@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import room1 from './assets/room-1.jpg';
+import room1mask from './assets/room-1-mask.png';
+import { Screen } from './Screen';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Screen
+        image={room1}
+        mask={room1mask}
+        onHovers={[
+          () => console.log("Window"),
+          () => console.log("Door"),
+          () => console.log("Cupboard"),
+          () => console.log("Oil lamp"),
+        ]}
+        onClicks={[
+          () => console.log("The window won't budge"),
+          () => console.log("The door won't budge"),
+          () => console.log("You found a key!"),
+          () => console.log("You took the oil lamp!"),
+        ]}
+      />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

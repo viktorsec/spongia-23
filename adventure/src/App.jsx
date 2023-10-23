@@ -11,7 +11,7 @@ function App() {
   const [banner, setBanner] = useState("");
   const [log, setLog] = useState("");
   const [items, setItems] = useState([]);
-  const [usedItem, setUsedItem] = useState("");
+  const [activeItem, setActiveItem] = useState("");
 
   const addLog = (line) => {
     const newLog = line + "\n" + log;
@@ -23,10 +23,56 @@ function App() {
     setItems(newItems);
   }
 
-  const handleHover = (object) => {
-    const action = usedItem ? `Use ${usedItem} on ` : "";
+  const updateBanner = (object) => {
+    const action = activeItem ? `Use ${activeItem} on ` : "";
     setBanner(action + object);
   }
+
+  const handleScreenHover = (zone) => {
+    switch (zone) {
+    case 1:
+      updateBanner("Window");
+      break;
+    case 2:
+      updateBanner("Door");
+      break;
+    case 3:
+      updateBanner("Cupboard");
+      break;
+    case 4:
+      updateBanner("Oil Lamp");
+      break;
+    default:
+      updateBanner("");
+    }
+  };
+
+  const handleScreenClick = (zone) => {
+    switch (zone) {
+      case 1:
+        addLog("The window won't budge…");
+        break;
+      case 2:
+        addLog("The door won't budge…");
+        break;
+      case 3:
+        addLog("You found a key!");
+        addItem("Key");
+        break;
+      case 4:
+        addLog("You took the oil lamp!");
+        addItem("Oil Lamp");
+        break;
+    }
+  };
+
+  const handleInventoryClick = (item) => {
+    if (activeItem === item) {
+      setActiveItem("");
+    } else {
+      setActiveItem(item);
+    }
+  };
 
   return (
     <>
@@ -34,33 +80,10 @@ function App() {
       <Screen
         image={room1}
         mask={room1mask}
-        onHovers={[
-          () => handleHover("Window"),
-          () => handleHover("Door"),
-          () => handleHover("Cupboard"),
-          () => handleHover("Oil lamp"),
-        ]}
-        onHoverOut={() => handleHover("")}
-        onClicks={[
-          () => addLog("The window won't budge…"),
-          () => addLog("The door won't budge…"),
-          () => {
-            addLog("You found a key!")
-            addItem({
-              label: "Key",
-              onClick: () => setUsedItem("key"),
-            })
-          },
-          () => {
-            addLog("You took the oil lamp!"),
-            addItem({
-              label: "Oil Lamp",
-              onClick: () => setUsedItem("lamp"),
-            })
-          }
-        ]}
+        onHover={handleScreenHover}
+        onClick={handleScreenClick}
       />
-      <Inventory items={items} />
+      <Inventory items={items} onClick={handleInventoryClick} />
       <Log value={log} />
     </>
   );

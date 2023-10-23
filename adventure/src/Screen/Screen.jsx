@@ -3,9 +3,8 @@ import React, { useRef } from 'react';
 const Screen = ({
   image,
   mask,
-  onHovers,
-  onClicks,
-  onHoverOut,
+  onHover,
+  onClick,
 }) => {
 
   const imageRef = useRef();
@@ -33,28 +32,31 @@ const Screen = ({
     return red
   };
 
-  const callCallback = (value, callbacks) => {
-    // not sure what to say about this other than apologize
+  const callCallback = (value, callback) => {
+    if (!callback) {
+      return;
+    }
+
     switch (value) {
       case 250:
-        callbacks[0] && callbacks[0]();
+        callback(1);
         break;
       case 200:
-        callbacks[1] && callbacks[1]();
+        callback(2);
         break;
       case 150:
-        callbacks[2] && callbacks[2]();
+        callback(3);
         break;
       case 100:
-        callbacks[3] && callbacks[3]();
+        callback(4);
         break;
       case 50:
-        callbacks[4] && callbacks[4]();
+        callback(5);
         break;
       default:
-        onHoverOut && onHoverOut();
+        callback(0);
     }
-  }
+  };
 
   const getMaskColorBasedOnEvent = (event) => {
     const { left, top } = imageRef.current.getBoundingClientRect();
@@ -69,12 +71,12 @@ const Screen = ({
 
   const handleMouseMove = (event) => {
     const color = getMaskColorBasedOnEvent(event);
-    callCallback(color, onHovers);
+    callCallback(color, onHover);
   };
 
   const handleClick = (event) => {
     const color = getMaskColorBasedOnEvent(event);
-    callCallback(color, onClicks);
+    callCallback(color, onClick);
   }
 
   return (

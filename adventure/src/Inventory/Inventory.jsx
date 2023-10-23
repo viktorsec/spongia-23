@@ -1,14 +1,18 @@
 import React from 'react';
 
 const Inventory = ({
-  items
+  items,
+  onClick,
 }) => {
 
   return (
     <div>
       { items.map(item =>
-        <button onClick={item.onClick}>
-          {item.label}
+        <button
+          onClick={() => onClick(item)}
+          style={{ fontSize: "24pt", margin: "1rem" }}
+        >
+          {item}
         </button>  
       ) }
     </div>

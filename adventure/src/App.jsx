@@ -2,11 +2,18 @@ import React, { useState } from 'react';
 import room1 from './assets/room-1.jpg';
 import room1mask from './assets/room-1-mask.png';
 import { Banner } from './Banner';
+import { Log } from './Log';
 import { Screen } from './Screen';
 import './App.css';
 
 function App() {
   const [banner, setBanner] = useState("");
+  const [log, setLog] = useState("");
+
+  const addLog = (line) => {
+    const newLog = line + "\n" + log;
+    setLog(newLog);
+  }
 
   return (
     <>
@@ -22,12 +29,13 @@ function App() {
         ]}
         onHoverOut={() => setBanner("")}
         onClicks={[
-          () => console.log("The window won't budge"),
-          () => console.log("The door won't budge"),
-          () => console.log("You found a key!"),
-          () => console.log("You took the oil lamp!"),
+          () => addLog("The window won't budge…"),
+          () => addLog("The door won't budge…"),
+          () => addLog("You found a key!"),
+          () => addLog("You took the oil lamp!"),
         ]}
       />
+      <Log value={log} />
     </>
   );
 }

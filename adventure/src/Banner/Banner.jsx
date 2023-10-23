@@ -5,7 +5,7 @@ const Banner = ({
 }) => {
 
   return (
-    <p style={{ height: 20, fontSize: "16pt" }}>{value}</p>
+    <p style={{ height: 20, fontSize: "24pt" }}>{value}</p>
   );
 };
 

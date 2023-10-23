@@ -87,6 +87,7 @@ const Screen = ({
         width={1080}
         height={720}
         alt="game"
+        draggable="false"
         onMouseMove={handleMouseMove}
         onClick={handleClick}
       />

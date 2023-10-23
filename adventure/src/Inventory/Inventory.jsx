@@ -6,11 +6,12 @@ const Inventory = ({
 }) => {
 
   return (
-    <div>
+    <div style={{ height: "8rem" }}>
       { items.map(item =>
         <button
           onClick={() => onClick(item)}
           style={{ fontSize: "24pt", margin: "1rem" }}
+          key={item}
         >
           {item}
         </button>  

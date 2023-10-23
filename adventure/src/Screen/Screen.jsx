@@ -5,6 +5,7 @@ const Screen = ({
   mask,
   onHovers,
   onClicks,
+  onHoverOut,
 }) => {
 
   const imageRef = useRef();
@@ -50,9 +51,8 @@ const Screen = ({
       case 50:
         callbacks[4] && callbacks[4]();
         break;
-      case 0:
-        callbacks[5] && callbacks[5]();
-        break;
+      default:
+        onHoverOut && onHoverOut();
     }
   }
 

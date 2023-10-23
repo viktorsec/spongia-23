@@ -3,6 +3,8 @@ import room1 from './assets/room-1.jpg';
 import room1Mask from './assets/room-1-mask.png';
 import room1NoLantern from './assets/room-1-no-lantern.jpg';
 import room1NoLanternMask from './assets/room-1-no-lantern-mask.png';
+import room2 from './assets/room-2.jpg';
+import maskBlank from './assets/mask-blank.png';
 import { Banner } from './Banner';
 import { Inventory } from './Inventory';
 import { Log } from './Log';
@@ -23,6 +25,7 @@ function App() {
   const [log, setLog] = useState("");
   const [items, setItems] = useState([]);
   const [activeItem, setActiveItem] = useState("");
+  const [windowOiled, setWindowOiled] = useState(false);
 
   useEffect(()=>{
     setLog(START_PROMPT);
@@ -68,7 +71,13 @@ function App() {
         if (activeItem === ITEMS.KEY) {
           addLog("The key doesn\'t fit. It made sense to try, though.");
         } else if (activeItem === ITEMS.OIL_LANTERN) {
-          addLog("You oil the window hinge and manage to open the window. You are free!");
+          addLog("You oil the window hinge.");
+          setWindowOiled(true);
+        } else if (windowOiled) {
+          addLog("You open the window and leave the room. Hopefully you were not on a high floor.");
+          addLog("Congratulations, you've reached the end of prototype.");
+          setRoomImage(room2);
+          setRoomMask(maskBlank);
         } else {
           addLog("The window won't budge…");
         }
@@ -120,7 +129,11 @@ function App() {
         onHover={handleScreenHover}
         onClick={handleScreenClick}
       />
-      <Inventory items={items} onClick={handleInventoryClick} />
+      <Inventory
+        items={items}
+        activeItem={activeItem}
+        onClick={handleInventoryClick}
+      />
       <Log value={log} />
     </>
   );

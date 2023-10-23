@@ -1,0 +1,12 @@
+.inventoryItem {
+  font-size: 24pt;
+  margin: 1rem;
+}
+
+.inventoryItem,
+.inventoryItem:active,
+.inventoryItem:focus,
+.inventoryItem:hover {
+  border: 2px solid black;
+  outline: none;
+}

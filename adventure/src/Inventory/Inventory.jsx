@@ -1,7 +1,9 @@
 import React from 'react';
+import './Inventory.css';
 
 const Inventory = ({
   items,
+  activeItem,
   onClick,
 }) => {
 
@@ -10,7 +12,10 @@ const Inventory = ({
       { items.map(item =>
         <button
           onClick={() => onClick(item)}
-          style={{ fontSize: "24pt", margin: "1rem" }}
+          className="inventoryItem"
+          style={{
+            border: activeItem === item && "2px solid gold",
+          }}
           key={item}
         >
           {item}

@@ -1,7 +1,7 @@
 <template>
   <main class="flex">
     <div class="w-1/2 p-2">
-      <div class="border relative aspect-[3/2]">
+      <div class="border relative aspect-[3/2] mb-2">
         <img
           v-for="(background, i) in room.background"
           :key="i"
@@ -14,6 +14,16 @@
             opacity: room.mask.opacity,
           }"
           class="absolute"
+        >
+      </div>
+
+      <div class="border p-2 mb-2">
+        <h2 class="font-bold">Room identification</h2>
+        <input
+          type="text"
+          class="w-full border"
+          :value="room.id"
+          @input="room.id = slugify($event.target.value)"
         >
       </div>
 
@@ -51,6 +61,61 @@
           </div>
         </div>
       </div>
+
+      <div class="border p-2 mb-2">
+        <header class="flex gap-2">
+          <h2 class="font-bold">Zones</h2>
+          <button @click="zoneHandler.remove()">-</button>
+          <button @click="zoneHandler.add()">+</button>
+        </header>
+
+        <div class="flex flex-col gap-2">
+          <div
+            v-for="(zone, i) in room.zones"
+            :key="i"
+            class="border p-2"
+          >
+            <div class="flex gap-2">
+              <label class="flex-1">
+                ID
+                <input type="text" class="border w-full" v-model="zone.id">
+              </label>
+              <label class="flex-1">
+                Color
+                <input type="color" class="border w-full" v-model="zone.color">
+              </label>
+              <label class="flex-1">
+                Action precendece
+                <InputSelect
+                  v-model="zone.actionSequence"
+                  :options="zoneHandler.actionSequenceOptions"
+                />
+              </label>
+            </div>
+            <div>
+              <header class="flex gap-2">
+                <h3 class="font-bold">Actions</h3>
+                <button @click="zoneHandler.removeAction(i)">-</button>
+                <button @click="zoneHandler.addAction(i)">+</button>
+              </header>
+              <div class="flex flex-col gap-2">
+                <div
+                  v-for="(action, j) in zone.actions"
+                  :key="j"
+                  class="flex gap-2"
+                >
+                  <input type="text" class="border w-full" v-model="action.trigger" placeholder="trigger">
+                  <input type="text" class="border w-full" v-model="action.itemAdd" placeholder="itemAdd">
+                  <input type="text" class="border w-full" v-model="action.itemRemove" placeholder="itemRemove">
+                  <input type="text" class="border w-full" v-model="action.flagAdd" placeholder="flagAdd">
+                  <input type="text" class="border w-full" v-model="action.flagRemove" placeholder="flagRemove">
+                  <input type="text" class="border w-full" v-model="action.move" placeholder="move">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="w-1/2 p-2 overflow-scroll">
@@ -63,7 +128,10 @@
 </template>
 
 <script setup>
-import { reactive } from 'vue';
+import room from '@/util/roomState';
+import slugify from '@/util/slugify';
+
+import InputSelect from '@/components/InputSelect.vue';
 
 const backgroundHandler = {
   generate: () => ({
@@ -73,7 +141,7 @@ const backgroundHandler = {
   add() {
     room.background.push(this.generate());
   },
-  remove: () => {
+  remove() {
     room.background.splice(room.background.length - 1, 1);
   },
   setFile: (files, i) => {
@@ -115,20 +183,44 @@ const maskHandler = {
   },
 };
 
-const room = reactive({
-  background: [
-    backgroundHandler.generate(),
-  ],
-  mask: {
-    file: '',
-    path: '',
-    opacity: 0.5,
+const zoneHandler = {
+  generateAction: () => ({
+    trigger: '',
+
+    say: '',
+    itemAdd: '',
+    itemRemove: '',
+    flagAdd: '',
+    flagRemove: '',
+    move: '',
+  }),
+  generate() {
+    return {
+      id: '',
+      color: '',
+      actionSequence: 'RANDOM',
+      actions: [
+        this.generateAction(),
+      ],
+    }
   },
-  items: [
-
+  add() {
+    room.zones.push(this.generate());
+  },
+  remove() {
+    room.zones.splice(room.zones.length - 1, 1);
+  },
+  addAction(i) {
+    room.zones[i].actions.push(this.generateAction());
+  },
+  removeAction(i) {
+    room.zones[i].actions.splice(room.zones[i].actions.length - 1, 1);
+  },
+  actionSequenceOptions: [
+    'RANDOM',
+    'SERIAL',
   ],
-});
-
+};
 
 const load = () => {
   const payload = prompt('Input JSON');

@@ -3,15 +3,15 @@
     <div class="w-1/2 p-2">
       <div class="border relative aspect-[3/2]">
         <img
-          v-for="(background, i) in state.background"
+          v-for="(background, i) in room.background"
           :key="i"
-          :src="background.file"
+          :src="`/assets/${background.path}`"
           class="absolute"
         >
         <img
-          :src="state.mask.file"
+          :src="room.mask.path"
           :style="{
-            opacity: state.mask.opacity,
+            opacity: room.mask.opacity,
           }"
           class="absolute"
         >
@@ -24,7 +24,7 @@
           <button @click="backgroundHandler.add()">+</button>
         </header>
         <div
-          v-for="(background, i) in state.background"
+          v-for="(background, i) in room.background"
           :key="i"
           class="flex"
         >
@@ -47,15 +47,16 @@
             <input type="text" class="w-full border">
           </div>
           <div class="w-1/3">
-            <input type="range" v-model.number="state.mask.opacity" min="0" max="1" step="0.01">
+            <input type="range" v-model.number="room.mask.opacity" min="0" max="1" step="0.01">
           </div>
         </div>
       </div>
     </div>
 
     <div class="w-1/2 p-2 overflow-scroll">
+      <button class="p-1 border" @click="load()">Load</button>
       <pre
-        v-text="state"
+        v-text="room"
       />
     </div>
   </main>
@@ -70,20 +71,20 @@ const backgroundHandler = {
     path: '',
   }),
   add() {
-    state.background.push(this.generate());
+    room.background.push(this.generate());
   },
   remove: () => {
-    state.background.splice(state.background.length - 1, 1);
+    room.background.splice(room.background.length - 1, 1);
   },
   setFile: (files, i) => {
     const file = files[0];
-    state.background[i].path = file.name;
+    room.background[i].path = file.name;
     const reader = new FileReader();
     reader.addEventListener(
       'load',
       () => {
         // convert image file to base64 string
-        state.background[i].file = reader.result;
+        room.background[i].file = reader.result;
       },
       false,
     );
@@ -97,13 +98,13 @@ const backgroundHandler = {
 const maskHandler = {
   setFile: (files) => {
     const file = files[0];
-    state.mask.path = file.name;
+    room.mask.path = file.name;
     const reader = new FileReader();
     reader.addEventListener(
       'load',
       () => {
         // convert image file to base64 string
-        state.mask.file = reader.result;
+        room.mask.file = reader.result;
       },
       false,
     );
@@ -114,7 +115,7 @@ const maskHandler = {
   },
 };
 
-const state = reactive({
+const room = reactive({
   background: [
     backgroundHandler.generate(),
   ],
@@ -123,7 +124,20 @@ const state = reactive({
     path: '',
     opacity: 0.5,
   },
+  items: [
+
+  ],
 });
+
+
+const load = () => {
+  const payload = prompt('Input JSON');
+  if (payload) {
+    const payloadParsed = JSON.parse(payload);
+    Object.assign(room, payloadParsed);
+  }
+};
+
 </script>
 
 <style scoped>

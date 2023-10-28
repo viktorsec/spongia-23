@@ -1,9 +1,9 @@
 <template>
-  <EditScreen />
+  <EditRoom />
 </template>
 
 <script setup>
-import EditScreen from '@/components/EditScreen.vue';
+import EditRoom from '@/components/EditRoom.vue';
 </script>
 
 <style scoped>

@@ -2,6 +2,7 @@ import { reactive } from 'vue';
 
 const room = reactive({
   id: '',
+  music: '',
   background: [],
   mask: {
     file: '',

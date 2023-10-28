@@ -9,7 +9,7 @@
           class="absolute"
         >
         <img
-          :src="room.mask.path"
+          :src="room.mask.file"
           :style="{
             opacity: room.mask.opacity,
           }"
@@ -85,12 +85,21 @@
                 <input type="color" class="border w-full" v-model="zone.color">
               </label>
               <label class="flex-1">
-                Action precendece
+                Action sequence
                 <InputSelect
                   v-model="zone.actionSequence"
                   :options="zoneHandler.actionSequenceOptions"
                 />
               </label>
+              <label class="flex-1">
+                Cursor
+                <input type="text" class="border w-full" v-model="zone.cursor">
+              </label>
+              <label class="flex-1">
+                Tooltip
+                <input type="text" class="border w-full" v-model="zone.tooltip">
+              </label>
+
             </div>
             <div>
               <header class="flex gap-2">
@@ -105,6 +114,7 @@
                   class="flex gap-2"
                 >
                   <input type="text" class="border w-full" v-model="action.trigger" placeholder="trigger">
+                  <input type="text" class="border w-full" v-model="action.say" placeholder="say">
                   <input type="text" class="border w-full" v-model="action.itemAdd" placeholder="itemAdd">
                   <input type="text" class="border w-full" v-model="action.itemRemove" placeholder="itemRemove">
                   <input type="text" class="border w-full" v-model="action.flagAdd" placeholder="flagAdd">
@@ -120,6 +130,7 @@
 
     <div class="w-1/2 p-2 overflow-scroll">
       <button class="p-1 border" @click="load()">Load</button>
+      <button class="p-1 border" @click="copy()">Copy</button>
       <pre
         v-text="room"
       />
@@ -186,19 +197,27 @@ const maskHandler = {
 const zoneHandler = {
   generateAction: () => ({
     trigger: '',
-
-    say: '',
-    itemAdd: '',
-    itemRemove: '',
-    flagAdd: '',
-    flagRemove: '',
-    move: '',
+    requirements: {
+      items: '',
+      flags: '',
+    },
+    do: {
+      say: '',
+      itemAdd: '',
+      itemRemove: '',
+      flagAdd: '',
+      flagRemove: '',
+      move: '',
+    },
+    soundEffect: ''
   }),
   generate() {
     return {
       id: '',
       color: '',
       actionSequence: 'RANDOM',
+      cursor: '',
+      tooltip: '',
       actions: [
         this.generateAction(),
       ],
@@ -229,6 +248,11 @@ const load = () => {
     Object.assign(room, payloadParsed);
   }
 };
+
+const copy = async () => {
+  await navigator.clipboard.writeText(JSON.stringify(room));
+  alert('Copied!');
+}
 
 </script>
 

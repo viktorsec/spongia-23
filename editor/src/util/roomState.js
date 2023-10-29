@@ -10,6 +10,7 @@ const room = reactive({
     opacity: 0.5,
   },
   zones: [],
+  items: [],
 });
 
 export default room;

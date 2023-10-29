@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <section id="player">
+        <div id="viewport">
+            <img id="background" />
+            <img id="zones" />
+            <!-- Objects inserted here -->
+        </div>
+        <div id="inventory"></div>
+        <textarea id="log"></textarea>
+    </section>
+    <section id="debug">
+        <label>Zone opacity
+            <input type="range" id="debug-zone-opacity" min="0" max="1" value="0.1" step="0.01">
+        </label>
+        <section class="boxed">
+            Current state:
+            <pre id="debug-state"></pre>
+        </section>
+        <textarea id="debug-log"></textarea>
+    </section>
+    <script src="index.js"></script>
+</body>
+
+</html>

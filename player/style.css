@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+section {
+    border: 1px solid black;
+}
+
+#viewport {
+    width: 1216px;
+    height: 832px;
+    position: relative;
+}
+
+#viewport img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1216px;
+    height: 832px;
+}
+
+#inventory {
+    display: flex;
+    flex-direction: row;
+}
+
+#inventory img {
+    width: 128px;
+    height: 128px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#inventory img.selected {
+    border: 2px solid red;
+}
+
+#debug {
+    width: 100%;
+}
+
+#log,
+#debug-log {
+    display: block;
+    height: 300px;
+    width: 100%;
+}

@@ -1,0 +1,26 @@
+{
+    "background": "a1_telescope_comet/comet.png",
+    "zones": "a1_telescope_comet/zones.png",
+    "enterAction": {
+        "say": "AAAAh! To sa ruti rovno na nas!",
+        "setFlag": "seen_comet"
+    },
+    "actions": [
+        {
+            "trigger": "#FF0000",
+            "goto": "a1_telescope_moon"
+        },
+        {
+            "trigger": "#00FF00",
+            "goto": "a1_telescope_planet"
+        },
+        {
+            "trigger": "#0000FF",
+            "say": "Vyssie sa to neda posunut."
+        },
+        {
+            "trigger": "#FF00FF",
+            "goto": "a1_telescope_empty"
+        }
+    ]
+}

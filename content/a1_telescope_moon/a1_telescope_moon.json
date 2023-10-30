@@ -1,0 +1,34 @@
+{
+    "background": "a1_telescope_moon/moon.png",
+    "zones": "a1_telescope_moon/zones.png",
+    "objects": {
+        "zapberry": {
+            "image": "a1_telescope_moon/moon_zapberry.png",
+            "actions": [
+                {
+                    "giveItem": "zapberry",
+                    "removeObject": "zapberry",
+                    "say": "Mesacne elektricke ovocie."
+                }
+            ]
+        }
+    },
+    "actions": [
+        {
+            "trigger": "#FF0000",
+            "goto": "a1_telescope_planet"
+        },
+        {
+            "trigger": "#00FF00",
+            "goto": "a1_telescope_empty"
+        },
+        {
+            "trigger": "#0000FF",
+            "goto": "a1_telescope_comet"
+        },
+        {
+            "trigger": "#FF00FF",
+            "goto": "a1_observatory_left"
+        }
+    ]
+}

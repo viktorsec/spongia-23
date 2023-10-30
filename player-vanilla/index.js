@@ -292,6 +292,25 @@ function init() {
 async function fetchGame() {
     const response = await fetch('./game.json');
     game = await response.json();
+
+    const rooms = [
+        'a1_spawn',
+        'a1_observatory_middle',
+        'a1_observatory_left',
+        'a1_observatory_right',
+        'a1_observatory_kitchen',
+        'a1_telescope_empty',
+        'a1_telescope_moon',
+        'a1_telescope_planet',
+        'a1_telescope_comet',
+        'a2_observatory_exterior',
+    ];
+    for (const key of rooms) {
+        const url = `./content/${key}/room.json`;
+        const room = await fetch(url);
+        const parsed = await room.json();
+        game.rooms[key] = parsed;
+    };
 }
 
 fetchGame().then(init);

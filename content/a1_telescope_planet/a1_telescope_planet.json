@@ -1,0 +1,37 @@
+{
+    "background": "a1_telescope_planet/planet.png",
+    "zones": "a1_telescope_planet/zones.png",
+    "enterAction": {
+        "say": "Haha, chudaci maju aku malu planetu"
+    },
+    "objects": {
+        "upberry": {
+            "image": "a1_telescope_planet/planet_upberry.png",
+            "actions": [
+                {
+                    "giveItem": "upberry",
+                    "removeObject": "upberry",
+                    "say": "Ovocie z inych planet je najchutnejsie."
+                }
+            ]
+        }
+    },
+    "actions": [
+        {
+            "trigger": "#FF0000",
+            "goto": "a1_telescope_empty"
+        },
+        {
+            "trigger": "#00FF00",
+            "goto": "a1_telescope_moon"
+        },
+        {
+            "trigger": "#0000FF",
+            "goto": "a1_telescope_comet"
+        },
+        {
+            "trigger": "#FF00FF",
+            "goto": "a1_observatory_left"
+        }
+    ]
+}

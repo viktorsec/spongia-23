@@ -1,0 +1,25 @@
+{
+    "background": "a1_telescope_empty/empty.png",
+    "zones": "a1_telescope_empty/zones.png",
+    "enterAction": {
+        "say": "Hmm nic zaujimave, musim sa rozhliadnut."
+    },
+    "actions": [
+        {
+            "trigger": "#FF0000",
+            "goto": "a1_telescope_moon"
+        },
+        {
+            "trigger": "#00FF00",
+            "goto": "a1_telescope_planet"
+        },
+        {
+            "trigger": "#0000FF",
+            "goto": "a1_telescope_comet"
+        },
+        {
+            "trigger": "#FF00FF",
+            "goto": "a1_observatory_left"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "background": "a1_observatory_middle/background.png",
+    "zones": "a1_observatory_middle/zones.png",
+    "actions": [
+        {
+            "trigger": "#FF0000",
+            "goto": "a1_observatory_left"
+        },
+        {
+            "trigger": "#00FF00",
+            "goto": "a1_observatory_right"
+        },
+        {
+            "trigger": "#0000FF",
+            "goto": "a1_spawn"
+        },
+        {
+            "trigger": "#FF00FF",
+            "goto": "a1_observatory_kitchen"
+        }
+    ]
+}

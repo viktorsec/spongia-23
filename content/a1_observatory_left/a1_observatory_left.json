@@ -1,0 +1,25 @@
+{
+    "background": "a1_observatory_left/background.png",
+    "zones": "a1_observatory_left/zones.png",
+    "objects": {
+        "full_whisky_b": {
+            "image": "a1_observatory_left/full_whisky_b.png",
+            "actions": [
+                {
+                    "giveItem": "full_whisky_b",
+                    "removeObject": "full_whisky_b"
+                }
+            ]
+        }
+    },
+    "actions": [
+        {
+            "trigger": "#FF0000",
+            "goto": "a1_observatory_middle"
+        },
+        {
+            "trigger": "#00FF00",
+            "goto": "a1_telescope_empty"
+        }
+    ]
+}

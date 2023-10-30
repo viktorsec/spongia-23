@@ -1,0 +1,93 @@
+{
+    "background": "a1_observatory_kitchen/background.png",
+    "zones": "a1_observatory_kitchen/zones.png",
+    "objects": {
+        "banana": {
+            "image": "a1_observatory_kitchen/banana.png",
+            "actions": [
+                {
+                    "giveItem": "banana",
+                    "removeObject": "banana",
+                    "say": "Mnam, banan."
+                }
+            ]
+        },
+        "downberry": {
+            "image": "a1_observatory_kitchen/downberry.png",
+            "actions": [
+                {
+                    "giveItem": "downberry",
+                    "removeObject": "downberry"
+                }
+            ]
+        },
+        "full_whisky_a": {
+            "image": "a1_observatory_kitchen/full_whisky_a.png",
+            "actions": [
+                {
+                    "giveItem": "full_whisky_a",
+                    "removeObject": "full_whisky_a"
+                }
+            ]
+        },
+        "quarter_potion": {
+            "image": "a1_observatory_kitchen/quarter_potion.png",
+            "actions": [
+                {
+                    "giveItem": "quarter_potion",
+                    "removeObject": "quarter_potion",
+                    "say": "Mesacny lektvar."
+                }
+            ]
+        }
+    },
+    "actions": [
+        {
+            "trigger": "#FF0000",
+            "goto": "a1_observatory_middle"
+        },
+        {
+            "trigger": "#00FF00",
+            "say": "Voda netecie ale dalo by sa sem nieco vyliat."
+        },
+        {
+            "trigger": "#00FF00",
+            "item": "full_whisky_a",
+            "guards": [
+                {
+                    "hasItem": "full_whisky_b"
+                }
+            ],
+            "giveItem": "empty_whisky",
+            "takeItem": "full_whisky_a",
+            "say": "Skoda, ale aspon mi ostala flasa."
+        },
+        {
+            "trigger": "#00FF00",
+            "item": "full_whisky_b",
+            "guards": [
+                {
+                    "hasItem": "full_whisky_a"
+                }
+            ],
+            "giveItem": "empty_whisky",
+            "takeItem": "full_whisky_b",
+            "say": "Skoda, ale aspon mi ostala flasa."
+        },
+        {
+            "trigger": "#00FF00",
+            "item": "full_whisky_a",
+            "say": "To urcite nevylejem, mam len jednu."
+        },
+        {
+            "trigger": "#00FF00",
+            "item": "full_whisky_b",
+            "say": "To urcite nevylejem, mam len jednu."
+        },
+        {
+            "trigger": "#00FF00",
+            "item": "empty_whisky",
+            "say": "To uz je prazdne a voda netecie."
+        }
+    ]
+}

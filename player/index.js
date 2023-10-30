@@ -42,15 +42,15 @@ function showState() {
     }
     // Setup background and zones.
     const background = document.getElementById('background');
-    background.src = './assets/' + room.background;
+    background.src = './content/' + room.background;
     const zones = document.getElementById('zones');
-    zones.src = './assets/' + room.zones;
+    zones.src = './content/' + room.zones;
     // Add objects.
     if (room.objects) {
         for (const label in room.objects) {
             if (!objectVisible(label)) continue;
             const objimg = document.createElement('img');
-            objimg.src = './assets/' + room.objects[label].image;
+            objimg.src = './content/' + room.objects[label].image;
             objimg.dataset.label = label;
             viewport.appendChild(objimg);
         }
@@ -61,7 +61,7 @@ function showState() {
     while (inventory.lastChild) inventory.removeChild(inventory.lastChild);
     for (const item of state.inventory) {
         const itemimg = document.createElement('img');
-        itemimg.src = './assets/items/' + game.items[item];
+        itemimg.src = './content/items/' + game.items[item];
         itemimg.dataset.label = item;
         itemimg.onclick = (e) => { updateSelected(item); };
         inventory.appendChild(itemimg);

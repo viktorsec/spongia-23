@@ -1,5 +1,25 @@
 {
     "id": "a2_observatory_exterior",
     "background": "a2_observatory_exterior/background.png",
-    "mask": "a2_observatory_exterior/zones.png"
+    "mask": "a2_observatory_exterior/zones.png",
+    "zones": [
+        {
+            "color": "#FF0000",
+            "cursor": "nw-resize",
+            "actions": [
+                {
+                    "goto": "a1_observatory_right"
+                }
+            ]
+        },
+        {
+            "color": "#00FF00",
+            "cursor": "s-resize",
+            "actions": [
+                {
+                    "goto": "a2_todo_next_room"
+                }
+            ]
+        }
+    ]
 }

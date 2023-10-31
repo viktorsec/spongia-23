@@ -17,7 +17,7 @@ html {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Merriweather', serif;
+  font-family: 'Space Mono', monospace;
   background-color: black;
   color: #ccc;
 }

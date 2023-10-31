@@ -1,53 +1,68 @@
 <template>
   <div class="interface">
-    <div class="interface-main">
-      <div class="viewport">
-        <img src="@/assets/comet.png" alt="">
-      </div>
-      <div class="items">
-
-      </div>
-      <div class="console">
-        <ul>
-          <li>Skoda, ale aspon mi ostala flasa.</li>
-          <li>Mesacny lektvar.</li>
-          <li>Mnam, banan.</li>
-          <li>Hmm nic zaujimave, musim sa rozhliadnut.</li>
-          <li>AAAAh! To sa ruti rovno na nas!</li>
-        </ul>
-      </div>
+    <ViewPort
+      :room="activeRoom"
+      :maskVisible="clientState.maskVisible"
+      :activeItem="clientState.activeItem"
+    />
+    <div class="items">
+      <button
+        v-for="item in gameState.items"
+        :key="item"
+        @click="clientState.activeItem = item"
+      >
+        {{ item }}
+      </button>
+    </div>
+    <div
+      class="console"
+      @keydown="handleKeyDown"
+    >
+      <ul>
+        <li
+          v-for="(line, i) in gameState.console.reverse()"
+          :key="i"
+          v-text="line"
+        />
+      </ul>
     </div>
   </div>
 </template>
 
 <script setup>
+import { onMounted, onBeforeUnmount, computed } from 'vue';
+import clientState from '@/store/clientState';
+import gameState from '@/store/gameState';
+import rooms from '@/rooms';
+
+import ViewPort from '@/components/ViewPort.vue'
+
+const activeRoom = computed(() => {
+  const match = rooms.find(room => room.id === gameState.currentRoom);
+  return match;
+});
+
+const handleKeyDown = (event) => {
+  if (event.key === 'm') {
+    clientState.maskVisible = !clientState.maskVisible;
+  }
+};
+
+onMounted(() => {
+  document.addEventListener('keydown', handleKeyDown);
+});
+
+onBeforeUnmount(() => {
+  document.removeEventListener('keydown', handleKeyDown);
+});
+
 </script>
 
 <style scoped>
 .interface {
-  padding: 1rem;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-}
-.interface-main {
+  padding: 3rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-}
-.viewport {
-  flex: 1;
-  height: calc(100vh - 17rem);
-  display: flex;
   align-items: center;
-  justify-content: center;
-}
-.console ul {
-  padding: 0;
-  list-style: none;
-  height: 10rem;
-}
-.items {
-  height: 4rem;
 }
 </style>

@@ -1,6 +1,7 @@
 {
+    "id": "a1_spawn",
     "background": "a1_spawn/background.png",
-    "zones": "a1_spawn/zones.png",
+    "mask": "a1_spawn/zones.png",
     "objects": {
         "important_key": {
             "image": "a1_spawn/important_key.png",
@@ -13,18 +14,31 @@
             ]
         }
     },
-    "actions": [
+    "zones": [
         {
-            "trigger": "#FF0000",
-            "say": "Velka rastlina"
+            "color": "#FF0000",
+            "actions": [
+                {
+                    "say": "Velka rastlina"
+                }
+            ]
         },
         {
-            "trigger": "#00FF00",
-            "say": "Hniezdo"
+            "color": "#00FF00",
+            "actions": [
+                {
+                    "say": "Hniezdo"
+                }
+            ]
         },
         {
-            "trigger": "#0000FF",
-            "goto": "a1_observatory_middle"
+            "color": "#0000FF",
+            "cursor": "ne-resize",
+            "actions": [
+                {
+                    "goto": "a1_observatory_middle"
+                }
+            ]
         }
     ]
 }

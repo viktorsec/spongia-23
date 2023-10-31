@@ -1,6 +1,7 @@
 {
+    "id": "a1_observatory_left",
     "background": "a1_observatory_left/background.png",
-    "zones": "a1_observatory_left/zones.png",
+    "mask": "a1_observatory_left/zones.png",
     "objects": {
         "full_whisky_b": {
             "image": "a1_observatory_left/full_whisky_b.png",
@@ -12,14 +13,24 @@
             ]
         }
     },
-    "actions": [
+    "zones": [
         {
-            "trigger": "#FF0000",
-            "goto": "a1_observatory_middle"
+            "color": "#FF0000",
+            "cursor": "ne-resize",
+            "actions": [
+                {
+                    "goto": "a1_observatory_middle"
+                }
+            ]
         },
         {
-            "trigger": "#00FF00",
-            "goto": "a1_telescope_empty"
+            "color": "#00FF00",
+            "cursor": "zoom-in",
+            "actions": [
+                {
+                    "goto": "a1_telescope_empty"
+                }
+            ]
         }
     ]
 }

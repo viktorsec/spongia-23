@@ -1,22 +1,42 @@
 {
+    "id": "a1_observatory_middle",
     "background": "a1_observatory_middle/background.png",
-    "zones": "a1_observatory_middle/zones.png",
-    "actions": [
+    "mask": "a1_observatory_middle/zones.png",
+    "zones": [
         {
-            "trigger": "#FF0000",
-            "goto": "a1_observatory_left"
+            "color": "#FF0000",
+            "cursor": "nw-resize",
+            "actions": [
+                {
+                    "goto": "a1_observatory_left"
+                }
+            ]
         },
         {
-            "trigger": "#00FF00",
-            "goto": "a1_observatory_right"
+            "color": "#00FF00",
+            "actions": [
+                {
+                    "goto": "a1_observatory_right"
+                }
+            ]
         },
         {
-            "trigger": "#0000FF",
-            "goto": "a1_spawn"
+            "color": "#0000FF",
+            "cursor": "ne-resize",
+            "actions": [
+                {
+                    "goto": "a1_spawn"
+                }
+            ]
         },
         {
-            "trigger": "#FF00FF",
-            "goto": "a1_observatory_kitchen"
+            "color": "#FF00FF",
+            "cursor": "sw-resize",
+            "actions": [
+                {
+                    "goto": "a1_observatory_kitchen"
+                }
+            ]
         }
     ]
 }

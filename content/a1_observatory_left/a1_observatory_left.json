@@ -16,7 +16,7 @@
     "zones": [
         {
             "color": "#FF0000",
-            "cursor": "ne-resize",
+            "cursor": "e-resize",
             "actions": [
                 {
                     "goto": "a1_observatory_middle"

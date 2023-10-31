@@ -5,7 +5,7 @@
     "zones": [
         {
             "color": "#FF0000",
-            "cursor": "nw-resize",
+            "cursor": "w-resize",
             "actions": [
                 {
                     "goto": "a1_observatory_left"
@@ -14,6 +14,7 @@
         },
         {
             "color": "#00FF00",
+            "cursor": "e-resize",
             "actions": [
                 {
                     "goto": "a1_observatory_right"

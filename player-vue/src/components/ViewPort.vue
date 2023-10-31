@@ -12,7 +12,7 @@
         :src="loadImage(room.background)"
         class="background"
       />
-      <div>
+      <div v-if="room.objects">
         <img
           v-for="(object, key) in room.objects"
           :key="key"
@@ -102,7 +102,7 @@ const getHovering = (x, y) => {
   const maskColor = rgbaToHex(getPixel(maskElement.value, x, y));
   const zone = props.room.zones.find((zone) => zone.color === maskColor);
 
-  activeObject.value = props.room.objects[hoveredObject];
+  activeObject.value = hoveredObject ? props.room.objects[hoveredObject] : null;
   activeZone.value = zone;
 }
 

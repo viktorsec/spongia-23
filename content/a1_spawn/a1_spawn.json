@@ -36,7 +36,12 @@
             "cursor": "ne-resize",
             "actions": [
                 {
-                    "goto": "a1_observatory_middle"
+                    "goto": "a1_observatory_middle",
+                    "say": "Dvere sa s hrmotom otvorili. Si vo velkej modrej hale"
+                },
+                {
+                    "trigger": "important_key",
+                    "say": "Hm, nie je tu ziadna klucova dierka"
                 }
             ]
         }

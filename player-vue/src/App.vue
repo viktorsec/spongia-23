@@ -4,12 +4,16 @@
       :room="activeRoom"
       :maskVisible="clientState.maskVisible"
       :activeItem="clientState.activeItem"
+      @click="activeItemSet(null)"
     />
     <div class="items">
       <button
         v-for="item in gameState.items"
         :key="item"
-        @click="clientState.activeItem = item"
+        @click="activeItemSet(item)"
+        :style="{
+          backgroundColor: clientState.activeItem === item ? 'pink' : 'white',
+        }"
       >
         {{ item }}
       </button>
@@ -20,7 +24,7 @@
     >
       <ul>
         <li
-          v-for="(line, i) in gameState.console.reverse()"
+          v-for="(line, i) in gameState.console"
           :key="i"
           v-text="line"
         />
@@ -41,6 +45,10 @@ const activeRoom = computed(() => {
   const match = rooms.find(room => room.id === gameState.currentRoom);
   return match;
 });
+
+const activeItemSet = (item) => {
+  clientState.activeItem = item;
+}
 
 const handleKeyDown = (event) => {
   if (event.key === 'm') {
@@ -64,5 +72,10 @@ onBeforeUnmount(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.console ul {
+  display: flex;
+  flex-direction: column-reverse;
 }
 </style>

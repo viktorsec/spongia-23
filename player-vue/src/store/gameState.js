@@ -4,6 +4,7 @@ const gameState = reactive({
   currentRoom: 'a1_spawn',
   visitedRooms: [],
   items: [],
+  itemsTaken: [],
   flags: [],
   console: [],
 });

@@ -14,7 +14,7 @@
       />
       <div v-if="room.objects">
         <img
-          v-for="(object, key) in room.objects"
+          v-for="[key, object] in objectsDisplayed"
           :key="key"
           :src="loadImage(object.image)"
           class="object"
@@ -33,12 +33,13 @@
     <div>
       <p>Hovering zone: {{ activeZone }}</p>
       <p>Hovering object: {{ activeObject }}</p>
+      <p>Active item: {{ activeItem }}</p>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, toRaw } from 'vue';
+import { ref, toRaw, watch, computed } from 'vue';
 import gameState from '@/store/gameState';
 
 const props = defineProps({
@@ -86,7 +87,6 @@ const getPixel = (image, x, y) => {
 }
 
 const getHovering = (x, y) => {
-
   let hoveredObject = null;
   if (props.room.objects) {
     for (const label in props.room.objects) {
@@ -122,6 +122,9 @@ const selectAction = (actions, trigger) => {
 }
 
 const handleAction = (action) => {
+  if (!action) {
+    return;
+  }
   const say = (value) => {
     gameState.console.push(value);
   }
@@ -129,7 +132,24 @@ const handleAction = (action) => {
     gameState.currentRoom = value;
   }
   const giveItem = (value) => {
+    gameState.itemsTaken.push(value);
     gameState.items.push(value);
+  }
+  const setFlag = (value) => {
+    if (!gameState.flags.includes(value)) {
+      gameState.flags.push(value);
+    }
+  }
+  const unsetFlag = (value) => {
+    const index = gameState.flags.indexOf(value);
+    gameState.flags.array.splice(index, 1);
+  }
+  const flipFlag = (value) => {
+    if (gameState.flags.includes(value)) {
+      unsetFlag(value);
+    } else {
+      setFlag(value);
+    }
   }
 
   if(action.say) {
@@ -141,7 +161,15 @@ const handleAction = (action) => {
   if(action.giveItem) {
     giveItem(action.giveItem);
   }
-
+  if(action.setFlag) {
+    setFlag(action.setFlag);
+  }
+  if(action.unsetFlag) {
+    unsetFlag(action.unsetFlag);
+  }
+  if(action.flipFlag) {
+    flipFlag(action.flipFlag);
+  }
 }
 
 const clickHandler = () => {
@@ -151,20 +179,34 @@ const clickHandler = () => {
     handleAction(selectedAction);
   } else if (activeZone.value) {
     const zone = toRaw(activeZone.value);
-    const selectedAction = selectAction(zone.actions);
+    const selectedAction = selectAction(zone.actions, props.activeItem);
     handleAction(selectedAction);
   }
 }
+
+const processRoomLoad = () => {
+  if (props.room.enterAction) {
+    handleAction(props.room.enterAction);
+  }
+}
+
+watch(() => props.room, processRoomLoad);
+
+const objectsDisplayed = computed(() => {
+  const objectArray = Object.entries(props.room.objects);
+  return objectArray.filter(([key]) => !gameState.itemsTaken.includes(key));
+})
 
 </script>
 
 <style scoped>
 .viewport-wrapper {
-  width: 1000px;
+  width: 800px;
 }
 .viewport {
   position: relative;
   aspect-ratio: 3 / 2.05;
+  outline: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .viewport .background,
@@ -173,5 +215,9 @@ const clickHandler = () => {
   display: block;
   width: 100%;
   position: absolute;
+}
+
+.viewport .mask {
+  user-select: none;
 }
 </style>

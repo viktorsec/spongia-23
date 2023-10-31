@@ -1,25 +1,46 @@
 {
+    "id": "a1_telescope_empty",
     "background": "a1_telescope_empty/empty.png",
-    "zones": "a1_telescope_empty/zones.png",
+    "mask": "a1_telescope_empty/zones.png",
     "enterAction": {
         "say": "Hmm nic zaujimave, musim sa rozhliadnut."
     },
-    "actions": [
+    "zones": [
         {
-            "trigger": "#FF0000",
-            "goto": "a1_telescope_moon"
+            "color": "#FF0000",
+            "cursor": "w-resize",
+            "actions": [
+                {
+                    "goto": "a1_telescope_moon"
+                }
+            ]
         },
         {
-            "trigger": "#00FF00",
-            "goto": "a1_telescope_planet"
+            "color": "#00FF00",
+            "cursor": "e-resize",
+            "actions": [
+                {
+                    "goto": "a1_telescope_planet"
+                }
+            ]
         },
         {
-            "trigger": "#0000FF",
-            "goto": "a1_telescope_comet"
+            "color": "#0000FF",
+            "cursor": "n-resize",
+            "actions": [
+                {
+                    "goto": "a1_telescope_comet"
+                }
+            ]
         },
         {
-            "trigger": "#FF00FF",
-            "goto": "a1_observatory_left"
+            "color": "#FF00FF",
+            "cursor": "zoom-out",
+            "actions": [
+                {
+                    "goto": "a1_observatory_left"
+                }
+            ]
         }
     ]
 }

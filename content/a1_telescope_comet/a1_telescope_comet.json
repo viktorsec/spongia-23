@@ -1,26 +1,47 @@
 {
+    "id": "a1_telescope_comet",
     "background": "a1_telescope_comet/comet.png",
-    "zones": "a1_telescope_comet/zones.png",
+    "mask": "a1_telescope_comet/zones.png",
     "enterAction": {
         "say": "AAAAh! To sa ruti rovno na nas!",
         "setFlag": "seen_comet"
     },
-    "actions": [
+    "zones": [
         {
-            "trigger": "#FF0000",
-            "goto": "a1_telescope_moon"
+            "color": "#FF0000",
+            "cursor": "w-resize",
+            "actions": [
+                {
+                    "goto": "a1_telescope_moon"
+                }
+            ]
         },
         {
-            "trigger": "#00FF00",
-            "goto": "a1_telescope_planet"
+            "color": "#00FF00",
+            "cursor": "e-resize",
+            "actions": [
+                {
+                    "goto": "a1_telescope_planet"
+                }
+            ]
         },
         {
-            "trigger": "#0000FF",
-            "say": "Vyssie sa to neda posunut."
+            "color": "#0000FF",
+            "cursor": "n-resize",
+            "actions": [
+                {
+                    "say": "Vyssie sa to neda posunut."
+                }
+            ]
         },
         {
-            "trigger": "#FF00FF",
-            "goto": "a1_telescope_empty"
+            "color": "#FF00FF",
+            "cursor": "s-resize",
+            "actions": [
+                {
+                    "goto": "a1_telescope_empty"
+                }
+            ]
         }
     ]
 }

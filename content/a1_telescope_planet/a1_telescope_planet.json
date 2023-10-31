@@ -1,6 +1,7 @@
 {
+    "id": "a1_telescope_planet",
     "background": "a1_telescope_planet/planet.png",
-    "zones": "a1_telescope_planet/zones.png",
+    "mask": "a1_telescope_planet/zones.png",
     "enterAction": {
         "say": "Haha, chudaci maju aku malu planetu"
     },
@@ -16,22 +17,42 @@
             ]
         }
     },
-    "actions": [
+    "zones": [
         {
-            "trigger": "#FF0000",
-            "goto": "a1_telescope_empty"
+            "color": "#FF0000",
+            "cursor": "w-resize",
+            "actions": [
+                {
+                    "goto": "a1_telescope_empty"
+                }
+            ]
         },
         {
-            "trigger": "#00FF00",
-            "goto": "a1_telescope_moon"
+            "color": "#00FF00",
+            "cursor": "e-resize",
+            "actions": [
+                {
+                    "goto": "a1_telescope_moon"
+                }
+            ]
         },
         {
-            "trigger": "#0000FF",
-            "goto": "a1_telescope_comet"
+            "color": "#0000FF",
+            "cursor": "n-resize",
+            "actions": [
+                {
+                    "goto": "a1_telescope_comet"
+                }
+            ]
         },
         {
-            "trigger": "#FF00FF",
-            "goto": "a1_observatory_left"
+            "color": "#FF00FF",
+            "cursor": "zoom-out",
+            "actions": [
+                {
+                    "goto": "a1_observatory_left"
+                }
+            ]
         }
     ]
 }

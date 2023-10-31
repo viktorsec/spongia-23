@@ -1,4 +1,5 @@
 {
+    "id": "a2_observatory_exterior",
     "background": "a2_observatory_exterior/background.png",
-    "zones": "a2_observatory_exterior/zones.png"
+    "mask": "a2_observatory_exterior/zones.png"
 }

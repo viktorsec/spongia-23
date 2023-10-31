@@ -1,6 +1,7 @@
 {
+    "id": "a1_observatory_right",
     "background": "a1_observatory_right/background.png",
-    "zones": "a1_observatory_right/zones.png",
+    "mask": "a1_observatory_right/zones.png",
     "objects": {
         "banana": {
             "image": "a1_observatory_right/placed_banana.png",
@@ -322,13 +323,17 @@
             ]
         }
     },
-    "actions": [
+    "zones": [
         {
-            "trigger": "#FF0000",
-            "goto": "a1_observatory_middle"
+            "color": "#FF0000",
+            "actions": [
+                {
+                    "goto": "a1_observatory_middle"
+                }
+            ]
         },
         {
-            "trigger": "#00FF00",
+            "color": "#00FF00",
             "guards": [
                 {
                     "flagTrue": "placed_empty_whisky"
@@ -352,10 +357,14 @@
                     "flagTrue": "seen_comet"
                 }
             ],
-            "goto": "a2_observatory_exterior"
+            "actions": [
+                {
+                    "goto": "a2_observatory_exterior"
+                }
+            ]
         },
         {
-            "trigger": "#00FF00",
+            "color": "#00FF00",
             "guards": [
                 {
                     "flagTrue": "placed_empty_whisky"
@@ -376,102 +385,146 @@
                     "flagTrue": "beam_active"
                 }
             ],
-            "say": "Mozno som sa nepozrel cez teleskop poriadne"
+            "actions": [
+                {
+                    "say": "Mozno som sa nepozrel cez teleskop poriadne"
+                }
+            ]
         },
         {
-            "trigger": "#00FF00",
-            "say": "Dvere su zamknute"
+            "color": "#00FF00",
+            "actions": [
+                {
+                    "say": "Dvere su zamknute"
+                }
+            ]
         },
         {
-            "trigger": "#0000FF",
+            "color": "#0000FF",
             "guards": [
                 {
                     "flagFalse": "placed_empty_whisky"
                 }
             ],
-            "say": "Policka s obrazkom faze mesiaca"
+            "actions": [
+                {
+                    "say": "Policka s obrazkom faze mesiaca"
+                }
+            ]
         },
         {
-            "trigger": "#0000FF",
+            "color": "#0000FF",
             "item": "empty_whisky",
             "guards": [
                 {
                     "flagFalse": "placed_empty_whisky"
                 }
             ],
-            "setFlag": "placed_empty_whisky",
-            "takeItem": "empty_whisky"
+            "actions": [
+                {
+                    "setFlag": "placed_empty_whisky",
+                    "takeItem": "empty_whisky"
+                }
+            ]
         },
         {
-            "trigger": "#FF00FF",
+            "color": "#FF00FF",
             "guards": [
                 {
                     "flagFalse": "placed_banana"
                 }
             ],
-            "say": "Policka s obrazkom faze mesiaca"
+            "actions": [
+                {
+                    "say": "Policka s obrazkom faze mesiaca"
+                }
+            ]
         },
         {
-            "trigger": "#FF00FF",
+            "color": "#FF00FF",
             "item": "banana",
             "guards": [
                 {
                     "flagFalse": "placed_banana"
                 }
             ],
-            "setFlag": "placed_banana",
-            "takeItem": "banana"
+            "actions": [
+                {
+                    "setFlag": "placed_banana",
+                    "takeItem": "banana"
+                }
+            ]
         },
         {
-            "trigger": "#FFFF00",
+            "color": "#FFFF00",
             "guards": [
                 {
                     "flagFalse": "placed_full_whisky"
                 }
             ],
-            "say": "Policka s obrazkom faze mesiaca"
+            "actions": [
+                {
+                    "say": "Policka s obrazkom faze mesiaca"
+                }
+            ]
         },
         {
-            "trigger": "#FFFF00",
+            "color": "#FFFF00",
             "item": "full_whisky_a",
             "guards": [
                 {
                     "flagFalse": "placed_full_whisky"
                 }
             ],
-            "setFlag": "placed_full_whisky",
-            "takeItem": "full_whisky_a"
+            "actions": [
+                {
+                    "setFlag": "placed_full_whisky",
+                    "takeItem": "full_whisky_a"
+                }
+            ]
         },
         {
-            "trigger": "#FFFF00",
+            "color": "#FFFF00",
             "item": "full_whisky_b",
             "guards": [
                 {
                     "flagFalse": "placed_full_whisky"
                 }
             ],
-            "setFlag": "placed_full_whisky",
-            "takeItem": "full_whisky_b"
+            "actions": [
+                {
+                    "setFlag": "placed_full_whisky",
+                    "takeItem": "full_whisky_b"
+                }
+            ]
         },
         {
-            "trigger": "#00FFFF",
+            "color": "#00FFFF",
             "guards": [
                 {
                     "flagFalse": "placed_quarter_potion"
                 }
             ],
-            "say": "Policka s obrazkom faze mesiaca"
+            "actions": [
+                {
+                    "say": "Policka s obrazkom faze mesiaca"
+                }
+            ]
         },
         {
-            "trigger": "#00FFFF",
+            "color": "#00FFFF",
             "item": "quarter_potion",
             "guards": [
                 {
                     "flagFalse": "placed_quarter_potion"
                 }
             ],
-            "setFlag": "placed_quarter_potion",
-            "takeItem": "quarter_potion"
+            "actions": [
+                {
+                    "setFlag": "placed_quarter_potion",
+                    "takeItem": "quarter_potion"
+                }
+            ]
         }
     ]
 }

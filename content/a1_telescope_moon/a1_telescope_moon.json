@@ -2,18 +2,13 @@
     "id": "a1_telescope_moon",
     "background": "a1_telescope_moon/moon.png",
     "mask": "a1_telescope_moon/zones.png",
-    "objects": {
-        "zapberry": {
+    "items": [
+        {
+            "id": "zapberry",
             "image": "a1_telescope_moon/moon_zapberry.png",
-            "actions": [
-                {
-                    "giveItem": "zapberry",
-                    "removeObject": "zapberry",
-                    "say": "Mesacne elektricke ovocie."
-                }
-            ]
+            "say": "Mesacne elektricke ovocie."
         }
-    },
+    ],
     "zones": [
         {
             "color": "#FF0000",

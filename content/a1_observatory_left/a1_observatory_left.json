@@ -2,17 +2,12 @@
     "id": "a1_observatory_left",
     "background": "a1_observatory_left/background.png",
     "mask": "a1_observatory_left/zones.png",
-    "objects": {
-        "full_whisky_b": {
-            "image": "a1_observatory_left/full_whisky_b.png",
-            "actions": [
-                {
-                    "giveItem": "full_whisky_b",
-                    "removeObject": "full_whisky_b"
-                }
-            ]
+    "items": [
+        {
+            "id": "full_whisky_b",
+            "image": "a1_observatory_left/full_whisky_b.png"
         }
-    },
+    ],
     "zones": [
         {
             "color": "#FF0000",

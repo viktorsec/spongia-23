@@ -5,18 +5,13 @@
     "enterAction": {
         "say": "Haha, chudaci maju aku malu planetu"
     },
-    "objects": {
-        "upberry": {
+    "items": [
+        {
+            "id": "upberry",
             "image": "a1_telescope_planet/planet_upberry.png",
-            "actions": [
-                {
-                    "giveItem": "upberry",
-                    "removeObject": "upberry",
-                    "say": "Ovocie z inych planet je najchutnejsie."
-                }
-            ]
+            "say": "Ovocie z inych planet je najchutnejsie"
         }
-    },
+    ],
     "zones": [
         {
             "color": "#FF0000",

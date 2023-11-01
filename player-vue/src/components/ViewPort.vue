@@ -12,13 +12,21 @@
         :src="loadImage(room.background)"
         class="background"
       />
-      <div v-if="room.objects">
+      <div v-if="overlaysDisplayed">
         <img
-          v-for="[key, object] in objectsDisplayed"
-          :key="key"
-          :src="loadImage(object.image)"
+          v-for="overlay in overlaysDisplayed"
+          :key="overlay.image"
+          :src="loadImage(overlay.image)"
           class="object"
-          :data-label="key"
+        />
+      </div>
+      <div v-if="itemsDisplayed">
+        <img
+          v-for="item in itemsDisplayed"
+          :key="item.id"
+          :src="loadImage(item.image)"
+          class="overlay"
+          :data-label="item.id"
         />
       </div>
       <img
@@ -32,8 +40,8 @@
     </div>
     <div>
       <p>Hovering zone: {{ activeZone }}</p>
-      <p>Hovering object: {{ activeObject }}</p>
-      <p>Active item: {{ activeItem }}</p>
+      <p>Hovering object: {{ activeItem }}</p>
+      <p>Active item: {{ holdingItem }}</p>
     </div>
   </div>
 </template>
@@ -45,12 +53,12 @@ import gameState from '@/store/gameState';
 const props = defineProps({
   room: Object,
   maskVisible: Boolean,
-  activeItem: String,
+  holdingItem: String,
 });
 
 const maskElement = ref(null);
 const activeZone = ref(null);
-const activeObject = ref(null);
+const activeItem = ref(null);
 
 const rgbaToHex = (rgba) => {
   function hexByte(x) {
@@ -88,21 +96,21 @@ const getPixel = (image, x, y) => {
 
 const getHovering = (x, y) => {
   let hoveredObject = null;
-  if (props.room.objects) {
-    for (const label in props.room.objects) {
-      const objectImg = document.querySelector(`img[data-label=${label}]`);
-      if (objectImg == null) continue;
+  if (props.room.items) {
+    props.room.items.forEach((item) => {
+      const objectImg = document.querySelector(`img[data-label=${item.id}]`);
+      if (objectImg == null) return;
       const rgba = getPixel(objectImg, x, y);
       if (rgba[3] != 0) {
-        hoveredObject = label;
+        hoveredObject = item;
       }
-    }
+    });
   }
 
   const maskColor = rgbaToHex(getPixel(maskElement.value, x, y));
   const zone = props.room.zones.find((zone) => zone.color === maskColor);
 
-  activeObject.value = hoveredObject ? props.room.objects[hoveredObject] : null;
+  activeItem.value = hoveredObject;
   activeZone.value = zone;
 }
 
@@ -113,11 +121,35 @@ const moveHandler = (event) => {
   getHovering(x, y);
 }
 
-const selectAction = (actions, trigger) => {
+const selectAction = (actions, trigger = null) => {
   const matchedActions = trigger
     ? actions.filter((action) => action.trigger === trigger)
-    : actions.filter((action) => !action.tirgger);
-  const selectedAction = randomArrayItem(matchedActions);
+    : actions.filter((action) => !action.trigger);
+  const eligibleActions = matchedActions.filter((action) => {
+    if (action.conditions?.hasItem && !gameState.items.includes(action.conditions.hasItem)) {
+      return false;
+    }
+    if (action.conditions?.hasItemNot && gameState.items.includes(action.conditions.hasItemNot)) {
+      return false;
+    }
+    if (action.conditions?.hasFlags) {
+      const flagArray = action.conditions.hasFlags.split(',');
+      if(flagArray.some((flag) => !gameState.flags.includes(flag))) {
+        return false;
+      }
+    }
+    if (action.conditions?.hasFlagsNot) {
+      const flagArray = action.conditions.hasFlagsNot.split(',');
+      if(!flagArray.some((flag) => !gameState.flags.includes(flag))) {
+        return false;
+      }
+    }
+
+    return true;
+  });
+  console.log(`eligible ${eligibleActions.length} actions`);
+
+  const selectedAction = randomArrayItem(eligibleActions);
   return selectedAction;
 }
 
@@ -135,6 +167,10 @@ const handleAction = (action) => {
     gameState.itemsTaken.push(value);
     gameState.items.push(value);
   }
+  const takeItem = (value) => {
+    const index = gameState.items.indexOf(value);
+    gameState.items.splice(index, 1);
+  }
   const setFlag = (value) => {
     if (!gameState.flags.includes(value)) {
       gameState.flags.push(value);
@@ -142,7 +178,7 @@ const handleAction = (action) => {
   }
   const unsetFlag = (value) => {
     const index = gameState.flags.indexOf(value);
-    gameState.flags.array.splice(index, 1);
+    gameState.flags.splice(index, 1);
   }
   const flipFlag = (value) => {
     if (gameState.flags.includes(value)) {
@@ -170,16 +206,21 @@ const handleAction = (action) => {
   if(action.flipFlag) {
     flipFlag(action.flipFlag);
   }
+  if(action.takeItem) {
+    takeItem(action.takeItem);
+  }
 }
 
 const clickHandler = () => {
-  if (activeObject.value) {
-    const object = toRaw(activeObject.value);
-    const selectedAction = selectAction(object.actions);
-    handleAction(selectedAction);
+  if (activeItem.value) {
+    const item = toRaw(activeItem.value);
+    handleAction({
+      ...item,
+      giveItem: item.id,
+    });
   } else if (activeZone.value) {
     const zone = toRaw(activeZone.value);
-    const selectedAction = selectAction(zone.actions, props.activeItem);
+    const selectedAction = selectAction(zone.actions, props.holdingItem);
     handleAction(selectedAction);
   }
 }
@@ -192,10 +233,35 @@ const processRoomLoad = () => {
 
 watch(() => props.room, processRoomLoad);
 
-const objectsDisplayed = computed(() => {
-  const objectArray = Object.entries(props.room.objects);
-  return objectArray.filter(([key]) => !gameState.itemsTaken.includes(key));
+const itemsDisplayed = computed(() => {
+  if (!props.room.items) {
+    return [];
+  }
+  return props.room.items.filter((item) => !gameState.itemsTaken.includes(item.id));
 })
+
+const overlaysDisplayed = computed(() => {
+  if (!props.room.overlays) {
+    return [];
+  }
+  return props.room.overlays.filter((overlay) => {
+    if (!overlay.conditions) {
+      return true;
+    }
+    if (overlay.conditions.hasFlags && gameState.flags.includes(overlay.conditions.hasFlags)) {
+      return true;
+    }
+    if (overlay.conditions.hasFlags) {
+      const flagArray = overlay.conditions.hasFlags.split(',');
+      if(flagArray.every((flag) => gameState.flags.includes(flag))) {
+        return true;
+      }
+    }
+
+    return false;
+  });
+})
+
 
 </script>
 
@@ -211,7 +277,8 @@ const objectsDisplayed = computed(() => {
 
 .viewport .background,
 .viewport .mask,
-.viewport .object {
+.viewport .object,
+.viewport .overlay {
   display: block;
   width: 100%;
   position: absolute;

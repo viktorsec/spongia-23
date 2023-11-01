@@ -3,20 +3,21 @@
     <ViewPort
       :room="activeRoom"
       :maskVisible="clientState.maskVisible"
-      :activeItem="clientState.activeItem"
-      @click="activeItemSet(null)"
+      :holdingItem="clientState.holdingItem"
+      @click="holdingItemSet(null)"
     />
     <div class="items">
       <button
         v-for="item in gameState.items"
         :key="item"
-        @click="activeItemSet(item)"
+        @click="holdingItemSet(item)"
         :style="{
-          backgroundColor: clientState.activeItem === item ? 'pink' : 'white',
+          backgroundColor: clientState.holdingItem === item ? 'pink' : 'white',
         }"
       >
         {{ item }}
       </button>
+      {{ gameState.flags }}
     </div>
     <div
       class="console"
@@ -46,8 +47,8 @@ const activeRoom = computed(() => {
   return match;
 });
 
-const activeItemSet = (item) => {
-  clientState.activeItem = item;
+const holdingItemSet = (item) => {
+  clientState.holdingItem = item;
 }
 
 const handleKeyDown = (event) => {

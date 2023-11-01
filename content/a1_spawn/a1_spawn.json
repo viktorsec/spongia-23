@@ -2,18 +2,13 @@
     "id": "a1_spawn",
     "background": "a1_spawn/background.png",
     "mask": "a1_spawn/zones.png",
-    "objects": {
-        "important_key": {
+    "items": [
+        {
+            "id": "important_key",
             "image": "a1_spawn/important_key.png",
-            "actions": [
-                {
-                    "giveItem": "important_key",
-                    "removeObject": "important_key",
-                    "say": "Toto budem potrebovat!"
-                }
-            ]
+            "say": "Toto budem potrebovat!"
         }
-    },
+    ],
     "zones": [
         {
             "color": "#FF0000",

@@ -2,327 +2,6 @@
     "id": "a1_observatory_right",
     "background": "a1_observatory_right/background.png",
     "mask": "a1_observatory_right/zones.png",
-    "objects": {
-        "banana": {
-            "image": "a1_observatory_right/placed_banana.png",
-            "guards": [
-                {
-                    "flagTrue": "placed_banana"
-                }
-            ],
-            "actions": [
-                {
-                    "say": "Hmm banan naozaj vyzera ako mesiac."
-                }
-            ]
-        },
-        "quarter_potion": {
-            "image": "a1_observatory_right/placed_quarter_potion.png",
-            "guards": [
-                {
-                    "flagTrue": "placed_quarter_potion"
-                }
-            ]
-        },
-        "full_whisky": {
-            "image": "a1_observatory_right/placed_full_whisky.png",
-            "guards": [
-                {
-                    "flagTrue": "placed_full_whisky"
-                }
-            ]
-        },
-        "empty_whisky": {
-            "image": "a1_observatory_right/placed_empty_whisky.png",
-            "guards": [
-                {
-                    "flagTrue": "placed_empty_whisky"
-                }
-            ]
-        },
-        "dud1": {
-            "image": "a1_observatory_right/dud1.png",
-            "guards": [
-                {
-                    "flagTrue": "dud_level_1"
-                }
-            ],
-            "actions": [
-                {
-                    "say": "To je dud"
-                },
-                {
-                    "item": "upberry",
-                    "guards": [
-                        {
-                            "flagTrue": "beam_active"
-                        }
-                    ],
-                    "say": "Posuvat zapnuty laser je moc nebezpecne"
-                },
-                {
-                    "item": "downberry",
-                    "guards": [
-                        {
-                            "flagTrue": "beam_active"
-                        }
-                    ],
-                    "say": "Posuvat zapnuty laser je moc nebezpecne"
-                },
-                {
-                    "item": "upberry",
-                    "guards": [
-                        {
-                            "flagFalse": "beam_active"
-                        }
-                    ],
-                    "say": "Vyssie sa neda"
-                },
-                {
-                    "item": "downberry",
-                    "guards": [
-                        {
-                            "flagFalse": "beam_active"
-                        }
-                    ],
-                    "setFlag": "dud_level_2",
-                    "unsetFlag": "dud_level_1"
-                },
-                {
-                    "item": "zapberry",
-                    "flipFlag": "beam_active"
-                }
-            ]
-        },
-        "dud2": {
-            "image": "a1_observatory_right/dud2.png",
-            "guards": [
-                {
-                    "flagTrue": "dud_level_2"
-                }
-            ],
-            "actions": [
-                {
-                    "say": "To je dud"
-                },
-                {
-                    "item": "upberry",
-                    "guards": [
-                        {
-                            "flagTrue": "beam_active"
-                        }
-                    ],
-                    "say": "Posuvat zapnuty laser je moc nebezpecne"
-                },
-                {
-                    "item": "downberry",
-                    "guards": [
-                        {
-                            "flagTrue": "beam_active"
-                        }
-                    ],
-                    "say": "Posuvat zapnuty laser je moc nebezpecne"
-                },
-                {
-                    "item": "upberry",
-                    "guards": [
-                        {
-                            "flagFalse": "beam_active"
-                        }
-                    ],
-                    "setFlag": "dud_level_1",
-                    "unsetFlag": "dud_level_2"
-                },
-                {
-                    "item": "downberry",
-                    "guards": [
-                        {
-                            "flagFalse": "beam_active"
-                        }
-                    ],
-                    "setFlag": "dud_level_3",
-                    "unsetFlag": "dud_level_2"
-                },
-                {
-                    "item": "zapberry",
-                    "flipFlag": "beam_active"
-                }
-            ]
-        },
-        "dud3": {
-            "image": "a1_observatory_right/dud3.png",
-            "guards": [
-                {
-                    "flagTrue": "dud_level_3"
-                }
-            ],
-            "actions": [
-                {
-                    "say": "To je dud"
-                },
-                {
-                    "item": "upberry",
-                    "guards": [
-                        {
-                            "flagTrue": "beam_active"
-                        }
-                    ],
-                    "say": "Posuvat zapnuty laser je moc nebezpecne"
-                },
-                {
-                    "item": "downberry",
-                    "guards": [
-                        {
-                            "flagTrue": "beam_active"
-                        }
-                    ],
-                    "say": "Posuvat zapnuty laser je moc nebezpecne"
-                },
-                {
-                    "item": "upberry",
-                    "guards": [
-                        {
-                            "flagFalse": "beam_active"
-                        }
-                    ],
-                    "setFlag": "dud_level_2",
-                    "unsetFlag": "dud_level_3"
-                },
-                {
-                    "item": "downberry",
-                    "guards": [
-                        {
-                            "flagFalse": "beam_active"
-                        }
-                    ],
-                    "setFlag": "dud_level_4",
-                    "unsetFlag": "dud_level_3"
-                },
-                {
-                    "item": "zapberry",
-                    "flipFlag": "beam_active"
-                }
-            ]
-        },
-        "dud4": {
-            "image": "a1_observatory_right/dud4.png",
-            "guards": [
-                {
-                    "flagTrue": "dud_level_4"
-                }
-            ],
-            "actions": [
-                {
-                    "say": "To je dud"
-                },
-                {
-                    "item": "upberry",
-                    "guards": [
-                        {
-                            "flagTrue": "beam_active"
-                        }
-                    ],
-                    "say": "Posuvat zapnuty laser je moc nebezpecne"
-                },
-                {
-                    "item": "downberry",
-                    "guards": [
-                        {
-                            "flagTrue": "beam_active"
-                        }
-                    ],
-                    "say": "Posuvat zapnuty laser je moc nebezpecne"
-                },
-                {
-                    "item": "upberry",
-                    "guards": [
-                        {
-                            "flagFalse": "beam_active"
-                        }
-                    ],
-                    "setFlag": "dud_level_3",
-                    "unsetFlag": "dud_level_4"
-                },
-                {
-                    "item": "downberry",
-                    "guards": [
-                        {
-                            "flagFalse": "beam_active"
-                        }
-                    ],
-                    "say": "Nizsie sa neda"
-                },
-                {
-                    "item": "zapberry",
-                    "flipFlag": "beam_active"
-                }
-            ]
-        },
-        "beam1": {
-            "image": "a1_observatory_right/beam1.png",
-            "guards": [
-                {
-                    "flagTrue": "dud_level_1"
-                },
-                {
-                    "flagTrue": "beam_active"
-                }
-            ],
-            "actions": [
-                {
-                    "say": "Pew pew pew!"
-                }
-            ]
-        },
-        "beam2": {
-            "image": "a1_observatory_right/beam2.png",
-            "guards": [
-                {
-                    "flagTrue": "dud_level_2"
-                },
-                {
-                    "flagTrue": "beam_active"
-                }
-            ],
-            "actions": [
-                {
-                    "say": "Pew pew pew!"
-                }
-            ]
-        },
-        "beam3": {
-            "image": "a1_observatory_right/beam3.png",
-            "guards": [
-                {
-                    "flagTrue": "dud_level_3"
-                },
-                {
-                    "flagTrue": "beam_active"
-                }
-            ],
-            "actions": [
-                {
-                    "say": "Pew pew pew!"
-                }
-            ]
-        },
-        "beam4": {
-            "image": "a1_observatory_right/beam4.png",
-            "guards": [
-                {
-                    "flagTrue": "dud_level_4"
-                },
-                {
-                    "flagTrue": "beam_active"
-                }
-            ],
-            "actions": [
-                {
-                    "say": "Pew pew pew!"
-                }
-            ]
-        }
-    },
     "zones": [
         {
             "color": "#FF0000",
@@ -334,201 +13,222 @@
             ]
         },
         {
-            "color": "#00FF00",
-            "cursor": "ne-resize",
-            "guards": [
-                {
-                    "flagTrue": "placed_empty_whisky"
-                },
-                {
-                    "flagTrue": "placed_banana"
-                },
-                {
-                    "flagTrue": "placed_full_whisky"
-                },
-                {
-                    "flagTrue": "placed_quarter_potion"
-                },
-                {
-                    "flagTrue": "dud_level_2"
-                },
-                {
-                    "flagTrue": "beam_active"
-                },
-                {
-                    "flagTrue": "seen_comet"
-                }
-            ],
+            "color": "#0000FF",
             "actions": [
                 {
+                    "say": "Policka s obrazkom faze mesiaca 1"
+                },
+                {
+                    "trigger": "empty_whisky",
+                    "takeItem": "empty_whisky",
+                    "setFlag": "placed_empty_whisky"
+                }
+            ]
+        },
+        {
+            "color": "#FF00FF",
+            "actions": [
+                {
+                    "say": "Policka s obrazkom faze mesiaca 2"
+                },
+                {
+                    "trigger": "banana",
+                    "takeItem": "banana",
+                    "setFlag": "placed_banana"
+                }
+            ]
+        },
+        {
+            "color": "#FFFF00",
+            "actions": [
+                {
+                    "say": "Policka s obrazkom faze mesiaca 3"
+                },
+                {
+                    "trigger": "full_whisky_a",
+                    "takeItem": "full_whisky_a",
+                    "setFlag": "placed_full_whisky"
+                },
+                {
+                    "trigger": "full_whisky_b",
+                    "takeItem": "full_whisky_b",
+                    "setFlag": "placed_full_whisky"
+                }
+            ]
+        },
+        {
+            "color": "#00FFFF",
+            "actions": [
+                {
+                    "say": "Policka s obrazkom faze mesiaca 4"
+                },
+                {
+                    "trigger": "quarter_potion",
+                    "takeItem": "quarter_potion",
+                    "setFlag": "placed_quarter_potion"
+                }
+            ]
+        },
+        {
+            "color": "#000000",
+            "actions": [
+                {
+                    "say": "Toto je dud"
+                },
+                {
+                    "trigger": "downberry",
+                    "conditions": {
+                        "hasFlags": "dud_level_1"
+                    },
+                    "unsetFlag": "dud_level_1",
+                    "setFlag": "dud_level_2"
+                },
+                {
+                    "trigger": "downberry",
+                    "conditions": {
+                        "hasFlags": "dud_level_2"
+                    },
+                    "unsetFlag": "dud_level_2",
+                    "setFlag": "dud_level_3"
+                },
+                {
+                    "trigger": "downberry",
+                    "conditions": {
+                        "hasFlags": "dud_level_3"
+                    },
+                    "unsetFlag": "dud_level_3",
+                    "setFlag": "dud_level_4"
+                },
+                {
+                    "trigger": "upberry",
+                    "conditions": {
+                        "hasFlags": "dud_level_4"
+                    },
+                    "unsetFlag": "dud_level_4",
+                    "setFlag": "dud_level_3"
+                },
+                {
+                    "trigger": "upberry",
+                    "conditions": {
+                        "hasFlags": "dud_level_3"
+                    },
+                    "unsetFlag": "dud_level_3",
+                    "setFlag": "dud_level_2"
+                },
+                {
+                    "trigger": "upberry",
+                    "conditions": {
+                        "hasFlags": "dud_level_2"
+                    },
+                    "unsetFlag": "dud_level_2",
+                    "setFlag": "dud_level_1"
+                },
+                {
+                    "trigger": "zapberry",
+                    "flipFlag": "beam_active"
+                }
+            ]
+        },
+        {
+            "color": "#00FF00",
+            "cursor": "ne-resize",
+            "actions": [
+                {
+                    "conditions": {
+                        "hasFlags": "placed_empty_whisky,placed_banana,placed_full_whisky,placed_quarter_potion,dud_level_2,beam_active,seen_comet"
+                    },
                     "goto": "a2_observatory_exterior"
-                }
-            ]
-        },
-        {
-            "color": "#00FF00",
-            "cursor": "ne-resize",
-            "guards": [
-                {
-                    "flagTrue": "placed_empty_whisky"
                 },
                 {
-                    "flagTrue": "placed_banana"
-                },
-                {
-                    "flagTrue": "placed_full_whisky"
-                },
-                {
-                    "flagTrue": "placed_quarter_potion"
-                },
-                {
-                    "flagTrue": "dud_level_2"
-                },
-                {
-                    "flagTrue": "beam_active"
-                }
-            ],
-            "actions": [
-                {
+                    "conditions": {
+                        "hasFlags": "placed_empty_whisky,placed_banana,placed_full_whisky,placed_quarter_potion,dud_level_2,beam_active",
+                        "hasFlagsNot": "seen_comet"
+                    },
                     "say": "Mozno som sa nepozrel cez teleskop poriadne"
+                },
+                {
+                    "conditions": {
+                        "hasFlagsNot": "placed_empty_whisky,placed_banana,placed_full_whisky,placed_quarter_potion,dud_level_2,beam_active"
+                    },
+                    "say": "Dvere sú zamknuté"
                 }
             ]
+        }
+    ],
+    "overlays": [
+        {
+            "image": "a1_observatory_right/placed_empty_whisky.png",
+            "conditions": {
+                "hasFlags": "placed_empty_whisky"
+            }
         },
         {
-            "color": "#00FF00",
-            "cursor": "ne-resize",
-            "actions": [
-                {
-                    "say": "Dvere su zamknute"
-                }
-            ]
+            "image": "a1_observatory_right/placed_banana.png",
+            "conditions": {
+                "hasFlags": "placed_banana"
+            }
         },
         {
-            "color": "#0000FF",
-            "guards": [
-                {
-                    "flagFalse": "placed_empty_whisky"
-                }
-            ],
-            "actions": [
-                {
-                    "say": "Policka s obrazkom faze mesiaca"
-                }
-            ]
+            "image": "a1_observatory_right/placed_full_whisky.png",
+            "conditions": {
+                "hasFlags": "placed_full_whisky"
+            }
         },
         {
-            "color": "#0000FF",
-            "item": "empty_whisky",
-            "guards": [
-                {
-                    "flagFalse": "placed_empty_whisky"
-                }
-            ],
-            "actions": [
-                {
-                    "setFlag": "placed_empty_whisky",
-                    "takeItem": "empty_whisky"
-                }
-            ]
+            "image": "a1_observatory_right/placed_quarter_potion.png",
+            "conditions": {
+                "hasFlags": "placed_quarter_potion"
+            }
+        },
+
+        {
+            "image": "a1_observatory_right/dud4.png",
+            "conditions": {
+                "hasFlags": "dud_level_4"
+            }
         },
         {
-            "color": "#FF00FF",
-            "guards": [
-                {
-                    "flagFalse": "placed_banana"
-                }
-            ],
-            "actions": [
-                {
-                    "say": "Policka s obrazkom faze mesiaca"
-                }
-            ]
+            "image": "a1_observatory_right/dud3.png",
+            "conditions": {
+                "hasFlags": "dud_level_3"
+            }
         },
         {
-            "color": "#FF00FF",
-            "item": "banana",
-            "guards": [
-                {
-                    "flagFalse": "placed_banana"
-                }
-            ],
-            "actions": [
-                {
-                    "setFlag": "placed_banana",
-                    "takeItem": "banana"
-                }
-            ]
+            "image": "a1_observatory_right/dud2.png",
+            "conditions": {
+                "hasFlags": "dud_level_2"
+            }
         },
         {
-            "color": "#FFFF00",
-            "guards": [
-                {
-                    "flagFalse": "placed_full_whisky"
-                }
-            ],
-            "actions": [
-                {
-                    "say": "Policka s obrazkom faze mesiaca"
-                }
-            ]
+            "image": "a1_observatory_right/dud1.png",
+            "conditions": {
+                "hasFlags": "dud_level_1"
+            }
+        },
+
+        {
+            "image": "a1_observatory_right/beam4.png",
+            "conditions": {
+                "hasFlags": "dud_level_4,beam_active"
+            }
         },
         {
-            "color": "#FFFF00",
-            "item": "full_whisky_a",
-            "guards": [
-                {
-                    "flagFalse": "placed_full_whisky"
-                }
-            ],
-            "actions": [
-                {
-                    "setFlag": "placed_full_whisky",
-                    "takeItem": "full_whisky_a"
-                }
-            ]
+            "image": "a1_observatory_right/beam3.png",
+            "conditions": {
+                "hasFlags": "dud_level_3,beam_active"
+            }
         },
         {
-            "color": "#FFFF00",
-            "item": "full_whisky_b",
-            "guards": [
-                {
-                    "flagFalse": "placed_full_whisky"
-                }
-            ],
-            "actions": [
-                {
-                    "setFlag": "placed_full_whisky",
-                    "takeItem": "full_whisky_b"
-                }
-            ]
+            "image": "a1_observatory_right/beam2.png",
+            "conditions": {
+                "hasFlags": "dud_level_2,beam_active"
+            }
         },
         {
-            "color": "#00FFFF",
-            "guards": [
-                {
-                    "flagFalse": "placed_quarter_potion"
-                }
-            ],
-            "actions": [
-                {
-                    "say": "Policka s obrazkom faze mesiaca"
-                }
-            ]
-        },
-        {
-            "color": "#00FFFF",
-            "item": "quarter_potion",
-            "guards": [
-                {
-                    "flagFalse": "placed_quarter_potion"
-                }
-            ],
-            "actions": [
-                {
-                    "setFlag": "placed_quarter_potion",
-                    "takeItem": "quarter_potion"
-                }
-            ]
+            "image": "a1_observatory_right/beam1.png",
+            "conditions": {
+                "hasFlags": "dud_level_1,beam_active"
+            }
         }
     ]
 }

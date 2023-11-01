@@ -5,7 +5,7 @@ const gameState = reactive({
   visitedRooms: [],
   items: [],
   itemsTaken: [],
-  flags: [],
+  flags: ['dud_level_3'], // TODO: move this to content
   console: [],
 });
 

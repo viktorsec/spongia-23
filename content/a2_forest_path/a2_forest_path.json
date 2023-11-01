@@ -1,0 +1,25 @@
+{
+    "id": "a2_forest_path",
+    "background": "a2_forest_path/background.png",
+    "mask": "a2_forest_path/zones.png",
+    "zones": [
+        {
+            "color": "#FF0000",
+            "cursor": "s-resize",
+            "actions": [
+                {
+                    "goto": "a2_town"
+                }
+            ]
+        },
+        {
+            "color": "#00FF00",
+            "cursor": "n-resize",
+            "actions": [
+                {
+                    "goto": "a2_observatory_exterior"
+                }
+            ]
+        }
+    ]
+}

@@ -7,6 +7,7 @@ import a1_telescope_comet from '../../content/a1_telescope_comet/a1_telescope_co
 import a1_telescope_empty from '../../content/a1_telescope_empty/a1_telescope_empty.json';
 import a1_telescope_moon from '../../content/a1_telescope_moon/a1_telescope_moon.json';
 import a1_telescope_planet from '../../content/a1_telescope_planet/a1_telescope_planet.json';
+import a2_forest_path from '../../content/a2_forest_path/a2_forest_path.json';
 import a2_observatory_exterior from '../../content/a2_observatory_exterior/a2_observatory_exterior.json';
 
 const rooms = [
@@ -19,6 +20,7 @@ const rooms = [
   a1_telescope_empty,
   a1_telescope_moon,
   a1_telescope_planet,
+  a2_forest_path,
   a2_observatory_exterior,
 ];
 

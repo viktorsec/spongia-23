@@ -17,7 +17,7 @@
             "cursor": "s-resize",
             "actions": [
                 {
-                    "goto": "a2_todo_next_room"
+                    "goto": "a2_forest_path"
                 }
             ]
         }

@@ -326,6 +326,7 @@
     "zones": [
         {
             "color": "#FF0000",
+            "cursor": "w-resize",
             "actions": [
                 {
                     "goto": "a1_observatory_middle"
@@ -334,6 +335,7 @@
         },
         {
             "color": "#00FF00",
+            "cursor": "ne-resize",
             "guards": [
                 {
                     "flagTrue": "placed_empty_whisky"
@@ -365,6 +367,7 @@
         },
         {
             "color": "#00FF00",
+            "cursor": "ne-resize",
             "guards": [
                 {
                     "flagTrue": "placed_empty_whisky"
@@ -393,6 +396,7 @@
         },
         {
             "color": "#00FF00",
+            "cursor": "ne-resize",
             "actions": [
                 {
                     "say": "Dvere su zamknute"

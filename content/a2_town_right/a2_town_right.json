@@ -1,0 +1,61 @@
+{
+    "id": "a2_town_right",
+    "background": "a2_town_right/background.png",
+    "mask": "a2_town_right/zones.png",
+    "zones": [
+        {
+            "color": "#FF0000",
+            "cursor": "s-resize",
+            "actions": [
+                {
+                    "goto": "a2_forest_path"
+                }
+            ]
+        },
+        {
+            "color": "#00FF00",
+            "cursor": "w-resize",
+            "actions": [
+                {
+                    "goto": "a2_town_left"
+                }
+            ]
+        },
+        {
+            "color": "#0000FF",
+            "cursor": "n-resize",
+            "actions": [
+                {
+                    "say": "TODO cesta za mestom"
+                }
+            ]
+        },
+        {
+            "color": "#FFFF00",
+            "cursor": "se-resize",
+            "actions": [
+                {
+                    "say": "Je zamknute."
+                }
+            ]
+        },
+        {
+            "color": "#FF00FF",
+            "cursor": "se-resize",
+            "actions": [
+                {
+                    "say": "Je zamknute."
+                }
+            ]
+        },
+        {
+            "color": "#00FFFF",
+            "cursor": "se-resize",
+            "actions": [
+                {
+                    "say": "Je zamknute."
+                }
+            ]
+        }
+    ]
+}

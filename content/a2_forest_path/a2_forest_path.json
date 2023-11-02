@@ -8,7 +8,7 @@
             "cursor": "s-resize",
             "actions": [
                 {
-                    "goto": "a2_town"
+                    "goto": "a2_observatory_exterior"
                 }
             ]
         },
@@ -17,7 +17,7 @@
             "cursor": "n-resize",
             "actions": [
                 {
-                    "goto": "a2_observatory_exterior"
+                    "goto": "a2_town_right"
                 }
             ]
         }

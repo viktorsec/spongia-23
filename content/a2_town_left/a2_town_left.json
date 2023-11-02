@@ -1,0 +1,52 @@
+{
+    "id": "a2_town_left",
+    "background": "a2_town_left/background.png",
+    "mask": "a2_town_left/zones.png",
+    "zones": [
+        {
+            "color": "#FF0000",
+            "cursor": "s-resize",
+            "actions": [
+                {
+                    "goto": "a2_town_right"
+                }
+            ]
+        },
+        {
+            "color": "#00FF00",
+            "cursor": "se-resize",
+            "actions": [
+                {
+                    "say": "Je zamknute."
+                }
+            ]
+        },
+        {
+            "color": "#0000FF",
+            "cursor": "se-resize",
+            "actions": [
+                {
+                    "say": "Je zamknute."
+                }
+            ]
+        },
+        {
+            "color": "#FFFF00",
+            "cursor": "se-resize",
+            "actions": [
+                {
+                    "say": "Je zamknute."
+                }
+            ]
+        },
+        {
+            "color": "#00FFFF",
+            "cursor": "se-resize",
+            "actions": [
+                {
+                    "say": "Je zamknute."
+                }
+            ]
+        }
+    ]
+}

@@ -9,6 +9,8 @@ import a1_telescope_moon from '../../content/a1_telescope_moon/a1_telescope_moon
 import a1_telescope_planet from '../../content/a1_telescope_planet/a1_telescope_planet.json';
 import a2_forest_path from '../../content/a2_forest_path/a2_forest_path.json';
 import a2_observatory_exterior from '../../content/a2_observatory_exterior/a2_observatory_exterior.json';
+import a2_town_left from '../../content/a2_town_left/a2_town_left.json';
+import a2_town_right from '../../content/a2_town_right/a2_town_right.json';
 
 const rooms = [
   a1_observatory_kitchen,
@@ -22,6 +24,8 @@ const rooms = [
   a1_telescope_planet,
   a2_forest_path,
   a2_observatory_exterior,
+  a2_town_left,
+  a2_town_right,
 ];
 
 export default rooms;

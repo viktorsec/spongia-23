@@ -53,7 +53,7 @@
             "cursor": "se-resize",
             "actions": [
                 {
-                    "say": "Je zamknute."
+                    "goto": "a2_weird_guy"
                 }
             ]
         }

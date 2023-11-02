@@ -11,6 +11,7 @@ import a2_forest_path from '../../content/a2_forest_path/a2_forest_path.json';
 import a2_observatory_exterior from '../../content/a2_observatory_exterior/a2_observatory_exterior.json';
 import a2_town_left from '../../content/a2_town_left/a2_town_left.json';
 import a2_town_right from '../../content/a2_town_right/a2_town_right.json';
+import a2_weird_guy from '../../content/a2_weird_guy/a2_weird_guy.json';
 
 const rooms = [
   a1_observatory_kitchen,
@@ -26,6 +27,7 @@ const rooms = [
   a2_observatory_exterior,
   a2_town_left,
   a2_town_right,
+  a2_weird_guy,
 ];
 
 export default rooms;

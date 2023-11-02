@@ -1,0 +1,90 @@
+{
+    "id": "a2_weird_guy",
+    "background": "a2_weird_guy/background.png",
+    "mask": "a2_weird_guy/zones.png",
+    "zones": [
+        {
+            "color": "#FF0000",
+            "cursor": "s-resize",
+            "actions": [
+                {
+                    "goto": "a2_town_right"
+                }
+            ]
+        },
+        {
+            "color": "#00FF00",
+            "cursor": "zoom-in",
+            "actions": [
+                {
+                    "say": "TODO zoom na hint"
+                }
+            ]
+        },
+        {
+            "color": "#00FF80",
+            "cursor": "help",
+            "actions": [
+                {
+                    "say": "TODO nieco s hodinami"
+                }
+            ]
+        },
+        {
+            "color": "#0000FF",
+            "actions": [
+                {
+                    "say": "TODO weird guy"
+                }
+            ]
+        },
+        {
+            "color": "#FFFF00",
+            "actions": [
+                {
+                    "say": "TODO socha 1"
+                }
+            ]
+        },
+        {
+            "color": "#00FFFF",
+            "actions": [
+                {
+                    "say": "TODO socha 2"
+                }
+            ]
+        },
+        {
+            "color": "#FF00FF",
+            "actions": [
+                {
+                    "say": "TODO socha 3"
+                }
+            ]
+        },
+        {
+            "color": "#FF8000",
+            "actions": [
+                {
+                    "say": "TODO socha 4"
+                }
+            ]
+        },
+        {
+            "color": "#FF0080",
+            "actions": [
+                {
+                    "say": "TODO socha 5"
+                }
+            ]
+        },
+        {
+            "color": "#8000FF",
+            "actions": [
+                {
+                    "say": "TODO socha 6"
+                }
+            ]
+        }
+    ]
+}

@@ -1,47 +1,51 @@
 <template>
-  <div class="viewport-wrapper">
-    <div
-      class="viewport"
-      @mousemove="moveHandler"
-      @click="clickHandler"
-      :style="{
-        cursor: activeZone?.cursor,
-      }"
-    >
-      <img
-        :src="loadImage(room.background)"
-        class="background"
-      />
-      <div v-if="overlaysDisplayed">
-        <img
-          v-for="overlay in overlaysDisplayed"
-          :key="overlay.image"
-          :src="loadImage(overlay.image)"
-          class="object"
-        />
-      </div>
-      <div v-if="itemsDisplayed">
-        <img
-          v-for="item in itemsDisplayed"
-          :key="item.id"
-          :src="loadImage(item.image)"
-          class="overlay"
-          :data-label="item.id"
-        />
-      </div>
-      <img
-        :src="loadImage(room.mask)"
-        class="mask"
-        ref="maskElement"
+  <div>
+    <div class="viewport-wrapper">
+      <div
+        class="viewport"
+        @mousemove="moveHandler"
+        @mouseleave="leaveHandler"
+        @click="clickHandler"
         :style="{
-          opacity: maskVisible ? 0.8 : 0,
+          cursor: activeZone?.cursor,
         }"
-      />
-    </div>
-    <div>
-      <p>Hovering zone: {{ activeZone }}</p>
-      <p>Hovering object: {{ activeItem }}</p>
-      <p>Active item: {{ holdingItem }}</p>
+      >
+        <img
+          :src="loadImage(room.background)"
+          class="background"
+        />
+        <img
+          :src="loadImage(room.mask)"
+          class="mask"
+          ref="maskElement"
+          :style="{
+            opacity: clientState.maskVisible ? 0.8 : 0,
+          }"
+        />
+        <div v-if="overlaysDisplayed">
+          <img
+            v-for="overlay in overlaysDisplayed"
+            :key="overlay.image"
+            :src="loadImage(overlay.image)"
+            class="object"
+          />
+        </div>
+        <div v-if="itemsDisplayed">
+          <img
+            v-for="item in itemsDisplayed"
+            :key="item.id"
+            :src="loadImage(item.image)"
+            class="overlay"
+            :data-label="item.id"
+          />
+        </div>
+      </div>
+      <div class="debug" v-if="clientState.debugVisible">
+        <p>Hovering zone: {{ activeZone?.color }}</p>
+        <p>Hovering item: {{ activeItem?.id }}</p>
+        <p>Holding item: {{ holdingItem }}</p>
+        <p>Flags: {{ gameState.flags }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -49,10 +53,10 @@
 <script setup>
 import { ref, toRaw, watch, computed } from 'vue';
 import gameState from '@/store/gameState';
+import clientState from '@/store/clientState';
 
 const props = defineProps({
   room: Object,
-  maskVisible: Boolean,
   holdingItem: String,
 });
 
@@ -119,6 +123,11 @@ const moveHandler = (event) => {
   const y = event.layerY;
 
   getHovering(x, y);
+}
+
+const leaveHandler = () => {
+  activeItem.value = null;
+  activeZone.value = null;
 }
 
 const selectAction = (actions, trigger = null) => {
@@ -267,12 +276,23 @@ const overlaysDisplayed = computed(() => {
 
 <style scoped>
 .viewport-wrapper {
-  width: 800px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 .viewport {
-  position: relative;
+  flex: 1;
+  /* TODO optimize */
+  max-width: min(100%, calc(calc(100vh - 15rem) * 1.46));
+  max-height: calc(100vh - 15rem);
   aspect-ratio: 3 / 2.05;
   outline: 1px solid rgba(255, 255, 255, 0.15);
+  position: relative;
+  @media screen and (min-width: 768px) {
+    max-width: min(100%, calc(calc(100vh - 17rem) * 1.46));
+  }
 }
 
 .viewport .background,
@@ -286,5 +306,16 @@ const overlaysDisplayed = computed(() => {
 
 .viewport .mask {
   user-select: none;
+}
+
+.debug {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: #333;
+  font-family: monospace;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
 }
 </style>

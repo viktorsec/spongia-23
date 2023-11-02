@@ -1,36 +1,22 @@
 <template>
   <div class="interface">
     <ViewPort
+      class="ui-viewport"
       :room="activeRoom"
       :maskVisible="clientState.maskVisible"
       :holdingItem="clientState.holdingItem"
       @click="holdingItemSet(null)"
     />
-    <div class="items">
-      <button
-        v-for="item in gameState.items"
-        :key="item"
-        @click="holdingItemSet(item)"
-        :style="{
-          backgroundColor: clientState.holdingItem === item ? 'pink' : 'white',
-        }"
-      >
-        {{ item }}
-      </button>
-      {{ gameState.flags }}
-    </div>
-    <div
-      class="console"
-      @keydown="handleKeyDown"
-    >
-      <ul>
-        <li
-          v-for="(line, i) in gameState.console"
-          :key="i"
-          v-text="line"
-        />
-      </ul>
-    </div>
+    <ItemsPanel
+      class="ui-items"
+      :items="gameState.items"
+      :holdingItem="clientState.holdingItem"
+      @holding-item-set="holdingItemSet($event)"
+    />
+    <ConsolePanel
+      class="ui-console"
+      :lines="gameState.console"
+    />
   </div>
 </template>
 
@@ -41,6 +27,8 @@ import gameState from '@/store/gameState';
 import rooms from '@/rooms';
 
 import ViewPort from '@/components/ViewPort.vue'
+import ItemsPanel from '@/components/ItemsPanel.vue'
+import ConsolePanel from '@/components/ConsolePanel.vue'
 
 const activeRoom = computed(() => {
   const match = rooms.find(room => room.id === gameState.currentRoom);
@@ -48,12 +36,19 @@ const activeRoom = computed(() => {
 });
 
 const holdingItemSet = (item) => {
-  clientState.holdingItem = item;
+  if (clientState.holdingItem === item) {
+    clientState.holdingItem = null;
+  } else {
+    clientState.holdingItem = item;
+  }
 }
 
 const handleKeyDown = (event) => {
   if (event.key === 'm') {
     clientState.maskVisible = !clientState.maskVisible;
+  }
+  if (event.key === 'd') {
+    clientState.debugVisible = !clientState.debugVisible;
   }
 };
 
@@ -69,14 +64,24 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .interface {
-  padding: 3rem;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  @media screen and (min-width: 768px) {
+    padding-top: 2rem;
+    flex: 0 1 calc(100vh - 17rem);
+  }
 }
 
-.console ul {
-  display: flex;
-  flex-direction: column-reverse;
+.ui-viewport {
+  flex: 0 1 calc(100vh - 15rem);
 }
+
+.ui-items {
+}
+
+.ui-console {
+  height: 10rem;
+}
+
 </style>

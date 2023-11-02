@@ -29,6 +29,7 @@
             :key="overlay.image"
             :src="loadImage(overlay.image)"
             class="object"
+            draggable="false"
           />
         </div>
         <div v-if="itemsDisplayed">

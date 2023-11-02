@@ -17,6 +17,7 @@
         <img
           :src="loadImage(room.mask)"
           class="mask"
+          draggable="false"
           ref="maskElement"
           :style="{
             opacity: clientState.maskVisible ? 0.8 : 0,

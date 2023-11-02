@@ -1,0 +1,31 @@
+{
+    "id": "a2_idols",
+    "background": "a2_idols/background.png",
+    "mask": "a2_idols/zones_rgb.png",
+    "zones": [
+        {
+            "color": "#FF0000",
+            "actions": [
+                {
+                    "say": "TODO ja som truth"
+                }
+            ]
+        },
+        {
+            "color": "#00FF00",
+            "actions": [
+                {
+                    "say": "TODO ja som lie"
+                }
+            ]
+        },
+        {
+            "color": "#0000FF",
+            "actions": [
+                {
+                    "say": "TODO ja som random"
+                }
+            ]
+        }
+    ]
+}

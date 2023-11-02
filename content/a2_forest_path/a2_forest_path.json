@@ -20,6 +20,16 @@
                     "goto": "a2_town_right"
                 }
             ]
+        },
+        {
+            "color": "#0000FF",
+            "cursor": "e-resize",
+            "actions": [
+                {
+                    "goto": "a2_idols_guardian",
+                    "say": "TODO schovane kym nie je flag"
+                }
+            ]
         }
     ]
 }

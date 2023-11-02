@@ -1,0 +1,33 @@
+{
+    "id": "a2_idols_guardian",
+    "background": "a2_idols_guardian/background.png",
+    "mask": "a2_idols_guardian/zones.png",
+    "zones": [
+        {
+            "color": "#FF0000",
+            "cursor": "w-resize",
+            "actions": [
+                {
+                    "goto": "a2_forest_path"
+                }
+            ]
+        },
+        {
+            "color": "#00FF00",
+            "cursor": "e-resize",
+            "actions": [
+                {
+                    "goto": "a2_idols"
+                }
+            ]
+        },
+        {
+            "color": "#0000FF",
+            "actions": [
+                {
+                    "say": "TODO ako funguju idols"
+                }
+            ]
+        }
+    ]
+}

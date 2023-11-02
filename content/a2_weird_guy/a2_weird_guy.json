@@ -17,7 +17,8 @@
             "cursor": "zoom-in",
             "actions": [
                 {
-                    "say": "TODO zoom na hint"
+                    "say": "To som vyrobil s kamaratmi.",
+                    "goto": "a2_weird_guy_art"
                 }
             ]
         },
@@ -34,7 +35,7 @@
             "color": "#0000FF",
             "actions": [
                 {
-                    "say": "TODO weird guy"
+                    "say": "Ahoj, vitaj u nas."
                 }
             ]
         },

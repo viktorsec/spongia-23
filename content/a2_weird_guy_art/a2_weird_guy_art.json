@@ -1,0 +1,17 @@
+{
+    "id": "a2_weird_guy_art",
+    "background": "a2_weird_guy_art/background.png",
+    "mask": "a2_weird_guy_art/zones.png",
+    "zones": [
+        {
+            "color": "#FF0000",
+            "cursor": "zoom-out",
+            "actions": [
+                {
+                    "say": "Paci sa ti nase umenie?",
+                    "goto": "a2_weird_guy"
+                }
+            ]
+        }
+    ]
+}

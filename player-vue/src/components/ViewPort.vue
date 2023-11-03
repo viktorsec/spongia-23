@@ -50,8 +50,13 @@
         >
           {{ activeTooltip }}
         </div>
+        <div
+          class="loading-overlay"
+          :class="{ hidden: imagesLoaded }"
+        />
       </div>
       <div class="debug" v-if="clientState.debugVisible">
+        <p>Images loaded: {{ imagesLoaded }}</p>
         <p>Hovering zone: {{ activeZone?.color }}</p>
         <p>Hovering item: {{ activeItem?.id }}</p>
         <p>Holding item: {{ holdingItem }}</p>
@@ -64,7 +69,7 @@
 </template>
 
 <script setup>
-import { ref, toRaw, watch, computed } from 'vue';
+import { ref, toRaw, watch, computed, nextTick } from 'vue';
 import gameState from '@/store/gameState';
 import clientState from '@/store/clientState';
 
@@ -73,6 +78,7 @@ const props = defineProps({
   holdingItem: String,
 });
 
+const imagesLoaded = ref(false);
 const maskElement = ref(null);
 const tooltipElement = ref(null);
 const activeZone = ref(null);
@@ -248,6 +254,7 @@ const clickHandler = () => {
 }
 
 const processRoomLoad = () => {
+  imagesLoaded.value = false;
   actionCount.value = 0;
   if (props.room.enterAction) {
     handleAction(props.room.enterAction);
@@ -260,6 +267,29 @@ const processRoomLoad = () => {
     return loadImage(props.room.mask)
   }
   maskSource.value = loadMask();
+
+  nextTick(() => {
+    const images = document.querySelectorAll('.viewport img');
+    console.log(images);
+
+    const imageLoader = Array.from(images).map((image) => {
+      return new Promise((resolve, reject) => {
+        const loader = new Image();
+        loader.src = image.src;
+        loader.onload = resolve;
+        loader.onerror = reject;
+      });
+    });
+
+    Promise.all(imageLoader).then(() => { 
+      imagesLoaded.value = true;
+    }).catch(error => {
+      console.error('Some image(s) failed loading!');
+      console.error(error.message)
+    });
+  });
+  setTimeout(() => {
+  }, 200);
 }
 
 watch(() => props.room, processRoomLoad);
@@ -346,6 +376,19 @@ processRoomLoad();
 
 .viewport .mask {
   user-select: none;
+}
+
+.loading-overlay {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background-color: #000;
+  transition: opacity .2s;
+  &.hidden {
+    opacity: 0;
+  }
 }
 
 .debug {

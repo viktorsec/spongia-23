@@ -1,35 +1,61 @@
 <template>
   <div class="items-panel">
-    <TransitionGroup
-    >
-      <button
-        v-for="item in items"
+    <TransitionGroup>
+      <Vue3Popper
+        v-for="item in itemsRich"
         :key="item"
-        @click="$emit('holding-item-set', item)"
-        class="item-single"
-        :class="{
-          'active' : holdingItem === item,
-        }"
+        hover
+        placement="bottom"
       >
-        <img
-          :src="loadItemImage(item)"
-          alt=""
+        <button
+          @click="$emit('holding-item-set', item.id)"
+          class="item-single"
+          :class="{
+            'active' : holdingItem === item.id,
+          }"
         >
-      </button>
+            <img
+              :src="loadItemImage(item.image)"
+              alt=""
+            >
+        </button>
+        <template #content>
+          <div class="item-tooltip">
+            <h3>{{ item.name }}</h3>
+            <p>{{ item.description }}</p>
+          </div>
+        </template>
+      </Vue3Popper>
     </TransitionGroup>
   </div>
 </template>
 
 <script setup>
-defineProps({
+import { computed } from 'vue';
+import itemsDB from '@/content/items.json';
+import Vue3Popper from 'vue3-popper';
+
+const props = defineProps({
   items: Array,
   holdingItem: String,
 });
 
-const loadItemImage = (key) => {
-  const url = new URL(`/src/content/items/${key}.png`, import.meta.url).href;
+
+const loadItemImage = (path) => {
+  const url = new URL(`/src/content/items/${path}`, import.meta.url).href;
   return url;
 }
+
+const itemsRich = computed(() => {
+  const getItem = (id) => {
+    return itemsDB.find((item) => item.id === id) || {
+      id,
+      image: `${id}.png`,
+      name: id,
+    };
+  };
+  return props.items.map((id) => getItem(id));
+});
 
 </script>
 
@@ -70,5 +96,18 @@ const loadItemImage = (key) => {
 .v-enter-from,
 .v-leave-to {
   transform: scale(0);
+}
+</style>
+
+<style>
+.item-tooltip {
+  & h3 {
+    margin: 0;
+    line-height: 1;
+    font-size: 1.25rem;
+  }
+  & p {
+    font-size: 0.9rem;
+  }
 }
 </style>

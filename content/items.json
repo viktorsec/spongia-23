@@ -1,0 +1,51 @@
+[
+  {
+    "id": "important_key",
+    "image": "important_key.png",
+    "name": "Kľúčik",
+    "description": "Veľmi dôležito vyzerajúci kľúč"
+  },
+
+  {
+    "id": "banana",
+    "image": "banana.png",
+    "name": "Banán",
+    "description": "Banán je žlté podlhovasté ovocie"
+  },
+  {
+    "id": "quarter_potion",
+    "image": "quarter_potion.png",
+    "name": "Quarter potion"
+  },
+  {
+    "id": "full_whisky_a",
+    "image": "full_whisky.png",
+    "name": "Jablkový mušt"
+  },
+  {
+    "id": "full_whisky_b",
+    "image": "full_whisky.png",
+    "name": "Jablčný mušt"
+  },
+  {
+    "id": "empty_whisky",
+    "image": "empty_whisky.png",
+    "name": "Jablčný fľaša"
+  },
+
+  {
+    "id": "downberry",
+    "image": "downberry.png",
+    "name": "Prečudesná malvica"
+  },
+  {
+    "id": "upberry",
+    "image": "upberry.png",
+    "name": "Prečudesná malvica"
+  },
+  {
+    "id": "zapberry",
+    "image": "zapberry.png",
+    "name": "Prečudesná malvica"
+  }
+]

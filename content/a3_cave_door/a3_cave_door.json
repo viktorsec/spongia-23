@@ -3,9 +3,8 @@
     "background": "a3_cave_door/background.png",
     "mask": "a3_cave_door/zones.png",
     "enterAction": {
-        "setFlag": "door_state0",
-        "unsetFlag": "door_state1,door_state2",
-        "say": "test"
+        "setFlag": "cave_door_state0",
+        "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
     },
     "zones": [
         {
@@ -13,7 +12,6 @@
             "cursor": "zoom-out",
             "actions": [
                 {
-                    "say": "TODO dalej sa neda",
                     "goto": "a3_cave_entrance"
                 }
             ]
@@ -22,8 +20,441 @@
             "color": "#FFFF00",
             "actions": [
                 {
-                    "say": "TODO puzzlfdsfe",
+                    "conditions": {
+                        "hasFlags": "cave_door_unlocked"
+                    },
                     "goto": "a3_cave_inside"
+                },
+                {
+                    "conditions": {
+                        "hasFlagsNot": "cave_door_unlocked"
+                    },
+                    "say": "Zamknute."
+                }
+            ]
+        },
+
+        {
+            "color": "#0000FF",
+            "actions": [
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state0"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state1"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state2"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state3"
+                    },
+                    "say": "Piiip",
+                    "setFlag": "cave_door_state4",
+                    "unsetFlag": "cave_door_state3"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state4"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state5"
+                    },
+                    "say": "Piiip",
+                    "setFlag": "cave_door_state6",
+                    "unsetFlag": "cave_door_state5"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state6"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state7"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state8"
+                    },
+                    "say": "Piiip",
+                    "setFlag": "cave_door_state9",
+                    "unsetFlag": "cave_door_state8"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state9"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                }
+            ]
+        },
+        {
+            "color": "#00FF00",
+            "actions": [
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state0"
+                    },
+                    "say": "Piiip",
+                    "setFlag": "cave_door_state1",
+                    "unsetFlag": "cave_door_state0"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state1"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state2"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state3"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state4"
+                    },
+                    "say": "Piiip",
+                    "setFlag": "cave_door_state5",
+                    "unsetFlag": "cave_door_state4"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state5"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state6"
+                    },
+                    "say": "Piiip",
+                    "setFlag": "cave_door_state7",
+                    "unsetFlag": "cave_door_state6"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state7"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state8"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state9"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                }
+            ]
+        },
+        {
+            "color": "#00FFFF",
+            "actions": [
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state0"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state1"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state2"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state3"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state4"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state5"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state6"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state7"
+                    },
+                    "say": "Piiip",
+                    "setFlag": "cave_door_state8",
+                    "unsetFlag": "cave_door_state7"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state8"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state9"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                }
+            ]
+        },
+        {
+            "color": "#FF0000",
+            "actions": [
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state0"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state1"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state2"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state3"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state4"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state5"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state6"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state7"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state8"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state9"
+                    },
+                    "say": "Klik!",
+                    "setFlag": "cave_door_unlocked"
+                }
+            ]
+        },
+        {
+            "color": "#FF00FF",
+            "actions": [
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state0"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state1"
+                    },
+                    "say": "Piiip",
+                    "setFlag": "cave_door_state2",
+                    "unsetFlag": "cave_door_state1"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state2"
+                    },
+                    "say": "Piiip",
+                    "setFlag": "cave_door_state3",
+                    "unsetFlag": "cave_door_state2"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state3"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state4"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state5"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state6"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state7"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state8"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "cave_door_state9"
+                    },
+                    "say": "BZZZT!",
+                    "setFlag": "cave_door_state0",
+                    "unsetFlag": "cave_door_state1,cave_door_state2,cave_door_state3,cave_door_state4,cave_door_state5,cave_door_state6,cave_door_state7,cave_door_state8,cave_door_state9"
                 }
             ]
         }

@@ -17,6 +17,15 @@
             "cursor": "zoom-in",
             "actions": [
                 {
+                    "conditions": {
+                        "hasFlags": "cave_door_unlocked"
+                    },
+                    "goto": "a3_cave_inside"
+                },
+                {
+                    "conditions": {
+                        "hasFlagsNot": "cave_door_unlocked"
+                    },
                     "goto": "a3_cave_door"
                 }
             ]

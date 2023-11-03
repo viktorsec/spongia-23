@@ -39,6 +39,10 @@
                     "say": "Voda netecie ale dalo by sa sem nieco vyliat."
                 },
                 {
+                    "trigger": "$FALLBACK",
+                    "say": "Čo si šiši, toto sa nedá vyliať."
+                },
+                {
                     "trigger": "full_whisky_a",
                     "conditions": {
                         "hasItem": "full_whisky_b"

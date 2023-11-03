@@ -133,8 +133,11 @@ const leaveHandler = () => {
 }
 
 const selectAction = (actions, trigger = null) => {
+  // TODO: Refactor this
   const matchedActions = trigger
-    ? actions.filter((action) => action.trigger === trigger)
+    ? actions.filter((action) => action.trigger === trigger).length
+      ? actions.filter((action) => action.trigger === trigger)
+      : actions.filter((action) => action.trigger === '$FALLBACK')
     : actions.filter((action) => !action.trigger);
   const eligibleActions = matchedActions.filter((action) => {
     if (action.conditions?.hasItem && !gameState.items.includes(action.conditions.hasItem)) {

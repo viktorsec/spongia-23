@@ -15,7 +15,7 @@
           class="background"
         />
         <img
-          :src="loadImage(room.mask)"
+          :src="maskSource"
           class="mask"
           draggable="false"
           ref="maskElement"
@@ -65,6 +65,7 @@ const props = defineProps({
 const maskElement = ref(null);
 const activeZone = ref(null);
 const activeItem = ref(null);
+const maskSource = ref(null);
 
 const rgbaToHex = (rgba) => {
   function hexByte(x) {
@@ -243,6 +244,14 @@ const processRoomLoad = () => {
   if (props.room.enterAction) {
     handleAction(props.room.enterAction);
   }
+  const loadMask = () => {
+    if (typeof props.room.mask === 'object') {
+      const selectedMask = randomArrayItem(props.room.mask);
+      return loadImage(selectedMask);
+    }
+    return loadImage(props.room.mask)
+  }
+  maskSource.value = loadMask();
 }
 
 watch(() => props.room, processRoomLoad);

@@ -1,7 +1,14 @@
 {
     "id": "a2_idols",
     "background": "a2_idols/background.png",
-    "mask": "a2_idols/zones_rgb.png",
+    "mask": [
+        "a2_idols/zones_bgr.png",
+        "a2_idols/zones_brg.png",
+        "a2_idols/zones_gbr.png",
+        "a2_idols/zones_grb.png",
+        "a2_idols/zones_rbg.png",
+        "a2_idols/zones_rgb.png"
+    ],
     "zones": [
         {
             "color": "#FF0000",

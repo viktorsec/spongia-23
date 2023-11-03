@@ -47,6 +47,15 @@
                     "say": "Je zamknute."
                 }
             ]
+        },
+        {
+            "color": "#FF00FF",
+            "cursor": "e-resize",
+            "actions": [
+                {
+                    "say": "TODO quarry"
+                }
+            ]
         }
     ]
 }

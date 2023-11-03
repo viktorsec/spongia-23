@@ -212,15 +212,19 @@ const handleAction = (action) => {
       const index = gameState.items.indexOf(value);
       gameState.items.splice(index, 1);
     },
-    setFlag(value) {
-      if (!gameState.flags.includes(value)) {
-        gameState.flags.push(value);
+    setFlag(values) {
+      for (const value of values.split(",")) {
+        if (!gameState.flags.includes(value)) {
+          gameState.flags.push(value);
+        }
       }
     },
-    unsetFlag(value) {
-      const index = gameState.flags.indexOf(value);
-      if (index != -1) {
-        gameState.flags.splice(index, 1);
+    unsetFlag(values) {
+      for (const value of values.split(",")) {
+        const index = gameState.flags.indexOf(value);
+        if (index != -1) {
+          gameState.flags.splice(index, 1);
+        }
       }
     },
     flipFlag(value) {

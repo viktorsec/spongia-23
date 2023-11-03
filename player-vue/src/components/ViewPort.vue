@@ -41,6 +41,15 @@
             :data-label="item.id"
           />
         </div>
+        <div
+          ref="tooltipElement"
+          class="tooltip"
+          :class="{
+            hidden: !activeTooltip
+          }"
+        >
+          {{ activeTooltip }}
+        </div>
       </div>
       <div class="debug" v-if="clientState.debugVisible">
         <p>Hovering zone: {{ activeZone?.color }}</p>
@@ -63,6 +72,7 @@ const props = defineProps({
 });
 
 const maskElement = ref(null);
+const tooltipElement = ref(null);
 const activeZone = ref(null);
 const activeItem = ref(null);
 const maskSource = ref(null);
@@ -121,11 +131,19 @@ const getHovering = (x, y) => {
   activeZone.value = zone;
 }
 
+const tooltipFollow = (x, y) => {
+  if (tooltipElement.value) {
+    tooltipElement.value.style.left = `${x + 20}px`;
+    tooltipElement.value.style.top = `${y - 20}px`;
+  }
+}
+
 const moveHandler = (event) => {
   const x = event.layerX;
   const y = event.layerY;
 
   getHovering(x, y);
+  tooltipFollow(x, y);
 }
 
 const leaveHandler = () => {
@@ -285,6 +303,17 @@ const overlaysDisplayed = computed(() => {
   });
 })
 
+const activeTooltip = computed(() => {
+  if (activeItem.value?.tooltip) {
+    return activeItem.value.tooltip;
+  }
+  if (activeZone.value?.tooltip) {
+    return activeZone.value.tooltip;
+  }
+
+  return null;
+});
+
 processRoomLoad();
 
 </script>
@@ -332,5 +361,18 @@ processRoomLoad();
   font-family: monospace;
   font-size: 0.75rem;
   padding: 0.25rem 0.5rem;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 2rem;
+  padding: 0.25rem 0.75rem;
+  opacity: 1;
+  transition: opacity .3s;
+  &.hidden {
+    opacity: 0;
+    transition: none;
+  }
 }
 </style>

@@ -5,6 +5,7 @@
     "items": [
         {
             "id": "important_key",
+            "tooltip": "Dôležitý kľúč",
             "image": "a1_spawn/important_key.png",
             "say": "Toto budem potrebovat!"
         }
@@ -12,6 +13,7 @@
     "zones": [
         {
             "color": "#FF0000",
+            "tooltip": "Veľká rastlina",
             "actions": [
                 {
                     "say": "Velka rastlina"
@@ -20,6 +22,7 @@
         },
         {
             "color": "#00FF00",
+            "tooltip": "Hniezdo",
             "actions": [
                 {
                     "say": "Hniezdo"
@@ -28,6 +31,7 @@
         },
         {
             "color": "#0000FF",
+            "tooltip": "Dvere",
             "cursor": "ne-resize",
             "actions": [
                 {

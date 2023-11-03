@@ -1,0 +1,25 @@
+{
+    "id": "a3_cave_entrance",
+    "background": "a3_cave_entrance/background.png",
+    "mask": "a3_cave_entrance/zones.png",
+    "zones": [
+        {
+            "color": "#FF0000",
+            "cursor": "n-resize",
+            "actions": [
+                {
+                    "goto": "a3_cave_robot"
+                }
+            ]
+        },
+        {
+            "color": "#00FF00",
+            "cursor": "zoom-in",
+            "actions": [
+                {
+                    "goto": "a3_cave_door"
+                }
+            ]
+        }
+    ]
+}

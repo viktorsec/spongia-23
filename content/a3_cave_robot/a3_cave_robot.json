@@ -1,32 +1,32 @@
 {
-    "id": "a2_quarry",
-    "background": "a2_quarry/background.png",
-    "mask": "a2_quarry/zones.png",
+    "id": "a3_cave_robot",
+    "background": "a3_cave_robot/background.png",
+    "mask": "a3_cave_robot/zones.png",
     "zones": [
         {
             "color": "#FF0000",
             "cursor": "s-resize",
             "actions": [
                 {
-                    "goto": "a2_town_left"
+                    "goto": "a2_quarry"
                 }
             ]
         },
         {
             "color": "#00FF00",
-            "cursor": "sw-resize",
             "actions": [
                 {
-                    "goto": "a3_cave_robot"
+                    "say": "BEEP BOOP dalej ta nepustim"
                 }
             ]
         },
         {
             "color": "#0000FF",
-            "cursor": "se-resize",
+            "cursor": "n-resize",
             "actions": [
                 {
-                    "say": "TODO ahoj nemas krompac"
+                    "say": "TODO dalej sa neda",
+                    "goto": "a3_cave_entrance"
                 }
             ]
         }

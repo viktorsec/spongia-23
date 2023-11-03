@@ -16,6 +16,10 @@ import a2_town_right from '../../content/a2_town_right/a2_town_right.json';
 import a2_weird_guy from '../../content/a2_weird_guy/a2_weird_guy.json';
 import a2_weird_guy_art from '../../content/a2_weird_guy_art/a2_weird_guy_art.json';
 import a2_quarry from '../../content/a2_quarry/a2_quarry.json';
+import a3_cave_robot from '../../content/a3_cave_robot/a3_cave_robot.json';
+import a3_cave_entrance from '../../content/a3_cave_entrance/a3_cave_entrance.json';
+import a3_cave_door from '../../content/a3_cave_door/a3_cave_door.json';
+import a3_cave_inside from '../../content/a3_cave_inside/a3_cave_inside.json';
 
 const rooms = [
   a1_observatory_kitchen,
@@ -36,6 +40,10 @@ const rooms = [
   a2_weird_guy_art,
   a2_weird_guy,
   a2_quarry,
+  a3_cave_robot,
+  a3_cave_entrance,
+  a3_cave_door,
+  a3_cave_inside,
 ];
 
 export default rooms;

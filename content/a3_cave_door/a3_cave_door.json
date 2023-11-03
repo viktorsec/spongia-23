@@ -1,0 +1,26 @@
+{
+    "id": "a3_cave_door",
+    "background": "a3_cave_door/background.png",
+    "mask": "a3_cave_door/zones.png",
+    "zones": [
+        {
+            "color": "#FFFFFF",
+            "cursor": "zoom-out",
+            "actions": [
+                {
+                    "say": "TODO dalej sa neda",
+                    "goto": "a3_cave_entrance"
+                }
+            ]
+        },
+        {
+            "color": "#FFFF00",
+            "actions": [
+                {
+                    "say": "TODO puzzle",
+                    "goto": "a3_cave_inside"
+                }
+            ]
+        }
+    ]
+}

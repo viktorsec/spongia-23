@@ -56,6 +56,8 @@
         <p>Hovering item: {{ activeItem?.id }}</p>
         <p>Holding item: {{ holdingItem }}</p>
         <p>Flags: {{ gameState.flags }}</p>
+        <p>Action count: {{ actionCount }}</p>
+        <p>Max action count: {{ props.room.maxActions }}</p>
       </div>
     </div>
   </div>
@@ -76,6 +78,8 @@ const tooltipElement = ref(null);
 const activeZone = ref(null);
 const activeItem = ref(null);
 const maskSource = ref(null);
+
+const actionCount = ref(0);
 
 const rgbaToHex = (rgba) => {
   function hexByte(x) {
@@ -242,6 +246,8 @@ const handleAction = (action) => {
   if(action.takeItem) {
     takeItem(action.takeItem);
   }
+
+  actionCount.value++;
 }
 
 const clickHandler = () => {
@@ -259,6 +265,7 @@ const clickHandler = () => {
 }
 
 const processRoomLoad = () => {
+  actionCount.value = 0;
   if (props.room.enterAction) {
     handleAction(props.room.enterAction);
   }
@@ -273,6 +280,12 @@ const processRoomLoad = () => {
 }
 
 watch(() => props.room, processRoomLoad);
+
+watch(actionCount, (newValue) => {
+  if (props.room.maxActions && props.room.maxActions <= newValue) {
+    handleAction(props.room.leaveAction);
+  }
+})
 
 const itemsDisplayed = computed(() => {
   if (!props.room.items) {

@@ -1,6 +1,11 @@
 {
     "id": "a2_idols",
     "background": "a2_idols/background.png",
+    "maxActions": 3,
+    "leaveAction": {
+        "say": "Čau",
+        "goto": "a2_forest_path"
+    },
     "mask": [
         "a2_idols/zones_bgr.png",
         "a2_idols/zones_brg.png",

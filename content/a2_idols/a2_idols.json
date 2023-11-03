@@ -4,7 +4,7 @@
     "maxActions": 3,
     "leaveAction": {
         "say": "Čau",
-        "goto": "a2_forest_path"
+        "goto": "a2_idols_guardian"
     },
     "mask": [
         "a2_idols/zones_bgr.png",

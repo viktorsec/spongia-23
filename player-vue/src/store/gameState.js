@@ -2,7 +2,7 @@ import { reactive } from 'vue';
 
 const gameState = reactive({
   // currentRoom: 'a1_spawn',
-  currentRoom: 'a2_town_right',
+  currentRoom: 'a3_cave_entrance',
   visitedRooms: [],
   items: [],
   itemsTaken: [],

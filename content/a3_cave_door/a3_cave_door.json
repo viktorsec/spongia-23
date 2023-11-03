@@ -2,6 +2,11 @@
     "id": "a3_cave_door",
     "background": "a3_cave_door/background.png",
     "mask": "a3_cave_door/zones.png",
+    "enterAction": {
+        "setFlag": "door_state0",
+        "unsetFlag": "door_state1,door_state2",
+        "say": "test"
+    },
     "zones": [
         {
             "color": "#FFFFFF",
@@ -17,7 +22,7 @@
             "color": "#FFFF00",
             "actions": [
                 {
-                    "say": "TODO puzzle",
+                    "say": "TODO puzzlfdsfe",
                     "goto": "a3_cave_inside"
                 }
             ]

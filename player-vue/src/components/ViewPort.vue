@@ -219,7 +219,9 @@ const handleAction = (action) => {
     },
     unsetFlag(value) {
       const index = gameState.flags.indexOf(value);
-      gameState.flags.splice(index, 1);
+      if (index != -1) {
+        gameState.flags.splice(index, 1);
+      }
     },
     flipFlag(value) {
       if (gameState.flags.includes(value)) {

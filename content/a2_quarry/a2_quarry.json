@@ -1,0 +1,34 @@
+{
+    "id": "a2_quarry",
+    "background": "a2_quarry/background.png",
+    "mask": "a2_quarry/zones.png",
+    "zones": [
+        {
+            "color": "#FF0000",
+            "cursor": "s-resize",
+            "actions": [
+                {
+                    "goto": "a2_town_left"
+                }
+            ]
+        },
+        {
+            "color": "#00FF00",
+            "cursor": "sw-resize",
+            "actions": [
+                {
+                    "say": "TODO bana"
+                }
+            ]
+        },
+        {
+            "color": "#0000FF",
+            "cursor": "se-resize",
+            "actions": [
+                {
+                    "say": "TODO ahoj nemas krompac"
+                }
+            ]
+        }
+    ]
+}

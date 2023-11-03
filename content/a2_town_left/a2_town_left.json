@@ -53,7 +53,7 @@
             "cursor": "e-resize",
             "actions": [
                 {
-                    "say": "TODO quarry"
+                    "goto": "a2_quarry"
                 }
             ]
         }

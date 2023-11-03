@@ -15,6 +15,7 @@ import a2_town_left from '../../content/a2_town_left/a2_town_left.json';
 import a2_town_right from '../../content/a2_town_right/a2_town_right.json';
 import a2_weird_guy from '../../content/a2_weird_guy/a2_weird_guy.json';
 import a2_weird_guy_art from '../../content/a2_weird_guy_art/a2_weird_guy_art.json';
+import a2_quarry from '../../content/a2_quarry/a2_quarry.json';
 
 const rooms = [
   a1_observatory_kitchen,
@@ -34,6 +35,7 @@ const rooms = [
   a2_town_right,
   a2_weird_guy_art,
   a2_weird_guy,
+  a2_quarry,
 ];
 
 export default rooms;

@@ -194,58 +194,41 @@ const handleAction = (action) => {
   if (!action) {
     return;
   }
-  const say = (value) => {
-    gameState.console.push(value);
-  }
-  const goto = (value) => {
-    gameState.currentRoom = value;
-  }
-  const giveItem = (value) => {
-    gameState.itemsTaken.push(value);
-    gameState.items.push(value);
-  }
-  const takeItem = (value) => {
-    const index = gameState.items.indexOf(value);
-    gameState.items.splice(index, 1);
-  }
-  const setFlag = (value) => {
-    if (!gameState.flags.includes(value)) {
-      gameState.flags.push(value);
-    }
-  }
-  const unsetFlag = (value) => {
-    const index = gameState.flags.indexOf(value);
-    gameState.flags.splice(index, 1);
-  }
-  const flipFlag = (value) => {
-    if (gameState.flags.includes(value)) {
-      unsetFlag(value);
-    } else {
-      setFlag(value);
-    }
-  }
 
-  if(action.say) {
-    say(action.say);
-  }
-  if(action.goto) {
-    goto(action.goto);
-  }
-  if(action.giveItem) {
-    giveItem(action.giveItem);
-  }
-  if(action.setFlag) {
-    setFlag(action.setFlag);
-  }
-  if(action.unsetFlag) {
-    unsetFlag(action.unsetFlag);
-  }
-  if(action.flipFlag) {
-    flipFlag(action.flipFlag);
-  }
-  if(action.takeItem) {
-    takeItem(action.takeItem);
-  }
+  const handlers = {
+    say: (value) => gameState.console.push(value),
+    goto: (value) => gameState.currentRoom = value,
+    giveItem(value) {
+      gameState.itemsTaken.push(value);
+      gameState.items.push(value);
+    },
+    takeItem(value) {
+      const index = gameState.items.indexOf(value);
+      gameState.items.splice(index, 1);
+    },
+    setFlag(value) {
+      if (!gameState.flags.includes(value)) {
+        gameState.flags.push(value);
+      }
+    },
+    unsetFlag(value) {
+      const index = gameState.flags.indexOf(value);
+      gameState.flags.splice(index, 1);
+    },
+    flipFlag(value) {
+      if (gameState.flags.includes(value)) {
+        this.unsetFlag(value);
+      } else {
+        this.setFlag(value);
+      }
+    }
+  };
+
+  Object.keys(handlers).forEach((key) => {
+    if (action[key]) {
+      handlers[key](action[key]);
+    }
+  });
 
   actionCount.value++;
 }

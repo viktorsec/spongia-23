@@ -285,6 +285,7 @@ const overlaysDisplayed = computed(() => {
   });
 })
 
+processRoomLoad();
 
 </script>
 

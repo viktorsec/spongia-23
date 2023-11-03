@@ -50,6 +50,13 @@ const handleKeyDown = (event) => {
   if (event.key === 'd') {
     clientState.debugVisible = !clientState.debugVisible;
   }
+  if (event.key === 'g') {
+    const roomId = prompt('enter room id');
+    if (rooms.find(room => room.id === roomId)) {
+      gameState.currentRoom = roomId;
+    }
+  }
+
 };
 
 onMounted(() => {

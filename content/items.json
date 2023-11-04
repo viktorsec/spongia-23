@@ -62,5 +62,10 @@
     "id": "barrel",
     "image": "barrel.png",
     "name": "Trubica"
+  },
+  {
+    "id": "cannonball",
+    "image": "cannonball.png",
+    "name": "Velky gulaty kamen"
   }
 ]

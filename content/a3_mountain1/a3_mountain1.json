@@ -1,0 +1,33 @@
+{
+    "id": "a3_mountain1",
+    "background": "a3_mountain1/background.png",
+    "mask": "a3_mountain1/zones.png",
+    "zones": [
+        {
+            "color": "#FF0000",
+            "cursor": "s-resize",
+            "actions": [
+                {
+                    "goto": "a3_crossroads"
+                }
+            ]
+        },
+        {
+            "color": "#00FF00",
+            "cursor": "n-resize",
+            "actions": [
+                {
+                    "goto": "a3_mountain2"
+                }
+            ]
+        },
+        {
+            "color": "#0000FF",
+            "actions": [
+                {
+                    "say": "TODO cave entrance"
+                }
+            ]
+        }
+    ]
+}

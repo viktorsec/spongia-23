@@ -26,6 +26,9 @@ import a3_crossroads from '../../content/a3_crossroads/a3_crossroads.json';
 import a3_desert1 from '../../content/a3_desert1/a3_desert1.json';
 import a3_desert2 from '../../content/a3_desert2/a3_desert2.json';
 import a3_desert3 from '../../content/a3_desert3/a3_desert3.json';
+import a3_mountain1 from '../../content/a3_mountain1/a3_mountain1.json';
+import a3_mountain2 from '../../content/a3_mountain2/a3_mountain2.json';
+import a3_mountain3 from '../../content/a3_mountain3/a3_mountain3.json';
 
 const rooms = [
   a1_observatory_kitchen,
@@ -56,6 +59,9 @@ const rooms = [
   a3_desert1,
   a3_desert2,
   a3_desert3,
+  a3_mountain1,
+  a3_mountain2,
+  a3_mountain3,
 ];
 
 export default rooms;

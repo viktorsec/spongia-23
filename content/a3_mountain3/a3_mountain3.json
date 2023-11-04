@@ -1,0 +1,30 @@
+{
+    "id": "a3_mountain3",
+    "background": "a3_mountain3/background.png",
+    "mask": "a3_mountain3/zones.png",
+    "items": [
+        {
+            "id": "cannonball",
+            "image": "a3_mountain3/cannonball.png"
+        }
+    ],
+    "zones": [
+        {
+            "color": "#FF0000",
+            "cursor": "s-resize",
+            "actions": [
+                {
+                    "goto": "a3_mountain2"
+                }
+            ]
+        },
+        {
+            "color": "#00FF00",
+            "actions": [
+                {
+                    "say": "Krasny vyhlad. Skoda ze to vsetko kometa znici."
+                }
+            ]
+        }
+    ]
+}

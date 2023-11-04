@@ -57,5 +57,10 @@
     "id": "wrench",
     "image": "wrench.png",
     "name": "Vidlicovy kluc"
+  },
+  {
+    "id": "barrel",
+    "image": "barrel.png",
+    "name": "Trubica"
   }
 ]

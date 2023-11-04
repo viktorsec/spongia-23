@@ -1,7 +1,7 @@
 {
     "id": "a3_cave_inside",
     "background": "a3_cave_inside/background.png",
-    "mask": "a3_cave_robot/zones.png",
+    "mask": "a3_cave_inside/zones.png",
     "zones": [
         {
             "color": "#FF0000",
@@ -9,6 +9,46 @@
             "actions": [
                 {
                     "goto": "a3_cave_entrance"
+                }
+            ]
+        },
+        {
+            "color": "#00FF00",
+            "actions": [
+                {
+                    "say": "Au! Horuce."
+                }
+            ]
+        },
+        {
+            "color": "#0000FF",
+            "actions": [
+                {
+                    "trigger": "wrench",
+                    "conditions": {
+                        "hasFlagsNot": "taken_barrel"
+                    },
+                    "say": "TODO toto by mal byt object + zmeni sa grafika",
+                    "giveItem": "barrel",
+                    "setFlag": "taken_barrel"
+                },
+                {
+                    "trigger": "wrench",
+                    "conditions": {
+                        "hasFlags": "taken_barrel"
+                    }
+                },
+                {
+                    "conditions": {
+                        "hasFlagsNot": "taken_barrel"
+                    },
+                    "say": "Hmm toto by sa dalo odmontovat"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "taken_barrel"
+                    },
+                    "say": "To uz som ukradol"
                 }
             ]
         }

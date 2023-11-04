@@ -17,6 +17,11 @@
             "actions": [
                 {
                     "say": "Au! Horuce."
+                },
+                {
+                    "trigger": "match",
+                    "takeItem": "match",
+                    "giveItem": "match_lit"
                 }
             ]
         },

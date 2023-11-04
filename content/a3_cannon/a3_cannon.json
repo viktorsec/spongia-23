@@ -24,6 +24,10 @@
                     "say": "To je delo, ale chyba mu naboj."
                 },
                 {
+                    "trigger": "barrel",
+                    "say": "To by slo namontovat do tej diery."
+                },
+                {
                     "trigger": "cannonball",
                     "conditions": { "hasFlagsNot": "placed_barrel" },
                     "say": "Chyba tomu hlaven, kam by som ten naboj dal."
@@ -36,9 +40,21 @@
                     "say": "Nabite!"
                 },
                 {
+                    "trigger": "match_lit",
+                    "conditions": { "hasFlagsNot": "placed_bullet" },
+                    "say": "Bez naboja je zbytocne strielat"
+                },
+                {
+                    "trigger": "match_lit",
                     "conditions": { "hasFlags": "placed_bullet" },
-                    "say": "TODO zapalka. BUM!",
+                    "say": "BUM!",
+                    "takeItem": "match_lit",
                     "goto": "a4_finale"
+                },
+                {
+                    "trigger": "match",
+                    "conditions": { "hasFlags": "placed_bullet" },
+                    "say": "Zapalka nehori, to mi je nanic."
                 }
             ]
         },

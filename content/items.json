@@ -83,5 +83,16 @@
     "image": "shirt_glowing.png",
     "name": "Tricko od hriboveho slizu",
     "description": "Ziari v tme"
+  },
+  {
+    "id": "match",
+    "image": "match.png",
+    "name": "Zapalka"
+  },
+  {
+    "id": "match_lit",
+    "image": "match_lit.png",
+    "name": "Horiaca zapalka",
+    "description": "Dufam ze mi nezhasne"
   }
 ]

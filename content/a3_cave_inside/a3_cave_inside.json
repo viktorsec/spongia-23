@@ -2,6 +2,14 @@
     "id": "a3_cave_inside",
     "background": "a3_cave_inside/background.png",
     "mask": "a3_cave_inside/zones.png",
+    "overlays": [
+        {
+            "image": "a3_cave_inside/barrel.png",
+            "conditions": {
+                "hasFlagsNot": "taken_barrel"
+            }
+        }
+    ],
     "zones": [
         {
             "color": "#FF0000",
@@ -33,7 +41,6 @@
                     "conditions": {
                         "hasFlagsNot": "taken_barrel"
                     },
-                    "say": "TODO toto by mal byt object + zmeni sa grafika",
                     "giveItem": "barrel",
                     "setFlag": "taken_barrel"
                 },
@@ -47,13 +54,13 @@
                     "conditions": {
                         "hasFlagsNot": "taken_barrel"
                     },
-                    "say": "Hmm toto by sa dalo odmontovat"
+                    "say": "Hmm toto by sa dalo odmontovat keby som mal naradie."
                 },
                 {
                     "conditions": {
                         "hasFlags": "taken_barrel"
                     },
-                    "say": "To uz som ukradol"
+                    "say": "To uz som ukradol, teda, pozical si."
                 }
             ]
         }

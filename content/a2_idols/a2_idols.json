@@ -17,25 +17,35 @@
     "zones": [
         {
             "color": "#FF0000",
+            "tooltip": "Idol",
             "actions": [
                 {
-                    "say": "TODO ja som truth"
+                    "conditions": {"hasFlagsNot": "given_match"},
+                    "say": "Toto zachrani nasu planetu.",
+                    "giveItem": "match",
+                    "setFlag": "given_match"
+                },
+                {
+                    "conditions": {"hasFlags": "given_match"},
+                    "say": "Planeta sa da zachranit."
                 }
             ]
         },
         {
             "color": "#00FF00",
+            "tooltip": "Idol",
             "actions": [
                 {
-                    "say": "TODO ja som lie"
+                    "say": "Planeta sa neda zachranit."
                 }
             ]
         },
         {
             "color": "#0000FF",
+            "tooltip": "Idol",
             "actions": [
                 {
-                    "say": "TODO ja som random"
+                    "say": "TODO random."
                 }
             ]
         }

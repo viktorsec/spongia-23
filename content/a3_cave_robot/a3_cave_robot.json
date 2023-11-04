@@ -16,7 +16,22 @@
             "color": "#00FF00",
             "actions": [
                 {
-                    "say": "BEEP BOOP dalej ta nepustim"
+                    "conditions": {
+                        "hasItemNot": "shirt_glowing"
+                    },
+                    "say": "Strazim aby sem mohla vojst len udrzba."
+                },
+                {
+                    "conditions": {
+                        "hasItemNot": "shirt_glowing"
+                    },
+                    "say": "Neviem co je \"udrba\" ale povedali mi ze ma vestu co svieti."
+                },
+                {
+                    "conditions": {
+                        "hasItem": "shirt_glowing"
+                    },
+                    "say": "Ah! Udrzba! Konecne."
                 }
             ]
         },
@@ -25,8 +40,16 @@
             "cursor": "n-resize",
             "actions": [
                 {
-                    "say": "TODO dalej sa neda",
+                    "conditions": {
+                        "hasItem": "shirt_glowing"
+                    },
                     "goto": "a3_cave_entrance"
+                },
+                {
+                    "conditions": {
+                        "hasItemNot": "shirt_glowing"
+                    },
+                    "say": "BEEP BOOP Dalej vas nesmiem pustit, vstup len pre udrzbu."
                 }
             ]
         }

@@ -1,0 +1,24 @@
+{
+    "id": "a3_shroom",
+    "background": "a3_shroom/background.png",
+    "mask": "a3_shroom/zones.png",
+    "zones": [
+        {
+            "color": "#FF0000",
+            "cursor": "s-resize",
+            "actions": [
+                {
+                    "goto": "a3_mountain1"
+                }
+            ]
+        },
+        {
+            "color": "#00FF00",
+            "actions": [
+                {
+                    "say": "TODO shroom"
+                }
+            ]
+        }
+    ]
+}

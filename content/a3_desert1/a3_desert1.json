@@ -1,0 +1,33 @@
+{
+    "id": "a3_desert1",
+    "background": "a3_desert1/background.png",
+    "mask": "a3_desert1/zones.png",
+    "zones": [
+        {
+            "color": "#FF0000",
+            "cursor": "s-resize",
+            "actions": [
+                {
+                    "goto": "a3_crossroads"
+                }
+            ]
+        },
+        {
+            "color": "#00FF00",
+            "cursor": "n-resize",
+            "actions": [
+                {
+                    "goto": "a3_desert2"
+                }
+            ]
+        },
+        {
+            "color": "#0000FF",
+            "actions": [
+                {
+                    "say": "\"Najblizsie delo: 10km\""
+                }
+            ]
+        }
+    ]
+}

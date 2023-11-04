@@ -2,11 +2,11 @@ import { reactive } from 'vue';
 
 const gameState = reactive({
   // currentRoom: 'a1_spawn',
-  currentRoom: 'a2_quarry',
+  currentRoom: 'a2_town_right',
   visitedRooms: [],
-  items: ['wrench'],
+  items: [],
   itemsTaken: [],
-  flags: ['dud_level_3', 'cave_door_unlocked'], // TODO: move this to content
+  flags: ['dud_level_3'], // TODO: move this to content
   console: [],
 });
 

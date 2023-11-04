@@ -1,0 +1,16 @@
+{
+    "id": "a3_cannon",
+    "background": "a3_cannon/background.png",
+    "mask": "a3_cannon/zones.png",
+    "zones": [
+        {
+            "color": "#FF0000",
+            "cursor": "s-resize",
+            "actions": [
+                {
+                    "goto": "a3_desert3"
+                }
+            ]
+        }
+    ]
+}

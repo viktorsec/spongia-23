@@ -1,0 +1,34 @@
+{
+    "id": "a3_crossroads",
+    "background": "a3_crossroads/background.png",
+    "mask": "a3_crossroads/zones.png",
+    "zones": [
+        {
+            "color": "#FF0000",
+            "cursor": "n-resize",
+            "actions": [
+                {
+                    "goto": "a2_town_right"
+                }
+            ]
+        },
+        {
+            "color": "#00FF00",
+            "cursor": "sw-resize",
+            "actions": [
+                {
+                    "goto": "a3_desert1"
+                }
+            ]
+        },
+        {
+            "color": "#0000FF",
+            "cursor": "se-resize",
+            "actions": [
+                {
+                    "goto": "a3_mountain1"
+                }
+            ]
+        }
+    ]
+}

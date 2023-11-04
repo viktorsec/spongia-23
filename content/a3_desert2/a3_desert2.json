@@ -1,0 +1,25 @@
+{
+    "id": "a3_desert2",
+    "background": "a3_desert2/background.png",
+    "mask": "a3_desert2/zones.png",
+    "zones": [
+        {
+            "color": "#FF0000",
+            "cursor": "s-resize",
+            "actions": [
+                {
+                    "goto": "a3_desert1"
+                }
+            ]
+        },
+        {
+            "color": "#00FF00",
+            "cursor": "n-resize",
+            "actions": [
+                {
+                    "goto": "a3_desert3"
+                }
+            ]
+        }
+    ]
+}

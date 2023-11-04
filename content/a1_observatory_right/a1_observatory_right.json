@@ -16,7 +16,7 @@
             "color": "#0000FF",
             "actions": [
                 {
-                    "say": "Policka s obrazkom faze mesiaca 1"
+                    "say": "Policka s kruzkom"
                 },
                 {
                     "trigger": "empty_whisky",
@@ -29,7 +29,7 @@
             "color": "#FF00FF",
             "actions": [
                 {
-                    "say": "Policka s obrazkom faze mesiaca 2"
+                    "say": "Policka s mesiacikom"
                 },
                 {
                     "trigger": "banana",
@@ -42,7 +42,7 @@
             "color": "#FFFF00",
             "actions": [
                 {
-                    "say": "Policka s obrazkom faze mesiaca 3"
+                    "say": "Policka s kruzkom"
                 },
                 {
                     "trigger": "full_whisky_a",
@@ -60,7 +60,7 @@
             "color": "#00FFFF",
             "actions": [
                 {
-                    "say": "Policka s obrazkom faze mesiaca 4"
+                    "say": "Policka s mesiacikom"
                 },
                 {
                     "trigger": "quarter_potion",
@@ -78,7 +78,22 @@
                 {
                     "trigger": "downberry",
                     "conditions": {
-                        "hasFlags": "dud_level_1"
+                        "hasFlags": "beam_active"
+                    },
+                    "say": "Posuvat so zapnutym paprskom by bolo nebezpecne."
+                },
+                {
+                    "trigger": "upberry",
+                    "conditions": {
+                        "hasFlags": "beam_active"
+                    },
+                    "say": "Posuvat so zapnutym paprskom by bolo nebezpecne."
+                },
+                {
+                    "trigger": "downberry",
+                    "conditions": {
+                        "hasFlags": "dud_level_1",
+                        "hasFlagsNot": "beam_active"
                     },
                     "unsetFlag": "dud_level_1",
                     "setFlag": "dud_level_2"
@@ -86,7 +101,8 @@
                 {
                     "trigger": "downberry",
                     "conditions": {
-                        "hasFlags": "dud_level_2"
+                        "hasFlags": "dud_level_2",
+                        "hasFlagsNot": "beam_active"
                     },
                     "unsetFlag": "dud_level_2",
                     "setFlag": "dud_level_3"
@@ -94,7 +110,8 @@
                 {
                     "trigger": "downberry",
                     "conditions": {
-                        "hasFlags": "dud_level_3"
+                        "hasFlags": "dud_level_3",
+                        "hasFlagsNot": "beam_active"
                     },
                     "unsetFlag": "dud_level_3",
                     "setFlag": "dud_level_4"
@@ -102,7 +119,8 @@
                 {
                     "trigger": "upberry",
                     "conditions": {
-                        "hasFlags": "dud_level_4"
+                        "hasFlags": "dud_level_4",
+                        "hasFlagsNot": "beam_active"
                     },
                     "unsetFlag": "dud_level_4",
                     "setFlag": "dud_level_3"
@@ -110,7 +128,8 @@
                 {
                     "trigger": "upberry",
                     "conditions": {
-                        "hasFlags": "dud_level_3"
+                        "hasFlags": "dud_level_3",
+                        "hasFlagsNot": "beam_active"
                     },
                     "unsetFlag": "dud_level_3",
                     "setFlag": "dud_level_2"
@@ -118,7 +137,8 @@
                 {
                     "trigger": "upberry",
                     "conditions": {
-                        "hasFlags": "dud_level_2"
+                        "hasFlags": "dud_level_2",
+                        "hasFlagsNot": "beam_active"
                     },
                     "unsetFlag": "dud_level_2",
                     "setFlag": "dud_level_1"

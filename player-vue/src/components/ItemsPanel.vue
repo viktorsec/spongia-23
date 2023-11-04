@@ -69,6 +69,8 @@ const itemsRich = computed(() => {
 }
 .item-single {
   display: block;
+  position: relative;
+  z-index: 0;
   background-color: transparent;
   cursor: pointer;
   border: 0;
@@ -76,11 +78,11 @@ const itemsRich = computed(() => {
   width: 5rem;
   height: 5rem;
   opacity: 0.9;
-  transform: scale(0.8);
   transition: all .3s;
   border-bottom: 4px solid transparent;
   &:hover {
-    transform: scale(1);
+    z-index: 1;
+    transform: scale(1.2);
   }
   &.active {
     border-bottom-color: rgba(255, 255, 255, 0.25);

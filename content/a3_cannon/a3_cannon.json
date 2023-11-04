@@ -11,6 +11,101 @@
                     "goto": "a3_desert3"
                 }
             ]
+        },
+        {
+            "color": "#0000FF",
+            "actions": [
+                {
+                    "conditions": { "hasFlagsNot": "placed_barrel" },
+                    "say": "To je delo, ale chyba mu hlaven."
+                },
+                {
+                    "conditions": { "hasFlags": "placed_barrel", "hasFlagsNot": "placed_bullet" },
+                    "say": "To je delo ale chyba mu naboj"
+                },
+                {
+                    "conditions": { "hasFlags": "placed_bullet" },
+                    "say": "To je nabite delo, staci z neho vystrelit. TODO zapalka?"
+                }
+            ]
+        },
+        {
+            "color": "#00FF00",
+            "actions": [
+                {
+                    "conditions": { "hasFlagsNot": "placed_barrel" },
+                    "say": "Sem by sa dala namontovat hlaven"
+                },
+                {
+                    "trigger": "barrel",
+                    "conditions": { "hasFlagsNot": "placed_barrel" },
+                    "takeItem": "barrel",
+                    "setFlag": "placed_barrel,placed_barrel_a,placed_barrel",
+                    "say": "Dufam ze to nie je naopak. Mozno to treba otocit."
+                },
+                {
+                    "conditions": { "hasFlags": "placed_barrel_a" },
+                    "say": "Hej toto sa mi zda spravne.",
+                    "setFlag": "placed_barrel_b",
+                    "unsetFlag": "placed_barrel_a"
+                },
+                {
+                    "conditions": { "hasFlags": "placed_barrel_b" },
+                    "say": "Hej toto sa mi zda spravne.",
+                    "setFlag": "placed_barrel_a",
+                    "unsetFlag": "placed_barrel_b"
+                },
+                {
+                    "conditions": { "hasFlags": "placed_barrel_a" },
+                    "say": "Hmm mozno to bolo predsa lepsie tak ako to bolo.",
+                    "setFlag": "placed_barrel_b",
+                    "unsetFlag": "placed_barrel_a"
+                },
+                {
+                    "conditions": { "hasFlags": "placed_barrel_b" },
+                    "say": "Hmm mozno to bolo predsa lepsie tak ako to bolo.",
+                    "setFlag": "placed_barrel_a",
+                    "unsetFlag": "placed_barrel_b"
+                },
+                {
+                    "conditions": { "hasFlags": "placed_barrel_a" },
+                    "say": "Mozno je jedno ako to namontujem?",
+                    "setFlag": "placed_barrel_b",
+                    "unsetFlag": "placed_barrel_a"
+                },
+                {
+                    "conditions": { "hasFlags": "placed_barrel_b" },
+                    "say": "Mozno je jedno ako to namontujem?",
+                    "setFlag": "placed_barrel_a",
+                    "unsetFlag": "placed_barrel_b"
+                },
+                {
+                    "conditions": { "hasFlags": "placed_barrel_a" },
+                    "say": "Nie som expert ale toto sa mi zda naopak...",
+                    "setFlag": "placed_barrel_b",
+                    "unsetFlag": "placed_barrel_a"
+                },
+                {
+                    "conditions": { "hasFlags": "placed_barrel_b" },
+                    "say": "Nie som expert ale toto sa mi zda naopak...",
+                    "setFlag": "placed_barrel_a",
+                    "unsetFlag": "placed_barrel_b"
+                }
+            ]
+        }
+    ],
+    "overlays": [
+        {
+            "image": "a3_cannon/barrel_a.png",
+            "conditions": {
+                "hasFlags": "placed_barrel_a"
+            }
+        },
+        {
+            "image": "a3_cannon/barrel_b.png",
+            "conditions": {
+                "hasFlags": "placed_barrel_b"
+            }
         }
     ]
 }

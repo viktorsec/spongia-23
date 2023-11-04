@@ -36,6 +36,12 @@
             "actions": [
                 {
                     "say": "Ahoj, vitaj u nas."
+                },
+                {
+                    "say": "Zdravime ta."
+                },
+                {
+                    "say": "Jeeej novy kamara! Neostanes na veceru?"
                 }
             ]
         },
@@ -67,7 +73,8 @@
             "color": "#FF8000",
             "actions": [
                 {
-                    "say": "TODO socha 4"
+                    "say": "V lese je tajna cesticka",
+                    "setFlag": "idol_path_unlocked"
                 }
             ]
         },

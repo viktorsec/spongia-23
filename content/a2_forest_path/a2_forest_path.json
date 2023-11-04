@@ -8,7 +8,7 @@
             "cursor": "s-resize",
             "actions": [
                 {
-                    "goto": "a2_observatory_exterior"
+                    "goto": "a2_town_right"
                 }
             ]
         },
@@ -17,7 +17,7 @@
             "cursor": "n-resize",
             "actions": [
                 {
-                    "goto": "a2_town_right"
+                    "goto": "a2_observatory_exterior"
                 }
             ]
         },
@@ -26,8 +26,16 @@
             "cursor": "e-resize",
             "actions": [
                 {
-                    "goto": "a2_idols_guardian",
-                    "say": "TODO schovane kym nie je flag"
+                    "conditions": {
+                        "hasFlagsNot": "idol_path_unlocked"
+                    },
+                    "say": "Tam vyzera ze nic nie je a bojim sa tam ist."
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "idol_path_unlocked"
+                    },
+                    "goto": "a2_idols_guardian"
                 }
             ]
         }

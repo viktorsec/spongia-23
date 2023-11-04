@@ -2,12 +2,6 @@
     "id": "a3_mountain3",
     "background": "a3_mountain3/background.png",
     "mask": "a3_mountain3/zones.png",
-    "items": [
-        {
-            "id": "cannonball",
-            "image": "a3_mountain3/cannonball.png"
-        }
-    ],
     "zones": [
         {
             "color": "#FF0000",
@@ -20,9 +14,41 @@
         },
         {
             "color": "#00FF00",
+            "cursor": "n-resize",
             "actions": [
                 {
-                    "say": "Krasny vyhlad. Skoda ze to vsetko kometa znici."
+                    "goto": "a3_mountain4"
+                }
+            ]
+        },
+        {
+            "color": "#0000FF",
+            "actions": [
+                {
+                    "conditions": {
+                        "hasFlags": "picture_taken"
+                    },
+                    "say": "Dakujem za fotku!"
+                },
+                {
+                    "conditions": {
+                        "hasFlagsNot": "given_camera"
+                    },
+                    "say": "Ahoj, neodfotis ma prosim?",
+                    "giveItem": "camera",
+                    "setFlag": "given_camera"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "given_camera",
+                        "hasFlagsNot": "picture_taken"
+                    },
+                    "say": "Odfotis ma prosim na moj fotoaparat?"
+                },
+                {
+                    "trigger": "camera",
+                    "say": "Pockaj musim zapozovat",
+                    "goto": "a3_photo"
                 }
             ]
         }

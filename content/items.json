@@ -67,5 +67,21 @@
     "id": "cannonball",
     "image": "cannonball.png",
     "name": "Velky gulaty kamen"
+  },
+  {
+    "id": "camera",
+    "image": "camera.png",
+    "name": "Fotoaparat"
+  },
+  {
+    "id": "shirt",
+    "image": "shirt.png",
+    "name": "Tricko"
+  },
+  {
+    "id": "shirt_glowing",
+    "image": "shirt_glowing.png",
+    "name": "Tricko od hriboveho slizu",
+    "description": "Ziari v tme"
   }
 ]

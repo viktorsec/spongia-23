@@ -1,0 +1,59 @@
+{
+    "id": "a3_photo",
+    "background": "a3_photo/background.png",
+    "mask": "a3_photo/zones.png",
+    "zones": [
+        {
+            "color": "#FF0000",
+            "actions": [
+                {
+                    "say": "Som pripraveny!"
+                },
+                {
+                    "trigger": "camera",
+                    "say": "Tam mam len nohy!"
+                }
+            ]
+        },
+        {
+            "color": "#00FF00",
+            "actions": [
+                {
+                    "say": "Som pripraveny!"
+                },
+                {
+                    "trigger": "camera",
+                    "say": "Super, dakujem pekne. Tu mas moje tricko, ja ho uz nepotrebujem.",
+                    "giveItem": "shirt",
+                    "takeItem": "camera",
+                    "setFlag": "picture_taken",
+                    "goto": "a3_mountain3"
+                }
+            ]
+        },
+        {
+            "color": "#0000FF",
+            "actions": [
+                {
+                    "say": "Som pripraveny!"
+                },
+                {
+                    "trigger": "camera",
+                    "say": "Chyba mi tam kus hlavy!"
+                }
+            ]
+        },
+        {
+            "color": "#FF00FF",
+            "actions": [
+                {
+                    "say": "Som pripraveny!"
+                },
+                {
+                    "trigger": "camera",
+                    "say": "Hej ved tam vobec nie som!"
+                }
+            ]
+        }
+    ]
+}

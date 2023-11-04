@@ -29,6 +29,8 @@ import a3_desert3 from '../../content/a3_desert3/a3_desert3.json';
 import a3_mountain1 from '../../content/a3_mountain1/a3_mountain1.json';
 import a3_mountain2 from '../../content/a3_mountain2/a3_mountain2.json';
 import a3_mountain3 from '../../content/a3_mountain3/a3_mountain3.json';
+import a3_mountain4 from '../../content/a3_mountain4/a3_mountain4.json';
+import a3_photo from '../../content/a3_photo/a3_photo.json';
 import a3_shroom from '../../content/a3_shroom/a3_shroom.json';
 import a4_finale from '../../content/a4_finale/a4_finale.json';
 
@@ -64,6 +66,8 @@ const rooms = [
   a3_mountain1,
   a3_mountain2,
   a3_mountain3,
+  a3_mountain4,
+  a3_photo,
   a3_shroom,
   a4_finale,
 ];

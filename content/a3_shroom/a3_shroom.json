@@ -16,7 +16,13 @@
             "color": "#00FF00",
             "actions": [
                 {
-                    "say": "TODO shroom"
+                    "say": "Svietiaci hryb. Tecie z neho ziarivy sliz."
+                },
+                {
+                    "trigger": "shirt",
+                    "say": "Fuj, cele tricko je od slizu a ziari.",
+                    "takeItem": "shirt",
+                    "giveItem": "shirt_glowing"
                 }
             ]
         }

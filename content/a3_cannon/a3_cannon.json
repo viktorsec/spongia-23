@@ -16,6 +16,14 @@
             "color": "#0000FF",
             "actions": [
                 {
+                    "goto": "a4_finale"
+                }
+            ]
+        },
+        {
+            "color": "#0000FFTODO",
+            "actions": [
+                {
                     "conditions": { "hasFlagsNot": "placed_barrel" },
                     "say": "To je delo, ale chyba mu hlaven."
                 },

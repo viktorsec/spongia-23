@@ -1,11 +1,12 @@
 {
     "id": "a2_idols_guardian",
     "background": "a2_idols_guardian/background.png",
-    "mask": "a2_idols_guardian/zones.png",
+    "mask": "a2_idols_guardian/zones.png",    
     "zones": [
         {
             "color": "#FF0000",
             "cursor": "w-resize",
+            "tooltip": "Spat na cesticku",
             "actions": [
                 {
                     "goto": "a2_forest_path"
@@ -15,6 +16,7 @@
         {
             "color": "#00FF00",
             "cursor": "e-resize",
+            "tooltip": "K idolom",
             "actions": [
                 {
                     "goto": "a2_idols"
@@ -23,9 +25,16 @@
         },
         {
             "color": "#0000FF",
+            "tooltip": "Strazca idolov",
             "actions": [
                 {
-                    "say": "TODO ako funguju idols"
+                    "say": "Nech sa paci, pokracujte k idolom a spytajte sa ich co chcete."
+                },
+                {
+                    "say": "Pozor, mate len tri otazky kym vas vyhodia prec."
+                },
+                {
+                    "say": "Neviem ktory je ktory, stale sa vymienaju."
                 }
             ]
         }

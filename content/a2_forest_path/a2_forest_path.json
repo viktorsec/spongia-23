@@ -35,7 +35,8 @@
                     "conditions": {
                         "hasFlags": "idol_path_unlocked"
                     },
-                    "goto": "a2_idols_guardian"
+                    "goto": "a2_idols_guardian",
+                    "say": "Vitajte v chrame troch idolov, jeden z ktorych vzdy hovori pravdu, jeden ktory vzdy klame a jeden ktory odpoveda nahodne."
                 }
             ]
         }

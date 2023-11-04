@@ -5,7 +5,7 @@
     "zones": [
         {
             "color": "#FF0000",
-            "cursor": "zoom-out",
+            "cursor": "move",
             "actions": [
                 {
                     "say": "Paci sa ti nase umenie?",

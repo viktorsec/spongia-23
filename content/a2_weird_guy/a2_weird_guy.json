@@ -14,7 +14,7 @@
         },
         {
             "color": "#00FF00",
-            "cursor": "zoom-in",
+            "cursor": "zoom",
             "actions": [
                 {
                     "say": "To som vyrobil s kamaratmi.",

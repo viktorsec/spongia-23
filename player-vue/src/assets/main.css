@@ -12,6 +12,7 @@ html, body, #app {
 
 html {
   font-size: 16px;
+  cursor: url("@/assets/cursors/auto.png") 16 16, auto;
 }
 
 body {

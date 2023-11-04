@@ -6,9 +6,7 @@
         @mousemove="moveHandler"
         @mouseleave="leaveHandler"
         @click="clickHandler"
-        :style="{
-          cursor: activeZone?.cursor,
-        }"
+        :class="[ activeCursor ]"
       >
         <img
           :src="loadImage(room.background)"
@@ -143,8 +141,8 @@ const getHovering = (x, y) => {
 
 const tooltipFollow = (x, y) => {
   if (tooltipElement.value) {
-    tooltipElement.value.style.left = `${x + 20}px`;
-    tooltipElement.value.style.top = `${y - 20}px`;
+    tooltipElement.value.style.left = `${x}px`;
+    tooltipElement.value.style.top = `${y - 50}px`;
   }
 }
 
@@ -351,6 +349,13 @@ const activeTooltip = computed(() => {
   return null;
 });
 
+const activeCursor = computed(() => {
+  if (activeItem.value) {
+    return 'cursor-grab';
+  }
+  return `cursor-${activeZone.value?.cursor}`;
+});
+
 processRoomLoad();
 
 </script>
@@ -420,9 +425,26 @@ processRoomLoad();
   padding: 0.25rem 0.75rem;
   opacity: 1;
   transition: opacity .3s;
+  transform: translateX(-50%);
   &.hidden {
     opacity: 0;
     transition: none;
   }
 }
+
+.cursor-nw-resize { cursor: url("@/assets/cursors/n-resize.png") 0 0, nw-resize; }
+.cursor-n-resize { cursor: url("@/assets/cursors/n-resize.png") 16 0, n-resize; }
+.cursor-ne-resize { cursor: url("@/assets/cursors/ne-resize.png") 32 0, ne-resize; }
+.cursor-w-resize { cursor: url("@/assets/cursors/w-resize.png") 0 16, w-resize; }
+.cursor-e-resize { cursor: url("@/assets/cursors/e-resize.png") 32 16, e-resize; }
+.cursor-sw-resize { cursor: url("@/assets/cursors/sw-resize.png") 0 32, sw-resize; }
+.cursor-s-resize { cursor: url("@/assets/cursors/s-resize.png") 16 32, s-resize; }
+.cursor-se-resize { cursor: url("@/assets/cursors/se-resize.png") 32 32, se-resize; }
+.cursor-zoom { cursor: url("@/assets/cursors/zoom.png") 0 0, zoom-in; }
+.cursor-move { cursor: url("@/assets/cursors/move.png") 0 0, move; }
+.cursor-door-right { cursor: url("@/assets/cursors/door-right.png") 0 0, move; }
+.cursor-door-left { cursor: url("@/assets/cursors/door-left.png") 0 0, move; }
+.cursor-help { cursor: url("@/assets/cursors/help.png") 0 0, help; }
+.cursor-grab { cursor: url("@/assets/cursors/help.png") 0 0, grab; }
+
 </style>

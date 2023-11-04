@@ -20,7 +20,7 @@
         },
         {
             "color": "#00FF00",
-            "cursor": "zoom-in",
+            "cursor": "zoom",
             "actions": [
                 {
                     "goto": "a1_telescope_empty"

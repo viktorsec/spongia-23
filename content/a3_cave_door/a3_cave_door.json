@@ -9,7 +9,7 @@
     "zones": [
         {
             "color": "#FFFFFF",
-            "cursor": "zoom-out",
+            "cursor": "move",
             "actions": [
                 {
                     "goto": "a3_cave_entrance"

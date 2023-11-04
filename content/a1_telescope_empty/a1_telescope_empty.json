@@ -35,7 +35,7 @@
         },
         {
             "color": "#FF00FF",
-            "cursor": "zoom-out",
+            "cursor": "door-left",
             "actions": [
                 {
                     "goto": "a1_observatory_left"

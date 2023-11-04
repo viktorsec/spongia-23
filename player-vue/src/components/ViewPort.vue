@@ -203,7 +203,10 @@ const handleAction = (action) => {
 
   const handlers = {
     say: (value) => gameState.console.push(value),
-    goto: (value) => gameState.currentRoom = value,
+    goto: (value) => {
+      actionCount.value = -1;
+      gameState.currentRoom = value;
+    },
     giveItem(value) {
       gameState.itemsTaken.push(value);
       gameState.items.push(value);
@@ -261,7 +264,6 @@ const clickHandler = () => {
 
 const processRoomLoad = () => {
   imagesLoaded.value = false;
-  actionCount.value = 0;
   if (props.room.enterAction) {
     handleAction(props.room.enterAction);
   }

@@ -1,0 +1,40 @@
+{
+    "id": "a2_claysmith",
+    "background": "a2_claysmith/background.png",
+    "mask": "a2_claysmith/zones.png",
+    "zones": [
+        {
+            "color": "#FF0000",
+            "cursor": "s-resize",
+            "actions": [
+                {
+                    "goto": "a2_town_right"
+                }
+            ]
+        },
+        {
+            "color": "#00FF00",
+            "actions": [
+                {
+                    "trigger": "raw_clay",
+                    "say": "Dakujem, tu mas kluc",
+                    "giveItem": "wrench",
+                    "takeItem": "raw_clay",
+                    "setFlag": "given_wrench"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "given_wrench"
+                    },
+                    "say": "Dufam ze sa paci kluc co som ti dal"
+                },
+                {
+                    "conditions": {
+                        "hasFlagsNot": "given_wrench"
+                    },
+                    "say": "Potreboval by som plastelinu"
+                }
+            ]
+        }
+    ]
+}

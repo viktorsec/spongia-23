@@ -16,24 +16,29 @@
             "color": "#0000FF",
             "actions": [
                 {
-                    "goto": "a4_finale"
-                }
-            ]
-        },
-        {
-            "color": "#0000FFTODO",
-            "actions": [
-                {
                     "conditions": { "hasFlagsNot": "placed_barrel" },
                     "say": "To je delo, ale chyba mu hlaven."
                 },
                 {
                     "conditions": { "hasFlags": "placed_barrel", "hasFlagsNot": "placed_bullet" },
-                    "say": "To je delo ale chyba mu naboj"
+                    "say": "To je delo, ale chyba mu naboj."
+                },
+                {
+                    "trigger": "cannonball",
+                    "conditions": { "hasFlagsNot": "placed_barrel" },
+                    "say": "Chyba tomu hlaven, kam by som ten naboj dal."
+                },
+                {
+                    "trigger": "cannonball",
+                    "conditions": { "hasFlags": "placed_barrel", "hasFlagsNot": "placed_bullet" },
+                    "takeItem": "cannonball",
+                    "setFlag": "placed_bullet",
+                    "say": "Nabite!"
                 },
                 {
                     "conditions": { "hasFlags": "placed_bullet" },
-                    "say": "To je nabite delo, staci z neho vystrelit. TODO zapalka?"
+                    "say": "TODO zapalka. BUM!",
+                    "goto": "a4_finale"
                 }
             ]
         },

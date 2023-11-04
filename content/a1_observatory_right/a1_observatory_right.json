@@ -16,7 +16,17 @@
             "color": "#0000FF",
             "actions": [
                 {
+                    "conditions": {
+                        "hasFlagsNot": "placed_empty_whisky"
+                    },
                     "say": "Policka s kruzkom"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "placed_empty_whisky"
+                    },
+                    "giveItem": "empty_whisky",
+                    "unsetFlag": "placed_empty_whisky"
                 },
                 {
                     "trigger": "empty_whisky",
@@ -29,7 +39,17 @@
             "color": "#FF00FF",
             "actions": [
                 {
+                    "conditions": {
+                        "hasFlagsNot": "placed_banana"
+                    },
                     "say": "Policka s mesiacikom"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "placed_banana"
+                    },
+                    "giveItem": "banana",
+                    "unsetFlag": "placed_banana"
                 },
                 {
                     "trigger": "banana",
@@ -42,7 +62,26 @@
             "color": "#FFFF00",
             "actions": [
                 {
+                    "conditions": {
+                        "hasFlagsNot": "placed_full_whisky"
+                    },
                     "say": "Policka s kruzkom"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "placed_full_whisky",
+                        "hasItemNot": "full_whisky_a"
+                    },
+                    "giveItem": "full_whisky_a",
+                    "unsetFlag": "placed_full_whisky"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "placed_full_whisky",
+                        "hasItemNot": "full_whisky_b"
+                    },
+                    "giveItem": "full_whisky_b",
+                    "unsetFlag": "placed_full_whisky"
                 },
                 {
                     "trigger": "full_whisky_a",
@@ -60,7 +99,17 @@
             "color": "#00FFFF",
             "actions": [
                 {
+                    "conditions": {
+                        "hasFlagsNot": "placed_quarter_potion"
+                    },
                     "say": "Policka s mesiacikom"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "placed_quarter_potion"
+                    },
+                    "giveItem": "quarter_potion",
+                    "unsetFlag": "placed_quarter_potion"
                 },
                 {
                     "trigger": "quarter_potion",

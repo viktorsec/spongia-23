@@ -47,5 +47,15 @@
     "id": "zapberry",
     "image": "zapberry.png",
     "name": "Prečudesná malvica"
+  },
+  {
+    "id": "raw_clay",
+    "image": "raw_clay.png",
+    "name": "Plastelinova ruda"
+  },
+  {
+    "id": "wrench",
+    "image": "wrench.png",
+    "name": "Vidlicovy kluc"
   }
 ]

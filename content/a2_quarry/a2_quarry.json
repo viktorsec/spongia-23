@@ -23,10 +23,20 @@
         },
         {
             "color": "#0000FF",
-            "cursor": "se-resize",
             "actions": [
                 {
-                    "say": "TODO ahoj nemas krompac"
+                    "conditions": {
+                        "hasFlagsNot": "given_raw_clay"
+                    },
+                    "say": "TODO krompac",
+                    "setFlag": "given_raw_clay",
+                    "giveItem": "raw_clay"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "given_raw_clay"
+                    },
+                    "say": "Uz viacej nemam"
                 }
             ]
         }

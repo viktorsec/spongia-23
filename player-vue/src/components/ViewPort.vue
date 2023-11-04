@@ -323,17 +323,20 @@ const overlaysDisplayed = computed(() => {
     if (!overlay.conditions) {
       return true;
     }
-    if (overlay.conditions.hasFlags && gameState.flags.includes(overlay.conditions.hasFlags)) {
-      return true;
-    }
     if (overlay.conditions.hasFlags) {
       const flagArray = overlay.conditions.hasFlags.split(',');
-      if(flagArray.every((flag) => gameState.flags.includes(flag))) {
-        return true;
+      if(flagArray.some((flag) => !gameState.flags.includes(flag))) {
+        return false;
+      }
+    }
+    if (overlay.conditions.hasFlagsNot) {
+      const flagArray = overlay.conditions.hasFlagsNot.split(',');
+      if(!flagArray.some((flag) => !gameState.flags.includes(flag))) {
+        return false;
       }
     }
 
-    return false;
+    return true;
   });
 })
 

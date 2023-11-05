@@ -7,7 +7,7 @@
     <div class="actions">
       <button class="base-button" @click="restart()">Reštartovať hru</button>
       <button class="base-button" @click="musicToggle()">Hudba {{ musicIsPlaying ? 'zap.' : 'vyp.' }}</button>
-      <button class="base-button" @click="credits()">Titulky</button>
+      <button class="base-button" @click="credits($event)" @keyup.enter="startDebug()">Titulky</button>
     </div>
   </div>
 </template>
@@ -43,7 +43,6 @@ const musicToggle = () => {
 }
 
 const credits = () => {
-  clientState.debugMode = true;
   const lines = [
     'Pozor, padá hviezda!',
     'Faisceau de Lumière ~ Špongia 2023',
@@ -56,6 +55,12 @@ const credits = () => {
     }, 1000 * index);
   });
 };
+
+const startDebug = () => {
+  console.log('debug started');
+  clientState.debugMode = true;
+};
+
 </script>
 
 <style scoped>

@@ -23,6 +23,10 @@
             "actions": [
                 {
                     "say": "Krásny výhľad. Škoda, že to čoskoro všetko zničí kométa."
+                },
+                {
+                    "trigger": "camera",
+                    "say": "Pekná fotka. Ale asi by sa patrilo ten fotoaparát vrátiť."
                 }
             ]
         }

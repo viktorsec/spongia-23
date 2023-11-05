@@ -31,6 +31,20 @@
                         "hasFlagsNot": "cave_door_unlocked"
                     },
                     "say": "Zamknute."
+                },
+                {
+                    "trigger": "important_key",
+                    "conditions": {
+                        "hasFlagsNot": "cave_door_unlocked"
+                    },
+                    "say": "Tieto dvere nie sú na kľúč ale na kód."
+                },
+                {
+                    "trigger": "match",
+                    "conditions": {
+                        "hasFlagsNot": "cave_door_unlocked"
+                    },
+                    "say": "Všetci sme zapálení pre hádanku, ale takto to nezapálim."
                 }
             ]
         },

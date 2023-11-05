@@ -36,6 +36,10 @@
                 {
                     "trigger": "important_key",
                     "say": "Idol: Ten klúč je úplne zbytočný."
+                },
+                {
+                    "trigger": "camera",
+                    "say": "Idol: Tu je zákaz fotiť."
                 }
             ]
         },
@@ -55,6 +59,10 @@
                 {
                     "trigger": "important_key",
                     "say": "Idol: Ten klúč je veľmi dôležitý."
+                },
+                {
+                    "trigger": "camera",
+                    "say": "Idol: Tu sa smie fotiť."
                 }
             ]
         },
@@ -79,7 +87,11 @@
                 },
                 {
                     "trigger": "important_key",
-                    "say": "Idol: To je klúč od motorky."
+                    "say": "Idol: Ako na tej fotke vyzerám?"
+                },
+                {
+                    "trigger": "camera",
+                    "say": "Idol: Tu je zákaz fotiť."
                 }
             ]
         }

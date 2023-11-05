@@ -50,6 +50,14 @@
                     "trigger": "camera",
                     "say": "Turista: Počkaj, musím zapózovať.",
                     "goto": "a3_photo"
+                },
+                {
+                    "trigger": "shirt",
+                    "say": "Turista: To si môžeš nechať."
+                },
+                {
+                    "trigger": "shirt_glowing",
+                    "say": "Turista: Fuj to čo je s mojím tričkom?"
                 }
             ]
         }

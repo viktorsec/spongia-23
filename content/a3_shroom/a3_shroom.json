@@ -23,6 +23,22 @@
                     "say": "Fuj, celé tričko je od slizu a žiari.",
                     "takeItem": "shirt",
                     "giveItem": "shirt_glowing"
+                },
+                {
+                    "trigger": "shirt_glowing",
+                    "say": "Už je zasvinené viac než dosť."
+                },
+                {
+                    "trigger": "camera",
+                    "say": "Pekná fotka. Ale asi by sa patrilo ten fotoaparát vrátiť."
+                },
+                {
+                    "trigger": "match",
+                    "say": "To nemožem zapáliť. Najmä preto, že zápalka nehorí."
+                },
+                {
+                    "trigger": "match_lit",
+                    "say": "To nemožem zapáliť."
                 }
             ]
         }

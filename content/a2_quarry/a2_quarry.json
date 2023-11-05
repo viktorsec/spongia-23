@@ -46,6 +46,10 @@
                     "takeItem": "raw_clay",
                     "unsetFlag": "given_raw_clay",
                     "say": "Baník: Dobre, ak nechceš vráť späť."
+                },
+                {
+                    "trigger": "camera",
+                    "say": "Baník: Prosím nefoť ma, som špinavý."
                 }
             ]
         }

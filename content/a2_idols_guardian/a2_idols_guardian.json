@@ -35,6 +35,10 @@
                 },
                 {
                     "say": "Strážca idolov: Neviem, ktorý je ktorý, stále sa vymieňajú."
+                },
+                {
+                    "trigger": "camera",
+                    "say": "Strážca idolov: Tu je zákaz fotiť."
                 }
             ]
         }

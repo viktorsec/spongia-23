@@ -33,6 +33,14 @@
                         "hasItem": "shirt_glowing"
                     },
                     "say": "Robot: Ah! Údržba! Konečne."
+                },
+                {
+                    "trigger": "camera",
+                    "say": "Robot: Toto nie je turistická atrakcia."
+                },
+                {
+                    "trigger": "barrel",
+                    "say": "Robot: Už bolo na čase to vymeniť. Dáfam, že čoskoro nainštalujete novú."
                 }
             ]
         },

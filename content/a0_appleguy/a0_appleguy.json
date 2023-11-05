@@ -19,7 +19,7 @@
           "cursor": "help",
           "actions": [
               {
-                "say": "Tieto jablone každý rok rodia zelené jablká, ale tento rok sú červené. Myslím, že za tým môže byť nejaký záujímavý astornomický úkaz. Išiel by si sa spýtať do observatória, či nepozorovali niečo zaujímavé? Povedz, že ťa posiela Izák.",
+                "say": "Izák: Tieto jablone každý rok rodia zelené jablká, ale tento rok sú červené. Myslím, že za tým môže byť nejaký záujímavý astornomický úkaz. Išiel by si sa spýtať do observatória, či nepozorovali niečo zaujímavé? Povedz, že ťa posiela Izák.",
                 "setFlag": "apple_talk"
               }
           ]

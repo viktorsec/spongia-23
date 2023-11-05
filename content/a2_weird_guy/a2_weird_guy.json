@@ -5,7 +5,7 @@
     "zones": [
         {
             "color": "#FF0000",
-            "cursor": "s-resize",
+            "cursor": "door-left",
             "actions": [
                 {
                     "goto": "a2_town"
@@ -17,7 +17,7 @@
             "cursor": "zoom",
             "actions": [
                 {
-                    "say": "To som vyrobil s kamaratmi.",
+                    "say": "Zberateľ: To sme vyrobili s kamaratmi.",
                     "goto": "a2_weird_guy_art"
                 }
             ]
@@ -27,21 +27,22 @@
             "cursor": "help",
             "actions": [
                 {
-                    "say": "TODO nieco s hodinami"
+                    "say": "Tik tok"
                 }
             ]
         },
         {
             "color": "#0000FF",
+            "tooltip": "Zberateľ kamarátov",
             "actions": [
                 {
-                    "say": "Ahoj, vitaj u nas."
+                    "say": "Zberateľ kamarátov: Ahoj, vitaj u nás."
                 },
                 {
-                    "say": "Zdravime ta."
+                    "say": "Zberateľ kamarátov: Zdravíme ťa."
                 },
                 {
-                    "say": "Jeeej novy kamara! Neostanes na veceru?"
+                    "say": "Zberateľ kamarátov: Jeeej nový kamaráť! Neostaneš na večeru?"
                 }
             ]
         },
@@ -49,7 +50,7 @@
             "color": "#FFFF00",
             "actions": [
                 {
-                    "say": "TODO socha 1"
+                    "say": "Zberateľ (hrubým hlasom): A ty si kto?"
                 }
             ]
         },
@@ -57,7 +58,7 @@
             "color": "#00FFFF",
             "actions": [
                 {
-                    "say": "TODO socha 2"
+                    "say": "Zberateľ (piskľavým hlasom): Ahoj, ja som Fialka."
                 }
             ]
         },
@@ -65,7 +66,7 @@
             "color": "#FF00FF",
             "actions": [
                 {
-                    "say": "TODO socha 3"
+                    "say": "Zberateľ (koktavo): A-a-a-ahoj."
                 }
             ]
         },
@@ -73,7 +74,7 @@
             "color": "#FF8000",
             "actions": [
                 {
-                    "say": "V lese je tajna cesticka",
+                    "say": "Zberateľ (šepotom): V lese je tajná cestička!",
                     "setFlag": "idol_path_unlocked"
                 }
             ]
@@ -82,7 +83,7 @@
             "color": "#FF0080",
             "actions": [
                 {
-                    "say": "TODO socha 5"
+                    "say": "Zberateľ (šúšlavo): Poznáme lôzne tajomstvá. Naplíklad aj o dvelách v bani."
                 }
             ]
         },
@@ -90,7 +91,7 @@
             "color": "#8000FF",
             "actions": [
                 {
-                    "say": "TODO socha 6"
+                    "say": "Zberateľ (svojím hlasom): Prepáč, ale on sa hanbí a nerozpráva."
                 }
             ]
         }

@@ -8,7 +8,7 @@
             "cursor": "move",
             "actions": [
                 {
-                    "say": "Paci sa ti nase umenie?",
+                    "say": "Zberateľ: Páči sa ti naše umenie? Okrem toho, že je krásne, je aj užitočné.",
                     "goto": "a2_weird_guy"
                 }
             ]

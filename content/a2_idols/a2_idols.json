@@ -3,7 +3,7 @@
     "background": "a2_idols/background.png",
     "maxActions": 3,
     "leaveAction": {
-        "say": "Čau",
+        "say": "Prac sa! Po troch otázkach sa musíme povymieňať.",
         "goto": "a2_idols_guardian"
     },
     "mask": [

@@ -203,7 +203,7 @@ const handleAction = (action) => {
   const handlers = {
     say: (value) => gameState.console.push(value),
     goto: (value) => {
-      actionCount.value = -1;
+      actionCount.value = -1; // incremented to zero below.
       gameState.currentRoom = value;
     },
     giveItem(value) {
@@ -248,6 +248,12 @@ const handleAction = (action) => {
 }
 
 const clickHandler = () => {
+  if (props.room.maxActions && actionCount.value >= props.room.maxActions) {
+    // Ignore action and override it with leaveAction when exceeding the limit.
+    handleAction(props.room.leaveAction);
+    return;
+  }
+
   if (activeItem.value) {
     const item = toRaw(activeItem.value);
     handleAction({
@@ -300,12 +306,6 @@ const processRoomLoad = () => {
 }
 
 watch(() => props.room, processRoomLoad);
-
-watch(actionCount, (newValue) => {
-  if (props.room.maxActions && props.room.maxActions <= newValue) {
-    handleAction(props.room.leaveAction);
-  }
-})
 
 const itemsDisplayed = computed(() => {
   if (!props.room.items) {

@@ -1,10 +1,16 @@
 Názov tímu: Faisceau de Lumière
 Názov hry: Pozor, padá hviezda
-Vývojové prostredie a prostriedky: Vue.js, JavaScript
-
-Obrázky:
+Vývojové prostredie a prostriedky:
+* Vue.js (https://vuejs.org/)
+* Vite (https://vitejs.dev/)
+* Visual Studio Code (https://code.visualstudio.com/)
 * Stable Diffusion XL 1.0 (https://github.com/Stability-AI/generative-models)
 * Clay Animation LoRA (https://civitai.com/models/59569)
+* Photoshop (https://www.adobe.com/products/photoshop.html)
+* Pixelmator (https://www.pixelmator.com/mac/)
+* GIMP (https://www.gimp.org/)
+* FFmpeg (https://www.ffmpeg.org/)
+* git (https://git-scm.com/)
 
 Hudba:
 * Ephemeral III (Lilith)

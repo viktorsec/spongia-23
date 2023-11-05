@@ -20,7 +20,7 @@
   {
     "id": "full_whisky_a",
     "image": "full_whisky.png",
-    "name": "Jablkový mušt"
+    "name": "Jablčný mušt"
   },
   {
     "id": "full_whisky_b",
@@ -30,7 +30,7 @@
   {
     "id": "empty_whisky",
     "image": "empty_whisky.png",
-    "name": "Jablčný fľaša"
+    "name": "Fľaša od jablčného muštu"
   },
 
   {

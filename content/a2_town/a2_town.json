@@ -1,32 +1,32 @@
 {
-    "id": "a2_town_left",
-    "background": "a2_town_left/background.png",
-    "mask": "a2_town_left/zones.png",
+    "id": "a2_town",
+    "background": "a2_town/background.png",
+    "mask": "a2_town/zones.png",
     "zones": [
         {
             "color": "#FF0000",
             "cursor": "s-resize",
             "actions": [
                 {
-                    "goto": "a2_town_right"
+                    "goto": "a2_forest_path"
                 }
             ]
         },
         {
             "color": "#00FF00",
-            "cursor": "se-resize",
+            "cursor": "w-resize",
             "actions": [
                 {
-                    "say": "Je zamknute."
+                    "goto": "a2_quarry"
                 }
             ]
         },
         {
             "color": "#0000FF",
-            "cursor": "se-resize",
+            "cursor": "n-resize",
             "actions": [
                 {
-                    "say": "Je zamknute."
+                    "goto": "a2_claysmith"
                 }
             ]
         },
@@ -35,7 +35,7 @@
             "cursor": "se-resize",
             "actions": [
                 {
-                    "say": "Je zamknute."
+                    "goto": "a2_weird_guy"
                 }
             ]
         },
@@ -44,16 +44,19 @@
             "cursor": "se-resize",
             "actions": [
                 {
-                    "say": "Je zamknute."
+                    "goto": "a3_crossroads"
                 }
             ]
         },
         {
             "color": "#FF00FF",
-            "cursor": "e-resize",
+            "cursor": "zoom",
             "actions": [
                 {
-                    "goto": "a2_quarry"
+                    "say": "To je okno."
+                },
+                {
+                    "say": "Pozerať sa ľuďom do okien je neslušné."
                 }
             ]
         }

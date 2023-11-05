@@ -8,7 +8,7 @@
             "cursor": "n-resize",
             "actions": [
                 {
-                    "goto": "a2_town_right"
+                    "goto": "a2_town"
                 }
             ]
         },

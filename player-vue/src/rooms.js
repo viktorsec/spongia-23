@@ -16,8 +16,7 @@ import a2_forest_path from '../../content/a2_forest_path/a2_forest_path.json';
 import a2_idols from '../../content/a2_idols/a2_idols.json';
 import a2_idols_guardian from '../../content/a2_idols_guardian/a2_idols_guardian.json';
 import a2_quarry from '../../content/a2_quarry/a2_quarry.json';
-import a2_town_left from '../../content/a2_town_left/a2_town_left.json';
-import a2_town_right from '../../content/a2_town_right/a2_town_right.json';
+import a2_town from '../../content/a2_town/a2_town.json';
 import a2_weird_guy from '../../content/a2_weird_guy/a2_weird_guy.json';
 import a2_weird_guy_art from '../../content/a2_weird_guy_art/a2_weird_guy_art.json';
 import a3_cannon from '../../content/a3_cannon/a3_cannon.json';
@@ -56,8 +55,7 @@ const rooms = [
   a2_idols_guardian,
   a2_idols,
   a2_quarry,
-  a2_town_left,
-  a2_town_right,
+  a2_town,
   a2_weird_guy_art,
   a2_weird_guy,
   a3_cannon,

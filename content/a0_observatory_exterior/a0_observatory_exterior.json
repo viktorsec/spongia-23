@@ -5,6 +5,7 @@
     "zones": [
         {
             "color": "#FF0000",
+            "tooltip": "Dvere observatória",
             "cursor": "door-right",
             "actions": [
                 {
@@ -47,6 +48,7 @@
         },
         {
             "color": "#0000FF",
+            "tooltip": "K domu",
             "cursor": "w-resize",
             "actions": [
                 {

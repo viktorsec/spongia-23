@@ -23,6 +23,7 @@
         },
         {
             "color": "#0000FF",
+            "tooltip": "Dvere",
             "cursor": "ne-resize",
             "actions": [
                 {
@@ -32,6 +33,7 @@
         },
         {
             "color": "#FF00FF",
+            "tooltip": "Dvere",
             "cursor": "sw-resize",
             "actions": [
                 {

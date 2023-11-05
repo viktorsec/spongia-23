@@ -20,6 +20,7 @@
         },
         {
             "color": "#00FF00",
+            "tooltip": "Teleskop",
             "cursor": "zoom",
             "actions": [
                 {

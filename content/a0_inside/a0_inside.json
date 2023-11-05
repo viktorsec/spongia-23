@@ -20,6 +20,10 @@
                 },
                 {
                     "say": "Tento kvetináč sa mi veľmi páči."
+                },
+                {
+                    "trigger": "important_key",
+                    "say": "Áno, je to moja kľúčová rastlina."
                 }
             ]
         },
@@ -29,6 +33,10 @@
             "actions": [
                 {
                     "say": "Pohodlné a teplé hniezdočko."
+                },
+                {
+                    "trigger": "important_key",
+                    "say": "Radšej si ho nechám."
                 }
             ]
         },

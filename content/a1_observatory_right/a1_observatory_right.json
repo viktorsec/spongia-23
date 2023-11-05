@@ -122,6 +122,9 @@
             "color": "#808080",
             "actions": [
                 {
+                    "conditions": {
+                        "hasFlagsNot": "dud_talk"
+                    },
                     "say": "Mikuláš: Vitaj v observátoriu. Konečne mám spoločnosť. Máme najvýkonnejší a zároveň jediný teleskop na našej planéte.",
                     "setFlag": "dud_talk"
                 },
@@ -129,7 +132,7 @@
                     "conditions": {
                         "hasFlags": "dud_talk"
                     },
-                    "say": "Mikuláš: Bol si sa už pozrieť cez teleskop? Videl si niečo zaujímavé?"
+                    "say": "Mikuláš: Čo tak pozrieť teleskop? Bolo tam niečo zaujímavé?"
                 },
                 {
                     "conditions": {
@@ -155,10 +158,21 @@
                     },
                     "say": "Mikuláš: Pri dverách mám peknú poličku, ale zatiaľ som si tam nič neuložil."
                 },
-
+                {
+                    "trigger": "full_whisky_a",
+                    "say": "Mikuláš: Ďakujem, nepijem."
+                },
+                {
+                    "trigger": "full_whisky_b",
+                    "say": "Mikuláš: Ďakujem, nepijem."
+                },
+                {
+                    "trigger": "banana",
+                    "say": "Mikuláš: Banány nemám rád."
+                },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Mikuláš: Toto nechcem."
+                    "say": "Mikuláš: Toto si radšej nechaj."
                 },
 
                 {
@@ -335,6 +349,13 @@
             "conditions": {
                 "hasFlags": "dud_level_1,beam_active"
             }
+        },
+        {
+            "image": "a1_observatory_right/open_door.png",
+            "conditions": {
+                "hasFlags": "placed_empty_whisky,placed_banana,placed_full_whisky,placed_quarter_potion,dud_level_2,beam_active,seen_comet"
+            }
         }
+
     ]
 }

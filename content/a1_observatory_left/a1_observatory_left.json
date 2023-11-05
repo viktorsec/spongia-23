@@ -24,6 +24,14 @@
             "actions": [
                 {
                     "goto": "a1_telescope_empty"
+                },
+                {
+                    "trigger": "important_key",
+                    "say": "Teleskop nie je na kľúč."
+                },
+                {
+                    "trigger": "$FALLBACK",
+                    "say": "Neviem čo s tým."
                 }
             ]
         }

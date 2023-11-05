@@ -44,8 +44,11 @@
                     "hasFlags": "seen_comet"
                 },
                 "say": "Izák: Jejdanenky. Kométa, a rúti sa priamo na nás? To veru neznie dobre. Možno s touto situáciou bude vedieť pomôcť niekto v meste"
+              },
+              {
+                "trigger": "important_key",
+                "say": "Izák: Máš veľmi pekný kľúč. Nevieš od čoho je? Určite na to prídeš."
               }
-
           ]
       }
   ]

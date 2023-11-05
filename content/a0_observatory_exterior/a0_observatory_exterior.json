@@ -18,7 +18,11 @@
                         "hasFlags": "apple_talk"
                     },        
                     "goto": "a1_observatory_right",
-                    "say": "Vošiel si do observatória. Dvere sa za tebou s hrmotom zabuchli. Niečo ti hovorí, že dostať sa odtiaľto nebude také jednoduché."
+                    "say": "Vchádzaš do observatória. Dvere sa za tebou s hrmotom zabuchli. Niečo ti hovorí, že dostať sa odtiaľto nebude také jednoduché."
+                },
+                {
+                    "trigger": "important_key",
+                    "say": "Kľúč sem nepasuje."
                 }
             ]
         },

@@ -26,7 +26,7 @@
             "cursor": "ne-resize",
             "actions": [
                 {
-                    "goto": "a1_spawn"
+                    "goto": "a1_observatory_kitchen"
                 }
             ]
         },

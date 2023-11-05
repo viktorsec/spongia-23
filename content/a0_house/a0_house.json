@@ -11,6 +11,10 @@
               {
                   "say": "Prešiel si dverami",
                   "goto": "a0_inside"
+              },
+              {
+                "trigger": "important_key",
+                "say": "Hmm, nie je tu žiadna kľúčová dierka."
               }
           ]
       },

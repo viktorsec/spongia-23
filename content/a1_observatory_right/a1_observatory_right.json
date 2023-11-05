@@ -32,6 +32,10 @@
                     "trigger": "empty_whisky",
                     "takeItem": "empty_whisky",
                     "setFlag": "placed_empty_whisky"
+                },
+                {
+                    "trigger": "$FALLBACK",
+                    "say": "To sa sem podľa mňa nehodí."
                 }
             ]
         },
@@ -55,6 +59,14 @@
                     "trigger": "banana",
                     "takeItem": "banana",
                     "setFlag": "placed_banana"
+                },
+                {
+                    "trigger": "quarter_potion",
+                    "say": "Kiež by sa to dalo otočiť."
+                },
+                {
+                    "trigger": "$FALLBACK",
+                    "say": "To sa sem podľa mňa nehodí."
                 }
             ]
         },
@@ -92,6 +104,10 @@
                     "trigger": "full_whisky_b",
                     "takeItem": "full_whisky_b",
                     "setFlag": "placed_full_whisky"
+                },
+                {
+                    "trigger": "$FALLBACK",
+                    "say": "To sa sem podľa mňa nehodí."
                 }
             ]
         },
@@ -115,6 +131,14 @@
                     "trigger": "quarter_potion",
                     "takeItem": "quarter_potion",
                     "setFlag": "placed_quarter_potion"
+                },
+                {
+                    "trigger": "banana",
+                    "say": "Kiež by sa ten banán dal otočiť."
+                },
+                {
+                    "trigger": "$FALLBACK",
+                    "say": "To sa sem podľa mňa nehodí."
                 }
             ]
         },

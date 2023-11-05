@@ -19,9 +19,33 @@
           "cursor": "help",
           "actions": [
               {
+                "conditions": {
+                    "hasFlagsNot": "apple_talk"
+                },
                 "say": "Izák: Tieto jablone každý rok rodia zelené jablká, ale tento rok sú červené. Myslím, že za tým môže byť nejaký záujímavý astornomický úkaz. Išiel by si sa spýtať do observatória, či nepozorovali niečo zaujímavé? Povedz, že ťa posiela Izák.",
                 "setFlag": "apple_talk"
+              },
+              {
+                "conditions": {
+                    "hasFlags": "apple_talk",
+                    "hasFlagsNot": "seen_comet"
+                },
+                "say": "Izák: Čo si zistil v observatóriu?"
+              },
+              {
+                "conditions": {
+                    "hasFlags": "apple_talk",
+                    "hasFlagsNot": "seen_comet"
+                },
+                "say": "Izák: Bol si sa pozrieť v observatóriu? Je na východ."
+              },
+              {
+                "conditions": {
+                    "hasFlags": "seen_comet"
+                },
+                "say": "Izák: Wow, kométa, a rúti sa priamo na nás? To neznie veľmi dobre. Možno s touto situáciou bude vedieť pomôcť niekto v meste"
               }
+
           ]
       }
   ]

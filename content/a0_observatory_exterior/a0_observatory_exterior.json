@@ -11,7 +11,7 @@
                     "conditions": {
                         "hasFlagsNot": "apple_talk"
                     },        
-                    "say": "Zazvonil si, ale nikto neotvára"
+                    "say": "Zvoníš, ale nikto neotvára. Možno treba povedať heslo"
                 },
                 {
                     "conditions": {

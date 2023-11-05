@@ -1,5 +1,6 @@
 <template>
   <div class="interface">
+    <AppHeader />
     <ViewPort
       class="ui-viewport"
       :room="activeRoom"
@@ -26,6 +27,7 @@ import clientState from '@/store/clientState';
 import gameState from '@/store/gameState';
 import rooms from '@/rooms';
 
+import AppHeader from '@/components/AppHeader.vue'
 import ViewPort from '@/components/ViewPort.vue'
 import ItemsPanel from '@/components/ItemsPanel.vue'
 import ConsolePanel from '@/components/ConsolePanel.vue'

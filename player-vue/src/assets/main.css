@@ -38,6 +38,7 @@ img {
 
 input, button, textarea, select {
   font: inherit;
+  cursor: inherit;
 }
 
 :root {

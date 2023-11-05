@@ -1,12 +1,19 @@
 import { reactive } from 'vue';
 
-const gameState = reactive({
+const initialState = () => ({
   currentRoom: 'a0_inside',
-  visitedRooms: [],
   items: [],
   itemsTaken: [],
   flags: ['dud_level_3'], // TODO: move this to content
   console: [],
 });
+
+const gameState = reactive({
+  ...initialState(),
+});
+
+gameState.restart = () => {
+  Object.assign(gameState, initialState());
+}
 
 export default gameState;

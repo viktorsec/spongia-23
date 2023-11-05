@@ -5,7 +5,7 @@
     "zones": [
         {
             "color": "#FF0000",
-            "cursor": "s-resize",
+            "cursor": "door-left",
             "actions": [
                 {
                     "goto": "a2_town"
@@ -17,22 +17,34 @@
             "actions": [
                 {
                     "trigger": "raw_clay",
-                    "say": "Dakujem, tu mas kluc",
+                    "say": "Ďakujem, tu máš za odmenu kľúč.",
                     "giveItem": "wrench",
                     "takeItem": "raw_clay",
                     "setFlag": "given_wrench"
                 },
                 {
+                    "trigger": "important_key",
+                    "say": "Radšej si ho nechaj, budeš ho asi potrebovať."
+                },
+                {
+                    "trigger": "barrel",
+                    "say": "Pozor keď to budeš niekam montovať, aby to bolo správne otočené."
+                },
+                {
+                    "trigger": "shirt",
+                    "say": "Ďakujem ale toto nepotrebujem."
+                },
+                {
                     "conditions": {
                         "hasFlags": "given_wrench"
                     },
-                    "say": "Dufam ze sa paci kluc co som ti dal"
+                    "say": "Dúfam, že sa ti páči kľúč, čo som ti dal."
                 },
                 {
                     "conditions": {
                         "hasFlagsNot": "given_wrench"
                     },
-                    "say": "Potreboval by som plastelinu"
+                    "say": "Potreboval by som plastelínu."
                 }
             ]
         }

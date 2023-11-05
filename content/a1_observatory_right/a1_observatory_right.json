@@ -180,14 +180,14 @@
                     "conditions": {
                         "hasFlags": "beam_active"
                     },
-                    "say": "Posuvat so zapnutym paprskom by bolo nebezpecne."
+                    "say": "Posúvať sa so zapnutým lúčom by bolo nebezpečné."
                 },
                 {
                     "trigger": "upberry",
                     "conditions": {
                         "hasFlags": "beam_active"
                     },
-                    "say": "Posuvat so zapnutym paprskom by bolo nebezpecne."
+                    "say": "Posúvať sa so zapnutým lúčom by bolo nebezpečné."
                 },
                 {
                     "trigger": "downberry",

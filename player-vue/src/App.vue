@@ -22,7 +22,7 @@
 </template>
 
 <script setup>
-import { onMounted, onBeforeUnmount, computed } from 'vue';
+import { onMounted, onBeforeUnmount, computed, watch } from 'vue';
 import clientState from '@/store/clientState';
 import gameState from '@/store/gameState';
 import rooms from '@/rooms';
@@ -58,10 +58,27 @@ const handleKeyDown = (event) => {
       gameState.currentRoom = roomId;
     }
   }
-
 };
 
+const saveGame = () => {
+  const state = {
+    currentRoom: gameState.currentRoom,
+    items: gameState.items,
+    itemsTaken: gameState.itemsTaken,
+    flags: gameState.flags,
+  };
+  localStorage.setItem('FDL_S23_SAVEFILE', JSON.stringify(state));
+};
+
+const loadGame = () => {
+  const saveFile = JSON.parse(localStorage.getItem('FDL_S23_SAVEFILE'));
+  Object.assign(gameState, saveFile);
+};
+
+watch(gameState, saveGame);
+
 onMounted(() => {
+  loadGame();
   document.addEventListener('keydown', handleKeyDown);
 });
 

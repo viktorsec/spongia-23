@@ -38,6 +38,10 @@
                     "say": "Idol: Ten klúč je úplne zbytočný."
                 },
                 {
+                    "trigger": "match",
+                    "say": "Idol: Niekde to zapál."
+                },
+                {
                     "trigger": "camera",
                     "say": "Idol: Tu je zákaz fotiť."
                 }
@@ -59,6 +63,10 @@
                 {
                     "trigger": "important_key",
                     "say": "Idol: Ten klúč je veľmi dôležitý."
+                },
+                {
+                    "trigger": "match",
+                    "say": "Idol: Je moc mokrá, nebude horieť."
                 },
                 {
                     "trigger": "camera",
@@ -92,6 +100,10 @@
                 {
                     "trigger": "wrench",
                     "say": "Idol: To je kľúč na odomknutie dverí."
+                },
+                {
+                    "trigger": "match",
+                    "say": "Idol: Ak s tým spáliš planétu nebude mať kométa čo zničiť."
                 },
                 {
                     "trigger": "camera",

@@ -58,6 +58,26 @@
                 {
                     "trigger": "shirt_glowing",
                     "say": "Turista: Fuj to čo je s mojím tričkom?"
+                },
+                {
+                    "trigger": "upberry",
+                    "say": "Turista: Ja na turistike jedávam len müsli tyčinky."
+                },
+                {
+                    "trigger": "downberry",
+                    "say": "Turista: Ja na turistike jedávam len müsli tyčinky."
+                },
+                {
+                    "trigger": "zapberry",
+                    "say": "Turista: Ja na turistike jedávam len müsli tyčinky."
+                },
+                {
+                    "trigger": "match",
+                    "say": "Turista: Dávaj pozor, tu v prírode by bol požiar nebezpečný."
+                },
+                {
+                    "trigger": "match_lit",
+                    "say": "Turista: Radšej to sfúkni, aby nevznikol lesný požiar."
                 }
             ]
         }

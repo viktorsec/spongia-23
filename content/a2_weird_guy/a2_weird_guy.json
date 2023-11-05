@@ -47,6 +47,18 @@
                 {
                     "trigger": "important_key",
                     "say": "Zberateľ kamarátov: Nevieš od čoho je? No ja verím, že na to prídeš."
+                },
+                {
+                    "trigger": "shirt",
+                    "say": "Zberateľ kamarátov: Ja nosím len košele."
+                },
+                {
+                    "trigger": "shirt_glowing",
+                    "say": "Zberateľ kamarátov: Ak chceš ostať na večeru toto musíš hodiť do pračky."
+                },
+                {
+                    "trigger": "cannonball",
+                    "say": "Zberateľ kamarátov: Z toho by ale bolo veľa kamarátov."
                 }
             ]
         },

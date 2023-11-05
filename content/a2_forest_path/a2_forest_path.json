@@ -6,6 +6,7 @@
         {
             "color": "#FF0000",
             "cursor": "s-resize",
+            "tooltip": "Do mesta",
             "actions": [
                 {
                     "goto": "a2_town"
@@ -15,6 +16,7 @@
         {
             "color": "#00FF00",
             "cursor": "n-resize",
+            "tooltip": "K observatóriu",
             "actions": [
                 {
                     "goto": "a0_observatory_exterior"
@@ -24,19 +26,20 @@
         {
             "color": "#0000FF",
             "cursor": "e-resize",
+            "tooltip": "Tajomná cestička",
             "actions": [
                 {
                     "conditions": {
                         "hasFlagsNot": "idol_path_unlocked"
                     },
-                    "say": "Tam vyzera ze nic nie je a bojim sa tam ist."
+                    "say": "Zdá sa že tam nič nie je a bojím sa tam len tak ísť."
                 },
                 {
                     "conditions": {
                         "hasFlags": "idol_path_unlocked"
                     },
                     "goto": "a2_idols_guardian",
-                    "say": "Vitajte v chrame troch idolov, jeden z ktorych vzdy hovori pravdu, jeden ktory vzdy klame a jeden ktory odpoveda nahodne."
+                    "say": "Vitajte v chráme troch idolov. Jeden z nich vždy hovorí pravdu, jeden vždy klame, a jeden odpovedá nahodne."
                 }
             ]
         }

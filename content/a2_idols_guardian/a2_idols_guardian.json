@@ -6,7 +6,7 @@
         {
             "color": "#FF0000",
             "cursor": "w-resize",
-            "tooltip": "Spat na cesticku",
+            "tooltip": "Späť na cestičku",
             "actions": [
                 {
                     "goto": "a2_forest_path"
@@ -25,16 +25,16 @@
         },
         {
             "color": "#0000FF",
-            "tooltip": "Strazca idolov",
+            "tooltip": "Strážca idolov",
             "actions": [
                 {
-                    "say": "Nech sa paci, pokracujte k idolom a spytajte sa ich co chcete."
+                    "say": "Strážca idolov: Nech sa páči, pokračujte k idolom a spýtajte sa ich, čo chcete."
                 },
                 {
-                    "say": "Pozor, mate len tri otazky kym vas vyhodia prec."
+                    "say": "Strážca idolov: Pozor, mate len tri otázky, kým vás vyhodia preč."
                 },
                 {
-                    "say": "Neviem ktory je ktory, stale sa vymienaju."
+                    "say": "Strážca idolov: Neviem, ktorý je ktorý, stále sa vymieňajú."
                 }
             ]
         }

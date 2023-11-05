@@ -3,7 +3,7 @@
     "background": "a2_idols/background.png",
     "maxActions": 3,
     "leaveAction": {
-        "say": "Prac sa! Po troch otázkach sa musíme povymieňať.",
+        "say": "Všetci traja spolu: Prac sa! Po troch otázkach sa musíme povymieňať.",
         "goto": "a2_idols_guardian"
     },
     "mask": [
@@ -21,13 +21,13 @@
             "actions": [
                 {
                     "conditions": {"hasFlagsNot": "given_match"},
-                    "say": "Toto zachrani nasu planetu.",
+                    "say": "Idol: Toto zachráni našu planétu.",
                     "giveItem": "match",
                     "setFlag": "given_match"
                 },
                 {
                     "conditions": {"hasFlags": "given_match"},
-                    "say": "Planeta sa da zachranit."
+                    "say": "Idol: Planeta sa dá zachrániť."
                 }
             ]
         },
@@ -36,7 +36,7 @@
             "tooltip": "Idol",
             "actions": [
                 {
-                    "say": "Planeta sa neda zachranit."
+                    "say": "Idol: Planeta sa nedá zachrániť."
                 }
             ]
         },
@@ -45,7 +45,7 @@
             "tooltip": "Idol",
             "actions": [
                 {
-                    "say": "TODO random."
+                    "say": "Idol: TODO random."
                 }
             ]
         }

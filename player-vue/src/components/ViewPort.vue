@@ -439,7 +439,7 @@ processRoomLoad();
   }
 }
 
-.cursor-nw-resize { cursor: url("@/assets/cursors/n-resize.png") 16 16, nw-resize; }
+.cursor-nw-resize { cursor: url("@/assets/cursors/nw-resize.png") 16 16, nw-resize; }
 .cursor-n-resize { cursor: url("@/assets/cursors/n-resize.png") 16 16, n-resize; }
 .cursor-ne-resize { cursor: url("@/assets/cursors/ne-resize.png") 16 16, ne-resize; }
 .cursor-w-resize { cursor: url("@/assets/cursors/w-resize.png") 16 16, w-resize; }

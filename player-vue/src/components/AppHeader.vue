@@ -15,6 +15,7 @@
 <script setup>
 import { ref } from 'vue';
 import gameState from '@/store/gameState';
+import clientState from '@/store/clientState';
 
 const restart = () => {
   const yes = confirm('Skutočne si želáte reštartovať hru?');
@@ -42,6 +43,7 @@ const musicToggle = () => {
 }
 
 const credits = () => {
+  clientState.debugMode = true;
   const lines = [
     'Pozor, padá hviezda!',
     'Faisceau de Lumière ~ Špongia 2023',

@@ -5,7 +5,7 @@ const initialState = () => ({
   items: [],
   itemsTaken: [],
   flags: ['dud_level_3'], // TODO: move this to content
-  console: [],
+  console: [], // TODO: move this to clientState
 });
 
 const gameState = reactive({

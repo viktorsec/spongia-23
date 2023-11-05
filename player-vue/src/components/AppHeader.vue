@@ -23,17 +23,20 @@ const restart = () => {
   }
 }
 
-const musicURL = new URL('/src/assets/ephemeral-3.mp3', import.meta.url);
-const music = new Audio(musicURL);
-music.loop = true;
-
+let musicAudio = null;
 const musicIsPlaying = ref(false);
 const musicToggle = () => {
+  if (!musicAudio) {
+    const musicURL = new URL('/src/assets/ephemeral-3.mp3', import.meta.url);
+    musicAudio = new Audio(musicURL);
+    musicAudio.loop = true;
+  }
+
   if (!musicIsPlaying.value) {
-    music.play();
+    musicAudio.play();
     musicIsPlaying.value = true;
   } else {
-    music.pause();
+    musicAudio.pause();
     musicIsPlaying.value = false;
   }
 }

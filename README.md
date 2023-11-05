@@ -1,6 +1,6 @@
 # Pozor, padá hviezda
 
-Pozor, padá hviezda is a point-and-click andventure game made for [Špongia 2022](https://www.smnd.sk/mikey/PHP/spongia/spongia_2023/) game jam.
+Pozor, padá hviezda is a point-and-click andventure game made for [Špongia 2023](https://www.smnd.sk/mikey/PHP/spongia/spongia_2023/) game jam.
 
 - Play on [projects.mravcak.com/hviezda](https://projects.mravcak.com/hviezda/)
 

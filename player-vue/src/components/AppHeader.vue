@@ -9,6 +9,7 @@
       <button class="base-button" @click="musicToggle()">Hudba {{ musicIsPlaying ? 'zap.' : 'vyp.' }}</button>
       <button class="base-button" @click="privacyPolicy()">Súkromie</button>
       <button class="base-button" @click="credits()" @keyup.enter="startDebug()">Titulky</button>
+      <button class="base-button" @click="repository()">GitHub</button>
     </div>
   </div>
 </template>
@@ -64,6 +65,10 @@ const startDebug = () => {
 
 const privacyPolicy = () => {
   gameState.console.push('Nesledujeme vaše správanie v hre ani mimo nej. Stav hry je uložený iba na vašom zariadení.');
+}
+
+const repository = () => {
+  window.open('https://github.com/viktorsec/spongia-23/');
 }
 
 </script>

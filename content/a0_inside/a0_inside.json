@@ -1,0 +1,40 @@
+{
+  "id": "a0_inside",
+  "background": "a0_inside/background.png",
+  "mask": "a0_inside/zones.png",
+  "zones": [
+      {
+          "color": "#FF0000",
+          "tooltip": "Dvere",
+          "cursor": "door-right",
+          "actions": [
+              {
+                  "say": "Prešiel si dverami",
+                  "goto": "a0_house"
+              }
+          ]
+      },
+      {
+          "color": "#00FF00",
+          "tooltip": "Okno",
+          "actions": [
+              {
+                  "say": "Je tu krásny výhľad na jablčný sad"
+              }
+          ]
+      },
+      {
+          "color": "#0000FF",
+          "tooltip": "Kvetina",
+          "cursor": "help",
+          "actions": [
+              {
+                  "say": "Aký krásny kvet"
+              },
+              {
+                  "say": "Veľmi vkusný kvetináč"
+              }
+          ]
+      }
+  ]
+}

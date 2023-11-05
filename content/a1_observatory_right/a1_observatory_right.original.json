@@ -359,7 +359,7 @@
             ],
             "actions": [
                 {
-                    "goto": "a2_observatory_exterior"
+                    "goto": "a0_observatory_exterior"
                 }
             ]
         },

@@ -1,3 +1,8 @@
+import a0_inside from '../../content/a0_inside/a0_inside.json';
+import a0_house from '../../content/a0_house/a0_house.json';
+import a0_appleguy from '../../content/a0_appleguy/a0_appleguy.json';
+import a0_observatory_exterior from '../../content/a0_observatory_exterior/a0_observatory_exterior.json';
+
 import a1_observatory_kitchen from '../../content/a1_observatory_kitchen/a1_observatory_kitchen.json';
 import a1_observatory_left from '../../content/a1_observatory_left/a1_observatory_left.json';
 import a1_observatory_middle from '../../content/a1_observatory_middle/a1_observatory_middle.json';
@@ -11,7 +16,6 @@ import a2_claysmith from '../../content/a2_claysmith/a2_claysmith.json';
 import a2_forest_path from '../../content/a2_forest_path/a2_forest_path.json';
 import a2_idols from '../../content/a2_idols/a2_idols.json';
 import a2_idols_guardian from '../../content/a2_idols_guardian/a2_idols_guardian.json';
-import a2_observatory_exterior from '../../content/a2_observatory_exterior/a2_observatory_exterior.json';
 import a2_quarry from '../../content/a2_quarry/a2_quarry.json';
 import a2_town_left from '../../content/a2_town_left/a2_town_left.json';
 import a2_town_right from '../../content/a2_town_right/a2_town_right.json';
@@ -35,6 +39,11 @@ import a3_shroom from '../../content/a3_shroom/a3_shroom.json';
 import a4_finale from '../../content/a4_finale/a4_finale.json';
 
 const rooms = [
+  a0_inside,
+  a0_house,
+  a0_appleguy,
+  a0_observatory_exterior,
+
   a1_observatory_kitchen,
   a1_observatory_left,
   a1_observatory_middle,
@@ -48,7 +57,6 @@ const rooms = [
   a2_forest_path,
   a2_idols_guardian,
   a2_idols,
-  a2_observatory_exterior,
   a2_quarry,
   a2_town_left,
   a2_town_right,

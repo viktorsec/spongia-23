@@ -1,0 +1,38 @@
+{
+  "id": "a0_house",
+  "background": "a0_house/background.png",
+  "mask": "a0_house/zones.png",
+  "zones": [
+      {
+          "color": "#FF0000",
+          "tooltip": "Dvere",
+          "cursor": "door-right",
+          "actions": [
+              {
+                  "say": "Prešiel si dverami",
+                  "goto": "a0_inside"
+              }
+          ]
+      },
+      {
+          "color": "#00FF00",
+          "tooltip": "Cesta do jablčného sadu",
+          "cursor": "w-resize",
+          "actions": [
+              {
+                "goto": "a0_appleguy"
+              }
+          ]
+      },
+      {
+          "color": "#0000FF",
+          "tooltip": "K observatóriu",
+          "cursor": "e-resize",
+          "actions": [
+              {
+                  "goto": "a0_observatory_exterior"
+              }
+          ]
+      }
+  ]
+}

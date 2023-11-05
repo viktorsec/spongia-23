@@ -1,0 +1,55 @@
+{
+    "id": "a0_observatory_exterior",
+    "background": "a0_observatory_exterior/background.png",
+    "mask": "a0_observatory_exterior/zones.png",
+    "zones": [
+        {
+            "color": "#FF0000",
+            "cursor": "door-right",
+            "actions": [
+                {
+                    "conditions": {
+                        "hasFlagsNot": "apple_talk"
+                    },        
+                    "say": "Zazvonil si, ale nikto neotvára"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "apple_talk"
+                    },        
+                    "goto": "a1_observatory_right",
+                    "say": "Vošiel si do observatória. Dvere sa za tebou s hrmotom zabuchli"
+                }
+            ]
+        },
+        {
+            "color": "#00FF00",
+            "cursor": "se-resize",
+            "actions": [
+                {
+                    "conditions": {
+                        "hasFlagsNot": "seen_comet"
+                    },        
+                    "say": "Musím najskôr preskúmať observatórium"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "seen_comet"
+                    },        
+                    "goto": "a2_forest_path"
+
+                }
+            ]
+        },
+        {
+            "color": "#0000FF",
+            "cursor": "w-resize",
+            "actions": [
+                {
+                    "goto": "a0_house"
+                }
+            ]
+        }
+
+    ]
+}

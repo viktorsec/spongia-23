@@ -432,6 +432,7 @@ processRoomLoad();
   opacity: 1;
   transition: opacity .3s;
   transform: translateX(-50%);
+  white-space: nowrap;
   &.hidden {
     opacity: 0;
     transition: none;

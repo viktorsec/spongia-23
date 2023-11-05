@@ -1,0 +1,28 @@
+{
+  "id": "a0_appleguy",
+  "background": "a0_appleguy/background.png",
+  "mask": "a0_appleguy/zones.png",
+  "zones": [
+      {
+          "color": "#00FF00",
+          "tooltip": "K môjmu domu",
+          "cursor": "e-resize",
+          "actions": [
+              {
+                  "goto": "a0_house"
+              }
+          ]
+      },
+      {
+          "color": "#FF0000",
+          "tooltip": "Pestovateľ jablík",
+          "cursor": "help",
+          "actions": [
+              {
+                "say": "Tieto jablone každý rok rodia zelené jablká, ale tento rok sú červené. Myslím, že za tým môže byť nejaký záujímavý astornomický úkaz. Išiel by si sa spýtať do observatória, či nepozorovali niečo zaujímavé? Povedz, že ťa posiela Izák.",
+                "setFlag": "apple_talk"
+              }
+          ]
+      }
+  ]
+}

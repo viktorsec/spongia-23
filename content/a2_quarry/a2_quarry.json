@@ -31,7 +31,7 @@
                     "conditions": {
                         "hasFlagsNot": "given_raw_clay"
                     },
-                    "say": "Baník: Nechceš plastelínu?",
+                    "say": "Gustáv: Nechceš Gustávovu plastelínu?",
                     "setFlag": "given_raw_clay",
                     "giveItem": "raw_clay"
                 },
@@ -39,33 +39,33 @@
                     "conditions": {
                         "hasFlags": "given_raw_clay"
                     },
-                    "say": "Baník: Už viacej nemám."
+                    "say": "Gustáv: Už viacej nemám."
                 },
                 {
                     "trigger": "raw_clay",
                     "takeItem": "raw_clay",
                     "unsetFlag": "given_raw_clay",
-                    "say": "Baník: Dobre, ak nechceš vráť späť."
+                    "say": "Gustáv: Dobre, ak nechceš vráť späť."
                 },
                 {
                     "trigger": "camera",
-                    "say": "Baník: Prosím nefoť ma, som špinavý."
+                    "say": "Gustáv: Prosím nefoť ma, som špinavý."
                 },
                 {
                     "trigger": "cannonball",
-                    "say": "Baník: Fíha, to je ale kopec plastelíny. A tak dokonale guľatý."
+                    "say": "Gustáv: Fíha, to je ale kopec plastelíny. A tak dokonale guľatý."
                 },
                 {
                     "trigger": "wrench",
-                    "say": "Baník: Nie že nám tu s tým niečo odmontuješ!"
+                    "say": "Gustáv: Nie že nám tu s tým niečo odmontuješ!"
                 },
                 {
                     "trigger": "shirt",
-                    "say": "Baník: Také čisté tričko by v bani dlho nevydržalo."
+                    "say": "Gustáv: Také čisté tričko by v bani dlho nevydržalo."
                 },
                 {
                     "trigger": "shirt_glowing",
-                    "say": "Baník: Veru ja dnešnej móde nerozumiem."
+                    "say": "Gustáv: Veru ja dnešnej móde nerozumiem."
                 }
             ]
         }

@@ -64,11 +64,11 @@
                 },
                 {
                     "trigger": "shirt",
-                    "say": "Baník: Pekné tričko, ale svietiaca vesta to nie je."
+                    "say": "Robot: Pekné tričko, ale svietiaca vesta to nie je."
                 },
                 {
                     "trigger": "shirt_glowing",
-                    "say": "Baník: Bájna údržbárska vesta."
+                    "say": "Robot: Bájna údržbárska vesta."
                 }
             ]
         },

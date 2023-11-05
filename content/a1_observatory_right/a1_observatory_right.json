@@ -144,13 +144,13 @@
         },
         {
             "color": "#808080",
-            "tooltip": "Mikuláš",
+            "tooltip": "Astronóm",
             "actions": [
                 {
                     "conditions": {
                         "hasFlagsNot": "dud_talk"
                     },
-                    "say": "Mikuláš: Vitaj v observátoriu. Konečne mám spoločnosť. Máme najvýkonnejší a zároveň jediný teleskop na našej planéte.",
+                    "say": "Mikuláš: Vitaj v mojom observátoriu. Ja som Mikuláš, teší ma. Máme najvýkonnejší a zároveň jediný teleskop na našej planéte.",
                     "setFlag": "dud_talk"
                 },
                 {

@@ -18,50 +18,50 @@
             "actions": [
                 {
                     "trigger": "raw_clay",
-                    "say": "Plastelinár: Ďakujem, tu máš za odmenu kľúč.",
+                    "say": "Leonardo: Ďakujem, tu máš za odmenu kľúč.",
                     "giveItem": "wrench",
                     "takeItem": "raw_clay",
                     "setFlag": "given_wrench"
                 },
                 {
                     "trigger": "important_key",
-                    "say": "Plastelinár: Radšej si ho nechaj, budeš ho asi potrebovať."
+                    "say": "Leonardo: Radšej si ho nechaj, budeš ho asi potrebovať."
                 },
                 {
                     "trigger": "barrel",
-                    "say": "Plastelinár: Pozor keď to budeš niekam montovať, aby to bolo správne otočené."
+                    "say": "Leonardo: Pozor keď to budeš niekam montovať, aby to bolo správne otočené."
                 },
                 {
                     "trigger": "shirt",
-                    "say": "Plastelinár: Ďakujem ale toto nepotrebujem."
+                    "say": "Leonardo: Ďakujem ale toto nepotrebujem."
                 },
                 {
                     "conditions": {
                         "hasFlags": "given_wrench"
                     },
-                    "say": "Plastelinár: Dúfam, že sa ti páči kľúč, čo som ti dal."
+                    "say": "Leonardo: Dúfam, že sa ti páči kľúč, čo som ti dal."
                 },
                 {
                     "conditions": {
                         "hasFlagsNot": "given_wrench"
                     },
-                    "say": "Plastelinár: Potreboval by som plastelínu."
+                    "say": "Leonardo: Vitajte v Leonardovom plastelínovom svete. Potreboval by som plastelínu."
                 },
                 {
                     "trigger": "wrench",
-                    "say": "Plastelinár (s plačom): Prečo mi to vraciaš? Nepáči sa ti?"
+                    "say": "Leonardo (s plačom): Prečo mi to vraciaš? Nepáči sa ti?"
                 },
                 {
                     "trigger": "upberry",
-                    "say": "Plastelinár: Ďakujem, ale som alergický."
+                    "say": "Leonardo: Ďakujem, ale som alergický."
                 },
                 {
                     "trigger": "downberry",
-                    "say": "Plastelinár: Ďakujem, ale som alergický."
+                    "say": "Leonardo: Ďakujem, ale som alergický."
                 },
                 {
                     "trigger": "zapberry",
-                    "say": "Plastelinár: Ďakujem, ale som alergický."
+                    "say": "Leonardo: Ďakujem, ale som alergický."
                 }
             ]
         }

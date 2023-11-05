@@ -210,9 +210,11 @@ const handleAction = (action) => {
       gameState.itemsTaken.push(value);
       gameState.items.push(value);
     },
-    takeItem(value) {
-      const index = gameState.items.indexOf(value);
-      gameState.items.splice(index, 1);
+    takeItem(values) {
+      for (const value of values.split(",")) {
+        const index = gameState.items.indexOf(value);
+        gameState.items.splice(index, 1);
+      }
     },
     setFlag(values) {
       for (const value of values.split(",")) {

@@ -27,7 +27,7 @@
                 },
                 {
                     "conditions": {"hasFlags": "given_match"},
-                    "say": "Idol: Planeta sa dá zachrániť."
+                    "say": "Idol: Planéta sa dá zachrániť."
                 },
                 {
                     "conditions": {"hasFlags": "given_match"},
@@ -52,7 +52,7 @@
             "tooltip": "Idol",
             "actions": [
                 {
-                    "say": "Idol: Planeta sa nedá zachrániť."
+                    "say": "Idol: Planéta sa nedá zachrániť."
                 },
                 {
                     "say": "Idol: Nie, to ja vravím pravdu."

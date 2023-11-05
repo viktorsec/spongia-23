@@ -26,7 +26,7 @@
                     "conditions": {
                         "hasItemNot": "shirt_glowing"
                     },
-                    "say": "Robot: Neviem čo to je \"údržba\", ale povedali mi, že ma vestu čo svieti."
+                    "say": "Robot: Neviem čo to je „údržba“, ale povedali mi, že má vestu čo svieti."
                 },
                 {
                     "conditions": {

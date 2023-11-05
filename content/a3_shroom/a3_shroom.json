@@ -39,6 +39,10 @@
                 {
                     "trigger": "match_lit",
                     "say": "To nemožem zapáliť."
+                },
+                {
+                    "trigger": "$FALLBACK",
+                    "say": "Neviem čo s tým."
                 }
             ]
         }

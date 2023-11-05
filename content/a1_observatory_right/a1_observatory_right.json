@@ -163,7 +163,7 @@
                     "conditions": {
                         "hasFlags": "dud_talk"
                     },
-                    "say": "Mikuláš: Toto observatórium bolo vybudované v roku 1842 na príkaz kráľa Leopolda. Všetok stavebný materiál bol vyťažený v blízkych horách."
+                    "say": "Mikuláš: Toto observatórium bolo vybudované na príkaz kráľa Leopolda. Všetok stavebný materiál bol vyťažený v blízkych horách."
                 },
                 {
                     "conditions": {
@@ -181,7 +181,7 @@
                     "conditions": {
                         "hasFlags": "dud_talk,seen_comet"
                     },
-                    "say": "Mikuláš: Pri dverách mám peknú poličku, ale zatiaľ som si tam nič neuložil."
+                    "say": "Mikuláš: Pri dverách mám peknú poličku, ale zatiaľ som si tam nestihol nič uložiť."
                 },
                 {
                     "trigger": "full_whisky_a",
@@ -283,7 +283,8 @@
                     "conditions": {
                         "hasFlags": "placed_empty_whisky,placed_banana,placed_full_whisky,placed_quarter_potion,dud_level_2,beam_active,seen_comet"
                     },
-                    "goto": "a0_observatory_exterior"
+                    "goto": "a0_observatory_exterior",
+                    "takeItem": "zapberry,upberry,downberry"
                 },
                 {
                     "conditions": {

@@ -28,6 +28,10 @@
                     "takeItem": "camera",
                     "setFlag": "picture_taken",
                     "goto": "a3_mountain3"
+                },
+                {
+                    "trigger": "$FALLBACK",
+                    "say": "Pekná vecička. Ale už ma prosím odfoť."
                 }
             ]
         },

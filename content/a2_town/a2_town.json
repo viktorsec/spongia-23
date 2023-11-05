@@ -6,6 +6,7 @@
         {
             "color": "#FF0000",
             "cursor": "s-resize",
+            "tooltip": "Do lesa",
             "actions": [
                 {
                     "goto": "a2_forest_path"
@@ -14,7 +15,8 @@
         },
         {
             "color": "#00FF00",
-            "cursor": "w-resize",
+            "cursor": "nw-resize",
+            "tooltip": "K bani",
             "actions": [
                 {
                     "goto": "a2_quarry"
@@ -23,7 +25,7 @@
         },
         {
             "color": "#0000FF",
-            "cursor": "n-resize",
+            "cursor": "door-right",
             "actions": [
                 {
                     "goto": "a2_claysmith"
@@ -32,7 +34,7 @@
         },
         {
             "color": "#FFFF00",
-            "cursor": "se-resize",
+            "cursor": "door-right",
             "actions": [
                 {
                     "goto": "a2_weird_guy"
@@ -41,7 +43,8 @@
         },
         {
             "color": "#00FFFF",
-            "cursor": "se-resize",
+            "cursor": "ne-resize",
+            "tooltip": "Von za mesto",
             "actions": [
                 {
                     "goto": "a3_crossroads"
@@ -51,6 +54,7 @@
         {
             "color": "#FF00FF",
             "cursor": "zoom",
+            "tooltip": "Okno",
             "actions": [
                 {
                     "say": "To je okno."

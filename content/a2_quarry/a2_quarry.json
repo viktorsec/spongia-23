@@ -6,6 +6,7 @@
         {
             "color": "#FF0000",
             "cursor": "s-resize",
+            "tooltip": "Do mesta",
             "actions": [
                 {
                     "goto": "a2_town"
@@ -15,6 +16,7 @@
         {
             "color": "#00FF00",
             "cursor": "sw-resize",
+            "tooltip": "Hlbšie do bane",
             "actions": [
                 {
                     "goto": "a3_cave_robot"
@@ -23,12 +25,13 @@
         },
         {
             "color": "#0000FF",
+            "tooltip": "Baník",
             "actions": [
                 {
                     "conditions": {
                         "hasFlagsNot": "given_raw_clay"
                     },
-                    "say": "TODO krompac",
+                    "say": "Baník: Nechceš plastelínu?",
                     "setFlag": "given_raw_clay",
                     "giveItem": "raw_clay"
                 },
@@ -36,7 +39,13 @@
                     "conditions": {
                         "hasFlags": "given_raw_clay"
                     },
-                    "say": "Uz viacej nemam"
+                    "say": "Baník: Už viacej nemám."
+                },
+                {
+                    "trigger": "raw_clay",
+                    "takeItem": "raw_clay",
+                    "unsetFlag": "given_raw_clay",
+                    "say": "Baník: Dobre, ak nechceš vráť späť."
                 }
             ]
         }

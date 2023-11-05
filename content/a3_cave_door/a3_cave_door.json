@@ -18,6 +18,7 @@
         },
         {
             "color": "#FFFF00",
+            "cursor": "door-left",
             "actions": [
                 {
                     "conditions": {

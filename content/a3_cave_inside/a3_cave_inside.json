@@ -13,7 +13,7 @@
     "zones": [
         {
             "color": "#FF0000",
-            "cursor": "s-resize",
+            "cursor": "door-left",
             "actions": [
                 {
                     "goto": "a3_cave_entrance"
@@ -24,7 +24,7 @@
             "color": "#00FF00",
             "actions": [
                 {
-                    "say": "Au! Horuce."
+                    "say": "Au! Horúce."
                 },
                 {
                     "trigger": "match",
@@ -54,13 +54,13 @@
                     "conditions": {
                         "hasFlagsNot": "taken_barrel"
                     },
-                    "say": "Hmm toto by sa dalo odmontovat keby som mal naradie."
+                    "say": "Hmm toto by sa dalo odmontovať s pomocou náradia."
                 },
                 {
                     "conditions": {
                         "hasFlags": "taken_barrel"
                     },
-                    "say": "To uz som ukradol, teda, pozical si."
+                    "say": "Toto už niekto ukradol, teda, požičal si."
                 }
             ]
         }

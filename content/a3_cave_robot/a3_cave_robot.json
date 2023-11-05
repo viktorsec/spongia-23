@@ -14,24 +14,25 @@
         },
         {
             "color": "#00FF00",
+            "tooltip": "Strážny robot",
             "actions": [
                 {
                     "conditions": {
                         "hasItemNot": "shirt_glowing"
                     },
-                    "say": "Strazim aby sem mohla vojst len udrzba."
+                    "say": "Robot: Strážim, aby sem mohla vôjsť len údržba."
                 },
                 {
                     "conditions": {
                         "hasItemNot": "shirt_glowing"
                     },
-                    "say": "Neviem co je \"udrba\" ale povedali mi ze ma vestu co svieti."
+                    "say": "Robot: Neviem čo to je \"údržba\", ale povedali mi, že ma vestu čo svieti."
                 },
                 {
                     "conditions": {
                         "hasItem": "shirt_glowing"
                     },
-                    "say": "Ah! Udrzba! Konecne."
+                    "say": "Robot: Ah! Údržba! Konečne."
                 }
             ]
         },
@@ -49,7 +50,7 @@
                     "conditions": {
                         "hasItemNot": "shirt_glowing"
                     },
-                    "say": "BEEP BOOP Dalej vas nesmiem pustit, vstup len pre udrzbu."
+                    "say": "Robot: BEEP BOOP Ďalej vás nesmiem pustiť, vstup len pre údržbu."
                 }
             ]
         }

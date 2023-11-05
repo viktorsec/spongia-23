@@ -87,7 +87,11 @@
                 },
                 {
                     "trigger": "important_key",
-                    "say": "Idol: Ako na tej fotke vyzerám?"
+                    "say": "Idol: To je kľúč na odmontovanie hlavne."
+                },
+                {
+                    "trigger": "wrench",
+                    "say": "Idol: To je kľúč na odomknutie dverí."
                 },
                 {
                     "trigger": "camera",

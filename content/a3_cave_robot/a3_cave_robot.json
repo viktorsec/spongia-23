@@ -41,6 +41,22 @@
                 {
                     "trigger": "barrel",
                     "say": "Robot: Už bolo na čase to vymeniť. Dáfam, že čoskoro nainštalujete novú."
+                },
+                {
+                    "trigger": "upberry",
+                    "say": "Robot: Organická potrava nie je pre mňa potrebná."
+                },
+                {
+                    "trigger": "downberry",
+                    "say": "Robot: Organická potrava nie je pre mňa potrebná."
+                },
+                {
+                    "trigger": "zapberry",
+                    "say": "Robot: To by ma mohlo zoskratovať."
+                },
+                {
+                    "trigger": "important_key",
+                    "say": "Robot: S takým kľúčom sa určite dostanene na nejaké doležité miesto, ale sem vás to nepustí."
                 }
             ]
         },

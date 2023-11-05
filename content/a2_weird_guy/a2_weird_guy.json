@@ -43,6 +43,10 @@
                 },
                 {
                     "say": "Zberateľ kamarátov: Jeeej nový kamaráť! Neostaneš na večeru?"
+                },
+                {
+                    "trigger": "important_key",
+                    "say": "Zberateľ kamarátov: Nevieš od čoho je? No ja verím, že na to prídeš."
                 }
             ]
         },

@@ -46,6 +46,22 @@
                         "hasFlagsNot": "given_wrench"
                     },
                     "say": "Plastelinár: Potreboval by som plastelínu."
+                },
+                {
+                    "trigger": "wrench",
+                    "say": "Plastelinár (s plačom): Prečo mi to vraciaš? Nepáči sa ti?"
+                },
+                {
+                    "trigger": "upberry",
+                    "say": "Plastelinár: Ďakujem, ale som alergický."
+                },
+                {
+                    "trigger": "downberry",
+                    "say": "Plastelinár: Ďakujem, ale som alergický."
+                },
+                {
+                    "trigger": "zapberry",
+                    "say": "Plastelinár: Ďakujem, ale som alergický."
                 }
             ]
         }

@@ -5,7 +5,7 @@
     "zones": [
         {
             "color": "#FF0000",
-            "cursor": "s-resize",
+            "cursor": "door-left",
             "actions": [
                 {
                     "goto": "a3_mountain1"
@@ -16,11 +16,11 @@
             "color": "#00FF00",
             "actions": [
                 {
-                    "say": "Svietiaci hryb. Tecie z neho ziarivy sliz."
+                    "say": "Svietiaci hríb. Tečie z neho žiarivý sliz."
                 },
                 {
                     "trigger": "shirt",
-                    "say": "Fuj, cele tricko je od slizu a ziari.",
+                    "say": "Fuj, celé tričko je od slizu a žiari.",
                     "takeItem": "shirt",
                     "giveItem": "shirt_glowing"
                 }

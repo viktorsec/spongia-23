@@ -17,32 +17,32 @@
             "actions": [
                 {
                     "conditions": { "hasFlagsNot": "placed_barrel" },
-                    "say": "To je delo, ale chyba mu hlaven."
+                    "say": "To je delo, ale chýba mu hlaveň."
                 },
                 {
                     "conditions": { "hasFlags": "placed_barrel", "hasFlagsNot": "placed_bullet" },
-                    "say": "To je delo, ale chyba mu naboj."
+                    "say": "To je delo, ale chýba mu náboj."
                 },
                 {
                     "trigger": "barrel",
-                    "say": "To by slo namontovat do tej diery."
+                    "say": "To by šlo namontovať do tej diery."
                 },
                 {
                     "trigger": "cannonball",
                     "conditions": { "hasFlagsNot": "placed_barrel" },
-                    "say": "Chyba tomu hlaven, kam by som ten naboj dal."
+                    "say": "Chýba tomu hlaveň, kam by sa ten náboj dal."
                 },
                 {
                     "trigger": "cannonball",
                     "conditions": { "hasFlags": "placed_barrel", "hasFlagsNot": "placed_bullet" },
                     "takeItem": "cannonball",
                     "setFlag": "placed_bullet",
-                    "say": "Nabite!"
+                    "say": "Nabité!"
                 },
                 {
                     "trigger": "match_lit",
                     "conditions": { "hasFlagsNot": "placed_bullet" },
-                    "say": "Bez naboja je zbytocne strielat"
+                    "say": "Bez náboja je zbytočné strielať."
                 },
                 {
                     "trigger": "match_lit",
@@ -54,7 +54,7 @@
                 {
                     "trigger": "match",
                     "conditions": { "hasFlags": "placed_bullet" },
-                    "say": "Zapalka nehori, to mi je nanic."
+                    "say": "Zápalka nehorí, to mi je nanič."
                 }
             ]
         },
@@ -63,60 +63,60 @@
             "actions": [
                 {
                     "conditions": { "hasFlagsNot": "placed_barrel" },
-                    "say": "Sem by sa dala namontovat hlaven"
+                    "say": "Sem by sa dala namontovať hlaveň."
                 },
                 {
                     "trigger": "barrel",
                     "conditions": { "hasFlagsNot": "placed_barrel" },
                     "takeItem": "barrel",
                     "setFlag": "placed_barrel,placed_barrel_a,placed_barrel",
-                    "say": "Dufam ze to nie je naopak. Mozno to treba otocit."
+                    "say": "Dúfam, že to nie je naopak. Možno to treba otočiť."
                 },
                 {
                     "conditions": { "hasFlags": "placed_barrel_a" },
-                    "say": "Hej toto sa mi zda spravne.",
+                    "say": "Hej, toto sa mi zdá správne.",
                     "setFlag": "placed_barrel_b",
                     "unsetFlag": "placed_barrel_a"
                 },
                 {
                     "conditions": { "hasFlags": "placed_barrel_b" },
-                    "say": "Hej toto sa mi zda spravne.",
+                    "say": "Hej, toto sa mi zdá správne.",
                     "setFlag": "placed_barrel_a",
                     "unsetFlag": "placed_barrel_b"
                 },
                 {
                     "conditions": { "hasFlags": "placed_barrel_a" },
-                    "say": "Hmm mozno to bolo predsa lepsie tak ako to bolo.",
+                    "say": "Hmm, možno to bolo predsa lepšie tak, ako to bolo.",
                     "setFlag": "placed_barrel_b",
                     "unsetFlag": "placed_barrel_a"
                 },
                 {
                     "conditions": { "hasFlags": "placed_barrel_b" },
-                    "say": "Hmm mozno to bolo predsa lepsie tak ako to bolo.",
+                    "say": "Hmm, možno to bolo predsa lepšie tak, ako to bolo.",
                     "setFlag": "placed_barrel_a",
                     "unsetFlag": "placed_barrel_b"
                 },
                 {
                     "conditions": { "hasFlags": "placed_barrel_a" },
-                    "say": "Mozno je jedno ako to namontujem?",
+                    "say": "Možno je jedno ako to namontujem?",
                     "setFlag": "placed_barrel_b",
                     "unsetFlag": "placed_barrel_a"
                 },
                 {
                     "conditions": { "hasFlags": "placed_barrel_b" },
-                    "say": "Mozno je jedno ako to namontujem?",
+                    "say": "Možno je jedno ako to namontujem?",
                     "setFlag": "placed_barrel_a",
                     "unsetFlag": "placed_barrel_b"
                 },
                 {
                     "conditions": { "hasFlags": "placed_barrel_a" },
-                    "say": "Nie som expert ale toto sa mi zda naopak...",
+                    "say": "Nie som expert, ale toto sa mi zdá naopak...",
                     "setFlag": "placed_barrel_b",
                     "unsetFlag": "placed_barrel_a"
                 },
                 {
                     "conditions": { "hasFlags": "placed_barrel_b" },
-                    "say": "Nie som expert ale toto sa mi zda naopak...",
+                    "say": "Nie som expert, ale toto sa mi zdá naopak...",
                     "setFlag": "placed_barrel_a",
                     "unsetFlag": "placed_barrel_b"
                 }

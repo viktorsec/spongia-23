@@ -24,6 +24,7 @@
         },
         {
             "color": "#0000FF",
+            "tooltip": "Jaskýňa",
             "actions": [
                 {
                     "goto": "a3_shroom"

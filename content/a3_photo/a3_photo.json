@@ -7,11 +7,11 @@
             "color": "#FF0000",
             "actions": [
                 {
-                    "say": "Som pripraveny!"
+                    "say": "Turista: Som pripraveny!"
                 },
                 {
                     "trigger": "camera",
-                    "say": "Tam mam len nohy!"
+                    "say": "Turista: Tam mám len nohy!"
                 }
             ]
         },
@@ -19,11 +19,11 @@
             "color": "#00FF00",
             "actions": [
                 {
-                    "say": "Som pripraveny!"
+                    "say": "Turista: Som pripravený!"
                 },
                 {
                     "trigger": "camera",
-                    "say": "Super, dakujem pekne. Tu mas moje tricko, ja ho uz nepotrebujem.",
+                    "say": "Turista: Super, ďakujem pekne. Tu máš moje tričko, ja ho už nepotrebujem.",
                     "giveItem": "shirt",
                     "takeItem": "camera",
                     "setFlag": "picture_taken",
@@ -35,11 +35,11 @@
             "color": "#0000FF",
             "actions": [
                 {
-                    "say": "Som pripraveny!"
+                    "say": "Turista: Som pripraveny!"
                 },
                 {
                     "trigger": "camera",
-                    "say": "Chyba mi tam kus hlavy!"
+                    "say": "Turista: Chýba mi tam kus hlavy!"
                 }
             ]
         },
@@ -47,11 +47,11 @@
             "color": "#FF00FF",
             "actions": [
                 {
-                    "say": "Som pripraveny!"
+                    "say": "Turista: Som pripravený!"
                 },
                 {
                     "trigger": "camera",
-                    "say": "Hej ved tam vobec nie som!"
+                    "say": "Turista: Hej veď tam vôbec nie som!"
                 }
             ]
         }

@@ -1,9 +1,9 @@
 import { reactive } from 'vue';
 
 const gameState = reactive({
-  currentRoom: 'a0_inside',
+  currentRoom: 'a3_crossroads',
   visitedRooms: [],
-  items: [],
+  items: ['barrel', 'match_lit', 'cannonball'],
   itemsTaken: [],
   flags: ['dud_level_3'], // TODO: move this to content
   console: [],

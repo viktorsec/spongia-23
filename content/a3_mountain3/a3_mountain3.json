@@ -23,18 +23,19 @@
         },
         {
             "color": "#0000FF",
+            "tooltip": "Turista",
             "actions": [
                 {
                     "conditions": {
                         "hasFlags": "picture_taken"
                     },
-                    "say": "Dakujem za fotku!"
+                    "say": "Turista: Ďakujem za fotku!"
                 },
                 {
                     "conditions": {
                         "hasFlagsNot": "given_camera"
                     },
-                    "say": "Ahoj, neodfotis ma prosim?",
+                    "say": "Turista: Ahoj, neodfotíš ma prosím?",
                     "giveItem": "camera",
                     "setFlag": "given_camera"
                 },
@@ -43,11 +44,11 @@
                         "hasFlags": "given_camera",
                         "hasFlagsNot": "picture_taken"
                     },
-                    "say": "Odfotis ma prosim na moj fotoaparat?"
+                    "say": "Turista: Odfotíš ma prosím na moj fotoaparát?"
                 },
                 {
                     "trigger": "camera",
-                    "say": "Pockaj musim zapozovat",
+                    "say": "Turista: Počkaj, musím zapózovať.",
                     "goto": "a3_photo"
                 }
             ]

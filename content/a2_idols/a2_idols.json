@@ -28,6 +28,14 @@
                 {
                     "conditions": {"hasFlags": "given_match"},
                     "say": "Idol: Planeta sa dá zachrániť."
+                },
+                {
+                    "conditions": {"hasFlags": "given_match"},
+                    "say": "Idol: Ja vravím pravdu."
+                },
+                {
+                    "trigger": "important_key",
+                    "say": "Idol: Ten klúč je úplne zbytočný."
                 }
             ]
         },
@@ -37,6 +45,16 @@
             "actions": [
                 {
                     "say": "Idol: Planeta sa nedá zachrániť."
+                },
+                {
+                    "say": "Idol: Nie, to ja vravím pravdu."
+                },
+                {
+                    "say": "Idol: Kométa nie je problém, netrafí nás."
+                },
+                {
+                    "trigger": "important_key",
+                    "say": "Idol: Ten klúč je veľmi dôležitý."
                 }
             ]
         },
@@ -45,7 +63,23 @@
             "tooltip": "Idol",
             "actions": [
                 {
-                    "say": "Idol: TODO random."
+                    "say": "Idol: Riešením kométy je šiška."
+                },
+                {
+                    "say": "Idol: Ja vravím pravdu. Teda nie, ja vlastne klamem."
+                },
+                {
+                    "say": "Idol: Kométa je náš kamarát. Netreba sa báť kométy."
+                },
+                {
+                    "say": "Idol: Tučniak. Opica. Taco."
+                },
+                {
+                    "say": "Idol: Viem ako zastaviť kométu, ale nepoviem ti."
+                },
+                {
+                    "trigger": "important_key",
+                    "say": "Idol: To je klúč od motorky."
                 }
             ]
         }

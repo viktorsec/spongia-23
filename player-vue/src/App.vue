@@ -97,19 +97,21 @@ onBeforeUnmount(() => {
   flex-direction: column;
   @media screen and (min-width: 768px) {
     padding-top: 2rem;
-    flex: 0 1 calc(100vh - 17rem);
   }
 }
 
 .ui-viewport {
-  flex: 0 1 calc(100vh - 15rem);
+  flex: 0 0 calc(100vh - 10rem);
+  @media screen and (min-width: 768px) {
+    flex: 0 0 calc(100vh - 12rem);
+  }
 }
 
 .ui-items {
 }
 
 .ui-console {
-  height: 10rem;
+  height: 6rem;
 }
 
 </style>

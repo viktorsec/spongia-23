@@ -23,10 +23,10 @@ defineProps({
 <style scoped>
 .console-panel {
   color: #AAA;
-  padding: 1rem;
+  padding: 0.25rem 1rem;
   overflow: auto;
   @media screen and (min-width: 768px) {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
 .console-list {

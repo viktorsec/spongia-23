@@ -46,6 +46,6 @@ input, button, textarea, select {
   --popper-theme-background-color-hover: #222;
   --popper-theme-text-color: #ffffff;
   --popper-theme-border-width: 0;
-  --popper-theme-border-radius: 6px;
-  --popper-theme-padding: 0.75rem 1rem;
+  --popper-theme-border-radius: 2rem;
+  --popper-theme-padding: 0.25rem 1rem;
 }

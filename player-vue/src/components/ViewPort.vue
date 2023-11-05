@@ -379,13 +379,13 @@ processRoomLoad();
 .viewport {
   flex: 1;
   /* TODO optimize */
-  max-width: min(100%, calc(calc(100vh - 15rem) * 1.46));
-  max-height: calc(100vh - 15rem);
+  max-width: min(100%, calc(calc(100vh - 10rem) * 1.46));
+  max-height: calc(100vh - 12rem);
   aspect-ratio: 3 / 2.05;
   outline: 1px solid rgba(255, 255, 255, 0.15);
   position: relative;
   @media screen and (min-width: 768px) {
-    max-width: min(100%, calc(calc(100vh - 17rem) * 1.46));
+    max-width: min(100%, calc(calc(100vh - 11rem) * 1.46));
   }
 }
 

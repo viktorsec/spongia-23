@@ -62,7 +62,7 @@ const itemsRich = computed(() => {
 <style scoped>
 .items-panel {
   display: flex;
-  height: 5rem;
+  height: 4rem;
   @media screen and (min-width: 768px) {
     justify-content: center;
   }
@@ -74,9 +74,9 @@ const itemsRich = computed(() => {
   background-color: transparent;
   cursor: pointer;
   border: 0;
-  min-width: 5rem;
-  width: 5rem;
-  height: 5rem;
+  min-width: 4rem;
+  width: 4rem;
+  height: 4rem;
   opacity: 0.9;
   transition: all .3s;
   border-bottom: 4px solid transparent;
@@ -105,11 +105,11 @@ const itemsRich = computed(() => {
 .item-tooltip {
   & h3 {
     margin: 0;
-    line-height: 1;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
   & p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    margin: 0;
   }
 }
 </style>

@@ -74,6 +74,7 @@ const privacyPolicy = () => {
   left: 0;
   right: 0;
   top: 0;
+  z-index: 20;
   display: flex;
   justify-content: space-between;
   align-items: center;

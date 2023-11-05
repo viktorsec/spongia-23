@@ -61,6 +61,7 @@
         <p>Flags: {{ gameState.flags }}</p>
         <p>Action count: {{ actionCount }}</p>
         <p>Max action count: {{ props.room.maxActions }}</p>
+        <p>Active cursor: {{ activeCursor }}</p>
       </div>
     </div>
   </div>
@@ -345,7 +346,6 @@ const activeTooltip = computed(() => {
   if (activeZone.value?.tooltip) {
     return activeZone.value.tooltip;
   }
-
   return null;
 });
 
@@ -353,7 +353,13 @@ const activeCursor = computed(() => {
   if (activeItem.value) {
     return 'cursor-grab';
   }
-  return `cursor-${activeZone.value?.cursor}`;
+  if (activeZone.value?.cursor) {
+    return `cursor-${activeZone.value?.cursor}`;
+  }
+  if (activeZone.value) {
+    return 'cursor-help';
+  }
+  return '';
 });
 
 processRoomLoad();
@@ -445,6 +451,6 @@ processRoomLoad();
 .cursor-door-right { cursor: url("@/assets/cursors/door-right.png") 16 16, move; }
 .cursor-door-left { cursor: url("@/assets/cursors/door-left.png") 16 16, move; }
 .cursor-help { cursor: url("@/assets/cursors/help.png") 16 16, help; }
-.cursor-grab { cursor: url("@/assets/cursors/help.png") 16 16, grab; }
+.cursor-grab { cursor: url("@/assets/cursors/grab.png") 16 16, grab; }
 
 </style>

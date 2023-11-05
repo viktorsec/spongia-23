@@ -19,7 +19,7 @@
                     "conditions": {
                         "hasFlagsNot": "placed_empty_whisky"
                     },
-                    "say": "Policka s kruzkom"
+                    "say": "Polica s krúžkom"
                 },
                 {
                     "conditions": {
@@ -42,7 +42,7 @@
                     "conditions": {
                         "hasFlagsNot": "placed_banana"
                     },
-                    "say": "Policka s mesiacikom"
+                    "say": "Polička s mesiacom"
                 },
                 {
                     "conditions": {
@@ -65,7 +65,7 @@
                     "conditions": {
                         "hasFlagsNot": "placed_full_whisky"
                     },
-                    "say": "Policka s kruzkom"
+                    "say": "Polička s krúžkom"
                 },
                 {
                     "conditions": {
@@ -102,7 +102,7 @@
                     "conditions": {
                         "hasFlagsNot": "placed_quarter_potion"
                     },
-                    "say": "Policka s mesiacikom"
+                    "say": "Polička s mesiacom"
                 },
                 {
                     "conditions": {
@@ -119,11 +119,48 @@
             ]
         },
         {
-            "color": "#000000",
+            "color": "#808080",
             "actions": [
                 {
-                    "say": "Toto je dud"
+                    "say": "Mikuláš: Vitaj v observátoriu. Konečne mám spoločnosť. Máme najvýkonnejší a zároveň jediný teleskop na našej planéte.",
+                    "setFlag": "dud_talk"
                 },
+                {
+                    "conditions": {
+                        "hasFlags": "dud_talk"
+                    },
+                    "say": "Mikuláš: Bol si sa už pozrieť cez teleskop? Videl si niečo zaujímavé?"
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "dud_talk"
+                    },
+                    "say": "Mikuláš: Toto observatórium bolo vybudované v roku 1842 na príkaz kráľa Leopolda. Všetok stavebný materiál bol vyťažený v blízkych horách."
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "dud_talk,seen_comet"
+                    },
+                    "say": "Mikuláš: Kométa? To neveští nič dobré."
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "dud_talk,seen_comet"
+                    },
+                    "say": "Mikuláš: Daj mi niečo jesť."
+                },
+                {
+                    "conditions": {
+                        "hasFlags": "dud_talk,seen_comet"
+                    },
+                    "say": "Mikuláš: Pri dverách mám peknú poličku, ale zatiaľ som si tam nič neuložil."
+                },
+
+                {
+                    "trigger": "$FALLBACK",
+                    "say": "Mikuláš: Toto nechcem."
+                },
+
                 {
                     "trigger": "downberry",
                     "conditions": {
@@ -200,7 +237,7 @@
         },
         {
             "color": "#00FF00",
-            "cursor": "ne-resize",
+            "cursor": "door-right",
             "actions": [
                 {
                     "conditions": {
@@ -213,7 +250,7 @@
                         "hasFlags": "placed_empty_whisky,placed_banana,placed_full_whisky,placed_quarter_potion,dud_level_2,beam_active",
                         "hasFlagsNot": "seen_comet"
                     },
-                    "say": "Mozno som sa nepozrel cez teleskop poriadne"
+                    "say": "Mikuláš: Ešte sa skús pozrieť lepšie cez teleskop. Možno tam bude niečo zaujímavé."
                 },
                 {
                     "conditions": {

@@ -9,12 +9,14 @@
       @click="holdingItemSet(null)"
     />
     <ItemsPanel
+      v-show="!activeRoom.hideInterface"
       class="ui-items"
       :items="gameState.items"
       :holdingItem="clientState.holdingItem"
       @holding-item-set="holdingItemSet($event)"
     />
     <ConsolePanel
+      v-show="!activeRoom.hideInterface"
       class="ui-console"
       :lines="gameState.console"
     />
@@ -46,13 +48,13 @@ const holdingItemSet = (item) => {
 }
 
 const handleKeyDown = (event) => {
-  if (event.key === 'm') {
+  if (event.key === 'm' && clientState.debugMode) {
     clientState.maskVisible = !clientState.maskVisible;
   }
-  if (event.key === 'd') {
+  if (event.key === 'd' && clientState.debugMode) {
     clientState.debugVisible = !clientState.debugVisible;
   }
-  if (event.key === 'g') {
+  if (event.key === 'g' && clientState.debugMode) {
     const roomId = prompt('enter room id');
     if (rooms.find(room => room.id === roomId)) {
       gameState.currentRoom = roomId;

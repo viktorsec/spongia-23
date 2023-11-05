@@ -40,6 +40,13 @@
                     "say": "Tieto dvere nie sú na kľúč ale na kód."
                 },
                 {
+                    "trigger": "wrench",
+                    "conditions": {
+                        "hasFlagsNot": "cave_door_unlocked"
+                    },
+                    "say": "Rozobrať to nepôjde."
+                },
+                {
                     "trigger": "match",
                     "conditions": {
                         "hasFlagsNot": "cave_door_unlocked"

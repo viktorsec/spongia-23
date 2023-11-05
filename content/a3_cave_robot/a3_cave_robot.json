@@ -57,6 +57,18 @@
                 {
                     "trigger": "important_key",
                     "say": "Robot: S takým kľúčom sa určite dostanene na nejaké doležité miesto, ale sem vás to nepustí."
+                },
+                {
+                    "trigger": "wrench",
+                    "say": "Robot: S takým ma vyrobili."
+                },
+                {
+                    "trigger": "shirt",
+                    "say": "Baník: Pekné tričko, ale svietiaca vesta to nie je."
+                },
+                {
+                    "trigger": "shirt_glowing",
+                    "say": "Baník: Bájna údržbárska vesta."
                 }
             ]
         },

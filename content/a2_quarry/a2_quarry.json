@@ -50,6 +50,22 @@
                 {
                     "trigger": "camera",
                     "say": "Baník: Prosím nefoť ma, som špinavý."
+                },
+                {
+                    "trigger": "cannonball",
+                    "say": "Baník: Fíha, to je ale kopec plastelíny. A tak dokonale guľatý."
+                },
+                {
+                    "trigger": "wrench",
+                    "say": "Baník: Nie že nám tu s tým niečo odmontuješ!"
+                },
+                {
+                    "trigger": "shirt",
+                    "say": "Baník: Také čisté tričko by v bani dlho nevydržalo."
+                },
+                {
+                    "trigger": "shirt_glowing",
+                    "say": "Baník: Veru ja dnešnej móde nerozumiem."
                 }
             ]
         }

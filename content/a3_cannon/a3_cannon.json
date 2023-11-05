@@ -24,6 +24,10 @@
                     "say": "To je delo, ale chýba mu náboj."
                 },
                 {
+                    "conditions": { "hasFlags": "placed_bullet" },
+                    "say": "Nabité delo, už len treba vystreliť."
+                },
+                {
                     "trigger": "barrel",
                     "say": "To by šlo namontovať do tej diery."
                 },
@@ -119,6 +123,18 @@
                     "say": "Nie som expert, ale toto sa mi zdá naopak...",
                     "setFlag": "placed_barrel_a",
                     "unsetFlag": "placed_barrel_b"
+                },
+                {
+                    "trigger": "cannonball",
+                    "conditions": { "hasFlags": "placed_barrel", "hasFlagsNot": "placed_bullet" },
+                    "takeItem": "cannonball",
+                    "setFlag": "placed_bullet",
+                    "say": "Nabité!"
+                },
+                {
+                    "trigger": "cannonball",
+                    "conditions": { "hasFlagsNot": "placed_barrel" },
+                    "say": "Keby to malo hlaveň dalo by sa to nabiť."
                 }
             ]
         }

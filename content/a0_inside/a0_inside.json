@@ -16,10 +16,10 @@
             "tooltip": "Veľká rastlina",
             "actions": [
                 {
-                    "say": "Moja obľúbená rastlina"
+                    "say": "Moja obľúbená rastlina."
                 },
                 {
-                    "say": "Tento kvetináč sa mi veľmi páči"
+                    "say": "Tento kvetináč sa mi veľmi páči."
                 }
             ]
         },
@@ -28,7 +28,7 @@
             "tooltip": "Hniezdo",
             "actions": [
                 {
-                    "say": "Pohodlné a teplé hniezdočko"
+                    "say": "Pohodlné a teplé hniezdočko."
                 }
             ]
         },
@@ -43,7 +43,7 @@
                 },
                 {
                     "trigger": "important_key",
-                    "say": "Hmm, nie je tu žiadna kľúčová dierka"
+                    "say": "Hmm, nie je tu žiadna kľúčová dierka."
                 }
             ]
         }

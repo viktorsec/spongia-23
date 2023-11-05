@@ -3,13 +3,13 @@
     "background": "a1_telescope_planet/planet.png",
     "mask": "a1_telescope_planet/zones.png",
     "enterAction": {
-        "say": "Haha, chudaci maju aku malu planetu"
+        "say": "Susedná planéta Kalliopé. Hovoria sa o nej všeliaké historky, ale netreba veriť všetkému."
     },
     "items": [
         {
             "id": "upberry",
             "image": "a1_telescope_planet/planet_upberry.png",
-            "say": "Ovocie z inych planet je najchutnejsie"
+            "say": "Ovocie z iných planét je najchutnejšie."
         }
     ],
     "zones": [

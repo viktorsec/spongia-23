@@ -2,11 +2,14 @@
     "id": "a1_telescope_moon",
     "background": "a1_telescope_moon/moon.png",
     "mask": "a1_telescope_moon/zones.png",
+    "enterAction": {
+        "say": "Fíha, náš mesiac vyzerá ozaj krásne. Ani som nevedel, že je v tejto fáze."
+    },
     "items": [
         {
             "id": "zapberry",
             "image": "a1_telescope_moon/moon_zapberry.png",
-            "say": "Mesacne elektricke ovocie."
+            "say": "Takéto ovocie som ešte nevidel."
         }
     ],
     "zones": [

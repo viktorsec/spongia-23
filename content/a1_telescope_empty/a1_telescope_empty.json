@@ -3,7 +3,7 @@
     "background": "a1_telescope_empty/empty.png",
     "mask": "a1_telescope_empty/zones.png",
     "enterAction": {
-        "say": "Hmm nic zaujimave, musim sa rozhliadnut."
+        "say": "Hviezdy sú vidieť naozaj krásne. Dokonca sa zdá, ako keby bola noc aj keď ešte pred chvíľou bolo svetlo. Ale nič zaujímavé popravde nevidím. Musím sa porozhliadať."
     },
     "zones": [
         {

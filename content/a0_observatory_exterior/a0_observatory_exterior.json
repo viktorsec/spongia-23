@@ -11,14 +11,14 @@
                     "conditions": {
                         "hasFlagsNot": "apple_talk"
                     },        
-                    "say": "Zvoníš, ale nikto neotvára. Možno treba povedať heslo"
+                    "say": "Zvoníš, ale nikto neotvára. Možno treba povedať heslo."
                 },
                 {
                     "conditions": {
                         "hasFlags": "apple_talk"
                     },        
                     "goto": "a1_observatory_right",
-                    "say": "Vošiel si do observatória. Dvere sa za tebou s hrmotom zabuchli"
+                    "say": "Vošiel si do observatória. Dvere sa za tebou s hrmotom zabuchli. Niečo ti hovorí, že dostať sa odtiaľto nebude také jednoduché."
                 }
             ]
         },
@@ -30,7 +30,7 @@
                     "conditions": {
                         "hasFlagsNot": "seen_comet"
                     },        
-                    "say": "Musím najskôr preskúmať observatórium"
+                    "say": "Musím najskôr preskúmať observatórium."
                 },
                 {
                     "conditions": {

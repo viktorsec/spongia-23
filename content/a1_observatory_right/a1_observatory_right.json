@@ -256,7 +256,7 @@
                     "conditions": {
                         "hasFlagsNot": "placed_empty_whisky,placed_banana,placed_full_whisky,placed_quarter_potion,dud_level_2,beam_active"
                     },
-                    "say": "Dvere sú zamknuté"
+                    "say": "Dvere sú zamknuté."
                 }
             ]
         }

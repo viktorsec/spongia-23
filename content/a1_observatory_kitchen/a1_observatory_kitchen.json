@@ -6,7 +6,7 @@
         {
             "id": "banana",
             "image": "a1_observatory_kitchen/banana.png",
-            "say": "Mnam, banan."
+            "say": "Mňam, banán."
         },
         {
             "id": "downberry",
@@ -19,7 +19,7 @@
         {
             "id": "quarter_potion",
             "image": "a1_observatory_kitchen/quarter_potion.png",
-            "say": "Mesacny lektvar."
+            "say": "Fíha, zaujímavá trúbeľka."
         }
     ],
     "zones": [

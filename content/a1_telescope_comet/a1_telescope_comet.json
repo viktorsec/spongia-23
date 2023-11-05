@@ -3,7 +3,7 @@
     "background": "a1_telescope_comet/comet.png",
     "mask": "a1_telescope_comet/zones.png",
     "enterAction": {
-        "say": "AAAAh! To sa ruti rovno na nas!",
+        "say": "Kométa! A vyzerá, že sa rúti priamo na nás! Mám strach.",
         "setFlag": "seen_comet"
     },
     "zones": [

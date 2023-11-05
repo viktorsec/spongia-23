@@ -1,0 +1,11 @@
+Názov tímu: Faisceau de Lumière
+Názov hry: Pozor, padá hviezda
+Vývojové prostredie a prostriedky: Vue.js, JavaScript
+
+Obrázky:
+
+Hudba:
+* Ephemeral III (Lilith)
+Zdroj: https://freemusicarchive.org/music/le-chaos-entre-2-chaises/ephemerals/ephemeral-iii-lilith/
+Autor: Le Chaos Entre 2 Chaises 
+Licencia: CC BY 4.0 Deed 

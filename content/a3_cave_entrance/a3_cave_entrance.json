@@ -5,7 +5,7 @@
     "zones": [
         {
             "color": "#FF0000",
-            "cursor": "n-resize",
+            "cursor": "s-resize",
             "actions": [
                 {
                     "goto": "a3_cave_robot"

@@ -213,7 +213,9 @@ const handleAction = (action) => {
     takeItem(values) {
       for (const value of values.split(",")) {
         const index = gameState.items.indexOf(value);
-        gameState.items.splice(index, 1);
+        if (index !== -1) {
+          gameState.items.splice(index, 1);
+        }
       }
     },
     setFlag(values) {
@@ -226,7 +228,7 @@ const handleAction = (action) => {
     unsetFlag(values) {
       for (const value of values.split(",")) {
         const index = gameState.flags.indexOf(value);
-        if (index != -1) {
+        if (index !== -1) {
           gameState.flags.splice(index, 1);
         }
       }

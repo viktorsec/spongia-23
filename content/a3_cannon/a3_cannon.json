@@ -141,6 +141,13 @@
                     "say": "Keby to malo hlaveň dalo by sa to nabiť."
                 },
                 {
+                    "trigger": "match_lit",
+                    "conditions": { "hasFlags": "placed_bullet" },
+                    "say": "BUM!",
+                    "takeItem": "match_lit",
+                    "goto": "a4_finale"
+                },
+                {
                     "trigger": "$FALLBACK",
                     "say": "Neviem, čo s tým."
                 }

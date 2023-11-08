@@ -28,6 +28,13 @@
                     "say": "Leonardo: Radšej si ho nechaj, budeš ho asi potrebovať."
                 },
                 {
+                    "conditions": {
+                        "hasFlagsNot": "given_wrench"
+                    },
+                    "trigger": "cannonball",
+                    "say": "Leonardo: Táto plastelína je celá pomiešaná. Skús nájsť nejakú nepoužitú."
+                },
+                {
                     "trigger": "barrel",
                     "say": "Leonardo: Pozor keď to budeš niekam montovať, aby to bolo správne otočené."
                 },

@@ -34,6 +34,14 @@
                     "say": "Idol: Ja vravím pravdu."
                 },
                 {
+                    "conditions": {"hasFlags": "given_match"},
+                    "say": "Idol: Máš štyri nohy a chvost."
+                },
+                {
+                    "conditions": {"hasFlags": "given_match"},
+                    "say": "Idol: Ak má zberateľ šesť kamarátov, tak vravím pravdu."
+                },
+                {
                     "trigger": "important_key",
                     "say": "Idol: Ten klúč je úplne zbytočný."
                 },
@@ -48,6 +56,10 @@
                 {
                     "trigger": "match_lit",
                     "say": "Idol: Toto budeš potrebovať inde."
+                },
+                {
+                    "trigger": "$FALLBACK",
+                    "say": "Idol: Túto vec si buď už použil, alebo ju ešte budeš potrebovať, alebo je úplne zbytočná."
                 }
             ]
         },
@@ -65,6 +77,12 @@
                     "say": "Idol: Kométa nie je problém, netrafí nás."
                 },
                 {
+                    "say": "Idol: Klamúci idol je po mojej pravici."
+                },
+                {
+                    "say": "Idol: Náhodný idol je ten jediný, čo občas hovorí pravdu."
+                },
+                {
                     "trigger": "important_key",
                     "say": "Idol: Ten klúč je veľmi dôležitý."
                 },
@@ -79,6 +97,10 @@
                 {
                     "trigger": "match_lit",
                     "say": "Idol: Najlepšie urobíš, ak ju zahasíš."
+                },
+                {
+                    "trigger": "$FALLBACK",
+                    "say": "Idol: Táto vec je magická."
                 }
             ]
         },
@@ -102,6 +124,15 @@
                     "say": "Idol: Viem ako zastaviť kométu, ale nepoviem ti."
                 },
                 {
+                    "say": "Idol: Beta tester kráčal aby player mohol utekať."
+                },
+                {
+                    "say": "Idol: P = NP."
+                },
+                {
+                    "say": "Idol: Klamúci idol občas hovorí pravdu."
+                },
+                {
                     "trigger": "important_key",
                     "say": "Idol: To je kľúč na odmontovanie hlavne."
                 },
@@ -120,6 +151,10 @@
                 {
                     "trigger": "match_lit",
                     "say": "Idol: To je zapálená zápalka."
+                },
+                {
+                    "trigger": "$FALLBACK",
+                    "say": "Idol: Tučniak. Opica. Taco."
                 }
             ]
         }

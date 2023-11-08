@@ -7,7 +7,7 @@
             "color": "#FF0000",
             "actions": [
                 {
-                    "say": "Turista: Som pripraveny!"
+                    "say": "Turista: Som pripravený!"
                 },
                 {
                     "trigger": "camera",
@@ -39,7 +39,7 @@
             "color": "#0000FF",
             "actions": [
                 {
-                    "say": "Turista: Som pripraveny!"
+                    "say": "Turista: Som pripravený!"
                 },
                 {
                     "trigger": "camera",

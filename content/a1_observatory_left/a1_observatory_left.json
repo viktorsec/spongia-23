@@ -31,6 +31,10 @@
                     "say": "Teleskop nie je na kľúč."
                 },
                 {
+                    "trigger": "wrench",
+                    "say": "Už je tu pobrané všetko čo nebolo priskrutkované, radšej ostaňme pri tom."
+                },
+                {
                     "trigger": "$FALLBACK",
                     "say": "Neviem čo s tým."
                 }

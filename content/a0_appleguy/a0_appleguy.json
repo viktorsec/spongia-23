@@ -15,7 +15,7 @@
       },
       {
           "color": "#FF0000",
-          "tooltip": "Pestovateľ jablík",
+          "tooltip": "Pestovateľ jabĺk",
           "cursor": "help",
           "actions": [
               {
@@ -43,7 +43,7 @@
                 "conditions": {
                     "hasFlags": "seen_comet"
                 },
-                "say": "Izák: Jejdanenky. Kométa, a rúti sa priamo na nás? To veru neznie dobre. Možno s touto situáciou bude vedieť pomôcť niekto v meste"
+                "say": "Izák: Jejdanenky. Kométa, a rúti sa priamo na nás? To veru neznie dobre. Možno s touto situáciou bude vedieť pomôcť niekto v meste."
               },
               {
                 "trigger": "important_key",

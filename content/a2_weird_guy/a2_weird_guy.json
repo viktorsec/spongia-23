@@ -17,7 +17,7 @@
             "cursor": "zoom",
             "actions": [
                 {
-                    "say": "Zberateľ: To sme vyrobili s kamaratmi.",
+                    "say": "Zberateľ: To sme vyrobili s kamarátmi.",
                     "goto": "a2_weird_guy_art"
                 }
             ]
@@ -58,6 +58,10 @@
                 },
                 {
                     "trigger": "cannonball",
+                    "say": "Zberateľ kamarátov: Z toho by ale bolo veľa kamarátov."
+                },
+                {
+                    "trigger": "raw_clay",
                     "say": "Zberateľ kamarátov: Z toho by ale bolo veľa kamarátov."
                 }
             ]

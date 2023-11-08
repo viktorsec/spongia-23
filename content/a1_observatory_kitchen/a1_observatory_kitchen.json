@@ -10,11 +10,13 @@
         },
         {
             "id": "downberry",
-            "image": "a1_observatory_kitchen/downberry.png"
+            "image": "a1_observatory_kitchen/downberry.png",
+            "say": "Celkom veľká bobuľa"
         },
         {
             "id": "full_whisky_a",
-            "image": "a1_observatory_kitchen/full_whisky_a.png"
+            "image": "a1_observatory_kitchen/full_whisky_a.png",
+            "say": "Pijatika."
         },
         {
             "id": "quarter_potion",
@@ -78,8 +80,11 @@
                 {
                     "trigger": "empty_whisky",
                     "say": "No, späť to už nenaberiem."
+                },
+                {
+                    "trigger": "quarter_potion",
+                    "say": "Radšej nie."
                 }
-
             ]
         },
         {

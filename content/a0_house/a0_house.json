@@ -9,7 +9,7 @@
           "cursor": "door-right",
           "actions": [
               {
-                  "say": "Prešiel si dverami",
+                  "say": "Prešiel si dverami.",
                   "goto": "a0_inside"
               },
               {

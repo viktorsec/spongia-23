@@ -39,7 +39,7 @@
                         "hasFlags": "idol_path_unlocked"
                     },
                     "goto": "a2_idols_guardian",
-                    "say": "Strážca idolov: Vitajte v chráme troch idolov. Jeden z nich vždy hovorí pravdu, jeden vždy klame, a jeden odpovedá nahodne."
+                    "say": "Strážca idolov: Vitajte v chráme troch idolov. Jeden z nich vždy hovorí pravdu, jeden vždy klame, a jeden odpovedá náhodne."
                 }
             ]
         }

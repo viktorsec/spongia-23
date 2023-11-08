@@ -47,7 +47,7 @@
             "actions": [
                 {
                     "goto": "a0_house",
-                    "say": "Dvere sa s hrmotom otvorili. Nachádzaš sa pred domom"
+                    "say": "Dvere sa s hrmotom otvorili. Nachádzaš sa pred domom."
                 },
                 {
                     "trigger": "important_key",

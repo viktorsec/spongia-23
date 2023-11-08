@@ -44,7 +44,7 @@
                         "hasFlags": "given_camera",
                         "hasFlagsNot": "picture_taken"
                     },
-                    "say": "Turista: Odfotíš ma prosím na moj fotoaparát?"
+                    "say": "Turista: Odfotíš ma prosím na môj fotoaparát?"
                 },
                 {
                     "trigger": "camera",

@@ -30,7 +30,7 @@
                     "conditions": {
                         "hasFlagsNot": "cave_door_unlocked"
                     },
-                    "say": "Zamknute."
+                    "say": "Zamknuté."
                 },
                 {
                     "trigger": "important_key",

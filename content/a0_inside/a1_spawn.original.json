@@ -8,7 +8,7 @@
                 {
                     "giveItem": "important_key",
                     "removeObject": "important_key",
-                    "say": "Toto budem potrebovat!"
+                    "say": "Toto budem potrebovať!"
                 }
             ]
         }
@@ -16,7 +16,7 @@
     "actions": [
         {
             "trigger": "#FF0000",
-            "say": "Velka rastlina"
+            "say": "Veľká rastlina"
         },
         {
             "trigger": "#00FF00",

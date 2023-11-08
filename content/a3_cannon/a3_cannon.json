@@ -46,7 +46,7 @@
                 {
                     "trigger": "match_lit",
                     "conditions": { "hasFlagsNot": "placed_bullet" },
-                    "say": "Bez náboja je zbytočné strielať."
+                    "say": "Bez náboja je zbytočné strieľať."
                 },
                 {
                     "trigger": "match_lit",

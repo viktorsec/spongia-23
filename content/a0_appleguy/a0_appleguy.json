@@ -68,6 +68,18 @@
               {
                 "trigger": "match_lit",
                 "say": "Izák: Nezapáľ mi sad."
+              },
+              {
+                  "trigger": "shirt",
+                  "say": "Izák: Pekné tričko."
+              },
+              {
+                  "trigger": "shirt_glowing",
+                  "say": "Izák: Fuj, čo je to za humus?"
+              },
+              {
+                  "trigger": "$FALLBACK",
+                  "say": "Izák: Toto nepotrebujem."
               }
           ]
       }

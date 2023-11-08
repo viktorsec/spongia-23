@@ -52,6 +52,10 @@
                         "hasFlagsNot": "cave_door_unlocked"
                     },
                     "say": "Všetci sme zapálení pre hádanku, ale takto to nezapálim."
+                },
+                {
+                    "trigger": "$FALLBACK",
+                    "say": "Neviem, čo s tým."
                 }
             ]
         },

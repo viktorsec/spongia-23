@@ -47,6 +47,10 @@
                 {
                     "trigger": "match_lit",
                     "say": "Strážca idolov: Opatrne s tým ohňom."
+                },
+                {
+                    "trigger": "$FALLBACK",
+                    "say": "Strážca idolov: Nemusíš mi nič dávať."
                 }
             ]
         }

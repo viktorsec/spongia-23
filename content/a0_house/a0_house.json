@@ -15,6 +15,10 @@
               {
                   "trigger": "important_key",
                   "say": "Hmm, nie je tu žiadna kľúčová dierka."
+              },
+              {
+                  "trigger": "$FALLBACK",
+                  "say": "Neviem, čo s tým."
               }
           ]
       },

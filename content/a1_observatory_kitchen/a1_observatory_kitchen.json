@@ -116,6 +116,10 @@
                 {
                     "trigger": "match_lit",
                     "say": "Nemôžem podpáliť observatórium."
+                },
+                {
+                    "trigger": "$FALLBACK",
+                    "say": "Neviem, čo s tým."
                 }
             ]
         },

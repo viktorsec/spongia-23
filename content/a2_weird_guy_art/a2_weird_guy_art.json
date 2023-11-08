@@ -18,6 +18,10 @@
                 {
                     "trigger": "match_lit",
                     "say": "Zberateľ: Nepoškoď nám to!"
+                },
+                {
+                    "trigger": "$FALLBACK",
+                    "say": "Neviem, čo s tým."
                 }
             ]
         }

@@ -74,6 +74,10 @@
                 {
                     "trigger": "match_lit",
                     "say": "Gustáv: Nepopáľ sa."
+                },
+                {
+                    "trigger": "$FALLBACK",
+                    "say": "Gustáv: Ďakujem, ale neviem, čo s tým."
                 }
             ]
         }

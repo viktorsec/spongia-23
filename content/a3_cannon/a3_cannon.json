@@ -59,6 +59,10 @@
                     "trigger": "match",
                     "conditions": { "hasFlags": "placed_bullet" },
                     "say": "Zápalka nehorí, to mi je nanič."
+                },
+                {
+                    "trigger": "$FALLBACK",
+                    "say": "Neviem, čo s tým."
                 }
             ]
         },
@@ -135,6 +139,10 @@
                     "trigger": "cannonball",
                     "conditions": { "hasFlagsNot": "placed_barrel" },
                     "say": "Keby to malo hlaveň dalo by sa to nabiť."
+                },
+                {
+                    "trigger": "$FALLBACK",
+                    "say": "Neviem, čo s tým."
                 }
             ]
         }

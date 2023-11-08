@@ -31,7 +31,7 @@
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Pekná vecička. Ale už ma prosím odfoť."
+                    "say": "Turista: Pekná vecička. Ale už ma prosím odfoť."
                 }
             ]
         },

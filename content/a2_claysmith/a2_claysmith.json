@@ -70,6 +70,10 @@
                 {
                     "trigger": "match_lit",
                     "say": "Leonardo: Opatrne, nepodpáľ mi dieľňu."
+                },
+                {
+                    "trigger": "$FALLBACK",
+                    "say": "Leonardo: Radšej si to nechaj."
                 }
             ]
         }

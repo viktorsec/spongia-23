@@ -24,6 +24,10 @@
                 {
                     "trigger": "important_key",
                     "say": "Kľúč sem nepasuje."
+                },
+                {
+                    "trigger": "$FALLBACK",
+                    "say": "Neviem, čo s tým."
                 }
             ]
         },

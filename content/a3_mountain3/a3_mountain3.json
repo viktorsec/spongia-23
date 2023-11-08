@@ -78,6 +78,10 @@
                 {
                     "trigger": "match_lit",
                     "say": "Turista: Radšej to sfúkni, aby nevznikol lesný požiar."
+                },
+                {
+                    "trigger": "$FALLBACK",
+                    "say": "Turista: Vďaka, toto nepotrebujem."
                 }
             ]
         }

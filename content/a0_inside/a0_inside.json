@@ -32,6 +32,10 @@
                 {
                     "trigger": "match_lit",
                     "say": "Určite si nepodpálim dom."
+                },
+                {
+                    "trigger": "$FALLBACK",
+                    "say": "Neviem, čo s tým."
                 }
             ]
         },
@@ -53,6 +57,10 @@
                 {
                     "trigger": "match_lit",
                     "say": "Určite si nepodpálim dom."
+                },
+                {
+                    "trigger": "$FALLBACK",
+                    "say": "Radšej si to nechám."
                 }
             ]
         },
@@ -76,6 +84,10 @@
                 {
                     "trigger": "match_lit",
                     "say": "Určite si nepodpálim dom."
+                },
+                {
+                    "trigger": "$FALLBACK",
+                    "say": "Neviem, čo s tým."
                 }
             ]
         }

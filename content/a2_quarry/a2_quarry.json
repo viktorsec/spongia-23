@@ -60,6 +60,10 @@
                     "say": "Gustáv: Nie že nám tu s tým niečo odmontuješ!"
                 },
                 {
+                  "trigger": "important_key",
+                  "say": "Gustáv: Radšej si ho nechaj, určite ho budeš potrebovať."
+                },
+                {
                     "trigger": "shirt",
                     "say": "Gustáv: Také čisté tričko by v bani dlho nevydržalo."
                 },

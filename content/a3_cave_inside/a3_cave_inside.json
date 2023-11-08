@@ -68,7 +68,7 @@
                     "conditions": {
                         "hasFlagsNot": "taken_barrel"
                     },
-                    "say": "To by chcelo iný typ kľúča.."
+                    "say": "To by chcelo iný typ kľúča…"
                 },
                 {
                     "conditions": {

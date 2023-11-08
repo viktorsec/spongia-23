@@ -56,7 +56,7 @@
                 },
                 {
                     "trigger": "important_key",
-                    "say": "Robot: S takým kľúčom sa určite dostanene na nejaké doležité miesto, ale sem vás to nepustí."
+                    "say": "Robot: S takým kľúčom sa určite dostanete na nejaké doležité miesto, ale sem vás to nepustí."
                 },
                 {
                     "trigger": "wrench",

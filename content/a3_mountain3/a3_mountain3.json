@@ -80,6 +80,10 @@
                     "say": "Turista: Radšej to sfúkni, aby nevznikol lesný požiar."
                 },
                 {
+                  "trigger": "important_key",
+                  "say": "Turista: Od čoho je?"
+                },
+                {
                     "trigger": "$FALLBACK",
                     "say": "Turista: Vďaka, toto nepotrebujem."
                 }

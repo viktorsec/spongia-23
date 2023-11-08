@@ -33,6 +33,10 @@
                     "say": "Nechcem spôsobiť požiar."
                 },
                 {
+                  "trigger": "important_key",
+                  "say": "Ten kľúč budem ešte potrebovať."
+                },
+                {
                     "trigger": "$FALLBACK",
                     "say": "Nebudem tu nič vyhadzovať."
                 }

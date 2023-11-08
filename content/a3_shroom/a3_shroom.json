@@ -41,6 +41,10 @@
                     "say": "To by aj tak nehorelo."
                 },
                 {
+                  "trigger": "important_key",
+                  "say": "Uhm, nemyslím si, že hríb pôjde odomknúť."
+                },
+                {
                     "trigger": "$FALLBACK",
                     "say": "Neviem čo s tým."
                 }

@@ -105,6 +105,10 @@
                     "say": "Zberateľ (hrubým hlasom): Čo tu tak extrémne smrdí?"
                 },
                 {
+                  "trigger": "important_key",
+                  "say": "Zberateľ (hrubým hlasom): Od čoho je ten kľúčik?"
+                },
+                {
                     "trigger": "$FALLBACK",
                     "say": "Zberateľ (hrubým hlasom): Čo to je?"
                 }
@@ -127,6 +131,10 @@
                 {
                     "trigger": "shirt_glowing",
                     "say": "Zberateľ (piskľavým hlasom): Wow, to je ale fascinujúci sliz."
+                },
+                {
+                  "trigger": "important_key",
+                  "say": "Zberateľ (piskľavým hlasom): To je ale krásny kľúčik. Od čoho je?"
                 },
                 {
                     "trigger": "$FALLBACK",
@@ -172,6 +180,10 @@
                 {
                     "trigger": "shirt_glowing",
                     "say": "Zberateľ (šepotom): Tajomstvo tohoto trička nechcem vedieť ani ja."
+                },
+                {
+                  "trigger": "important_key",
+                  "say": "Zberateľ (šepotom): Ten kľúč ti podľa mňa pomôže odhaliť veľké tajomstvo."
                 },
                 {
                     "trigger": "$FALLBACK",

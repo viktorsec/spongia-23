@@ -61,6 +61,10 @@
                     "say": "Zápalka nehorí, to mi je nanič."
                 },
                 {
+                  "trigger": "important_key",
+                  "say": "Nemá to kľúčovú dierku."
+                },
+                {
                     "trigger": "$FALLBACK",
                     "say": "Neviem, čo s tým."
                 }
@@ -146,6 +150,10 @@
                     "say": "BUM!",
                     "takeItem": "match_lit",
                     "goto": "a4_finale"
+                },
+                {
+                  "trigger": "important_key",
+                  "say": "Nepripadá mi, že by to bolo na kľúč."
                 },
                 {
                     "trigger": "$FALLBACK",

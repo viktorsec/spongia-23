@@ -63,6 +63,10 @@
                     "say": "Pozerať sa ľuďom do okien je neslušné."
                 },
                 {
+                  "trigger": "important_key",
+                  "say": "Sem tento kľúč nepasuje."
+                },
+                {
                     "trigger": "match",
                     "say": "Nemôžem niekomu zapáliť dom. Najmä preto, že zápalka nehorí."
                 },

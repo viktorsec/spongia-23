@@ -7,7 +7,7 @@
             "id": "important_key",
             "tooltip": "Dôležitý kľúč",
             "image": "a0_inside/important_key.png",
-            "say": "Toto budem potrebovat!"
+            "say": "Toto budem potrebovať!"
         }
     ],
     "zones": [
@@ -24,6 +24,14 @@
                 {
                     "trigger": "important_key",
                     "say": "Áno, je to moja kľúčová rastlina."
+                },
+                {
+                    "trigger": "match",
+                    "say": "Určite si nepodpálim dom. Najmä preto, že zápalka nehorí."
+                },
+                {
+                    "trigger": "match_lit",
+                    "say": "Určite si nepodpálim dom."
                 }
             ]
         },
@@ -37,6 +45,14 @@
                 {
                     "trigger": "important_key",
                     "say": "Radšej si ho nechám."
+                },
+                {
+                    "trigger": "match",
+                    "say": "Určite si nepodpálim dom. Najmä preto, že zápalka nehorí."
+                },
+                {
+                    "trigger": "match_lit",
+                    "say": "Určite si nepodpálim dom."
                 }
             ]
         },
@@ -52,6 +68,14 @@
                 {
                     "trigger": "important_key",
                     "say": "Hmm, nie je tu žiadna kľúčová dierka."
+                },
+                {
+                    "trigger": "match",
+                    "say": "Určite si nepodpálim dom. Najmä preto, že zápalka nehorí."
+                },
+                {
+                    "trigger": "match_lit",
+                    "say": "Určite si nepodpálim dom."
                 }
             ]
         }

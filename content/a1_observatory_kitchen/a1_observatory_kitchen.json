@@ -84,6 +84,14 @@
                 {
                     "trigger": "quarter_potion",
                     "say": "Radšej nie."
+                },
+                {
+                    "trigger": "match",
+                    "say": "Nemôžem podpáliť observatórium. Najmä preto, že zápalka nehorí."
+                },
+                {
+                    "trigger": "match_lit",
+                    "say": "Nemôžem podpáliť observatórium."
                 }
             ]
         },
@@ -100,6 +108,14 @@
                 {
                     "trigger": "important_key",
                     "say": "Sem tento kľúč nepasuje."
+                },
+                {
+                    "trigger": "match",
+                    "say": "Nemôžem podpáliť observatórium. Najmä preto, že zápalka nehorí."
+                },
+                {
+                    "trigger": "match_lit",
+                    "say": "Nemôžem podpáliť observatórium."
                 }
             ]
         },
@@ -113,6 +129,14 @@
                 {
                     "trigger": "important_key",
                     "say": "Sem tento kľúč nepasuje."
+                },
+                {
+                    "trigger": "match",
+                    "say": "Nemôžem podpáliť observatórium. Najmä preto, že zápalka nehorí."
+                },
+                {
+                    "trigger": "match_lit",
+                    "say": "Nemôžem podpáliť observatórium."
                 },
                 {
                     "trigger": "$FALLBACK",

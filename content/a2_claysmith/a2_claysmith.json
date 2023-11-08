@@ -62,6 +62,14 @@
                 {
                     "trigger": "zapberry",
                     "say": "Leonardo: Ďakujem, ale som alergický."
+                },
+                {
+                    "trigger": "match",
+                    "say": "Leonardo: Ďakujem, mám dosť vlastných."
+                },
+                {
+                    "trigger": "match_lit",
+                    "say": "Leonardo: Opatrne, nepodpáľ mi dieľňu."
                 }
             ]
         }

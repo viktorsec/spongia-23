@@ -39,6 +39,14 @@
                 {
                     "trigger": "camera",
                     "say": "Strážca idolov: Tu je zákaz fotiť."
+                },
+                {
+                    "trigger": "match",
+                    "say": "Strážca idolov: Idoly občas dávajú návštevníkom aj predmety. Minule jednému dali fotoaparát."
+                },
+                {
+                    "trigger": "match_lit",
+                    "say": "Strážca idolov: Opatrne s tým ohňom."
                 }
             ]
         }

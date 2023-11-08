@@ -69,6 +69,17 @@
                     "say": "Hmm toto by sa dalo odmontovať s pomocou náradia."
                 },
                 {
+                    "trigger": "match",
+                    "say": "Kiežby sa tu dala niekde táto zápalka zapáliť."
+                },
+                {
+                    "trigger": "match_lit",
+                    "conditions": {
+                        "hasFlagsNot": "taken_barrel"
+                    },
+                    "say": "Radšej to tu nebudem podpaľovať, dosť že tu horia sviečky."
+                },
+                {
                     "conditions": {
                         "hasFlags": "taken_barrel"
                     },

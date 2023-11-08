@@ -38,6 +38,14 @@
             "actions": [
                 {
                     "say": "Značka sa nedá prečítať."
+                },
+                {
+                    "trigger": "match",
+                    "say": "Nemôžem to tu podpáliť. Najmä preto, že zápalka nehorí."
+                },
+                {
+                    "trigger": "match_lit",
+                    "say": "Nemôžem to tu podpáliť."
                 }
             ]
         }

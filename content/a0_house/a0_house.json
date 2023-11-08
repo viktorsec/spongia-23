@@ -13,8 +13,8 @@
                   "goto": "a0_inside"
               },
               {
-                "trigger": "important_key",
-                "say": "Hmm, nie je tu žiadna kľúčová dierka."
+                  "trigger": "important_key",
+                  "say": "Hmm, nie je tu žiadna kľúčová dierka."
               }
           ]
       },

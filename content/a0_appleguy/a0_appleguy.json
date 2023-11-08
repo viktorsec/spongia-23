@@ -60,6 +60,14 @@
               {
                 "trigger": "zapberry",
                 "say": "Izák: Ďakujem, ale ja jem iba jablká."
+              },
+              {
+                  "trigger": "match",
+                  "say": "Izák: Nemám ju ako zapáliť."
+              },
+              {
+                "trigger": "match_lit",
+                "say": "Izák: Nezapáľ mi sad."
               }
           ]
       }

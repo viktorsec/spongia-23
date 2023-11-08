@@ -27,6 +27,14 @@
                 {
                     "trigger": "camera",
                     "say": "Pekná fotka. Ale asi by sa patrilo ten fotoaparát vrátiť."
+                },
+                {
+                    "trigger": "match_lit",
+                    "say": "Nechcem spôsobiť požiar."
+                },
+                {
+                    "trigger": "$FALLBACK",
+                    "say": "Nebudem tu nič vyhadzovať."
                 }
             ]
         }

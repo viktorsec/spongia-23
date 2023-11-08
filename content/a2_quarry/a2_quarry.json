@@ -66,6 +66,14 @@
                 {
                     "trigger": "shirt_glowing",
                     "say": "Gustáv: Veru ja dnešnej móde nerozumiem."
+                },
+                {
+                    "trigger": "match",
+                    "say": "Gustáv: Nepotrebujem nič zapáliť."
+                },
+                {
+                    "trigger": "match_lit",
+                    "say": "Gustáv: Nepopáľ sa."
                 }
             ]
         }

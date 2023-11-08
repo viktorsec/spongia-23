@@ -10,6 +10,14 @@
                 {
                     "say": "Zberateľ: Páči sa ti naše umenie? Okrem toho, že je krásne, je aj užitočné.",
                     "goto": "a2_weird_guy"
+                },
+                {
+                    "trigger": "match",
+                    "say": "Zberateľ: Viem, že nehorí, ale aj tak opatrne okolo nášho umenia!"
+                },
+                {
+                    "trigger": "match_lit",
+                    "say": "Zberateľ: Nepoškoď nám to!"
                 }
             ]
         }

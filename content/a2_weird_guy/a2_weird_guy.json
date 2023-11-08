@@ -63,6 +63,14 @@
                 {
                     "trigger": "raw_clay",
                     "say": "Zberateľ kamarátov: Z toho by ale bolo veľa kamarátov."
+                },
+                {
+                    "trigger": "match",
+                    "say": "Zberateľ kamarátov: Ďakujem, ale nepotrebujem nič zapáliť."
+                },
+                {
+                    "trigger": "match_lit",
+                    "say": "Zberateľ kamarátov: Ďakujem, ale nepotrebujem nič zapáliť."
                 }
             ]
         },
@@ -71,6 +79,10 @@
             "actions": [
                 {
                     "say": "Zberateľ (hrubým hlasom): A ty si kto?"
+                },
+                {
+                    "trigger": "$FALLBACK",
+                    "say": "Zberateľ (hrubým hlasom): Čo to je?"
                 }
             ]
         },
@@ -79,6 +91,18 @@
             "actions": [
                 {
                     "say": "Zberateľ (piskľavým hlasom): Ahoj, ja som Fialka."
+                },
+                {
+                    "trigger": "match",
+                    "say": "Zberateľ (piskľavým hlasom): Kiežby horela. Mám rada ohníky."
+                },
+                {
+                    "trigger": "match_lit",
+                    "say": "Zberateľ (piskľavým hlasom): Jéj, to je pekný plamienok."
+                },
+                {
+                    "trigger": "$FALLBACK",
+                    "say": "Zberateľ (piskľavým hlasom): Jéj, to je ale krásny predmet."
                 }
             ]
         },
@@ -87,6 +111,14 @@
             "actions": [
                 {
                     "say": "Zberateľ (koktavo): A-a-a-ahoj."
+                },
+                {
+                    "trigger": "match_lit",
+                    "say": "Zberateľ (koktavo): Ra-ra-ra-radšej s-s tým narábaj o-o-o-opatrne."
+                },
+                {
+                    "trigger": "$FALLBACK",
+                    "say": "Zberateľ (koktavo): Č-čo ja s-s-s tým?"
                 }
             ]
         },
@@ -96,6 +128,14 @@
                 {
                     "say": "Zberateľ (šepotom): V lese je tajná cestička!",
                     "setFlag": "idol_path_unlocked"
+                },
+                {
+                    "trigger": "match",
+                    "say": "Zberateľ (šepotom): Nikomu to nehovor, ale táto palička sa dá zapáliť."
+                },
+                {
+                    "trigger": "match_lit",
+                    "say": "Zberateľ (šepotom): Mám rád tiene tvorené ohňom. Tancujú."
                 }
             ]
         },
@@ -103,7 +143,15 @@
             "color": "#FF0080",
             "actions": [
                 {
-                    "say": "Zberateľ (šúšlavo): Poznáme lôzne tajomstvá. Naplíklad aj o dvelách v bani."
+                    "say": "Zberateľ (šušlavo): Poznáme lôzne tajomstvá. Naplíklad aj o dvelách v bani."
+                },
+                {
+                    "trigger": "match",
+                    "say": "Zberateľ (šušlavo): Zápalky majú tajomnú atmosfélu."
+                },
+                {
+                    "trigger": "match_lit",
+                    "say": "Zberateľ (šušlavo): Zápalky majú tajomnú atmosfélu."
                 }
             ]
         },
@@ -111,6 +159,10 @@
             "color": "#8000FF",
             "actions": [
                 {
+                    "say": "Zberateľ (svojím hlasom): Prepáč, ale on sa hanbí a nerozpráva."
+                },
+                {
+                    "trigger": "$FALLBACK",
                     "say": "Zberateľ (svojím hlasom): Prepáč, ale on sa hanbí a nerozpráva."
                 }
             ]

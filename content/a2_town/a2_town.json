@@ -61,6 +61,14 @@
                 },
                 {
                     "say": "Pozerať sa ľuďom do okien je neslušné."
+                },
+                {
+                    "trigger": "match",
+                    "say": "Nemôžem niekomu zapáliť dom. Najmä preto, že zápalka nehorí."
+                },
+                {
+                    "trigger": "match_lit",
+                    "say": "Nemôžem niekomu zapáliť dom!"
                 }
             ]
         }

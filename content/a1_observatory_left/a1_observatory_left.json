@@ -35,6 +35,14 @@
                     "say": "Už je tu pobrané všetko čo nebolo priskrutkované, radšej ostaňme pri tom."
                 },
                 {
+                    "trigger": "match",
+                    "say": "Nemôžem podpáliť observatórium. Najmä preto, že zápalka nehorí."
+                },
+                {
+                    "trigger": "match_lit",
+                    "say": "Nemôžem podpáliť observatórium."
+                },
+                {
                     "trigger": "$FALLBACK",
                     "say": "Neviem čo s tým."
                 }

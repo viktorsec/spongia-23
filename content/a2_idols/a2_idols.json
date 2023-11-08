@@ -44,6 +44,10 @@
                 {
                     "trigger": "camera",
                     "say": "Idol: Tu je zákaz fotiť."
+                },
+                {
+                    "trigger": "match_lit",
+                    "say": "Idol: Toto budeš potrebovať inde."
                 }
             ]
         },
@@ -71,6 +75,10 @@
                 {
                     "trigger": "camera",
                     "say": "Idol: Tu sa smie fotiť."
+                },
+                {
+                    "trigger": "match_lit",
+                    "say": "Idol: Najlepšie urobíš, ak ju zahasíš."
                 }
             ]
         },
@@ -108,6 +116,10 @@
                 {
                     "trigger": "camera",
                     "say": "Idol: Tu je zákaz fotiť."
+                },
+                {
+                    "trigger": "match_lit",
+                    "say": "Idol: To je zapálená zápalka."
                 }
             ]
         }

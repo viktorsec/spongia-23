@@ -196,6 +196,14 @@
                     "say": "Mikuláš: Banány nemám rád."
                 },
                 {
+                    "trigger": "match",
+                    "say": "Mikuláš: Radšej ju tu nezapaľuj, je tu drahé vedecké vybavenie."
+                },
+                {
+                    "trigger": "match_lit",
+                    "say": "Mikuláš: Radšej to sfúkni, nepohybuj sa tu s otvoreným ohňom."
+                },
+                {
                     "trigger": "$FALLBACK",
                     "say": "Mikuláš: Toto si radšej nechaj."
                 },

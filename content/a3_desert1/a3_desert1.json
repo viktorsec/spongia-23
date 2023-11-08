@@ -26,6 +26,14 @@
             "actions": [
                 {
                     "say": "\"Najbližšie delo: 10km\""
+                },
+                {
+                    "trigger": "match",
+                    "say": "Nemôžem to tu podpáliť. Najmä preto, že zápalka nehorí."
+                },
+                {
+                    "trigger": "match_lit",
+                    "say": "Už čoskoro nadíde chvíľa tejto zápalky."
                 }
             ]
         }

@@ -69,6 +69,14 @@
                 {
                     "trigger": "shirt_glowing",
                     "say": "Robot: Bájna údržbárska vesta."
+                },
+                {
+                    "trigger": "match",
+                    "say": "Robot: Na čo by mi to bolo?"
+                },
+                {
+                    "trigger": "match_lit",
+                    "say": "Robot: To je údržbársky nástroj?"
                 }
             ]
         },

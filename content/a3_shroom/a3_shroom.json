@@ -38,7 +38,7 @@
                 },
                 {
                     "trigger": "match_lit",
-                    "say": "To nemožem zapáliť."
+                    "say": "To by aj tak nehorelo."
                 },
                 {
                     "trigger": "$FALLBACK",

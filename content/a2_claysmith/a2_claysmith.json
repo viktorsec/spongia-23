@@ -72,6 +72,10 @@
                     "say": "Leonardo: Opatrne, nepodpáľ mi dieľňu."
                 },
                 {
+                    "trigger": "shirt_glowing",
+                    "say": "Leonardo: Okamžite to vynes von z mojej dielne."
+                },
+                {
                     "trigger": "$FALLBACK",
                     "say": "Leonardo: Radšej si to nechaj."
                 }

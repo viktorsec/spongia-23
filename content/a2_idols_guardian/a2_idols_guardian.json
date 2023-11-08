@@ -49,6 +49,14 @@
                     "say": "Strážca idolov: Opatrne s tým ohňom."
                 },
                 {
+                    "trigger": "shirt",
+                    "say": "Strážca idolov: Toto tričko je mi povedomé."
+                },
+                {
+                    "trigger": "shirt_glowing",
+                    "say": "Strážca idolov: Fuj, toto sem nenos."
+                },
+                {
                     "trigger": "$FALLBACK",
                     "say": "Strážca idolov: Nemusíš mi nič dávať."
                 }

@@ -21,6 +21,14 @@
                     "goto": "a2_weird_guy_art"
                 },
                 {
+                    "trigger": "match_lit",
+                    "say": "Zberateľ: Nepribližuj sa k tomu s ohňom!"
+                },
+                {
+                    "trigger": "shirt_glowing",
+                    "say": "Zberateľ: Nepribližuj sa s tým k tomu!"
+                },
+                {
                     "trigger": "$FALLBACK",
                     "say": "Neviem, čo s tým."
                 }
@@ -93,6 +101,10 @@
                     "say": "Zberateľ (hrubým hlasom): A ty si kto?"
                 },
                 {
+                    "trigger": "shirt_glowing",
+                    "say": "Zberateľ (hrubým hlasom): Čo tu tak extrémne smrdí?"
+                },
+                {
                     "trigger": "$FALLBACK",
                     "say": "Zberateľ (hrubým hlasom): Čo to je?"
                 }
@@ -113,6 +125,10 @@
                     "say": "Zberateľ (piskľavým hlasom): Jéj, to je pekný plamienok."
                 },
                 {
+                    "trigger": "shirt_glowing",
+                    "say": "Zberateľ (piskľavým hlasom): Wow, to je ale fascinujúci sliz."
+                },
+                {
                     "trigger": "$FALLBACK",
                     "say": "Zberateľ (piskľavým hlasom): Jéj, to je ale krásny predmet."
                 }
@@ -127,6 +143,10 @@
                 {
                     "trigger": "match_lit",
                     "say": "Zberateľ (koktavo): Ra-ra-ra-radšej s-s tým narábaj o-o-o-opatrne."
+                },
+                {
+                    "trigger": "shirt_glowing",
+                    "say": "Zberateľ (koktavo): P-p-p-prosím, choď s-s-s tým p-p-p-preč."
                 },
                 {
                     "trigger": "$FALLBACK",
@@ -150,6 +170,10 @@
                     "say": "Zberateľ (šepotom): Mám rád tiene tvorené ohňom. Tancujú."
                 },
                 {
+                    "trigger": "shirt_glowing",
+                    "say": "Zberateľ (šepotom): Tajomstvo tohoto trička nechcem vedieť ani ja."
+                },
+                {
                     "trigger": "$FALLBACK",
                     "say": "Zberateľ (šepotom): To je ale tajomný predmet."
                 }
@@ -168,6 +192,10 @@
                 {
                     "trigger": "match_lit",
                     "say": "Zberateľ (šušlavo): Zápalky majú tajomnú atmosfélu."
+                },
+                {
+                    "trigger": "shirt_glowing",
+                    "say": "Zberateľ (šušlavo): Mal by si si to oplať, stlašne to smldí."
                 },
                 {
                     "trigger": "$FALLBACK",

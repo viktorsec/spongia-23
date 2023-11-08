@@ -20,6 +20,10 @@
                     "say": "Zberateľ: Nepoškoď nám to!"
                 },
                 {
+                    "trigger": "shirt_glowing",
+                    "say": "Zberateľ: Nepribližuj sa s tým k tomu!"
+                },
+                {
                     "trigger": "$FALLBACK",
                     "say": "Neviem, čo s tým."
                 }

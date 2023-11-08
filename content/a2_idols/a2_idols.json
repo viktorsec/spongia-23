@@ -58,6 +58,14 @@
                     "say": "Idol: Toto budeš potrebovať inde."
                 },
                 {
+                    "trigger": "shirt",
+                    "say": "Idol: Biele tričko sa dá prefarbiť."
+                },
+                {
+                    "trigger": "shirt_glowing",
+                    "say": "Idol: Toto smradľavé tričko radšej ľuďom neukazuj."
+                },
+                {
                     "trigger": "$FALLBACK",
                     "say": "Idol: Túto vec si buď už použil, alebo ju ešte budeš potrebovať, alebo je úplne zbytočná."
                 }
@@ -97,6 +105,14 @@
                 {
                     "trigger": "match_lit",
                     "say": "Idol: Najlepšie urobíš, ak ju zahasíš."
+                },
+                {
+                    "trigger": "shirt",
+                    "say": "Idol: Pekná mikina."
+                },
+                {
+                    "trigger": "shirt_glowing",
+                    "say": "Idol: Pekne voní."
                 },
                 {
                     "trigger": "$FALLBACK",
@@ -151,6 +167,10 @@
                 {
                     "trigger": "match_lit",
                     "say": "Idol: To je zapálená zápalka."
+                },
+                {
+                    "trigger": "shirt_glowing",
+                    "say": "Idol: Extrém."
                 },
                 {
                     "trigger": "$FALLBACK",

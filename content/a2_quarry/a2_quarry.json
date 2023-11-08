@@ -76,6 +76,10 @@
                     "say": "Gustáv: Nepopáľ sa."
                 },
                 {
+                    "trigger": "shirt_glowing",
+                    "say": "Gustáv: Nechutne to smrdí."
+                },
+                {
                     "trigger": "$FALLBACK",
                     "say": "Gustáv: Ďakujem, ale neviem, čo s tým."
                 }

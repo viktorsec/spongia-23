@@ -92,6 +92,10 @@
                 {
                     "trigger": "match_lit",
                     "say": "Nemôžem podpáliť observatórium."
+                },
+                {
+                    "trigger": "shirt_glowing",
+                    "say": "Fuj, toto som asi ani nemal nosiť do kuchyne."
                 }
             ]
         },
@@ -116,6 +120,10 @@
                 {
                     "trigger": "match_lit",
                     "say": "Nemôžem podpáliť observatórium."
+                },
+                {
+                    "trigger": "shirt_glowing",
+                    "say": "Fuj, toto som asi ani nemal nosiť do kuchyne."
                 },
                 {
                     "trigger": "$FALLBACK",

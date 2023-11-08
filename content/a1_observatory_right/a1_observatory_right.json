@@ -204,6 +204,10 @@
                     "say": "Mikuláš: Radšej to sfúkni, nepohybuj sa tu s otvoreným ohňom."
                 },
                 {
+                    "trigger": "shirt_glowing",
+                    "say": "Mikuláš: Fuj, nepribližuj sa s tým ku mne!"
+                },
+                {
                     "trigger": "$FALLBACK",
                     "say": "Mikuláš: Toto si radšej nechaj."
                 },

@@ -59,6 +59,10 @@
                     "say": "Určite si nepodpálim dom."
                 },
                 {
+                    "trigger": "shirt_glowing",
+                    "say": "No fuj, určite nie."
+                },
+                {
                     "trigger": "$FALLBACK",
                     "say": "Radšej si to nechám."
                 }

@@ -71,6 +71,10 @@
                     "say": "Nemôžem niekomu zapáliť dom!"
                 },
                 {
+                    "trigger": "shirt_glowing",
+                    "say": "Hodiť toto dnu by bolo spáchaním trestného činu."
+                },
+                {
                     "trigger": "$FALLBACK",
                     "say": "Neviem, čo s tým."
                 }

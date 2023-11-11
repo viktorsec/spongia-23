@@ -85,6 +85,7 @@ const activeItem = ref(null);
 const maskSource = ref(null);
 
 const actionCount = ref(0);
+const lastCoordinates = ref({ x: null, y: null });
 
 const rgbaToHex = (rgba) => {
   function hexByte(x) {
@@ -147,9 +148,19 @@ const tooltipFollow = (x, y) => {
   }
 }
 
+const setLastCoordinates = (x, y) => {
+  lastCoordinates.value.x = x;
+  lastCoordinates.value.y = y;
+}
+
 const moveHandler = (event) => {
+  if (!event) {
+    getHovering(lastCoordinates.value.x, lastCoordinates.value.y);
+    return;
+  }
   const x = event.layerX;
   const y = event.layerY;
+  setLastCoordinates(x, y);
 
   getHovering(x, y);
   tooltipFollow(x, y);
@@ -158,6 +169,7 @@ const moveHandler = (event) => {
 const leaveHandler = () => {
   activeItem.value = null;
   activeZone.value = null;
+  setLastCoordinates(null, null);
 }
 
 const selectAction = (actions, trigger = null) => {
@@ -300,6 +312,8 @@ const processRoomLoad = () => {
 
     Promise.all(imageLoader).then(() => { 
       imagesLoaded.value = true;
+      // TODO: Improve this
+      moveHandler();
     }).catch(error => {
       console.error('Some image(s) failed loading!');
       console.error(error.message)

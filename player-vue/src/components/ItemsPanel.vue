@@ -17,6 +17,7 @@
             <img
               :src="loadItemImage(item.image)"
               alt=""
+              draggable="false"
             >
         </button>
         <template #content>

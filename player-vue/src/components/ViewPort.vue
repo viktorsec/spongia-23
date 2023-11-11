@@ -37,6 +37,7 @@
             :src="loadImage(item.image)"
             class="overlay"
             :data-label="item.id"
+            draggable="false"
           />
         </div>
         <div

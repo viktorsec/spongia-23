@@ -37,25 +37,37 @@
                     "conditions": {
                         "hasFlagsNot": "cave_door_unlocked"
                     },
-                    "say": "Tieto dvere nie sú na kľúč ale na kód."
+                    "say": {
+                        "sk": "Tieto dvere nie sú na kľúč ale na kód.",
+                        "en": "These doors are not locked with a key but with a code."
+                    }
                 },
                 {
                     "trigger": "wrench",
                     "conditions": {
                         "hasFlagsNot": "cave_door_unlocked"
                     },
-                    "say": "Rozobrať to nepôjde."
+                    "say": {
+                        "sk": "Rozobrať to nepôjde.",
+                        "en": "I'm unable to disassemble it."
+                    }
                 },
                 {
                     "trigger": "match",
                     "conditions": {
                         "hasFlagsNot": "cave_door_unlocked"
                     },
-                    "say": "Všetci sme zapálení pre hádanku, ale takto to nezapálim."
+                    "say": {
+                        "sk": "Všetci sme zapálení pre hádanku, ale takto to nezapálim.",
+                        "en": "We are all fired up for a riddle, but I can't solve it like this."
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Neviem, čo s tým."
+                    "say": {
+                        "sk": "Neviem, čo s tým.",
+                        "en": "I have no idea what to do with it."
+                    }
                 }
             ]
         },
@@ -394,7 +406,10 @@
                     "conditions": {
                         "hasFlags": "cave_door_state9"
                     },
-                    "say": "Klik!",
+                    "say": {
+                        "sk": "Klik!",
+                        "en": "Click!"
+                    },
                     "setFlag": "cave_door_unlocked"
                 }
             ]

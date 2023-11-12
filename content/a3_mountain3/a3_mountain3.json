@@ -23,19 +23,28 @@
         },
         {
             "color": "#0000FF",
-            "tooltip": "Turista",
+            "tooltip": {
+                "sk": "Turista",
+                "en": "Tourist"
+            },
             "actions": [
                 {
                     "conditions": {
                         "hasFlags": "picture_taken"
                     },
-                    "say": "Turista: Ďakujem za fotku!"
+                    "say": {
+                        "sk": "Turista: Ďakujem za fotku!",
+                        "en": "Tourist: Thank you for the picture!"
+                    }
                 },
                 {
                     "conditions": {
                         "hasFlagsNot": "given_camera"
                     },
-                    "say": "Turista: Ahoj, neodfotíš ma prosím?",
+                    "say": {
+                        "sk": "Turista: Ahoj, neodfotíš ma prosím?",
+                        "en": "Tourist: Hello, can you take a picture of me please?"
+                    },
                     "giveItem": "camera",
                     "setFlag": "given_camera"
                 },
@@ -44,48 +53,81 @@
                         "hasFlags": "given_camera",
                         "hasFlagsNot": "picture_taken"
                     },
-                    "say": "Turista: Odfotíš ma prosím na môj fotoaparát?"
+                    "say": {
+                        "sk": "Turista: Odfotíš ma prosím na môj fotoaparát?",
+                        "en": "Tourist: Can you take a picture of me please?"
+                    }
                 },
                 {
                     "trigger": "camera",
-                    "say": "Turista: Počkaj, musím zapózovať.",
+                    "say": {
+                        "sk": "Turista: Počkaj, musím zapózovať.",
+                        "en": "Tourist: Wait, I need to pose."
+                    },
                     "goto": "a3_photo"
                 },
                 {
                     "trigger": "shirt",
-                    "say": "Turista: To si môžeš nechať."
+                    "say": {
+                        "sk": "Turista: To si môžeš nechať.",
+                        "en": "Tourist: You can keep it."
+                    }
                 },
                 {
                     "trigger": "shirt_glowing",
-                    "say": "Turista: Fuj to čo je s mojím tričkom?"
+                    "say": {
+                        "sk": "Turista: Fuj to čo je s mojím tričkom?",
+                        "en": "Tourist: Eww what is wrong with my shirt?"
+                    }
                 },
                 {
                     "trigger": "upberry",
-                    "say": "Turista: Ja na turistike jedávam len müsli tyčinky."
+                    "say": {
+                        "sk": "Turista: Ja na turistike jedávam len müsli tyčinky.",
+                        "en": "Tourist: I only eat granola bars on my hikes."
+                    }
                 },
                 {
                     "trigger": "downberry",
-                    "say": "Turista: Ja na turistike jedávam len müsli tyčinky."
+                    "say": {
+                        "sk": "Turista: Ja na turistike jedávam len müsli tyčinky.",
+                        "en": "Tourist: I only eat granola bars on my hikes."
+                    }
                 },
                 {
                     "trigger": "zapberry",
-                    "say": "Turista: Ja na turistike jedávam len müsli tyčinky."
+                    "say": {
+                        "sk": "Turista: Ja na turistike jedávam len müsli tyčinky.",
+                        "en": "Tourist: I only eat granola bars on my hikes."
+                    }
                 },
                 {
                     "trigger": "match",
-                    "say": "Turista: Dávaj pozor, tu v prírode by bol požiar nebezpečný."
+                    "say": {
+                        "sk": "Turista: Dávaj pozor, tu v prírode by bol požiar nebezpečný.",
+                        "en": "Tourist: Be careful, a fire would be dangerous out here in nature."
+                    }
                 },
                 {
                     "trigger": "match_lit",
-                    "say": "Turista: Radšej to sfúkni, aby nevznikol lesný požiar."
+                    "say": {
+                        "sk": "Turista: Radšej to sfúkni, aby nevznikol lesný požiar.",
+                        "en": "Tourist: Better blow it out, we don't want a forest fire."
+                    }
                 },
                 {
-                  "trigger": "important_key",
-                  "say": "Turista: Od čoho je?"
+                    "trigger": "important_key",
+                    "say": {
+                        "sk": "Turista: Od čoho je?",
+                        "en": "Tourist: What is it for?"
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Turista: Vďaka, toto nepotrebujem."
+                    "say": {
+                        "sk": "Turista: Vďaka, toto nepotrebujem.",
+                        "en": "Tourist: Thanks, I don't need this."
+                    }
                 }
             ]
         }

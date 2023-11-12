@@ -24,7 +24,10 @@
             "color": "#00FF00",
             "actions": [
                 {
-                    "say": "Au! Horúce."
+                    "say": {
+                        "sk": "Au! Horúce.",
+                        "en": "Ouch! Hot."
+                    }
                 },
                 {
                     "trigger": "match",
@@ -33,15 +36,24 @@
                 },
                 {
                     "trigger": "match_lit",
-                    "say": "Sviečka už horí, aj zápalka už horí."
+                    "say": {
+                        "sk": "Sviečka už horí, aj zápalka už horí.",
+                        "en": "The candle is already lit, and the match is also already lit."
+                    }
                 },
                 {
                     "trigger": "shirt_glowing",
-                    "say": "Ten smrad by ma mohol zahubiť."
+                    "say": {
+                        "sk": "Ten smrad by ma mohol zahubiť.",
+                        "en": "This stench could kill me."
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Neviem, čo s tým."
+                    "say": {
+                        "sk": "Neviem, čo s tým.",
+                        "en": "I have no idea what to do with that."
+                    }
                 }
             ]
         },
@@ -61,43 +73,64 @@
                     "conditions": {
                         "hasFlags": "taken_barrel"
                     },
-                    "say": "Nechce sa mi to montovať naspäť."
+                    "say": {
+                        "sk": "Nechce sa mi to montovať naspäť.",
+                        "en": "I don't feel like mounting it back."
+                    }
                 },
                 {
                     "trigger": "important_key",
                     "conditions": {
                         "hasFlagsNot": "taken_barrel"
                     },
-                    "say": "To by chcelo iný typ kľúča…"
+                    "say": {
+                        "sk": "To by chcelo iný typ kľúča…",
+                        "en": "This asks for a different type of key…"
+                    }
                 },
                 {
                     "conditions": {
                         "hasFlagsNot": "taken_barrel"
                     },
-                    "say": "Hmm toto by sa dalo odmontovať s pomocou náradia."
+                    "say": {
+                        "sk": "Hmm toto by sa dalo odmontovať s pomocou náradia.",
+                        "en": "Hmm this could be removed with a proper tool."
+                    }
                 },
                 {
                     "trigger": "match",
-                    "say": "Kiežby sa tu dala niekde táto zápalka zapáliť."
+                    "say": {
+                        "sk": "Kiežby sa tu dala niekde táto zápalka zapáliť.",
+                        "en": "I wish I could light this match somewhere."
+                    }
                 },
                 {
                     "trigger": "match_lit",
                     "conditions": {
                         "hasFlagsNot": "taken_barrel"
                     },
-                    "say": "Radšej to tu nebudem podpaľovať, dosť že tu horia sviečky."
+                    "say": {
+                        "sk": "Radšej to tu nebudem podpaľovať, dosť že tu horia sviečky.",
+                        "en": "I'd better not set this place on fire, it's enough that the candles are burning."
+                    }
                 },
                 {
                     "conditions": {
                         "hasFlagsNot": "taken_barrel"
                     },
-                    "say": "Potrebujem na to nejaký lepší nástroj."
+                    "say": {
+                        "sk": "Potrebujem na to nejaký lepší nástroj.",
+                        "en": "I need some better tool for this."
+                    }
                 },
                 {
                     "conditions": {
                         "hasFlags": "taken_barrel"
                     },
-                    "say": "Toto už niekto ukradol, teda, požičal si."
+                    "say": {
+                        "sk": "Toto už niekto ukradol, teda, požičal si.",
+                        "en": "Someone already stole this, I mean, borrowed it."
+                    }
                 }
             ]
         }

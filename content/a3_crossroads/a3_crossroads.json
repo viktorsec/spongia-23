@@ -6,7 +6,10 @@
         {
             "color": "#FF0000",
             "cursor": "sw-resize",
-            "tooltip": "Do mesta",
+            "tooltip": {
+                "sk": "Do mesta",
+                "en": "To the town"
+            },
             "actions": [
                 {
                     "goto": "a2_town"
@@ -16,7 +19,10 @@
         {
             "color": "#00FF00",
             "cursor": "se-resize",
-            "tooltip": "Do púšte",
+            "tooltip": {
+                "sk": "Do púšte",
+                "en": "To the desert"
+            },
             "actions": [
                 {
                     "goto": "a3_desert1"
@@ -26,7 +32,10 @@
         {
             "color": "#0000FF",
             "cursor": "n-resize",
-            "tooltip": "Do hôr",
+            "tooltip": {
+                "sk": "Do hôr",
+                "en": "To the mountains"
+            },
             "actions": [
                 {
                     "goto": "a3_mountain1"
@@ -37,19 +46,31 @@
             "color": "#00FFFF",
             "actions": [
                 {
-                    "say": "Značka sa nedá prečítať."
+                    "say": {
+                        "sk": "Značka sa nedá prečítať.",
+                        "en": "The sign is unreadable."
+                    }
                 },
                 {
                     "trigger": "match",
-                    "say": "Nemôžem to tu podpáliť. Najmä preto, že zápalka nehorí."
+                    "say": {
+                        "sk": "Nemôžem to tu podpáliť. Najmä preto, že zápalka nehorí.",
+                        "en": "I can't light it on fire. Especially because the match is not lit."
+                    }
                 },
                 {
                     "trigger": "match_lit",
-                    "say": "Nemôžem to tu podpáliť."
+                    "say": {
+                        "sk": "Nemôžem to tu podpáliť.",
+                        "en": "I can't light it on fire."
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Neviem, čo s tým."
+                    "say": {
+                        "sk": "Neviem, čo s tým.",
+                        "en": "I have no idea what to do with it."
+                    }
                 }
             ]
         }

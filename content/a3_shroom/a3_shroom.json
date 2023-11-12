@@ -16,37 +16,61 @@
             "color": "#00FF00",
             "actions": [
                 {
-                    "say": "Svietiaci hríb. Tečie z neho žiarivý sliz."
+                    "say": {
+                        "sk": "Svietiaci hríb. Tečie z neho žiarivý sliz.",
+                        "en": "Glowing mushroom. It's leaking glowing slime."
+                    }
                 },
                 {
                     "trigger": "shirt",
-                    "say": "Fuj, celé tričko je od slizu a žiari.",
+                    "say": {
+                        "sk": "Fuj, celé tričko je od slizu a žiari.",
+                        "en": "Ew, the whole shirt is covered in slime and it's glowing."
+                    },
                     "takeItem": "shirt",
                     "giveItem": "shirt_glowing"
                 },
                 {
                     "trigger": "shirt_glowing",
-                    "say": "Už je zasvinené viac než dosť."
+                    "say": {
+                        "sk": "Už je zasvinené viac než dosť.",
+                        "en": "It's already dirty more than enough."
+                    }
                 },
                 {
                     "trigger": "camera",
-                    "say": "Pekná fotka. Ale asi by sa patrilo ten fotoaparát vrátiť."
+                    "say": {
+                        "sk": "Pekná fotka. Ale asi by sa patrilo ten fotoaparát vrátiť.",
+                        "en": "Nice photo. But I should probably return the camera."
+                    }
                 },
                 {
                     "trigger": "match",
-                    "say": "To nemožem zapáliť. Najmä preto, že zápalka nehorí."
+                    "say": {
+                        "sk": "To nemôžem zapáliť. Najmä preto, že zápalka nehorí.",
+                        "en": "I can't light it on fire. Especially because the match is not lit."
+                    }
                 },
                 {
                     "trigger": "match_lit",
-                    "say": "To by aj tak nehorelo."
+                    "say": {
+                        "sk": "To by aj tak nehorelo.",
+                        "en": "It wouldn't burn anyway."
+                    }
                 },
                 {
-                  "trigger": "important_key",
-                  "say": "Uhm, nemyslím si, že hríb pôjde odomknúť."
+                    "trigger": "important_key",
+                    "say": {
+                        "sk": "Uhm, nemyslím si, že hríb pôjde odomknúť.",
+                        "en": "Uh, I don't think the mushroom can be unlocked with a key."
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Neviem čo s tým."
+                    "say": {
+                        "sk": "Neviem čo s tým.",
+                        "en": "I have no idea what to do with that."
+                    }
                 }
             ]
         }

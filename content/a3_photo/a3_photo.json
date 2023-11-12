@@ -7,11 +7,17 @@
             "color": "#FF0000",
             "actions": [
                 {
-                    "say": "Turista: Som pripravený!"
+                    "say": {
+                        "sk": "Turista: Som pripravený!",
+                        "en": "Tourist: I'm ready!"
+                    }
                 },
                 {
                     "trigger": "camera",
-                    "say": "Turista: Tam mám len nohy!"
+                    "say": {
+                        "sk": "Turista: Tam mám len nohy!",
+                        "en": "Tourist: You snapped just my legs!"
+                    }
                 }
             ]
         },
@@ -19,11 +25,17 @@
             "color": "#00FF00",
             "actions": [
                 {
-                    "say": "Turista: Som pripravený!"
+                    "say": {
+                        "sk": "Turista: Som pripravený!",
+                        "en": "Tourist: I'm ready!"
+                    }
                 },
                 {
                     "trigger": "camera",
-                    "say": "Turista: Super, ďakujem pekne. Tu máš moje tričko, ja ho už nepotrebujem.",
+                    "say": {
+                        "sk": "Turista: Super, ďakujem pekne. Tu máš moje tričko, ja ho už nepotrebujem.",
+                        "en": "Tourist: Great, thank you. Here, take my shirt, I don't need it anymore."
+                    },
                     "giveItem": "shirt",
                     "takeItem": "camera",
                     "setFlag": "picture_taken",
@@ -31,7 +43,10 @@
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Turista: Pekná vecička. Ale už ma prosím odfoť."
+                    "say": {
+                        "sk": "Turista: Pekná vecička. Ale už ma prosím odfoť.",
+                        "en": "Tourist: Nice thing. But please take a picture of me already."
+                    }
                 }
             ]
         },
@@ -39,11 +54,17 @@
             "color": "#0000FF",
             "actions": [
                 {
-                    "say": "Turista: Som pripravený!"
+                    "say": {
+                        "sk": "Turista: Som pripravený!",
+                        "en": "Tourist: I'm ready!"
+                    }
                 },
                 {
                     "trigger": "camera",
-                    "say": "Turista: Chýba mi tam kus hlavy!"
+                    "say": {
+                        "sk": "Turista: Chýba mi tam kus hlavy!",
+                        "en": "Tourist: Part of my head is cut off!"
+                    }
                 }
             ]
         },
@@ -51,11 +72,17 @@
             "color": "#FF00FF",
             "actions": [
                 {
-                    "say": "Turista: Som pripravený!"
+                    "say": {
+                        "sk": "Turista: Som pripravený!",
+                        "en": "Tourist: I'm ready!"
+                    }
                 },
                 {
                     "trigger": "camera",
-                    "say": "Turista: Hej veď tam vôbec nie som!"
+                    "say": {
+                        "sk": "Turista: Hej veď tam vôbec nie som!",
+                        "en": "Tourist: Hey, I'm not there at all!"
+                    }
                 }
             ]
         }

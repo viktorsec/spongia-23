@@ -22,23 +22,38 @@
             "color": "#00FF00",
             "actions": [
                 {
-                    "say": "Krásny výhľad. Škoda, že to čoskoro všetko zničí kométa."
+                    "say": {
+                        "sk": "Krásny výhľad. Škoda, že to čoskoro všetko zničí kométa.",
+                        "en": "Beautiful view. Too bad it will all be destroyed by the comet soon."
+                    }
                 },
                 {
                     "trigger": "camera",
-                    "say": "Pekná fotka. Ale asi by sa patrilo ten fotoaparát vrátiť."
+                    "say": {
+                        "sk": "Pekná fotka. Ale asi by sa patrilo ten fotoaparát vrátiť.",
+                        "en": "Nice photo. But I should probably return the camera."
+                    }
                 },
                 {
                     "trigger": "match_lit",
-                    "say": "Nechcem spôsobiť požiar."
+                    "say": {
+                        "sk": "Nechcem spôsobiť požiar.",
+                        "en": "I don't want to start a wilderness fire."
+                    }
                 },
                 {
-                  "trigger": "important_key",
-                  "say": "Ten kľúč budem ešte potrebovať."
+                    "trigger": "important_key",
+                    "say": {
+                        "sk": "Ten kľúč budem ešte potrebovať.",
+                        "en": "I will need that key later."
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Nebudem tu nič vyhadzovať."
+                    "say": {
+                        "sk": "Nebudem tu nič vyhadzovať.",
+                        "en": "I'm not going to throw anything away here."
+                    }
                 }
             ]
         }

@@ -25,19 +25,31 @@
             "color": "#0000FF",
             "actions": [
                 {
-                    "say": "\"Najbližšie delo: 10km\""
+                    "say": {
+                        "sk": "\"Najbližšie delo: 10 km\"",
+                        "en": "\"Nearest cannon: 6 miles\""
+                    }
                 },
                 {
                     "trigger": "match",
-                    "say": "Nemôžem to tu podpáliť. Najmä preto, že zápalka nehorí."
+                    "say": {
+                        "sk": "Nemôžem to tu podpáliť. Najmä preto, že zápalka nehorí.",
+                        "en": "I can't set it on fire. Especially because the match is not lit."
+                    }
                 },
                 {
                     "trigger": "match_lit",
-                    "say": "Už čoskoro nadíde chvíľa tejto zápalky."
+                    "say": {
+                        "sk": "Už čoskoro nadíde chvíľa tejto zápalky.",
+                        "en": "The time of this match will soon come."
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Neviem, čo s tým."
+                    "say": {
+                        "sk": "Neviem, čo s tým.",
+                        "en": "I have no idea what to do with that."
+                    }
                 }
             ]
         }

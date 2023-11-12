@@ -14,69 +14,114 @@
         },
         {
             "color": "#00FF00",
-            "tooltip": "Strážny robot",
+            "tooltip": {
+                "sk": "Strážny robot",
+                "en": "Guard robot"
+            },
             "actions": [
                 {
                     "conditions": {
                         "hasItemNot": "shirt_glowing"
                     },
-                    "say": "Robot: Strážim, aby sem mohla vôjsť len údržba."
+                    "say": {
+                        "sk": "Robot: Strážim, aby sem mohla vôjsť len údržba.",
+                        "en": "Robot: I'm guarding this place, only the maintenance is allowed here."
+                    }
                 },
                 {
                     "conditions": {
                         "hasItemNot": "shirt_glowing"
                     },
-                    "say": "Robot: Neviem čo to je „údržba“, ale povedali mi, že má vestu čo svieti."
+                    "say": {
+                        "sk": "Robot: Neviem čo to je „údržba“, ale povedali mi, že má vestu čo svieti.",
+                        "en": "Robot: I don't know what is „maintenance“, but they have told me that it has a glowing vest."
+                    }
                 },
                 {
                     "conditions": {
                         "hasItem": "shirt_glowing"
                     },
-                    "say": "Robot: Ah! Údržba! Konečne."
+                    "say": {
+                        "sk": "Robot: Ah! Údržba! Konečne.",
+                        "en": "Robot: Ah! Maintenance! Finally."
+                    }
                 },
                 {
                     "trigger": "camera",
-                    "say": "Robot: Toto nie je turistická atrakcia."
+                    "say": {
+                        "sk": "Robot: Toto nie je turistická atrakcia.",
+                        "en": "Robot: This is not a tourist attraction."
+                    }
                 },
                 {
                     "trigger": "barrel",
-                    "say": "Robot: Už bolo na čase to vymeniť. Dáfam, že čoskoro nainštalujete novú."
+                    "say": {
+                        "sk": "Robot: Už bolo na čase to vymeniť. Dáfam, že čoskoro nainštalujete novú.",
+                        "en": "Robot: It was about time to replace that pipe. I hope you will install a new one soon."
+                    }
                 },
                 {
                     "trigger": "upberry",
-                    "say": "Robot: Organická potrava nie je pre mňa potrebná."
+                    "say": {
+                        "sk": "Robot: Organická potrava nie je pre mňa potrebná.",
+                        "en": "Robot: Organic food is not necessary for me."
+                    }
                 },
                 {
                     "trigger": "downberry",
-                    "say": "Robot: Organická potrava nie je pre mňa potrebná."
+                    "say": {
+                        "sk": "Robot: Organická potrava nie je pre mňa potrebná.",
+                        "en": "Robot: Organic food is not necessary for me."
+                    }
                 },
                 {
                     "trigger": "zapberry",
-                    "say": "Robot: To by ma mohlo zoskratovať."
+                    "say": {
+                        "sk": "Robot: To by ma mohlo zoskratovať.",
+                        "en": "Robot: That could short-circuit me."
+                    }
                 },
                 {
                     "trigger": "important_key",
-                    "say": "Robot: S takým kľúčom sa určite dostanete na nejaké doležité miesto, ale sem vás to nepustí."
+                    "say": {
+                        "sk": "Robot: S takým kľúčom sa určite dostanete na nejaké doležité miesto, ale sem vás to nepustí.",
+                        "en": "Robot: With such a key you are bound to get to some important place, but it won't let you in here."
+                    }
                 },
                 {
                     "trigger": "wrench",
-                    "say": "Robot: S takým ma vyrobili."
+                    "say": {
+                        "sk": "Robot: S takým ma vyrobili.",
+                        "en": "Robot: They made me using one like that."
+                    }
                 },
                 {
                     "trigger": "shirt",
-                    "say": "Robot: Pekné tričko, ale svietiaca vesta to nie je."
+                    "say": {
+                        "sk": "Robot: Pekné tričko, ale svietiaca vesta to nie je.",
+                        "en": "Robot: Nice shirt, but it's not a glowing vest."
+                    }
                 },
                 {
                     "trigger": "shirt_glowing",
-                    "say": "Robot: Bájna údržbárska vesta."
+                    "say": {
+                        "sk": "Robot: Bájna údržbárska vesta.",
+                        "en": "Robot: The legendary maintenance vest."
+                    }
                 },
                 {
                     "trigger": "match_lit",
-                    "say": "Robot: To je údržbársky nástroj?"
+                    "say": {
+                        "sk": "Robot: To je údržbársky nástroj?",
+                        "en": "Robot: Is that a maintenance tool?"
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Robot: O tomto nemám žiadnu informáciu."
+                    "say": {
+                        "sk": "Robot: O tomto nemám žiadnu informáciu.",
+                        "en": "Robot: I have no information on this."
+                    }
                 }
             ]
         },
@@ -94,7 +139,10 @@
                     "conditions": {
                         "hasItemNot": "shirt_glowing"
                     },
-                    "say": "Robot: BEEP BOOP Ďalej vás nesmiem pustiť, vstup len pre údržbu."
+                    "say": {
+                        "sk": "Robot: BEEP BOOP Ďalej vás nesmiem pustiť, vstup len pre údržbu.",
+                        "en": "Robot: BEEP BOOP I can't let you any further, only the maintenance is allowed here."
+                    }
                 }
             ]
         }

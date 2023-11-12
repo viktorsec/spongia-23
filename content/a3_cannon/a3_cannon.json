@@ -17,56 +17,89 @@
             "actions": [
                 {
                     "conditions": { "hasFlagsNot": "placed_barrel" },
-                    "say": "To je delo, ale chýba mu hlaveň."
+                    "say": {
+                        "sk": "To je delo, ale chýba mu hlaveň.",
+                        "en": "It's a cannon, but it's missing a barrel."
+                    }
                 },
                 {
                     "conditions": { "hasFlags": "placed_barrel", "hasFlagsNot": "placed_bullet" },
-                    "say": "To je delo, ale chýba mu náboj."
+                    "say": {
+                        "sk": "To je delo, ale chýba mu náboj.",
+                        "en": "It's a cannon, but it's missing a cannonball."
+                    }
                 },
                 {
                     "conditions": { "hasFlags": "placed_bullet" },
-                    "say": "Nabité delo, už len treba vystreliť."
+                    "say": {
+                        "sk": "Nabité delo, už len treba vystreliť.",
+                        "en": "The cannon is loaded, now I just need to fire it."
+                    }
                 },
                 {
                     "trigger": "barrel",
-                    "say": "To by šlo namontovať do tej diery."
+                    "say": {
+                        "sk": "To by šlo namontovať do tej diery.",
+                        "en": "This could be mounted into that hole."
+                    }
                 },
                 {
                     "trigger": "cannonball",
                     "conditions": { "hasFlagsNot": "placed_barrel" },
-                    "say": "Chýba tomu hlaveň, kam by sa ten náboj dal."
+                    "say": {
+                        "sk": "Chýba tomu hlaveň, kam by sa ten náboj dal.",
+                        "en": "It's missing a barrel, where could I put this cannonball."
+                    }
                 },
                 {
                     "trigger": "cannonball",
                     "conditions": { "hasFlags": "placed_barrel", "hasFlagsNot": "placed_bullet" },
                     "takeItem": "cannonball",
                     "setFlag": "placed_bullet",
-                    "say": "Nabité!"
+                    "say": {
+                        "sk": "Nabité!",
+                        "en": "Loaded!"
+                    }
                 },
                 {
                     "trigger": "match_lit",
                     "conditions": { "hasFlagsNot": "placed_bullet" },
-                    "say": "Bez náboja je zbytočné strieľať."
+                    "say": {
+                        "sk": "Bez náboja je zbytočné strieľať.",
+                        "en": "It's pointless to fire without a cannonball."
+                    }
                 },
                 {
                     "trigger": "match_lit",
                     "conditions": { "hasFlags": "placed_bullet" },
-                    "say": "BUM!",
+                    "say": {
+                        "sk": "BUM!",
+                        "en": "BOOM!"
+                    },
                     "takeItem": "match_lit",
                     "goto": "a4_finale"
                 },
                 {
                     "trigger": "match",
                     "conditions": { "hasFlags": "placed_bullet" },
-                    "say": "Zápalka nehorí, to mi je nanič."
+                    "say": {
+                        "sk": "Zápalka nehorí, to mi je nanič.",
+                        "en": "The match is not lit, that's useless."
+                    }
                 },
                 {
-                  "trigger": "important_key",
-                  "say": "Nemá to kľúčovú dierku."
+                    "trigger": "important_key",
+                    "say": {
+                        "sk": "Nemá to kľúčovú dierku.",
+                        "en": "It doesn't have a keyhole."
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Neviem, čo s tým."
+                    "say": {
+                        "sk": "Neviem, čo s tým.",
+                        "en": "I have no idea what to do with that."
+                    }
                 }
             ]
         },
@@ -75,60 +108,90 @@
             "actions": [
                 {
                     "conditions": { "hasFlagsNot": "placed_barrel" },
-                    "say": "Sem by sa dala namontovať hlaveň."
+                    "say": {
+                        "sk": "Sem by sa dala namontovať hlaveň.",
+                        "en": "This could be mounted into that hole."
+                    }
                 },
                 {
                     "trigger": "barrel",
                     "conditions": { "hasFlagsNot": "placed_barrel" },
                     "takeItem": "barrel",
                     "setFlag": "placed_barrel,placed_barrel_a,placed_barrel",
-                    "say": "Dúfam, že to nie je naopak. Možno to treba otočiť."
+                    "say": {
+                        "sk": "Dúfam, že to nie je naopak. Možno to treba otočiť.",
+                        "en": "I hope I didn't mount it the wrong way. Maybe I should turn it the other way around."
+                    }
                 },
                 {
                     "conditions": { "hasFlags": "placed_barrel_a" },
-                    "say": "Hej, toto sa mi zdá správne.",
+                    "say": {
+                        "sk": "Hej, toto sa mi zdá správne.",
+                        "en": "Yeah, this seems right."
+                    },
                     "setFlag": "placed_barrel_b",
                     "unsetFlag": "placed_barrel_a"
                 },
                 {
                     "conditions": { "hasFlags": "placed_barrel_b" },
-                    "say": "Hej, toto sa mi zdá správne.",
+                    "say": {
+                        "sk": "Hej, toto sa mi zdá správne.",
+                        "en": "Yeah, this seems right."
+                    },
                     "setFlag": "placed_barrel_a",
                     "unsetFlag": "placed_barrel_b"
                 },
                 {
                     "conditions": { "hasFlags": "placed_barrel_a" },
-                    "say": "Hmm, možno to bolo predsa lepšie tak, ako to bolo.",
+                    "say": {
+                        "sk": "Hmm, možno to bolo predsa lepšie tak, ako to bolo.",
+                        "en": "Hmm, maybe it was better the way it was."
+                    },
                     "setFlag": "placed_barrel_b",
                     "unsetFlag": "placed_barrel_a"
                 },
                 {
                     "conditions": { "hasFlags": "placed_barrel_b" },
-                    "say": "Hmm, možno to bolo predsa lepšie tak, ako to bolo.",
+                    "say": {
+                        "sk": "Hmm, možno to bolo predsa lepšie tak, ako to bolo.",
+                        "en": "Hmm, maybe it was better the way it was."
+                    },
                     "setFlag": "placed_barrel_a",
                     "unsetFlag": "placed_barrel_b"
                 },
                 {
                     "conditions": { "hasFlags": "placed_barrel_a" },
-                    "say": "Možno je jedno ako to namontujem?",
+                    "say": {
+                        "sk": "Možno je jedno ako to namontujem?",
+                        "en": "Perhaps it doesn't matter which way I mount it?"
+                    },
                     "setFlag": "placed_barrel_b",
                     "unsetFlag": "placed_barrel_a"
                 },
                 {
                     "conditions": { "hasFlags": "placed_barrel_b" },
-                    "say": "Možno je jedno ako to namontujem?",
+                    "say": {
+                        "sk": "Možno je jedno ako to namontujem?",
+                        "en": "Perhaps it doesn't matter which way I mount it?"
+                    },
                     "setFlag": "placed_barrel_a",
                     "unsetFlag": "placed_barrel_b"
                 },
                 {
                     "conditions": { "hasFlags": "placed_barrel_a" },
-                    "say": "Nie som expert, ale toto sa mi zdá naopak...",
+                    "say": {
+                        "sk": "Nie som expert, ale toto sa mi zdá naopak...",
+                        "en": "I'm no expert, but this seems backwards to me..."
+                    },
                     "setFlag": "placed_barrel_b",
                     "unsetFlag": "placed_barrel_a"
                 },
                 {
                     "conditions": { "hasFlags": "placed_barrel_b" },
-                    "say": "Nie som expert, ale toto sa mi zdá naopak...",
+                    "say": {
+                        "sk": "Nie som expert, ale toto sa mi zdá naopak...",
+                        "en": "I'm no expert, but this seems backwards to me..."
+                    },
                     "setFlag": "placed_barrel_a",
                     "unsetFlag": "placed_barrel_b"
                 },
@@ -137,27 +200,42 @@
                     "conditions": { "hasFlags": "placed_barrel", "hasFlagsNot": "placed_bullet" },
                     "takeItem": "cannonball",
                     "setFlag": "placed_bullet",
-                    "say": "Nabité!"
+                    "say": {
+                        "sk": "Nabité!",
+                        "en": "Loaded!"
+                    }
                 },
                 {
                     "trigger": "cannonball",
                     "conditions": { "hasFlagsNot": "placed_barrel" },
-                    "say": "Keby to malo hlaveň dalo by sa to nabiť."
+                    "say": {
+                        "sk": "Keby to malo hlaveň dalo by sa to nabiť.",
+                        "en": "If it had a barrel, I could load it."
+                    }
                 },
                 {
                     "trigger": "match_lit",
                     "conditions": { "hasFlags": "placed_bullet" },
-                    "say": "BUM!",
+                    "say": {
+                        "sk": "BUM!",
+                        "en": "BOOM!"
+                    },
                     "takeItem": "match_lit",
                     "goto": "a4_finale"
                 },
                 {
-                  "trigger": "important_key",
-                  "say": "Nepripadá mi, že by to bolo na kľúč."
+                    "trigger": "important_key",
+                    "say": {
+                        "sk": "Nepripadá mi, že by to bolo na kľúč.",
+                        "en": "I don't think this uses a key."
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Neviem, čo s tým."
+                    "say": {
+                        "sk": "Neviem, čo s tým.",
+                        "en": "I have no idea what to do with that."
+                    }
                 }
             ]
         }

@@ -1,46 +1,64 @@
 {
-  "id": "a0_house",
-  "background": "a0_house/background.png",
-  "mask": "a0_house/zones.png",
-  "zones": [
-      {
-          "color": "#FF0000",
-          "tooltip": "Dvere",
-          "cursor": "door-right",
-          "actions": [
-              {
-                  "say": "Prešiel si dverami.",
-                  "goto": "a0_inside"
-              },
-              {
-                  "trigger": "important_key",
-                  "say": "Hmm, nie je tu žiadna kľúčová dierka."
-              },
-              {
-                  "trigger": "$FALLBACK",
-                  "say": "Neviem, čo s tým."
-              }
-          ]
-      },
-      {
-          "color": "#00FF00",
-          "tooltip": "Cesta do jablčného sadu",
-          "cursor": "w-resize",
-          "actions": [
-              {
-                "goto": "a0_appleguy"
-              }
-          ]
-      },
-      {
-          "color": "#0000FF",
-          "tooltip": "K observatóriu",
-          "cursor": "e-resize",
-          "actions": [
-              {
-                  "goto": "a0_observatory_exterior"
-              }
-          ]
-      }
-  ]
+    "id": "a0_house",
+    "background": "a0_house/background.png",
+    "mask": "a0_house/zones.png",
+    "zones": [
+        {
+            "color": "#FF0000",
+            "tooltip": {
+                "sk": "Dvere",
+                "en": "Door"
+            },
+            "cursor": "door-right",
+            "actions": [
+                {
+                    "say": {
+                        "sk": "Prešiel si dverami.",
+                        "en": "You went through the door."
+                    },
+                    "goto": "a0_inside"
+                },
+                {
+                    "trigger": "important_key",
+                    "say": {
+                        "sk": "Hmm, nie je tu žiadna kľúčová dierka.",
+                        "en": "Hmm, there is no keyhole here."
+                    }
+                },
+                {
+                    "trigger": "$FALLBACK",
+                    "say": {
+                        "sk": "Neviem, čo s tým.",
+                        "en": "I have no idea what to do with that."
+                    }
+                }
+            ]
+        },
+        {
+            "color": "#00FF00",
+            "tooltip": {
+                "sk": "Cesta do jablčného sadu",
+                "en": "Path to the apple orchard"
+            },
+            "cursor": "w-resize",
+            "actions": [
+                {
+                    "goto": "a0_appleguy"
+                }
+            ]
+        },
+        {
+            "color": "#0000FF",
+            "tooltip": {
+                "sk": "K observatóriu",
+                "en": "To the observatory"
+            },
+            "cursor": "e-resize",
+            "actions": [
+                {
+                    "goto": "a0_observatory_exterior"
+                }
+            ]
+        }
+    ]
 }

@@ -5,29 +5,44 @@
     "zones": [
         {
             "color": "#FF0000",
-            "tooltip": "Dvere observatória",
+            "tooltip": {
+                "sk": "Dvere observatória",
+                "en": "Observatory door"
+            },
             "cursor": "door-right",
             "actions": [
                 {
                     "conditions": {
                         "hasFlagsNot": "apple_talk"
                     },        
-                    "say": "Zvoníš, ale nikto neotvára. Možno treba povedať heslo."
+                    "say": {
+                        "sk": "Zvoníš, ale nikto neotvára. Možno treba povedať heslo.",
+                        "en": "You ring the bell, but nobody opens. Maybe you need to say a password."
+                    }
                 },
                 {
                     "conditions": {
                         "hasFlags": "apple_talk"
                     },        
                     "goto": "a1_observatory_right",
-                    "say": "Vchádzaš do observatória. Dvere sa za tebou s hrmotom zabuchli. Niečo ti hovorí, že dostať sa odtiaľto nebude také jednoduché."
+                    "say": {
+                        "sk": "Vchádzaš do observatória. Dvere sa za tebou s hrmotom zabuchli. Niečo ti hovorí, že dostať sa odtiaľto nebude také jednoduché.",
+                        "en": "You enter the observatory. The door slams shut behind you with a loud bang. You have a feeling that getting out of here won't be so easy."
+                    }
                 },
                 {
                     "trigger": "important_key",
-                    "say": "Kľúč sem nepasuje."
+                    "say": {
+                        "sk": "Kľúč sem nepasuje.",
+                        "en": "The key doesn't fit here."
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Neviem, čo s tým."
+                    "say": {
+                        "sk": "Neviem, čo s tým.",
+                        "en": "I have no idea what to do with that."
+                    }
                 }
             ]
         },
@@ -39,7 +54,10 @@
                     "conditions": {
                         "hasFlagsNot": "seen_comet"
                     },        
-                    "say": "Musím najskôr preskúmať observatórium."
+                    "say": {
+                        "sk": "Musím najskôr preskúmať observatórium.",
+                        "en": "I need to explore the observatory first."
+                    }
                 },
                 {
                     "conditions": {
@@ -52,7 +70,10 @@
         },
         {
             "color": "#0000FF",
-            "tooltip": "K domu",
+            "tooltip": {
+                "sk": "K domu",
+                "en": "To the house"
+            },
             "cursor": "w-resize",
             "actions": [
                 {

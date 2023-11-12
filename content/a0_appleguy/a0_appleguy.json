@@ -1,87 +1,132 @@
 {
-  "id": "a0_appleguy",
-  "background": "a0_appleguy/background.png",
-  "mask": "a0_appleguy/zones.png",
-  "zones": [
-      {
-          "color": "#00FF00",
-          "tooltip": "K môjmu domu",
-          "cursor": "e-resize",
-          "actions": [
-              {
-                  "goto": "a0_house"
-              }
-          ]
-      },
-      {
-          "color": "#FF0000",
-          "tooltip": "Pestovateľ jabĺk",
-          "cursor": "help",
-          "actions": [
-              {
-                "conditions": {
-                    "hasFlagsNot": "apple_talk"
+    "id": "a0_appleguy",
+    "background": "a0_appleguy/background.png",
+    "mask": "a0_appleguy/zones.png",
+    "zones": [
+        {
+            "color": "#00FF00",
+            "tooltip": {
+                "sk": "K môjmu domu",
+                "en": "To my house"
+            },
+            "cursor": "e-resize",
+            "actions": [
+                {
+                    "goto": "a0_house"
+                }
+            ]
+        },
+        {
+            "color": "#FF0000",
+            "tooltip": {
+                "sk": "Pestovateľ jabĺk",
+                "en": "Apple grower"
+            },
+            "cursor": "help",
+            "actions": [
+                {
+                    "conditions": {
+                        "hasFlagsNot": "apple_talk"
+                    },
+                    "say": {
+                        "sk": "Izák: Tieto jablone každý rok rodia zelené jablká, ale tento rok sú červené. Myslím, že za tým môže byť nejaký záujímavý astornomický úkaz. Môžem ťa poprosiť, ísť sa spýtať do observatória, či nepozorovali niečo zaujímavé? Povedz, že ťa posiela Izák.",
+                        "en": "Isaac: These apple trees bear green apples every year, but this year they are red. I think it might be due to some interesting astornomical phenomenon. Could you please go and ask in the observatory if they have noticed anything interesting? Tell them that Isaac sent you."
+                    },
+                    "setFlag": "apple_talk"
                 },
-                "say": "Izák: Tieto jablone každý rok rodia zelené jablká, ale tento rok sú červené. Myslím, že za tým môže byť nejaký záujímavý astornomický úkaz. Môžem ťa poprosiť, ísť sa spýtať do observatória, či nepozorovali niečo zaujímavé? Povedz, že ťa posiela Izák.",
-                "setFlag": "apple_talk"
-              },
-              {
-                "conditions": {
-                    "hasFlags": "apple_talk",
-                    "hasFlagsNot": "seen_comet"
+                {
+                    "conditions": {
+                        "hasFlags": "apple_talk",
+                        "hasFlagsNot": "seen_comet"
+                    },
+                    "say": {
+                        "sk": "Izák: Čo sa zistilo v observatóriu?",
+                        "en": "Isaac: What did you find out in the observatory?"
+                    }
                 },
-                "say": "Izák: Čo sa zistilo v observatóriu?"
-              },
-              {
-                "conditions": {
-                    "hasFlags": "apple_talk",
-                    "hasFlagsNot": "seen_comet"
+                {
+                    "conditions": {
+                        "hasFlags": "apple_talk",
+                        "hasFlagsNot": "seen_comet"
+                    },
+                    "say": {
+                        "sk": "Izák: Už si späť z observatória? Je na východ.",
+                        "en": "Isaac: Are you back from the observatory? It is to the east."
+                    }
                 },
-                "say": "Izák: Už si späť z observatória? Je na východ."
-              },
-              {
-                "conditions": {
-                    "hasFlags": "seen_comet"
+                {
+                    "conditions": {
+                        "hasFlags": "seen_comet"
+                    },
+                    "say": {
+                        "sk": "Izák: Jejdanenky. Kométa, a rúti sa priamo na nás? To veru neznie dobre. Možno s touto situáciou bude vedieť pomôcť niekto v meste.",
+                        "en": "Isaac: Oh my. A comet, and it is heading straight for us? That does not sound good. Maybe someone in the town will be able to help with this situation."
+                    }
                 },
-                "say": "Izák: Jejdanenky. Kométa, a rúti sa priamo na nás? To veru neznie dobre. Možno s touto situáciou bude vedieť pomôcť niekto v meste."
-              },
-              {
-                "trigger": "important_key",
-                "say": "Izák: Máš veľmi pekný kľúč. Nevieš od čoho je? Určite na to prídeš."
-              },
-              {
-                "trigger": "upberry",
-                "say": "Izák: Ďakujem, ale ja jem iba jablká."
-              },
-              {
-                "trigger": "downberry",
-                "say": "Izák: Ďakujem, ale ja jem iba jablká."
-              },
-              {
-                "trigger": "zapberry",
-                "say": "Izák: Ďakujem, ale ja jem iba jablká."
-              },
-              {
-                  "trigger": "match",
-                  "say": "Izák: Nemám ju ako zapáliť."
-              },
-              {
-                "trigger": "match_lit",
-                "say": "Izák: Nezapáľ mi sad."
-              },
-              {
-                  "trigger": "shirt",
-                  "say": "Izák: Pekné tričko."
-              },
-              {
-                  "trigger": "shirt_glowing",
-                  "say": "Izák: Fuj, čo je to za humus?"
-              },
-              {
-                  "trigger": "$FALLBACK",
-                  "say": "Izák: Toto nepotrebujem."
-              }
-          ]
-      }
-  ]
+                {
+                    "trigger": "important_key",
+                    "say": {
+                        "sk": "Izák: Máš veľmi pekný kľúč. Nevieš od čoho je? Určite na to prídeš.",
+                        "en": "Isaac: You have a very nice key. You don't know what is it for? You will surely find out."
+                    }
+                },
+                {
+                    "trigger": "upberry",
+                    "say": {
+                        "sk": "Izák: Ďakujem, ale ja jem iba jablká.",
+                        "en": "Isaac: Thank you, but I only eat apples."
+                    }
+                },
+                {
+                    "trigger": "downberry",
+                    "say": {
+                        "sk": "Izák: Ďakujem, ale ja jem iba jablká.",
+                        "en": "Isaac: Thank you, but I only eat apples."
+                    }
+                },
+                {
+                    "trigger": "zapberry",
+                    "say": {
+                        "sk": "Izák: Ďakujem, ale ja jem iba jablká.",
+                        "en": "Isaac: Thank you, but I only eat apples."
+                    }
+                },
+                {
+                    "trigger": "match",
+                    "say": {
+                        "sk": "Izák: Nemám ju ako zapáliť.",
+                        "en": "Isaac: I don't have anything to light it with."
+                    }
+                },
+                {
+                    "trigger": "match_lit",
+                    "say": {
+                        "sk": "Izák: Nezapáľ mi sad.",
+                        "en": "Isaac: Don't light my orchard on fire."
+                    }
+                },
+                {
+                    "trigger": "shirt",
+                    "say": {
+                        "sk": "Izák: Pekné tričko.",
+                        "en": "Isaac: Nice shirt."
+                    }
+                },
+                {
+                    "trigger": "shirt_glowing",
+                    "say": {
+                        "sk": "Izák: Fuj, čo je to za humus?",
+                        "en": "Isaac: Yuck, what is this mess?"
+                    }
+                },
+                {
+                    "trigger": "$FALLBACK",
+                    "say": {
+                        "sk": "Izák: Toto nepotrebujem.",
+                        "en": "Isaac: I don't need this."
+                    }
+                }
+            ]
+        }
+    ]
 }

@@ -10,7 +10,10 @@
                 "en": "Important key"
             },
             "image": "a0_inside/important_key.png",
-            "say": "Toto budem potrebovať!"
+            "say": {
+                "sk": "Toto budem potrebovať!",
+                "en": "I will need this!"
+            }
         }
     ],
     "zones": [
@@ -35,75 +38,126 @@
                 },
                 {
                     "trigger": "important_key",
-                    "say": "Áno, je to moja kľúčová rastlina."
+                    "say": {
+                        "sk": "Áno, je to moja kľúčová rastlina.",
+                        "en": "Yes, this is my key plant."
+                    }
                 },
                 {
                     "trigger": "match",
-                    "say": "Určite si nepodpálim dom. Najmä preto, že zápalka nehorí."
+                    "say": {
+                        "sk": "Určite si nepodpálim dom. Najmä preto, že zápalka nehorí.",
+                        "en": "I will definitely not burn down my house. Especially because the match is not lit."
+                    }
                 },
                 {
                     "trigger": "match_lit",
-                    "say": "Určite si nepodpálim dom."
+                    "say": {
+                        "sk": "Určite si nepodpálim dom.",
+                        "en": "I will definitely not burn down my house."
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Neviem, čo s tým."
+                    "say": {
+                        "sk": "Neviem, čo s tým.",
+                        "en": "I have no idea what to do with this."
+                    }
                 }
             ]
         },
         {
             "color": "#00FF00",
-            "tooltip": "Hniezdo",
+            "tooltip": {
+                "sk": "Hniezdo",
+                "en": "Nest"
+            },
             "actions": [
                 {
-                    "say": "Pohodlné a teplé hniezdočko."
+                    "say": {
+                        "sk": "Pohodlné a teplé hniezdočko.",
+                        "en": "A comfortable and warm nest."
+                    }
                 },
                 {
                     "trigger": "important_key",
-                    "say": "Radšej si ho nechám."
+                    "say": {
+                        "sk": "Radšej si ho nechám.",
+                        "en": "I better keep this."
+                    }
                 },
                 {
                     "trigger": "match",
-                    "say": "Určite si nepodpálim dom. Najmä preto, že zápalka nehorí."
+                    "say": {
+                        "sk": "Určite si nepodpálim dom. Najmä preto, že zápalka nehorí.",
+                        "en": "I will definitely not burn down my house. Especially because the match is not lit."
+                    }
                 },
                 {
                     "trigger": "match_lit",
-                    "say": "Určite si nepodpálim dom."
+                    "say": {
+                        "sk": "Určite si nepodpálim dom.",
+                        "en": "I will definitely not burn down my house."
+                    }
                 },
                 {
                     "trigger": "shirt_glowing",
-                    "say": "No fuj, určite nie."
+                    "say": {
+                        "sk": "No fuj, určite nie.",
+                        "en": "Eww, definitely not."
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Radšej si to nechám."
+                    "say": {
+                        "sk": "Radšej si to nechám.",
+                        "en": "I better keep this."
+                    }
                 }
             ]
         },
         {
             "color": "#0000FF",
-            "tooltip": "Dvere",
+            "tooltip": {
+                "sk": "Dvere",
+                "en": "Door"
+            },
             "cursor": "door-right",
             "actions": [
                 {
                     "goto": "a0_house",
-                    "say": "Dvere sa s hrmotom otvorili. Nachádzaš sa pred domom."
+                    "say": {
+                        "sk": "Dvere sa s hrmotom otvorili. Nachádzaš sa pred domom.",
+                        "en": "The door opened with a rumble. You are standing in front of a house."
+                    }
                 },
                 {
                     "trigger": "important_key",
-                    "say": "Hmm, nie je tu žiadna kľúčová dierka."
+                    "say": {
+                        "sk": "Hmm, nie je tu žiadna kľúčová dierka.",
+                        "en": "Hmm, there is no keyhole here."
+                    }
                 },
                 {
                     "trigger": "match",
-                    "say": "Určite si nepodpálim dom. Najmä preto, že zápalka nehorí."
+                    "say": {
+                        "sk": "Určite si nepodpálim dom. Najmä preto, že zápalka nehorí.",
+                        "en": "I will definitely not burn down my house. Especially because the match is not lit."
+                    }
                 },
                 {
                     "trigger": "match_lit",
-                    "say": "Určite si nepodpálim dom."
+                    "say": {
+                        "sk": "Určite si nepodpálim dom.",
+                        "en": "I will definitely not burn down my house."
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Neviem, čo s tým."
+                    "say": {
+                        "sk": "Neviem, čo s tým.",
+                        "en": "I have no idea what to do with this."
+                    }
                 }
             ]
         }

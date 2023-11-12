@@ -22,8 +22,8 @@
         </button>
         <template #content>
           <div class="item-tooltip">
-            <h3>{{ item.name }}</h3>
-            <p>{{ item.description }}</p>
+            <h3>{{ getItemName(item) }}</h3>
+            <p>{{ getItemDescription(item) }}</p>
           </div>
         </template>
       </Vue3Popper>
@@ -34,6 +34,7 @@
 <script setup>
 import { computed } from 'vue';
 import itemsDB from '@/content/items.json';
+import clientState from '@/store/clientState';
 import Vue3Popper from 'vue3-popper';
 
 const props = defineProps({
@@ -57,6 +58,26 @@ const itemsRich = computed(() => {
   };
   return props.items.map((id) => getItem(id));
 });
+
+const getItemName = (item) => {
+  const translations = item.name;
+  const string = clientState.language === "sk"
+    ? translations.sk ?? translations
+    : translations.en ?? translations;
+
+  return string;
+}
+
+const getItemDescription = (item) => {
+  if (!item.description) return '';
+
+  const translations = item.description;
+  const string = clientState.language === "sk"
+    ? translations.sk ?? translations
+    : translations.en ?? translations;
+
+  return string;
+}
 
 </script>
 

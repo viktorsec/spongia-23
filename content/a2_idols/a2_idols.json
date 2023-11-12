@@ -3,7 +3,10 @@
     "background": "a2_idols/background.png",
     "maxActions": 3,
     "leaveAction": {
-        "say": "Všetci traja spolu: Prac sa! Po troch otázkach sa musíme povymieňať.",
+        "say": {
+            "sk": "Všetci traja spolu: Prac sa! Po troch otázkach sa musíme povymieňať.",
+            "en": "All three together: Begone! We have to swap after three questions."
+        },
         "goto": "a2_idols_guardian"
     },
     "mask": [
@@ -21,53 +24,89 @@
             "actions": [
                 {
                     "conditions": {"hasFlagsNot": "given_match"},
-                    "say": "Idol: Toto zachráni našu planétu.",
+                    "say": {
+                        "sk": "Idol: Toto zachráni našu planétu.",
+                        "en": "Idol: This will save our planet."
+                    },
                     "giveItem": "match",
                     "setFlag": "given_match"
                 },
                 {
                     "conditions": {"hasFlags": "given_match"},
-                    "say": "Idol: Planéta sa dá zachrániť."
+                    "say": {
+                        "sk": "Idol: Planéta sa dá zachrániť.",
+                        "en": "Idol: The planet can be saved."
+                    }
                 },
                 {
                     "conditions": {"hasFlags": "given_match"},
-                    "say": "Idol: Ja vravím pravdu."
+                    "say": {
+                        "sk": "Idol: Ja vravím pravdu.",
+                        "en": "Idol: I am telling the truth."
+                    }
                 },
                 {
                     "conditions": {"hasFlags": "given_match"},
-                    "say": "Idol: Máš štyri nohy a chvost."
+                    "say": {
+                        "sk": "Idol: Máš štyri nohy a chvost.",
+                        "en": "Idol: You have four legs and a tail."
+                    }
                 },
                 {
                     "conditions": {"hasFlags": "given_match"},
-                    "say": "Idol: Ak má zberateľ šesť kamarátov, tak vravím pravdu."
+                    "say": {
+                        "sk": "Idol: Ak má zberateľ šesť kamarátov, tak vravím pravdu.",
+                        "en": "Idol: If the collector has six friends, then I am telling the truth."
+                    }
                 },
                 {
                     "trigger": "important_key",
-                    "say": "Idol: Ten klúč je úplne zbytočný."
+                    "say": {
+                        "sk": "Idol: Ten klúč je úplne zbytočný.",
+                        "en": "Idol: That key is completely useless."
+                    }
                 },
                 {
                     "trigger": "match",
-                    "say": "Idol: Niekde to zapáľ."
+                    "say": {
+                        "sk": "Idol: Niekde to zapáľ.",
+                        "en": "Idol: Light that match."
+                    }
                 },
                 {
                     "trigger": "camera",
-                    "say": "Idol: Tu je zákaz fotiť."
+                    "say": {
+                        "sk": "Idol: Tu je zákaz fotiť.",
+                        "en": "Idol: No photos are allowed here."
+                    }
                 },
                 {
                     "trigger": "match_lit",
-                    "say": "Idol: Toto budeš potrebovať inde."
+                    "say": {
+                        "sk": "Idol: Toto budeš potrebovať inde.",
+                        "en": "Idol: You will need this elsewhere."
+                    }
                 },
                 {
                     "trigger": "shirt",
-                    "say": "Idol: Biele tričko sa dá prefarbiť."
+                    "say": {
+                        "sk": "Idol: Biele tričko sa dá prefarbiť.",
+                        "en": "Idol: A white shirt can be dyed."
+                    }
                 },
                 {
                     "trigger": "shirt_glowing",
-                    "say": "Idol: Toto smradľavé tričko radšej ľuďom neukazuj."
+                    "say": {
+                        "sk": "Idol: Toto smradľavé tričko radšej ľuďom neukazuj.",
+                        "en": "Idol: You better do not show this stinky shirt to people."
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Idol: Túto vec si buď už použil, alebo ju ešte budeš potrebovať, alebo je úplne zbytočná."
+                    "say": {
+                        "sk": "Idol: Túto vec si buď už použil, alebo ju ešte budeš potrebovať, alebo je úplne zbytočná.",
+                        "en": "Idol: You have either already used this item, or you will need it later, or it is completely useless."
+                    }
                 }
             ]
         },
@@ -76,47 +115,89 @@
             "tooltip": "Idol",
             "actions": [
                 {
-                    "say": "Idol: Planéta sa nedá zachrániť."
+                    "say": {
+                        "sk": "Idol: Planéta sa nedá zachrániť.",
+                        "en": "Idol: The planet cannot be saved."
+                    }
                 },
                 {
-                    "say": "Idol: Nie, to ja vravím pravdu."
+                    "say": {
+                        "sk": "Idol: Nie, to ja vravím pravdu.",
+                        "en": "Idol: No, I am the one telling the truth."
+                    }
                 },
                 {
-                    "say": "Idol: Kométa nie je problém, netrafí nás."
+                    "say": {
+                        "sk": "Idol: Máš dve nohy a žiaden chvost.",
+                        "en": "Idol: You have two legs and no tail."
+                    }
                 },
                 {
-                    "say": "Idol: Klamúci idol je po mojej pravici."
+                    "say": {
+                        "sk": "Idol: Kométa nie je problém, netrafí nás.",
+                        "en": "Idol: The comet is not a problem, it will not hit us."
+                    }
                 },
                 {
-                    "say": "Idol: Náhodný idol je ten jediný, čo občas hovorí pravdu."
+                    "say": {
+                        "sk": "Idol: Klamúci idol je po mojej pravici.",
+                        "en": "Idol: The lying idol is on my right."
+                    }
+                },
+                {
+                    "say": {
+                        "sk": "Idol: Náhodný idol je ten jediný, čo občas hovorí pravdu.",
+                        "en": "Idol: The random idol is the only one who sometimes tells the truth."
+                    }
                 },
                 {
                     "trigger": "important_key",
-                    "say": "Idol: Ten klúč je veľmi dôležitý."
+                    "say": {
+                        "sk": "Idol: Ten klúč je veľmi dôležitý.",
+                        "en": "Idol: That key is very important."
+                    }
                 },
                 {
                     "trigger": "match",
-                    "say": "Idol: Je moc mokrá, nebude horieť."
+                    "say": {
+                        "sk": "Idol: Je moc mokrá, nebude horieť.",
+                        "en": "Idol: It is too wet, it will not burn."
+                    }
                 },
                 {
                     "trigger": "camera",
-                    "say": "Idol: Tu sa smie fotiť."
+                    "say": {
+                        "sk": "Idol: Tu sa smie fotiť.",
+                        "en": "Idol: Photos are allowed here."
+                    }
                 },
                 {
                     "trigger": "match_lit",
-                    "say": "Idol: Najlepšie urobíš, ak ju zahasíš."
+                    "say": {
+                        "sk": "Idol: Najlepšie urobíš, ak ju zahasíš.",
+                        "en": "Idol: You better put it out."
+                    }
                 },
                 {
                     "trigger": "shirt",
-                    "say": "Idol: Pekná mikina."
+                    "say": {
+                        "sk": "Idol: Pekná mikina.",
+                        "en": "Idol: Nice hoodie."
+                    }
                 },
                 {
                     "trigger": "shirt_glowing",
-                    "say": "Idol: Pekne voní."
+                    "say": {
+                        "sk": "Idol: Pekne voní.",
+                        "en": "Idol: It smells nice."
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Idol: Táto vec je magická."
+                    "say": {
+                        "sk": "Idol: Táto vec je magická.",
+                        "en": "Idol: This item is magical."
+                    }
                 }
             ]
         },
@@ -125,56 +206,101 @@
             "tooltip": "Idol",
             "actions": [
                 {
-                    "say": "Idol: Riešením kométy je šiška."
+                    "say": {
+                        "sk": "Idol: Riešením kométy je šiška.",
+                        "en": "Idol: The solution to the comet is a donut."
+                    }
                 },
                 {
-                    "say": "Idol: Ja vravím pravdu. Teda nie, ja vlastne klamem."
+                    "say": {
+                        "sk": "Idol: Ja vravím pravdu. Teda nie, ja vlastne klamem.",
+                        "en": "Idol: I am telling the truth. Well, no, I am actually lying."
+                    }
                 },
                 {
-                    "say": "Idol: Kométa je náš kamarát. Netreba sa báť kométy."
+                    "say": {
+                        "sk": "Idol: Kométa je náš kamarát. Netreba sa báť kométy.",
+                        "en": "Idol: The comet is our friend. There is no need to be afraid of the comet."
+                    }
                 },
                 {
-                    "say": "Idol: Tučniak. Opica. Taco."
+                    "say": {
+                        "sk": "Idol: Tučniak. Opica. Taco.",
+                        "en": "Idol: Penguin. Monkey. Taco."
+                    }
                 },
                 {
-                    "say": "Idol: Viem ako zastaviť kométu, ale nepoviem ti."
+                    "say": {
+                        "sk": "Idol: Viem ako zastaviť kométu, ale nepoviem ti.",
+                        "en": "Idol: I know how to stop the comet, but I will not tell you."
+                    }
                 },
                 {
-                    "say": "Idol: Beta tester kráčal aby player mohol utekať."
+                    "say": {
+                        "sk": "Idol: Beta tester kráčal aby player mohol utekať.",
+                        "en": "Idol: The beta tester walked so that the player could run."
+                    }
                 },
                 {
-                    "say": "Idol: P = NP."
+                    "say": {
+                        "sk": "Idol: P = NP.",
+                        "en": "Idol: P = NP."
+                    }
                 },
                 {
-                    "say": "Idol: Klamúci idol občas hovorí pravdu."
+                    "say": {
+                        "sk": "Idol: Klamúci idol občas hovorí pravdu.",
+                        "en": "Idol: The lying idol sometimes tells the truth."
+                    }
                 },
                 {
                     "trigger": "important_key",
-                    "say": "Idol: To je kľúč na odmontovanie hlavne."
+                    "say": {
+                        "sk": "Idol: To je kľúč na odmontovanie hlavne.",
+                        "en": "Idol: That is the key to disassemble the cannon."
+                    }
                 },
                 {
                     "trigger": "wrench",
-                    "say": "Idol: To je kľúč na odomknutie dverí."
+                    "say": {
+                        "sk": "Idol: To je kľúč na odomknutie dverí.",
+                        "en": "Idol: That is the key to unlock a door."
+                    }
                 },
                 {
                     "trigger": "match",
-                    "say": "Idol: Ak s tým spáliš planétu nebude mať kométa čo zničiť."
+                    "say": {
+                        "sk": "Idol: Ak s tým spáliš planétu nebude mať kométa čo zničiť.",
+                        "en": "Idol: If you burn down the planet with that, the comet will have nothing to destroy."
+                    }
                 },
                 {
                     "trigger": "camera",
-                    "say": "Idol: Tu je zákaz fotiť."
+                    "say": {
+                        "sk": "Idol: Tu je zákaz fotiť.",
+                        "en": "Idol: No photos are allowed here."
+                    }
                 },
                 {
                     "trigger": "match_lit",
-                    "say": "Idol: To je zapálená zápalka."
+                    "say": {
+                        "sk": "Idol: To je zapálená zápalka.",
+                        "en": "Idol: That is a lit match."
+                    }
                 },
                 {
                     "trigger": "shirt_glowing",
-                    "say": "Idol: Extrém."
+                    "say": {
+                        "sk": "Idol: Extrém.",
+                        "en": "Idol: Extreme."
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Idol: Tučniak. Opica. Taco."
+                    "say": {
+                        "sk": "Idol: Tučniak. Opica. Taco.",
+                        "en": "Idol: Penguin. Monkey. Taco."
+                    }
                 }
             ]
         }

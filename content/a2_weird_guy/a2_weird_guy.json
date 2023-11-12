@@ -17,20 +17,32 @@
             "cursor": "zoom",
             "actions": [
                 {
-                    "say": "Zberateľ: To sme vyrobili s kamarátmi.",
+                    "say": {
+                        "sk": "Zberateľ: To sme vyrobili s kamarátmi.",
+                        "en": "Collector: We made this with my friends."
+                    },
                     "goto": "a2_weird_guy_art"
                 },
                 {
                     "trigger": "match_lit",
-                    "say": "Zberateľ: Nepribližuj sa k tomu s ohňom!"
+                    "say": {
+                        "sk": "Zberateľ: Nepribližuj sa k tomu s ohňom!",
+                        "en": "Collector: Don't get close to that with fire!"
+                    }
                 },
                 {
                     "trigger": "shirt_glowing",
-                    "say": "Zberateľ: Nepribližuj sa s tým k tomu!"
+                    "say": {
+                        "sk": "Zberateľ: Nepribližuj sa s tým k tomu!",
+                        "en": "Collector: Don't get close to my art with that!"
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Neviem, čo s tým."
+                    "say": {
+                        "sk": "Neviem, čo s tým.",
+                        "en": "I have no idea what to do with that."
+                    }
                 }
             ]
         },
@@ -39,58 +51,100 @@
             "cursor": "help",
             "actions": [
                 {
-                    "say": "Tik tok"
+                    "say": {
+                        "sk": "Tik tok",
+                        "en": "Tick-tock"
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Neviem, čo s tým."
+                    "say": {
+                        "sk": "Neviem, čo s tým.",
+                        "en": "I have no idea what to do with that."
+                    }
                 }
             ]
         },
         {
             "color": "#0000FF",
-            "tooltip": "Zberateľ kamarátov",
+            "tooltip": {
+                "sk": "Zberateľ kamarátov",
+                "en": "Collector of friends"
+            },
             "actions": [
                 {
-                    "say": "Zberateľ kamarátov: Ahoj, vitaj u nás."
+                    "say": {
+                        "sk": "Zberateľ kamarátov: Ahoj, vitaj u nás.",
+                        "en": "Collector of friends: Hello, welcome to our home."
+                    }
                 },
                 {
-                    "say": "Zberateľ kamarátov: Zdravíme ťa."
+                    "say": {
+                        "sk": "Zberateľ kamarátov: Zdravíme ťa.",
+                        "en": "Collector of friends: We greet you."
+                    }
                 },
                 {
-                    "say": "Zberateľ kamarátov: Jeeej nový kamaráť! Neostaneš na večeru?"
+                    "say": {
+                        "sk": "Zberateľ kamarátov: Jeeej nový kamaráť! Neostaneš na večeru?",
+                        "en": "Collector of friends: Yaaay, a new friend! Will you stay for dinner?"
+                    }
                 },
                 {
                     "trigger": "important_key",
-                    "say": "Zberateľ kamarátov: Nevieš od čoho je? No ja verím, že na to prídeš."
+                    "say": {
+                        "sk": "Zberateľ kamarátov: Nevieš od čoho je? No ja verím, že na to prídeš.",
+                        "en": "Collector of friends: You don't know what it's for? I'm sure you'll figure it out."
+                    }
                 },
                 {
                     "trigger": "shirt",
-                    "say": "Zberateľ kamarátov: Ja nosím len košele."
+                    "say": {
+                        "sk": "Zberateľ kamarátov: Ja nosím len košele.",
+                        "en": "Collector of friends: I wear only shirts."
+                    }
                 },
                 {
                     "trigger": "shirt_glowing",
-                    "say": "Zberateľ kamarátov: Ak chceš ostať na večeru toto musíš hodiť do pračky."
+                    "say": {
+                        "sk": "Zberateľ kamarátov: Ak chceš ostať na večeru toto musíš hodiť do pračky.",
+                        "en": "Collector of friends: If you want to stay for dinner, you have to put that in the washing machine."
+                    }
                 },
                 {
                     "trigger": "cannonball",
-                    "say": "Zberateľ kamarátov: Z toho by ale bolo veľa kamarátov."
+                    "say": {
+                        "sk": "Zberateľ kamarátov: Z toho by ale bolo veľa kamarátov.",
+                        "en": "Collector of friends: That would be a lot of friends."
+                    }
                 },
                 {
                     "trigger": "raw_clay",
-                    "say": "Zberateľ kamarátov: Z toho by ale bolo veľa kamarátov."
+                    "say": {
+                        "sk": "Zberateľ kamarátov: Z toho by ale bolo veľa kamarátov.",
+                        "en": "Collector of friends: That would be a lot of friends."
+                    }
                 },
                 {
                     "trigger": "match",
-                    "say": "Zberateľ kamarátov: Ďakujem, ale nepotrebujem nič zapáliť."
+                    "say": {
+                        "sk": "Zberateľ kamarátov: Ďakujem, ale nepotrebujem nič zapáliť.",
+                        "en": "Collector of friends: Thank you, but I don't need to light up anything."
+                    }
                 },
                 {
                     "trigger": "match_lit",
-                    "say": "Zberateľ kamarátov: Ďakujem, ale nepotrebujem nič zapáliť."
+                    "say": {
+                        "sk": "Zberateľ kamarátov: Ďakujem, ale nepotrebujem nič zapáliť.",
+                        "en": "Collector of friends: Thank you, but I don't need to light up anything."
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Zberateľ kamarátov: Ja to nepotrebujem, ale môžeš ponúknuť mojich kamarátov."
+                    "say": {
+                        "sk": "Zberateľ kamarátov: Ja to nepotrebujem, ale môžeš ponúknuť mojich kamarátov.",
+                        "en": "Collector of friends: I don't need that, but you can offer it to my friends."
+                    }
                 }
             ]
         },
@@ -98,19 +152,31 @@
             "color": "#FFFF00",
             "actions": [
                 {
-                    "say": "Zberateľ (hrubým hlasom): A ty si kto?"
+                    "say": {
+                        "sk": "Zberateľ (hrubým hlasom): A ty si kto?",
+                        "en": "Collector (with a rough voice): And who are you?"
+                    }
                 },
                 {
                     "trigger": "shirt_glowing",
-                    "say": "Zberateľ (hrubým hlasom): Čo tu tak extrémne smrdí?"
+                    "say": {
+                        "sk": "Zberateľ (hrubým hlasom): Čo tu tak extrémne smrdí?",
+                        "en": "Collector (with a rough voice): What is smelling so badly here?"
+                    }
                 },
                 {
-                  "trigger": "important_key",
-                  "say": "Zberateľ (hrubým hlasom): Od čoho je ten kľúčik?"
+                    "trigger": "important_key",
+                    "say": {
+                        "sk": "Zberateľ (hrubým hlasom): Od čoho je ten kľúčik?",
+                        "en": "Collector (with a rough voice): What is this key for?"
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Zberateľ (hrubým hlasom): Čo to je?"
+                    "say": {
+                        "sk": "Zberateľ (hrubým hlasom): Čo to je?",
+                        "en": "Collector (with a rough voice): What' that?"
+                    }
                 }
             ]
         },
@@ -118,27 +184,45 @@
             "color": "#00FFFF",
             "actions": [
                 {
-                    "say": "Zberateľ (piskľavým hlasom): Ahoj, ja som Fialka."
+                    "say": {
+                        "sk": "Zberateľ (piskľavým hlasom): Ahoj, ja som Fialka.",
+                        "en": "Collector (with a squeaky voice): Hello, I'm Violet. Pleased to meet you."
+                    }
                 },
                 {
                     "trigger": "match",
-                    "say": "Zberateľ (piskľavým hlasom): Kiežby horela. Mám rada ohníky."
+                    "say": {
+                        "sk": "Zberateľ (piskľavým hlasom): Kiežby horela. Mám rada ohníky.",
+                        "en": "Collector (with a squeaky voice): I wish it was burning. I like small fires."
+                    }
                 },
                 {
                     "trigger": "match_lit",
-                    "say": "Zberateľ (piskľavým hlasom): Jéj, to je pekný plamienok."
+                    "say": {
+                        "sk": "Zberateľ (piskľavým hlasom): Jéj, to je pekný plamienok.",
+                        "en": "Collector (with a squeaky voice): Yay, that's a nice flame."
+                    }
                 },
                 {
                     "trigger": "shirt_glowing",
-                    "say": "Zberateľ (piskľavým hlasom): Wow, to je ale fascinujúci sliz."
+                    "say": {
+                        "sk": "Zberateľ (piskľavým hlasom): Wow, to je ale fascinujúci sliz.",
+                        "en": "Collector (with a squeaky voice): Wow, that's a fascinating slime."
+                    }
                 },
                 {
-                  "trigger": "important_key",
-                  "say": "Zberateľ (piskľavým hlasom): To je ale krásny kľúčik. Od čoho je?"
+                    "trigger": "important_key",
+                    "say": {
+                        "sk": "Zberateľ (piskľavým hlasom): To je ale krásny kľúčik. Od čoho je?",
+                        "en": "Collector (with a squeaky voice): That's a beautiful key. What is it for?"
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Zberateľ (piskľavým hlasom): Jéj, to je ale krásny predmet."
+                    "say": {
+                        "sk": "Zberateľ (piskľavým hlasom): Jéj, to je ale krásny predmet.",
+                        "en": "Collector (with a squeaky voice): Yay, that's a beautiful item."
+                    }
                 }
             ]
         },
@@ -146,19 +230,31 @@
             "color": "#FF00FF",
             "actions": [
                 {
-                    "say": "Zberateľ (koktavo): A-a-a-ahoj."
+                    "say": {
+                        "sk": "Zberateľ (koktavo): A-a-a-ahoj.",
+                        "en": "Collector (with a stutter): H-h-h-hello."
+                    }
                 },
                 {
                     "trigger": "match_lit",
-                    "say": "Zberateľ (koktavo): Ra-ra-ra-radšej s-s tým narábaj o-o-o-opatrne."
+                    "say": {
+                        "sk": "Zberateľ (koktavo): Ra-ra-ra-radšej s-s tým narábaj o-o-o-opatrne.",
+                        "en": "Collector (with a stutter): P-p-p-please be careful with t-t-that."
+                    }
                 },
                 {
                     "trigger": "shirt_glowing",
-                    "say": "Zberateľ (koktavo): P-p-p-prosím, choď s-s-s tým p-p-p-preč."
+                    "say": {
+                        "sk": "Zberateľ (koktavo): P-p-p-prosím, choď s-s-s tým p-p-p-preč.",
+                        "en": "Collector (with a stutter): P-p-p-please t-take t-t-that away."
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Zberateľ (koktavo): Č-čo ja s-s-s tým?"
+                    "say": {
+                        "sk": "Zberateľ (koktavo): Č-čo ja s-s-s tým?",
+                        "en": "Collector (with a stutter): What sh-sh-should I d-d-d-do with t-t-that?"
+                    }
                 }
             ]
         },
@@ -166,28 +262,46 @@
             "color": "#FF8000",
             "actions": [
                 {
-                    "say": "Zberateľ (šepotom): V lese je tajná cestička!",
+                    "say": {
+                        "sk": "Zberateľ (šepotom): V lese je tajná cestička!",
+                        "en": "Collector (whispering): There is a secret path in the forest!"
+                    },
                     "setFlag": "idol_path_unlocked"
                 },
                 {
                     "trigger": "match",
-                    "say": "Zberateľ (šepotom): Nikomu to nehovor, ale táto palička sa dá zapáliť."
+                    "say": {
+                        "sk": "Zberateľ (šepotom): Nikomu to nehovor, ale táto palička sa dá zapáliť.",
+                        "en": "Collector (whispering): Don't tell anyone, but this stick can be lit."
+                    }
                 },
                 {
                     "trigger": "match_lit",
-                    "say": "Zberateľ (šepotom): Mám rád tiene tvorené ohňom. Tancujú."
+                    "say": {
+                        "sk": "Zberateľ (šepotom): Mám rád tiene tvorené ohňom. Tancujú.",
+                        "en": "Collector (whispering): I like the shadows caused by fire. They dance."
+                    }
                 },
                 {
                     "trigger": "shirt_glowing",
-                    "say": "Zberateľ (šepotom): Tajomstvo tohoto trička nechcem vedieť ani ja."
+                    "say": {
+                        "sk": "Zberateľ (šepotom): Tajomstvo tohoto trička nechcem vedieť ani ja.",
+                        "en": "Collector (whispering): Even I don't want to know the secret of this shirt."
+                    }
                 },
                 {
-                  "trigger": "important_key",
-                  "say": "Zberateľ (šepotom): Ten kľúč ti podľa mňa pomôže odhaliť veľké tajomstvo."
+                    "trigger": "important_key",
+                    "say": {
+                        "sk": "Zberateľ (šepotom): Ten kľúč ti podľa mňa pomôže odhaliť veľké tajomstvo.",
+                        "en": "Collector (whispering): I think this key will help you reveal a big secret."
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Zberateľ (šepotom): To je ale tajomný predmet."
+                    "say": {
+                        "sk": "Zberateľ (šepotom): To je ale tajomný predmet.",
+                        "en": "Collector (whispering): Now, that's a mysterious item!"
+                    }
                 }
             ]
         },
@@ -195,23 +309,38 @@
             "color": "#FF0080",
             "actions": [
                 {
-                    "say": "Zberateľ (šušlavo): Poznáme lôzne tajomstvá. Naplíklad aj o dvelách v bani."
+                    "say": {
+                        "sk": "Zberateľ (šušlavo): Poznáme lôzne tajomstvá. Naplíklad aj o dvelách v bani.",
+                        "en": "Collector (with a heavy lisp): We know many secrets. For example, about the door in the mine."
+                    }
                 },
                 {
                     "trigger": "match",
-                    "say": "Zberateľ (šušlavo): Zápalky majú tajomnú atmosfélu."
+                    "say": {
+                        "sk": "Zberateľ (šušlavo): Zápalky majú tajomnú atmosfélu.",
+                        "en": "Collector (with a heavy lisp): Matches have a mysterious atmosphere."
+                    }
                 },
                 {
                     "trigger": "match_lit",
-                    "say": "Zberateľ (šušlavo): Zápalky majú tajomnú atmosfélu."
+                    "say": {
+                        "sk": "Zberateľ (šušlavo): Zápalky majú tajomnú atmosfélu.",
+                        "en": "Collector (with a heavy lisp): Matches have a mysterious atmosphere."
+                    }
                 },
                 {
                     "trigger": "shirt_glowing",
-                    "say": "Zberateľ (šušlavo): Mal by si si to oplať, stlašne to smldí."
+                    "say": {
+                        "sk": "Zberateľ (šušlavo): Mal by si si to oplať, stlašne to smldí.",
+                        "en": "Collector (with a heavy lisp): You should wash that, it smells really bad."
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Zberateľ (šušlavo): Dávaj si na to pozoj."
+                    "say": {
+                        "sk": "Zberateľ (šušlavo): Dávaj si na to pozoj.",
+                        "en": "Collector (with a heavy lisp): Keep that safely."
+                    }
                 }
             ]
         },
@@ -219,11 +348,17 @@
             "color": "#8000FF",
             "actions": [
                 {
-                    "say": "Zberateľ (svojím hlasom): Prepáč, ale on sa hanbí a nerozpráva."
+                    "say": {
+                        "sk": "Zberateľ (svojím hlasom): Prepáč, ale on sa hanbí a nerozpráva.",
+                        "en": "Collector (with his own voice): Sorry, but that one is shy and doesn't talk."
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Zberateľ (svojím hlasom): Prepáč, ale on sa hanbí a nerozpráva."
+                    "say": {
+                        "sk": "Zberateľ (svojím hlasom): Prepáč, ale on sa hanbí a nerozpráva.",
+                        "en": "Collector (with his own voice): Sorry, but that one is shy and doesn't talk."
+                    }
                 }
             ]
         }

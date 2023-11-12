@@ -6,7 +6,10 @@
         {
             "color": "#FF0000",
             "cursor": "w-resize",
-            "tooltip": "Späť na cestičku",
+            "tooltip": {
+                "sk": "Späť na cestičku",
+                "en": "Back to the path"
+            },
             "actions": [
                 {
                     "goto": "a2_forest_path"
@@ -16,7 +19,10 @@
         {
             "color": "#00FF00",
             "cursor": "e-resize",
-            "tooltip": "K idolom",
+            "tooltip": {
+                "sk": "K idolom",
+                "en": "To the idols"
+            },
             "actions": [
                 {
                     "goto": "a2_idols"
@@ -25,40 +31,70 @@
         },
         {
             "color": "#0000FF",
-            "tooltip": "Strážca idolov",
+            "tooltip": {
+                "sk": "Strážca idolov",
+                "en": "Guardian of the idols"
+            },
             "actions": [
                 {
-                    "say": "Strážca idolov: Nech sa páči, pokračujte k idolom a spýtajte sa ich, čo chcete."
+                    "say": {
+                        "sk": "Strážca idolov: Nech sa páči, pokračujte k idolom a spýtajte sa ich, čo chcete.",
+                        "en": "Guardian of the idols: Go ahead, continue to the idols and ask them what you want."
+                    }
                 },
                 {
-                    "say": "Strážca idolov: Pozor, máte len tri otázky, kým vás vyhodia preč."
+                    "say": {
+                        "sk": "Strážca idolov: Pozor, máte len tri otázky, kým vás vyhodia preč.",
+                        "en": "Guardian of the idols: Be careful, you only have three questions before they throw you out."
+                    }
                 },
                 {
-                    "say": "Strážca idolov: Neviem, ktorý je ktorý, stále sa vymieňajú."
+                    "say": {
+                        "sk": "Strážca idolov: Neviem, ktorý je ktorý, stále sa vymieňajú.",
+                        "en": "Guardian of the idols: I don't know which one is which, they keep swapping."
+                    }
                 },
                 {
                     "trigger": "camera",
-                    "say": "Strážca idolov: Tu je zákaz fotiť."
+                    "say": {
+                        "sk": "Strážca idolov: Tu je zákaz fotiť.",
+                        "en": "Guardian of the idols: No photos are allowed here."
+                    }
                 },
                 {
                     "trigger": "match",
-                    "say": "Strážca idolov: Idoly občas dávajú návštevníkom aj predmety. Minule jednému dali fotoaparát."
+                    "say": {
+                        "sk": "Strážca idolov: Idoly občas dávajú návštevníkom aj predmety. Minule jednému dali fotoaparát.",
+                        "en": "Guardian of the idols: The idols sometimes give visitors items. Last time they gave a camera to one of them."
+                    }
                 },
                 {
                     "trigger": "match_lit",
-                    "say": "Strážca idolov: Opatrne s tým ohňom."
+                    "say": {
+                        "sk": "Strážca idolov: Opatrne s tým ohňom.",
+                        "en": "Guardian of the idols: Be careful with that fire."
+                    }
                 },
                 {
                     "trigger": "shirt",
-                    "say": "Strážca idolov: Toto tričko je mi povedomé."
+                    "say": {
+                        "sk": "Strážca idolov: Toto tričko je mi povedomé.",
+                        "en": "Guardian of the idols: This shirt is familiar to me."
+                    }
                 },
                 {
                     "trigger": "shirt_glowing",
-                    "say": "Strážca idolov: Fuj, toto sem nenos."
+                    "say": {
+                        "sk": "Strážca idolov: Fuj, toto sem nenos.",
+                        "en": "Guardian of the idols: Eww, don't wear this here."
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Strážca idolov: Nemusíš mi nič dávať."
+                    "say": {
+                        "sk": "Strážca idolov: Nemusíš mi nič dávať.",
+                        "en": "Guardian of the idols: You don't have to give me anything."
+                    }
                 }
             ]
         }

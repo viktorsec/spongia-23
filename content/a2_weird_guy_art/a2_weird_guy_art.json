@@ -8,24 +8,39 @@
             "cursor": "move",
             "actions": [
                 {
-                    "say": "Zberateľ: Páči sa ti naše umenie? Okrem toho, že je krásne, je aj užitočné.",
+                    "say": {
+                        "sk": "Zberateľ: Páči sa ti naše umenie? Okrem toho, že je krásne, je aj užitočné.",
+                        "en": "Collector: Do you like our art? Besides being beautiful, it is also useful."
+                    },
                     "goto": "a2_weird_guy"
                 },
                 {
                     "trigger": "match",
-                    "say": "Zberateľ: Viem, že nehorí, ale aj tak opatrne okolo nášho umenia!"
+                    "say": {
+                        "sk": "Zberateľ: Viem, že nehorí, ale aj tak opatrne okolo nášho umenia!",
+                        "en": "Collector: I know it's not burning, but still be careful around our art!"
+                    }
                 },
                 {
                     "trigger": "match_lit",
-                    "say": "Zberateľ: Nepoškoď nám to!"
+                    "say": {
+                        "sk": "Zberateľ: Nepoškoď nám to!",
+                        "en": "Collector: Don't damage it!"
+                    }
                 },
                 {
                     "trigger": "shirt_glowing",
-                    "say": "Zberateľ: Nepribližuj sa s tým k tomu!"
+                    "say": {
+                        "sk": "Zberateľ: Nepribližuj sa s tým k tomu!",
+                        "en": "Collector: Don't get that thing close to our art!"
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Neviem, čo s tým."
+                    "say": {
+                        "sk": "Neviem, čo s tým.",
+                        "en": "I have no idea what to do with that."
+                    }
                 }
             ]
         }

@@ -6,7 +6,10 @@
         {
             "color": "#FF0000",
             "cursor": "s-resize",
-            "tooltip": "Do mesta",
+            "tooltip": {
+                "sk": "Do mesta",
+                "en": "To the town"
+            },
             "actions": [
                 {
                     "goto": "a2_town"
@@ -16,7 +19,10 @@
         {
             "color": "#00FF00",
             "cursor": "sw-resize",
-            "tooltip": "Hlbšie do bane",
+            "tooltip": {
+                "sk": "Hlbšie do bane",
+                "en": "Deeper into the mine"
+            },
             "actions": [
                 {
                     "goto": "a3_cave_robot"
@@ -25,13 +31,19 @@
         },
         {
             "color": "#0000FF",
-            "tooltip": "Baník",
+            "tooltip": {
+                "sk": "Baník",
+                "en": "Miner"
+            },
             "actions": [
                 {
                     "conditions": {
                         "hasFlagsNot": "given_raw_clay"
                     },
-                    "say": "Gustáv: Nechceš Gustávovu plastelínu?",
+                    "say": {
+                        "sk": "Gustáv: Nechceš Gustávovu plastelínu?",
+                        "en": "Augustus: Do you want Augustus' clay?"
+                    },
                     "setFlag": "given_raw_clay",
                     "giveItem": "raw_clay"
                 },
@@ -39,53 +51,82 @@
                     "conditions": {
                         "hasFlags": "given_raw_clay"
                     },
-                    "say": "Gustáv: Už viacej nemám."
+                    "say": {
+                        "sk": "Gustáv: Už viacej nemám.",
+                        "en": "Augustus: That's all I had."
+                    }
                 },
                 {
                     "trigger": "raw_clay",
                     "takeItem": "raw_clay",
                     "unsetFlag": "given_raw_clay",
-                    "say": "Gustáv: Dobre, ak nechceš vráť späť."
+                    "say": {
+                        "sk": "Gustáv: Dobre, ak nechceš vráť späť.",
+                        "en": "Augustus: Okay, if you don't want it, give it back."
+                    }
                 },
                 {
                     "trigger": "camera",
-                    "say": "Gustáv: Prosím nefoť ma, som špinavý."
+                    "say": {
+                        "sk": "Gustáv: Prosím nefoť ma, som špinavý.",
+                        "en": "Augustus: Please don't take pictures of me, I'm dirty."
+                    }
                 },
                 {
                     "trigger": "cannonball",
-                    "say": "Gustáv: Fíha, to je ale kopec plastelíny. A tak dokonale guľatý."
+                    "say": {
+                        "sk": "Gustáv: Fíha, to je ale kopec plastelíny. A tak dokonale guľatý.",
+                        "en": "Augustus: Wow, that's a lot of clay. And it's so perfectly round."
+                    }
                 },
                 {
                     "trigger": "wrench",
-                    "say": "Gustáv: Nie že nám tu s tým niečo odmontuješ!"
+                    "say": {
+                        "sk": "Gustáv: Nie že nám tu s tým niečo odmontuješ!",
+                        "en": "Augustus: Don't you dare to unscrew anything here!"
+                    }
                 },
                 {
-                  "trigger": "important_key",
-                  "say": "Gustáv: Radšej si ho nechaj, určite ho budeš potrebovať."
+                    "trigger": "important_key",
+                    "say": {
+                        "sk": "Gustáv: Radšej si ho nechaj, určite ho budeš potrebovať.",
+                        "en": "Augustus: You better keep that, you'll need it for sure."
+                    }
                 },
                 {
                     "trigger": "shirt",
-                    "say": "Gustáv: Také čisté tričko by v bani dlho nevydržalo."
+                    "say": {
+                        "sk": "Gustáv: Také čisté tričko by v bani dlho nevydržalo.",
+                        "en": "Augustus: Such a clean shirt wouldn't last long in the mine."
+                    }
                 },
                 {
                     "trigger": "shirt_glowing",
-                    "say": "Gustáv: Veru ja dnešnej móde nerozumiem."
+                    "say": {
+                        "sk": "Gustáv: Veru ja dnešnej móde nerozumiem.",
+                        "en": "Augustus: I have to admit I don't understand today's fashion."
+                    }
                 },
                 {
                     "trigger": "match",
-                    "say": "Gustáv: Nepotrebujem nič zapáliť."
+                    "say": {
+                        "sk": "Gustáv: Nepotrebujem nič zapáliť.",
+                        "en": "Augustus: I don't need to light anything."
+                    }
                 },
                 {
                     "trigger": "match_lit",
-                    "say": "Gustáv: Nepopáľ sa."
-                },
-                {
-                    "trigger": "shirt_glowing",
-                    "say": "Gustáv: Nechutne to smrdí."
+                    "say": {
+                        "sk": "Gustáv: Nepopáľ sa.",
+                        "en": "Augustus: Don't burn yourself."
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Gustáv: Ďakujem, ale neviem, čo s tým."
+                    "say": {
+                        "sk": "Gustáv: Ďakujem, ale neviem, čo s tým.",
+                        "en": "Augustus: Thank you, but I don't know what to do with this."
+                    }
                 }
             ]
         }

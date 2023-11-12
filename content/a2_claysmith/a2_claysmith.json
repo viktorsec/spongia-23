@@ -14,77 +14,125 @@
         },
         {
             "color": "#00FF00",
-            "tooltip": "Plastelinár",
+            "tooltip": {
+                "sk": "Plastelinár",
+                "en": "Claysmith"
+            },
             "actions": [
                 {
                     "trigger": "raw_clay",
-                    "say": "Leonardo: Ďakujem, tu máš za odmenu kľúč.",
+                    "say": {
+                        "sk": "Leonardo: Ďakujem, tu máš za odmenu kľúč.",
+                        "en": "Leonardo: Thank you, here is a wrench as a reward."
+                    },
                     "giveItem": "wrench",
                     "takeItem": "raw_clay",
                     "setFlag": "given_wrench"
                 },
                 {
                     "trigger": "important_key",
-                    "say": "Leonardo: Radšej si ho nechaj, budeš ho asi potrebovať."
+                    "say": {
+                        "sk": "Leonardo: Radšej si ho nechaj, budeš ho asi potrebovať.",
+                        "en": "Leonardo: You should keep it, you are probably going to need it."
+                    }
                 },
                 {
                     "conditions": {
                         "hasFlagsNot": "given_wrench"
                     },
                     "trigger": "cannonball",
-                    "say": "Leonardo: Táto plastelína je celá pomiešaná. Skús nájsť nejakú nepoužitú."
+                    "say": {
+                        "sk": "Leonardo: Táto plastelína je celá pomiešaná. Skús nájsť nejakú nepoužitú.",
+                        "en": "Leonardo: This clay is all mixed up. Try to find some unused one."
+                    }
                 },
                 {
                     "trigger": "barrel",
-                    "say": "Leonardo: Pozor keď to budeš niekam montovať, aby to bolo správne otočené."
+                    "say": {
+                        "sk": "Leonardo: Pozor keď to budeš niekam montovať, aby to bolo správne otočené.",
+                        "en": "Leonardo: Be careful when you are going to mount it somewhere, it has to be turned the right way."
+                    }
                 },
                 {
                     "trigger": "shirt",
-                    "say": "Leonardo: Ďakujem ale toto nepotrebujem."
+                    "say": {
+                        "sk": "Leonardo: Ďakujem ale toto nepotrebujem.",
+                        "en": "Leonardo: Thank you but I don't need this."
+                    }
                 },
                 {
                     "conditions": {
                         "hasFlags": "given_wrench"
                     },
-                    "say": "Leonardo: Dúfam, že sa ti páči kľúč, čo som ti dal."
+                    "say": {
+                        "sk": "Leonardo: Dúfam, že sa ti páči kľúč, čo som ti dal.",
+                        "en": "Leonardo: I hope you like the wrench I gave you."
+                    }
                 },
                 {
                     "conditions": {
                         "hasFlagsNot": "given_wrench"
                     },
-                    "say": "Leonardo: Vitajte v Leonardovom plastelínovom svete. Potreboval by som plastelínu."
+                    "say": {
+                        "sk": "Leonardo: Vitajte v Leonardovom plastelínovom svete. Potreboval by som plastelínu.",
+                        "en": "Leonardo: Welcome to Leonardo's clay world. I'm in need of some clay."
+                    }
                 },
                 {
                     "trigger": "wrench",
-                    "say": "Leonardo (s plačom): Prečo mi to vraciaš? Nepáči sa ti?"
+                    "say": {
+                        "sk": "Leonardo (s plačom): Prečo mi to vraciaš? Nepáči sa ti?",
+                        "en": "Leonardo (crying): Why are you giving it back? Don't you like it?"
+                    }
                 },
                 {
                     "trigger": "upberry",
-                    "say": "Leonardo: Ďakujem, ale som alergický."
+                    "say": {
+                        "sk": "Leonardo: Ďakujem, ale som alergický.",
+                        "en": "Leonardo: Thank you but I'm allergic."
+                    }
                 },
                 {
                     "trigger": "downberry",
-                    "say": "Leonardo: Ďakujem, ale som alergický."
+                    "say": {
+                        "sk": "Leonardo: Ďakujem, ale som alergický.",
+                        "en": "Leonardo: Thank you but I'm allergic."
+                    } 
                 },
                 {
                     "trigger": "zapberry",
-                    "say": "Leonardo: Ďakujem, ale som alergický."
+                    "say": {
+                        "sk": "Leonardo: Ďakujem, ale som alergický.",
+                        "en": "Leonardo: Thank you but I'm allergic."
+                    }
                 },
                 {
                     "trigger": "match",
-                    "say": "Leonardo: Ďakujem, mám dosť vlastných."
+                    "say": {
+                        "sk": "Leonardo: Ďakujem, mám dosť vlastných.",
+                        "en": "Leonardo: Thank you, I have enough of my own."
+                    }
                 },
                 {
                     "trigger": "match_lit",
-                    "say": "Leonardo: Opatrne, nepodpáľ mi dieľňu."
+                    "say": {
+                        "sk": "Leonardo: Opatrne, nepodpáľ mi dieľňu.",
+                        "en": "Leonardo: Careful, don't burn down my workshop."
+                    }
                 },
                 {
                     "trigger": "shirt_glowing",
-                    "say": "Leonardo: Okamžite to vynes von z mojej dielne."
+                    "say": {
+                        "sk": "Leonardo: Okamžite to vynes von z mojej dielne.",
+                        "en": "Leonardo: Take that thing out of my workshop immediately."
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Leonardo: Radšej si to nechaj."
+                    "say": {
+                        "sk": "Leonardo: Radšej si to nechaj.",
+                        "en": "Leonardo: You should keep this."
+                    }
                 }
             ]
         }

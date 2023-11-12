@@ -6,7 +6,10 @@
         {
             "color": "#FF0000",
             "cursor": "s-resize",
-            "tooltip": "Do mesta",
+            "tooltip": {
+                "sk": "Do mesta",
+                "en": "To the town"
+            },
             "actions": [
                 {
                     "goto": "a2_town"
@@ -16,7 +19,10 @@
         {
             "color": "#00FF00",
             "cursor": "n-resize",
-            "tooltip": "K observatóriu",
+            "tooltip": {
+                "sk": "K observatóriu",
+                "en": "To the observatory"
+            },
             "actions": [
                 {
                     "goto": "a0_observatory_exterior"
@@ -26,20 +32,29 @@
         {
             "color": "#0000FF",
             "cursor": "e-resize",
-            "tooltip": "Tajomná cestička",
+            "tooltip": {
+                "sk": "Tajomná cestička",
+                "en": "Mysterious path"
+            },
             "actions": [
                 {
                     "conditions": {
                         "hasFlagsNot": "idol_path_unlocked"
                     },
-                    "say": "Zdá sa že tam nič nie je a bojím sa tam len tak ísť."
+                    "say": {
+                        "sk": "Zdá sa že tam nič nie je a bojím sa tam len tak ísť.",
+                        "en": "It seems it leads nowhere reasonable and I am afraid to go there."
+                    }
                 },
                 {
                     "conditions": {
                         "hasFlags": "idol_path_unlocked"
                     },
                     "goto": "a2_idols_guardian",
-                    "say": "Strážca idolov: Vitajte v chráme troch idolov. Jeden z nich vždy hovorí pravdu, jeden vždy klame, a jeden odpovedá náhodne."
+                    "say": {
+                        "sk": "Strážca idolov: Vitajte v chráme troch vševediacich idolov. Jeden z nich vždy hovorí pravdu, jeden vždy klame, a jeden odpovedá náhodne.",
+                        "en": "Guardian of the idols: Welcome to the temple of the three omniscient idols, one of which always tells the truth, one of which always lies, and one of which answers randomly."
+                    }
                 }
             ]
         }

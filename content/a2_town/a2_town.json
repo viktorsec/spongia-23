@@ -6,7 +6,10 @@
         {
             "color": "#FF0000",
             "cursor": "s-resize",
-            "tooltip": "Do lesa",
+            "tooltip": {
+                "sk": "Do lesa",
+                "en": "Into the forest"
+            },
             "actions": [
                 {
                     "goto": "a2_forest_path"
@@ -16,7 +19,10 @@
         {
             "color": "#00FF00",
             "cursor": "nw-resize",
-            "tooltip": "K bani",
+            "tooltip": {
+                "sk": "K bani",
+                "en": "To the quarry"
+            },
             "actions": [
                 {
                     "goto": "a2_quarry"
@@ -44,7 +50,10 @@
         {
             "color": "#00FFFF",
             "cursor": "ne-resize",
-            "tooltip": "Von za mesto",
+            "tooltip": {
+                "sk": "Von za mesto",
+                "en": "Out of town"
+            },
             "actions": [
                 {
                     "goto": "a3_crossroads"
@@ -54,33 +63,57 @@
         {
             "color": "#FF00FF",
             "cursor": "zoom",
-            "tooltip": "Okno",
+            "tooltip": {
+                "sk": "Okno",
+                "en": "Window"
+            },
             "actions": [
                 {
-                    "say": "To je okno."
+                    "say": {
+                        "sk": "To je okno.",
+                        "en": "This is a window."
+                    }
                 },
                 {
-                    "say": "Pozerať sa ľuďom do okien je neslušné."
+                    "say": {
+                        "sk": "Pozerať sa ľuďom do okien je neslušné.",
+                        "en": "It is rude to look into people's windows."
+                    }
                 },
                 {
-                  "trigger": "important_key",
-                  "say": "Sem tento kľúč nepasuje."
+                    "trigger": "important_key",
+                    "say": {
+                        "sk": "Sem tento kľúč nepasuje.",
+                        "en": "This key does not fit here."
+                    }
                 },
                 {
                     "trigger": "match",
-                    "say": "Nemôžem niekomu zapáliť dom. Najmä preto, že zápalka nehorí."
+                    "say": {
+                        "sk": "Nemôžem niekomu zapáliť dom. Najmä preto, že zápalka nehorí.",
+                        "en": "I can't set someone's house on fire. Especially because the match is not lit."
+                    }
                 },
                 {
                     "trigger": "match_lit",
-                    "say": "Nemôžem niekomu zapáliť dom!"
+                    "say": {
+                        "sk": "Nemôžem niekomu zapáliť dom!",
+                        "en": "I can't set someone's house on fire!"
+                    }
                 },
                 {
                     "trigger": "shirt_glowing",
-                    "say": "Hodiť toto dnu by bolo spáchaním trestného činu."
+                    "say": {
+                        "sk": "Hodiť toto dnu by bolo spáchaním trestného činu.",
+                        "en": "Throwing this in would be a crime."
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Neviem, čo s tým."
+                    "say": {
+                        "sk": "Neviem, čo s tým.",
+                        "en": "I have no idea what to do with this."
+                    }
                 }
             ]
         }

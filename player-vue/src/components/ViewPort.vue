@@ -214,10 +214,11 @@ const handleAction = (action) => {
   }
 
   const handlers = {
-    say: (strings) => {
+    say: (translations) => {
       const string = clientState.language === "sk"
-        ? strings.sk ?? strings
-        : strings.en ?? strings;
+        ? translations.sk ?? translations
+        : translations.en ?? translations;
+
       gameState.console.push(string);
     },
     goto: (value) => {
@@ -365,10 +366,20 @@ const overlaysDisplayed = computed(() => {
 
 const activeTooltip = computed(() => {
   if (activeItem.value?.tooltip) {
-    return activeItem.value.tooltip;
+    const translations = activeItem.value.tooltip;
+    const string = clientState.language === "sk"
+      ? translations.sk ?? translations
+      : translations.en ?? translations;
+
+    return string;
   }
   if (activeZone.value?.tooltip) {
-    return activeZone.value.tooltip;
+    const translations = activeZone.value.tooltip;
+    const string = clientState.language === "sk"
+      ? translations.sk ?? translations
+      : translations.en ?? translations;
+
+    return string;
   }
   return null;
 });

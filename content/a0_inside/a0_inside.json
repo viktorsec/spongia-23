@@ -5,7 +5,10 @@
     "items": [
         {
             "id": "important_key",
-            "tooltip": "Dôležitý kľúč",
+            "tooltip": {
+                "sk": "Dôležitý kľúč",
+                "en": "Important key"
+            },
             "image": "a0_inside/important_key.png",
             "say": "Toto budem potrebovať!"
         }
@@ -13,7 +16,10 @@
     "zones": [
         {
             "color": "#FF0000",
-            "tooltip": "Veľká rastlina",
+            "tooltip": {
+                "sk": "Veľká rastlina",
+                "en": "Large plant"
+            },
             "actions": [
                 {
                     "say": {

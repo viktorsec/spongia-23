@@ -16,10 +16,16 @@
             "tooltip": "Veľká rastlina",
             "actions": [
                 {
-                    "say": "Moja obľúbená rastlina."
+                    "say": {
+                        "sk": "Moja obľúbená rastlina.",
+                        "en": "My favourite flower."
+                    }
                 },
                 {
-                    "say": "Tento kvetináč sa mi veľmi páči."
+                    "say": {
+                        "sk": "Tento kvetináč sa mi veľmi páči.",
+                        "en": "I like this flowerpot a lot."
+                    }
                 },
                 {
                     "trigger": "important_key",

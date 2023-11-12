@@ -214,7 +214,12 @@ const handleAction = (action) => {
   }
 
   const handlers = {
-    say: (value) => gameState.console.push(value),
+    say: (strings) => {
+      const string = clientState.language === "sk"
+        ? strings.sk ?? strings
+        : strings.en ?? strings;
+      gameState.console.push(string);
+    },
     goto: (value) => {
       actionCount.value = -1; // incremented to zero below.
       gameState.currentRoom = value;

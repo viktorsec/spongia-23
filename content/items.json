@@ -15,90 +15,150 @@
   {
     "id": "banana",
     "image": "banana.png",
-    "name": "Banán",
-    "description": "Banán je žlté podlhovasté ovocie"
+    "name": {
+      "sk": "Banán",
+      "en": "Banana"
+    },
+    "description": {
+      "sk": "Banán je žlté podlhovasté ovocie",
+      "en": "Banana is an elongated yellow fruit"
+    }
   },
   {
     "id": "quarter_potion",
     "image": "quarter_potion.png",
-    "name": "Polmesiac"
+    "name": {
+      "sk": "Polmesačný amulet",
+      "en": "Half moon amulet"
+    }
   },
   {
     "id": "full_whisky_a",
     "image": "full_whisky.png",
-    "name": "Jablčný mušt"
+    "name": {
+      "sk": "Jablčný mušt",
+      "en": "Apple juice"
+    }
   },
   {
     "id": "full_whisky_b",
     "image": "full_whisky.png",
-    "name": "Jablčný mušt"
+    "name": {
+      "sk": "Jablčný mušt",
+      "en": "Apple juice"
+    }
   },
   {
     "id": "empty_whisky",
     "image": "empty_whisky.png",
-    "name": "Fľaša od jablčného muštu"
+    "name": {
+      "sk": "Fľaša od jablčného muštu",
+      "en": "Empty apple juice flask"
+    }
   },
 
   {
     "id": "downberry",
     "image": "downberry.png",
-    "name": "Zmršťovacia malvica"
+    "name": {
+      "sk": "Zmršťovacia malvica",
+      "en": "Downberry"
+    }
   },
   {
     "id": "upberry",
     "image": "upberry.png",
-    "name": "Nafukovacia bobuľa"
+    "name": {
+      "sk": "Nafukovacia bobuľa",
+      "en": "Upberry"
+    }
   },
   {
     "id": "zapberry",
     "image": "zapberry.png",
-    "name": "Elektrická borievka"
+    "name": {
+      "sk": "Elektrická borievka",
+      "en": "Zapberry"
+    }
   },
   {
     "id": "raw_clay",
     "image": "raw_clay.png",
-    "name": "Plastelínová ruda"
+    "name": {
+      "sk": "Surová plastelína",
+      "en": "Raw clay"
+    }
   },
   {
     "id": "wrench",
     "image": "wrench.png",
-    "name": "Vidlicový kľúč"
+    "name": {
+      "sk": "Vidlicový kľúč",
+      "en": "Wrench"
+    }
   },
   {
     "id": "barrel",
     "image": "barrel.png",
-    "name": "Trubica"
+    "name": {
+      "sk": "Trubica",
+      "en": "Pipe"
+    }
   },
   {
     "id": "cannonball",
     "image": "cannonball.png",
-    "name": "Veľký guľatý kameň"
+    "name": {
+      "sk": "Veľký guľatý kameň",
+      "en": "Big round stone"
+    }
   },
   {
     "id": "camera",
     "image": "camera.png",
-    "name": "Fotoaparát"
+    "name": {
+      "sk": "Fotoaparát",
+      "en": "Camera"
+    }
   },
   {
     "id": "shirt",
     "image": "shirt.png",
-    "name": "Tričko"
+    "name": {
+      "sk": "Tričko",
+      "en": "Shirt"
+    }
   },
   {
     "id": "shirt_glowing",
     "image": "shirt_glowing.png",
-    "name": "Tričko ulepené od hríbového slizu",
-    "description": "Žiari v tme"
+    "name": {
+      "sk": "Tričko ulepené od hríbového slizu",
+      "en": "Shirt covered in mushroom slime"
+    },
+    "description": {
+      "sk": "Žiari v tme",
+      "en": "It glows in the dark"
+    }
   },
   {
     "id": "match",
     "image": "match.png",
-    "name": "Zápalka"
+    "name": {
+      "sk": "Zápalka",
+      "en": "Match"
+    }
   },
   {
     "id": "match_lit",
     "image": "match_lit.png",
-    "name": "Horiaca zápalka",
-    "description": "Dúfam, že mi nezhasne"
+    "name": {
+      "sk": "Horiaca zápalka",
+      "en": "Burning match"
+    },
+    "description": {
+      "sk": "Dúfam, že mi nezhasne",
+      "en": "I hope it won't go out"
+    }
   }
 ]

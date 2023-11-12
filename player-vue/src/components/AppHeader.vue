@@ -1,14 +1,27 @@
 <template>
   <div class="app-header">
     <div class="name">
-      Pozor, padá hviezda!
+      {{ clientState.language === 'sk' ? 'Pozor, padá hviezda!' : 'Watch Out: A Star is Falling' }}
     </div>
 
     <div class="actions">
-      <button class="base-button" @click="restart()">Reštartovať hru</button>
-      <button class="base-button" @click="musicToggle()">Hudba {{ musicIsPlaying ? 'zap.' : 'vyp.' }}</button>
-      <button class="base-button" @click="privacyPolicy()">Súkromie</button>
-      <button class="base-button" @click="credits()" @keyup.enter="startDebug()" @keyup.space="toggleLanguage()">Titulky</button>
+      <button class="base-button" @click="restart()">
+        {{ clientState.language === 'sk' ? 'Reštartovať hru' : 'Restart Game' }}
+      </button>
+      <button class="base-button" @click="musicToggle()">
+        {{ getMusicToggleLabel() }}
+      </button>
+      <button class="base-button" @click="privacyPolicy()">
+        {{ clientState.language === 'sk' ? 'Súkromie' : 'Privacy' }}
+      </button>
+      <button
+        class="base-button"
+        @click="credits()"
+        @keyup.enter="startDebug()"
+        @keyup.space="toggleLanguage()"
+      >
+       {{ clientState.language === 'sk' ? 'Titulky' : 'Credits' }}
+      </button>
       <button class="base-button" @click="repository()">GitHub</button>
     </div>
   </div>
@@ -45,8 +58,9 @@ const musicToggle = () => {
 }
 
 const credits = () => {
+  const title = clientState.language === 'sk' ? 'Pozor, padá hviezda!' : 'Watch Out: A Star is Falling';
   const lines = [
-    'Pozor, padá hviezda!',
+    title,
     'Faisceau de Lumière ~ Špongia 2023',
     ['Alexander Mravčák', 'Laco Pápay', 'Viktor Seč'].sort(() => Math.random() - 0.5).join(', '),
     'projects.mravcak.com/hviezda/',
@@ -58,6 +72,14 @@ const credits = () => {
   });
 };
 
+const getMusicToggleLabel = () => {
+  if (clientState.language === 'sk') {
+    return `Hudba ${musicIsPlaying.value ? 'vyp.' : 'zap.'}`;
+  }
+
+  return `Sound ${musicIsPlaying.value ? 'on' : 'off'}`;
+};
+
 const startDebug = () => {
   console.log('debug started');
   clientState.debugMode = true;
@@ -65,12 +87,14 @@ const startDebug = () => {
 
 const toggleLanguage = () => {
   const newLanguage = clientState.language === 'sk' ? 'en' : 'sk';
-  console.log('new language', newLanguage);
   clientState.language = newLanguage;
 }
 
 const privacyPolicy = () => {
-  gameState.console.push('Nesledujeme vaše správanie v hre ani mimo nej. Stav hry je uložený iba na vašom zariadení.');
+  const message = clientState.language === 'sk'
+    ? 'Nesledujeme vaše správanie v hre ani mimo nej. Stav hry je uložený iba na vašom zariadení.'
+    : 'We do not track your behavior in the game or outside of it. The game state is saved only on your device.';
+  gameState.console.push(message);
 }
 
 const repository = () => {

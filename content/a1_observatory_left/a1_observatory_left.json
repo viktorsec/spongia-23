@@ -20,7 +20,10 @@
         },
         {
             "color": "#00FF00",
-            "tooltip": "Teleskop",
+            "tooltip": {
+                "sk": "Teleskop",
+                "en": "Telescope"
+            },
             "cursor": "zoom",
             "actions": [
                 {
@@ -28,23 +31,38 @@
                 },
                 {
                     "trigger": "important_key",
-                    "say": "Teleskop nie je na kľúč."
+                    "say": {
+                        "sk": "Teleskop nie je na kľúč.",
+                        "en": "The telescope doesn't need a key."
+                    }
                 },
                 {
                     "trigger": "wrench",
-                    "say": "Už je tu pobrané všetko čo nebolo priskrutkované, radšej ostaňme pri tom."
+                    "say": {
+                        "sk": "Už je tu pobrané všetko čo nebolo priskrutkované, radšej ostaňme pri tom.",
+                        "en": "I've already taken everything that wasn't screwed down, let's leave it at that."
+                    }
                 },
                 {
                     "trigger": "match",
-                    "say": "Nemôžem podpáliť observatórium. Najmä preto, že zápalka nehorí."
+                    "say": {
+                        "sk": "Nemôžem podpáliť observatórium. Najmä preto, že zápalka nehorí.",
+                        "en": "I can't burn down the observatory. Especially because the match isn't lit."
+                    }
                 },
                 {
                     "trigger": "match_lit",
-                    "say": "Nemôžem podpáliť observatórium."
+                    "say": {
+                        "sk": "Nemôžem podpáliť observatórium.",
+                        "en": "I can't burn down the observatory."
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Neviem čo s tým."
+                    "say": {
+                        "sk": "Neviem čo s tým.",
+                        "en": "I have no idea what to do with that."
+                    }
                 }
             ]
         }

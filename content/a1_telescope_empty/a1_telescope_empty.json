@@ -3,7 +3,10 @@
     "background": "a1_telescope_empty/empty.png",
     "mask": "a1_telescope_empty/zones.png",
     "enterAction": {
-        "say": "Hviezdy sú vidieť naozaj krásne. Dokonca sa zdá, ako keby bola noc aj keď ešte pred chvíľou bolo svetlo. Ale nič zaujímavé popravde nevidím. Musím sa porozhliadať."
+        "say": {
+            "sk": "Hviezdy sú vidieť naozaj krásne. Dokonca sa zdá, ako keby bola noc aj keď ešte pred chvíľou bolo svetlo. Ale nič zaujímavé popravde nevidím. Musím sa porozhliadať.",
+            "en": "The stars are really beautiful. It even seems like it's night even though it was light a moment ago. But I don't see anything interesting. I have to look around."
+        }
     },
     "zones": [
         {

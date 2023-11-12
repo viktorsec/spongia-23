@@ -19,7 +19,10 @@
                     "conditions": {
                         "hasFlagsNot": "placed_empty_whisky"
                     },
-                    "say": "Polica s krúžkom"
+                    "say": {
+                        "sk": "Polica s krúžkom",
+                        "en": "Shelf with an etched circle"
+                    }
                 },
                 {
                     "conditions": {
@@ -35,7 +38,10 @@
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "To sa sem podľa mňa nehodí."
+                    "say": {
+                        "sk": "To sa sem podľa mňa nehodí.",
+                        "en": "I feel this doesn't belong here."
+                    }
                 }
             ]
         },
@@ -46,7 +52,10 @@
                     "conditions": {
                         "hasFlagsNot": "placed_banana"
                     },
-                    "say": "Polička s mesiacom"
+                    "say": {
+                        "sk": "Polička s mesiacom",
+                        "en": "Shelf with an etched moon"
+                    }
                 },
                 {
                     "conditions": {
@@ -62,11 +71,17 @@
                 },
                 {
                     "trigger": "quarter_potion",
-                    "say": "Kiež by sa to dalo otočiť."
+                    "say": {
+                        "sk": "Kiež by sa to dalo otočiť.",
+                        "en": "I wish I could flip it."
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "To sa sem podľa mňa nehodí."
+                    "say": {
+                        "sk": "To sa sem podľa mňa nehodí.",
+                        "en": "I feel this doesn't belong here."
+                    }
                 }
             ]
         },
@@ -77,7 +92,10 @@
                     "conditions": {
                         "hasFlagsNot": "placed_full_whisky"
                     },
-                    "say": "Polička s krúžkom"
+                    "say": {
+                        "sk": "Polička s krúžkom",
+                        "en":"Shelf with an etched circle"
+                    }
                 },
                 {
                     "conditions": {
@@ -107,7 +125,10 @@
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "To sa sem podľa mňa nehodí."
+                    "say": {
+                        "sk": "To sa sem podľa mňa nehodí.",
+                        "en":"I feel this doesn't belong here."
+                    }
                 }
             ]
         },
@@ -118,7 +139,10 @@
                     "conditions": {
                         "hasFlagsNot": "placed_quarter_potion"
                     },
-                    "say": "Polička s mesiacom"
+                    "say": {
+                        "sk": "Polička s mesiacom",
+                        "en": "Shelf with an etched moon"
+                    }
                 },
                 {
                     "conditions": {
@@ -134,82 +158,130 @@
                 },
                 {
                     "trigger": "banana",
-                    "say": "Kiež by sa ten banán dal otočiť."
+                    "say": {
+                        "sk": "Kiež by sa ten banán dal otočiť.",
+                        "en": "I wish I could flip the banana."
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "To sa sem podľa mňa nehodí."
+                    "say": {
+                        "sk": "To sa sem podľa mňa nehodí.",
+                        "en": "I feel this doesn't belong here."
+                    }
                 }
             ]
         },
         {
             "color": "#808080",
-            "tooltip": "Astronóm",
+            "tooltip": {
+                "sk": "Astronóm",
+                "en": "Astronomer"
+            },
             "actions": [
                 {
                     "conditions": {
                         "hasFlagsNot": "dud_talk"
                     },
-                    "say": "Mikuláš: Vitaj v mojom observátoriu. Ja som Mikuláš, teší ma. Máme najvýkonnejší a zároveň jediný teleskop na našej planéte.",
+                    "say": {
+                        "sk": "Mikuláš: Vitaj v mojom observátoriu. Ja som Mikuláš, teší ma. Máme najvýkonnejší a zároveň jediný teleskop na našej planéte.",
+                        "en": "Nicolaus: Welcome to my observatory. I am Nicolaus, nice to meet you. We have the most powerful and also the only telescope on our planet here."
+                    },
                     "setFlag": "dud_talk"
                 },
                 {
                     "conditions": {
                         "hasFlags": "dud_talk"
                     },
-                    "say": "Mikuláš: Čo tak pozrieť teleskop? Bolo tam niečo zaujímavé?"
+                    "say": {
+                        "sk": "Mikuláš: Čo tak pozrieť teleskop? Bolo tam niečo zaujímavé?",
+                        "en": "Nicolaus: How about looking through the telescope? Was there anything interesting?"
+                    }
                 },
                 {
                     "conditions": {
                         "hasFlags": "dud_talk"
                     },
-                    "say": "Mikuláš: Toto observatórium bolo vybudované na príkaz kráľa Leopolda. Všetok stavebný materiál bol vyťažený v blízkych horách."
+                    "say": {
+                        "sk": "Mikuláš: Toto observatórium bolo vybudované na príkaz kráľa Leopolda. Všetok stavebný materiál bol vyťažený v blízkych horách.",
+                        "en": "Nicolaus: This observatory was built by the order of King Leopold. All the building material was mined in the nearby mountains."
+                    }
                 },
                 {
                     "conditions": {
                         "hasFlags": "dud_talk,seen_comet"
                     },
-                    "say": "Mikuláš: Kométa? To neveští nič dobré."
+                    "say": {
+                        "sk": "Mikuláš: Kométa? To neveští nič dobré.",
+                        "en": "Nicolaus: A comet? That doesn't mean anything good."
+                    }
                 },
                 {
                     "conditions": {
                         "hasFlags": "dud_talk,seen_comet"
                     },
-                    "say": "Mikuláš: Daj mi niečo jesť."
+                    "say": {
+                        "sk": "Mikuláš: Daj mi niečo jesť.",
+                        "en": "Nicolaus: Give me something to eat."
+                    }
                 },
                 {
                     "conditions": {
                         "hasFlags": "dud_talk,seen_comet"
                     },
-                    "say": "Mikuláš: Pri dverách mám peknú poličku, ale zatiaľ som si tam nestihol nič uložiť."
+                    "say": {
+                        "sk": "Mikuláš: Pri dverách mám peknú poličku, ale zatiaľ som si tam nestihol nič uložiť.",
+                        "en": "Nicolaus: I have a nice shelf by the door, but I haven't had time to put anything there yet."
+                    }
                 },
                 {
                     "trigger": "full_whisky_a",
-                    "say": "Mikuláš: Ďakujem, nepijem."
+                    "say": {
+                        "sk": "Mikuláš: Ďakujem, nepijem.",
+                        "en": "Nicolaus: Thank you, I don't drink."
+                    }
                 },
                 {
                     "trigger": "full_whisky_b",
-                    "say": "Mikuláš: Ďakujem, nepijem."
+                    "say": {
+                        "sk": "Mikuláš: Ďakujem, nepijem.",
+                        "en": "Nicolaus: Thank you, I don't drink."
+                    }
                 },
                 {
                     "trigger": "banana",
-                    "say": "Mikuláš: Banány nemám rád."
+                    "say": {
+                        "sk": "Mikuláš: Banány nemám rád.",
+                        "en": "Nicolaus: I don't like bananas."
+                    }
                 },
                 {
                     "trigger": "match",
-                    "say": "Mikuláš: Radšej ju tu nezapaľuj, je tu drahé vedecké vybavenie."
+                    "say": {
+                        "sk": "Mikuláš: Radšej ju tu nezapaľuj, je tu drahé vedecké vybavenie.",
+                        "en": "Nicolaus: You better not light it in here, there is expensive scientific equipment here."
+                    }
                 },
                 {
                     "trigger": "match_lit",
-                    "say": "Mikuláš: Radšej to sfúkni, nepohybuj sa tu s otvoreným ohňom."
+                    "say": {
+                        "sk": "Mikuláš: Radšej to sfúkni, nepohybuj sa tu s otvoreným ohňom.",
+                        "en": "Nicolaus: You better blow it out, don't walk around with an open flame."
+                    }
                 },
                 {
                     "trigger": "shirt_glowing",
-                    "say": "Mikuláš: Fuj, nepribližuj sa s tým ku mne!"
+                    "say": {
+                        "sk": "Mikuláš: Fuj, nepribližuj sa s tým ku mne!",
+                        "en": "Nicolaus: Yuck, don't get that close to me!"
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Mikuláš: Toto si radšej nechaj."
+                    "say": {
+                        "sk": "Mikuláš: Toto si radšej nechaj.",
+                        "en": "Nicolaus: You better keep this."
+                    }
                 },
 
                 {
@@ -217,14 +289,20 @@
                     "conditions": {
                         "hasFlags": "beam_active"
                     },
-                    "say": "Posúvať sa so zapnutým lúčom by bolo nebezpečné."
+                    "say": {
+                        "sk": "Posúvať sa so zapnutým lúčom by bolo nebezpečné.",
+                        "en": "Repositioning with an active beam would be dangerous."
+                    }
                 },
                 {
                     "trigger": "upberry",
                     "conditions": {
                         "hasFlags": "beam_active"
                     },
-                    "say": "Posúvať sa so zapnutým lúčom by bolo nebezpečné."
+                    "say": {
+                        "sk": "Posúvať sa so zapnutým lúčom by bolo nebezpečné.",
+                        "en": "Repositioning with an active beam would be dangerous."
+                    }
                 },
                 {
                     "trigger": "downberry",
@@ -288,7 +366,10 @@
         },
         {
             "color": "#00FF00",
-            "tooltip": "Východ z observatória",
+            "tooltip": {
+                "sk": "Východ z observatória",
+                "en": "Exit the observatory"
+            },
             "cursor": "door-right",
             "actions": [
                 {
@@ -302,13 +383,19 @@
                         "hasFlags": "placed_empty_whisky,placed_banana,placed_full_whisky,placed_quarter_potion,dud_level_2,beam_active",
                         "hasFlagsNot": "seen_comet"
                     },
-                    "say": "Mikuláš: Ešte sa skús pozrieť lepšie cez teleskop. Možno tam bude niečo zaujímavé."
+                    "say": {
+                        "sk": "Mikuláš: Ešte sa skús pozrieť lepšie cez teleskop. Možno tam bude niečo zaujímavé.",
+                        "en": "Nicolaus: Try to look better through the telescope. Maybe there will be something interesting."
+                    }
                 },
                 {
                     "conditions": {
                         "hasFlagsNot": "placed_empty_whisky,placed_banana,placed_full_whisky,placed_quarter_potion,dud_level_2,beam_active"
                     },
-                    "say": "Dvere sú zamknuté."
+                    "say": {
+                        "sk": "Dvere sú zamknuté.",
+                        "en": "The door is locked."
+                    }
                 }
             ]
         }

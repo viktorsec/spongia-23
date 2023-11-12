@@ -3,13 +3,19 @@
     "background": "a1_telescope_moon/moon.png",
     "mask": "a1_telescope_moon/zones.png",
     "enterAction": {
-        "say": "Fíha, náš mesiac vyzerá ozaj krásne. Ani som nevedel, že je v tejto fáze."
+        "say": {
+            "sk": "Fíha, náš mesiac vyzerá ozaj krásne. Ani som nevedel, že je v tejto fáze.",
+            "en": "Wow, our moon looks really beautiful. I didn't even know it was in this phase."
+        }
     },
     "items": [
         {
             "id": "zapberry",
             "image": "a1_telescope_moon/moon_zapberry.png",
-            "say": "Takéto ovocie som ešte nevidel."
+            "say": {
+                "sk": "Takéto ovocie som ešte nevidel.",
+                "en": "I've never seen such a fruit."
+            }
         }
     ],
     "zones": [

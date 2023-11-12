@@ -3,7 +3,10 @@
     "background": "a1_telescope_comet/comet.png",
     "mask": "a1_telescope_comet/zones.png",
     "enterAction": {
-        "say": "Kométa! A vyzerá, že sa rúti priamo na nás! Mám strach.",
+        "say": {
+            "sk": "Kométa! A vyzerá, že sa rúti priamo na nás! Mám strach.",
+            "en": "A comet! And it looks like it's heading straight for us! I'm scared."
+        },
         "setFlag": "seen_comet"
     },
     "zones": [
@@ -30,7 +33,10 @@
             "cursor": "n-resize",
             "actions": [
                 {
-                    "say": "Vyššie sa to nedá posunúť."
+                    "say": {
+                        "sk": "Vyššie sa to nedá posunúť.",
+                        "en": "I can't move it any higher."
+                    }
                 }
             ]
         },

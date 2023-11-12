@@ -6,22 +6,34 @@
         {
             "id": "banana",
             "image": "a1_observatory_kitchen/banana.png",
-            "say": "Mňam, banán."
+            "say": {
+                "sk": "Mňam, banán.",
+                "en": "Yummy, a banana."
+            }
         },
         {
             "id": "downberry",
             "image": "a1_observatory_kitchen/downberry.png",
-            "say": "Celkom veľká bobuľa"
+            "say": {
+                "sk": "Celkom veľká bobuľa",
+                "en": "Quite a big berry"
+            }
         },
         {
             "id": "full_whisky_a",
             "image": "a1_observatory_kitchen/full_whisky_a.png",
-            "say": "Pijatika."
+            "say": {
+                "sk": "Pijatika.",
+                "en": "A drink."
+            }
         },
         {
             "id": "quarter_potion",
             "image": "a1_observatory_kitchen/quarter_potion.png",
-            "say": "Fíha, zaujímavá trúbeľka."
+            "say": {
+                "sk": "Fíha, zaujímavý amulet.",
+                "en": "Wow, an interesting amulet."
+            }
         }
     ],
     "zones": [
@@ -36,14 +48,23 @@
         },
         {
             "color": "#00FF00",
-            "tooltip": "Umývadlo",
+            "tooltip": {
+                "sk": "Umývadlo",
+                "en": "Sink"
+            },
             "actions": [
                 {
-                    "say": "Voda netečie, ale aspoň odtok možno funguje."
+                    "say": {
+                        "sk": "Voda netečie, ale aspoň odtok možno funguje.",
+                        "en": "The water is not running, but at least the drain might work."
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Čo si šiši, toto sa nedá vyliať."
+                    "say": {
+                        "sk": "Čo si šiši, toto sa nedá vyliať.",
+                        "en": "Are you crazy, this cannot be poured out."
+                    }
                 },
                 {
                     "trigger": "full_whisky_a",
@@ -52,7 +73,10 @@
                     },
                     "giveItem": "empty_whisky",
                     "takeItem": "full_whisky_a",
-                    "say": "Mušt zmizol vo výlevke. Nevadí, ešte mi ostala jedna plná fľaša."
+                    "say": {
+                        "sk": "Mušt zmizol vo výlevke. Nevadí, ešte mi ostala jedna plná fľaša.",
+                        "en": "The juice has disappeared down the drain. Never mind, I still have one full bottle left."
+                    }
                 },
                 {
                     "trigger": "full_whisky_b",
@@ -61,98 +85,164 @@
                     },
                     "giveItem": "empty_whisky",
                     "takeItem": "full_whisky_b",
-                    "say": "Mušt zmizol vo výlevke. Nevadí, ešte mi ostala jedna plná fľaša."
+                    "say": {
+                        "sk": "Mušt zmizol vo výlevke. Nevadí, ešte mi ostala jedna plná fľaša.",
+                        "en": "The juice has disappeared down the drain. Never mind, I still have one full bottle left."
+                    }
                 },
                 {
                     "trigger": "full_whisky_a",
                     "conditions": {
                         "hasItemNot": "full_whisky_b"
                     },
-                    "say": "To určite nevylejem, mám len jednu."
+                    "say": {
+                        "sk": "To určite nevylejem, mám len jednu.",
+                        "en": "I'm certainly not going to pour this out, I only have one."
+                    }
                 },
                 {
                     "trigger": "full_whisky_b",
                     "conditions": {
                         "hasItemNot": "full_whisky_a"
                     },
-                    "say": "To určite nevylejem, mám len jednu."
+                    "say": {
+                        "sk": "To určite nevylejem, mám len jednu.",
+                        "en": "I'm certainly not going to pour this out, I only have one."
+                    }
                 },
                 {
                     "trigger": "empty_whisky",
-                    "say": "No, späť to už nenaberiem."
+                    "say": {
+                        "sk": "No, späť to už nenaberiem.",
+                        "en": "Well, I can't get it back now."
+                    }
                 },
                 {
                     "trigger": "quarter_potion",
-                    "say": "Radšej nie."
+                    "say": {
+                        "sk": "Radšej nie.",
+                        "en": "Better not."
+                    }
                 },
                 {
                     "trigger": "match",
-                    "say": "Nemôžem podpáliť observatórium. Najmä preto, že zápalka nehorí."
+                    "say": {
+                        "sk": "Nemôžem podpáliť observatórium. Najmä preto, že zápalka nehorí.",
+                        "en": "I can't burn down the observatory. Especially because the match is not lit."
+                    }
                 },
                 {
                     "trigger": "match_lit",
-                    "say": "Nemôžem podpáliť observatórium."
+                    "say": {
+                        "sk": "Nemôžem podpáliť observatórium.",
+                        "en": "I can't burn down the observatory."
+                    }
                 },
                 {
                     "trigger": "shirt_glowing",
-                    "say": "Fuj, toto som asi ani nemal nosiť do kuchyne."
+                    "say": {
+                        "sk": "Fuj, toto som asi ani nemal nosiť do kuchyne.",
+                        "en": "Yuck, I probably shouldn't have brought this to the kitchen."
+                    }
                 }
             ]
         },
         {
             "color": "#0000FF",
-            "tooltip": "Chladnička",
+            "tooltip": {
+                "sk": "Chladnička",
+                "en": "Fridge"
+            },
             "actions": [
                 {
-                    "say": "Vyzerá, že chladnička je zamknutá."
+                    "say": {
+                        "sk": "Vyzerá, že chladnička je zamknutá.",
+                        "en": "It looks like the fridge is locked."
+                    }
                 },
                 {
-                    "say": "Nie je slušné brať veci z chladničky na pracovisku."
+                    "say": {
+                        "sk": "Nie je slušné brať veci z chladničky na pracovisku.",
+                        "en": "It's not nice to take things from the fridge at a workplace."
+                    }
                 },
                 {
                     "trigger": "important_key",
-                    "say": "Sem tento kľúč nepasuje."
+                    "say": {
+                        "sk": "Sem tento kľúč nepasuje.",
+                        "en": "This key doesn't fit here."
+                    }
                 },
                 {
                     "trigger": "match",
-                    "say": "Nemôžem podpáliť observatórium. Najmä preto, že zápalka nehorí."
+                    "say": {
+                        "sk": "Nemôžem podpáliť observatórium. Najmä preto, že zápalka nehorí.",
+                        "en": "I can't burn down the observatory. Especially because the match is not lit."
+                    }
                 },
                 {
                     "trigger": "match_lit",
-                    "say": "Nemôžem podpáliť observatórium."
+                    "say": {
+                        "sk": "Nemôžem podpáliť observatórium.",
+                        "en": "I can't burn down the observatory."
+                    }
                 },
                 {
                     "trigger": "shirt_glowing",
-                    "say": "Fuj, toto som asi ani nemal nosiť do kuchyne."
+                    "say": {
+                        "sk": "Fuj, toto som asi ani nemal nosiť do kuchyne.",
+                        "en": "Yuck, I probably shouldn't have brought this to the kitchen."
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "Neviem, čo s tým."
+                    "say": {
+                        "sk": "Neviem, čo s tým.",
+                        "en": "I have no idea what to do with that."
+                    }
                 }
             ]
         },
         {
             "color": "#FFFF00",
-            "tooltip": "Okno",
+            "tooltip": {
+                "sk": "Okno",
+                "en": "Window"
+            },
             "actions": [
                 {
-                    "say": "Je zamrežované, tade nevyjdem."
+                    "say": {
+                        "sk": "Je zamrežované, tade nevyjdem.",
+                        "en": "It's barred, I can't get out that way."
+                    }
                 },
                 {
                     "trigger": "important_key",
-                    "say": "Sem tento kľúč nepasuje."
+                    "say": {
+                        "sk": "Sem tento kľúč nepasuje.",
+                        "en": "This key doesn't fit here."
+                    }
                 },
                 {
                     "trigger": "match",
-                    "say": "Nemôžem podpáliť observatórium. Najmä preto, že zápalka nehorí."
+                    "say": {
+                        "sk": "Nemôžem podpáliť observatórium. Najmä preto, že zápalka nehorí.",
+                        "en": "I can't burn down the observatory. Especially because the match is not lit."
+                    }
                 },
                 {
                     "trigger": "match_lit",
-                    "say": "Nemôžem podpáliť observatórium."
+                    "say": {
+                        "sk": "Nemôžem podpáliť observatórium.",
+                        "en": "I can't burn down the observatory."
+                    }
                 },
                 {
                     "trigger": "$FALLBACK",
-                    "say": "To nemôžem len tak vyhodiť von."
+                    "say": {
+                        "sk": "To nemôžem len tak vyhodiť von.",
+                        "en": "I can't just throw that out."
+                    }
                 }
             ]
         }

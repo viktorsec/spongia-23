@@ -3,13 +3,19 @@
     "background": "a1_telescope_planet/planet.png",
     "mask": "a1_telescope_planet/zones.png",
     "enterAction": {
-        "say": "Susedná planéta Kalliopé. Hovoria sa o nej všeliaké historky, ale netreba veriť všetkému."
+        "say": {
+            "sk": "Susedná planéta Kalliopé. Hovoria sa o nej všeliaké historky, ale netreba veriť všetkému.",
+            "en": "Our neighbour planet Calliope. There are many stories about it, but you don't have to believe everything."
+        }
     },
     "items": [
         {
             "id": "upberry",
             "image": "a1_telescope_planet/planet_upberry.png",
-            "say": "Ovocie z iných planét je najchutnejšie."
+            "say": {
+                "sk": "Ovocie z iných planét je najchutnejšie.",
+                "en": "Fruit from other planets is the tastiest."
+            }
         }
     ],
     "zones": [

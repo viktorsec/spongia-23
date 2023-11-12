@@ -23,7 +23,10 @@
         },
         {
             "color": "#0000FF",
-            "tooltip": "Dvere",
+            "tooltip": {
+                "sk": "Dvere",
+                "en": "Door"
+            },
             "cursor": "ne-resize",
             "actions": [
                 {

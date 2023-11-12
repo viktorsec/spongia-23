@@ -8,8 +8,11 @@
       <button class="base-button" @click="restart()">
         {{ clientState.language === 'sk' ? 'Reštartovať hru' : 'Restart Game' }}
       </button>
-      <button class="base-button" @click="musicToggle()">
+      <button class="base-button" @click="toggleMusic()">
         {{ getMusicToggleLabel() }}
+      </button>
+      <button class="base-button" @click="toggleLanguage()">
+        {{ clientState.language === 'sk' ? 'English' : 'Slovensky' }}
       </button>
       <button class="base-button" @click="privacyPolicy()">
         {{ clientState.language === 'sk' ? 'Súkromie' : 'Privacy' }}
@@ -18,7 +21,6 @@
         class="base-button"
         @click="credits()"
         @keyup.enter="startDebug()"
-        @keyup.space="toggleLanguage()"
       >
        {{ clientState.language === 'sk' ? 'Titulky' : 'Credits' }}
       </button>
@@ -33,15 +35,18 @@ import gameState from '@/store/gameState';
 import clientState from '@/store/clientState';
 
 const restart = () => {
-  const yes = confirm('Skutočne si želáte reštartovať hru?');
-  if (yes) {
+  const message = clientState.language === 'sk'
+    ? 'Skutočne si želáte reštartovať hru?'
+    : 'Do you really want to restart the game?';
+
+  if (confirm(message)) {
     gameState.restart();
   }
 }
 
 let musicAudio = null;
 const musicIsPlaying = ref(false);
-const musicToggle = () => {
+const toggleMusic = () => {
   if (!musicAudio) {
     const musicURL = new URL('/src/assets/ephemeral-3.mp3', import.meta.url);
     musicAudio = new Audio(musicURL);
@@ -55,6 +60,11 @@ const musicToggle = () => {
     musicAudio.pause();
     musicIsPlaying.value = false;
   }
+}
+
+const toggleLanguage = () => {
+  const newLanguage = clientState.language === 'sk' ? 'en' : 'sk';
+  clientState.language = newLanguage;
 }
 
 const credits = () => {
@@ -84,11 +94,6 @@ const startDebug = () => {
   console.log('debug started');
   clientState.debugMode = true;
 };
-
-const toggleLanguage = () => {
-  const newLanguage = clientState.language === 'sk' ? 'en' : 'sk';
-  clientState.language = newLanguage;
-}
 
 const privacyPolicy = () => {
   const message = clientState.language === 'sk'

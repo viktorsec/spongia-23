@@ -277,6 +277,13 @@
                     }
                 },
                 {
+                    "trigger": "important_key",
+                    "say": {
+                        "sk": "Mikuláš: Tento kľúč som ešte nevidel. Neviem od čoho je.",
+                        "en": "Nicolaus: I haven't seen this key yet. I don't know what it's for."
+                    }
+                },
+                {
                     "trigger": "$FALLBACK",
                     "say": {
                         "sk": "Mikuláš: Toto si radšej nechaj.",
@@ -395,6 +402,13 @@
                     "say": {
                         "sk": "Dvere sú zamknuté.",
                         "en": "The door is locked."
+                    }
+                },
+                {
+                    "trigger": "important_key",
+                    "say": {
+                        "sk": "Kľúč nepasuje.",
+                        "en": "The key doesn't fit."
                     }
                 }
             ]

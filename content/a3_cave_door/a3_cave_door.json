@@ -30,7 +30,10 @@
                     "conditions": {
                         "hasFlagsNot": "cave_door_unlocked"
                     },
-                    "say": "Zamknuté."
+                    "say": {
+                        "sk": "Zamknuté.",
+                        "en": "Locked."
+                    }
                 },
                 {
                     "trigger": "important_key",
@@ -71,7 +74,6 @@
                 }
             ]
         },
-
         {
             "color": "#0000FF",
             "actions": [

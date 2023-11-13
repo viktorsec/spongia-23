@@ -29,8 +29,8 @@
                         "hasFlagsNot": "apple_talk"
                     },
                     "say": {
-                        "sk": "Izák: Tieto jablone každý rok rodia zelené jablká, ale tento rok sú červené. Myslím, že za tým môže byť nejaký záujímavý astornomický úkaz. Môžem ťa poprosiť, ísť sa spýtať do observatória, či nepozorovali niečo zaujímavé? Povedz, že ťa posiela Izák.",
-                        "en": "Isaac: These apple trees bear green apples every year, but this year they are red. I think it might be due to some interesting astornomical phenomenon. Could you please go and ask in the observatory if they have noticed anything interesting? Tell them that Isaac sent you."
+                        "sk": "Izák: Tieto jablone každý rok rodia zelené jablká, ale tento rok sú červené. Myslím, že za tým môže byť nejaký záujímavý astronomický úkaz. Môžem ťa poprosiť, ísť sa spýtať do observatória, či nepozorovali niečo zaujímavé? Povedz, že ťa posiela Izák.",
+                        "en": "Isaac: These apple trees bear green apples every year, but this year they are red. I think it might be due to some interesting astronomical phenomenon. Could you please go and ask in the observatory if they have noticed anything interesting? Tell them that Isaac sent you."
                     },
                     "setFlag": "apple_talk"
                 },

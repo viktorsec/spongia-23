@@ -33,4 +33,4 @@ There is an alternative player in `player-vanilla`, but it doesn't support the c
 
 There is also a content editor in `editor`.
 
-The `adventure` directory contains an (early proof-of-concept prototype)[https://adventure-lovat.vercel.app] of the game.
+The `adventure` directory contains an [early proof-of-concept prototype](https://adventure-lovat.vercel.app) of the game.

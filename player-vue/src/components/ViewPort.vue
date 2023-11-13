@@ -208,6 +208,16 @@ const selectAction = (actions, trigger = null) => {
   return selectedAction;
 }
 
+const maybePlayDubbing = (line) => {
+  window.crypto.subtle.digest('SHA-256', new TextEncoder().encode(line)).then(
+    (result_buffer) => {
+      const digest = Array.from(new Uint8Array(result_buffer))
+      .map((byte) => byte.toString(16).padStart(2, "0")).join("");
+     new Audio('./src/content/dubbing/' + digest + '.mp3').play();
+    }
+  );
+};
+
 const handleAction = (action) => {
   if (!action) {
     return;
@@ -218,7 +228,7 @@ const handleAction = (action) => {
       const string = clientState.language === "sk"
         ? translations.sk ?? translations
         : translations.en ?? translations;
-
+      maybePlayDubbing(string);
       gameState.console.push(string);
     },
     goto: (value) => {

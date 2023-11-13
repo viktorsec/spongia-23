@@ -85,6 +85,15 @@
                     }
                 }
             ]
+        },
+        {
+            "color": "#FFFF00",
+            "cursor": "move",
+            "actions": [
+                {
+                    "goto": "a3_mountain3"
+                }
+            ]
         }
     ]
 }

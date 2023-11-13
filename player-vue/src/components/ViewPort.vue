@@ -212,8 +212,9 @@ const maybePlayDubbing = (line) => {
   window.crypto.subtle.digest('SHA-256', new TextEncoder().encode(line)).then(
     (result_buffer) => {
       const digest = Array.from(new Uint8Array(result_buffer))
-      .map((byte) => byte.toString(16).padStart(2, "0")).join("");
-     new Audio('./src/content/dubbing/' + digest + '.mp3').play();
+        .map((byte) => byte.toString(16).padStart(2, "0")).join("");
+      const url = new URL(`/src/content/dubbing/${digest}.mp3`, import.meta.url).href;
+      new Audio(url).play();
     }
   );
 };

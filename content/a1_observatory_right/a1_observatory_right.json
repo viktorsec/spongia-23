@@ -94,7 +94,7 @@
                     },
                     "say": {
                         "sk": "Polička s krúžkom",
-                        "en":"Shelf with an etched circle"
+                        "en": "Shelf with an etched circle"
                     }
                 },
                 {
@@ -127,7 +127,7 @@
                     "trigger": "$FALLBACK",
                     "say": {
                         "sk": "To sa sem podľa mňa nehodí.",
-                        "en":"I feel this doesn't belong here."
+                        "en": "I feel this doesn't belong here."
                     }
                 }
             ]
@@ -184,7 +184,7 @@
                         "hasFlagsNot": "dud_talk"
                     },
                     "say": {
-                        "sk": "Mikuláš: Vitaj v mojom observátoriu. Ja som Mikuláš, teší ma. Máme najvýkonnejší a zároveň jediný teleskop na našej planéte.",
+                        "sk": "Mikuláš: Vitaj v mojom observatóriu. Ja som Mikuláš, teší ma. Máme najvýkonnejší a zároveň jediný teleskop na našej planéte.",
                         "en": "Nicolaus: Welcome to my observatory. I am Nicolaus, nice to meet you. We have the most powerful and also the only telescope on our planet here."
                     },
                     "setFlag": "dud_talk"
@@ -290,7 +290,6 @@
                         "en": "Nicolaus: You better keep this."
                     }
                 },
-
                 {
                     "trigger": "downberry",
                     "conditions": {
@@ -439,7 +438,6 @@
                 "hasFlags": "placed_quarter_potion"
             }
         },
-
         {
             "image": "a1_observatory_right/dud4.png",
             "conditions": {
@@ -464,7 +462,6 @@
                 "hasFlags": "dud_level_1"
             }
         },
-
         {
             "image": "a1_observatory_right/beam4.png",
             "conditions": {

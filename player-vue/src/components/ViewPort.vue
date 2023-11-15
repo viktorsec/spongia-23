@@ -4,6 +4,11 @@
       <div class="viewport" @mousemove="moveHandler" @mouseleave="leaveHandler" @click="clickHandler"
         :class="[activeCursor]">
         <img :src="loadImage(room.background)" class="background" />
+        <img :src="maskSource" class="hint" draggable="false" ref="hintElement" :style="{
+          opacity: 0,
+          position: 'absolute',
+          filter: 'blur(5px)',
+        }" />
         <img :src="maskSource" class="mask" draggable="false" ref="maskElement" :style="{
           opacity: clientState.maskVisible ? 0.8 : 0,
         }" />
@@ -52,6 +57,7 @@ const props = defineProps({
 
 const imagesLoaded = ref(false);
 const maskElement = ref(null);
+const hintElement = ref(null);
 const tooltipElement = ref(null);
 const activeZone = ref(null);
 const activeItem = ref(null);
@@ -67,9 +73,40 @@ const getHint = () => {
     console.log('initializing hint generator');
     hintGenerator = wasm.GeneratorState.new(JSON.stringify(rooms));
   }
-  console.log(hintGenerator);
-  const action = hintGenerator.next_action(JSON.stringify(toRaw(gameState)), "a2_forest_path");
-  console.log(action);
+  const actionString = hintGenerator.next_action(JSON.stringify(toRaw(gameState)), "a4_finale");
+  const action = JSON.parse(actionString);
+  console.log("hint:", action);
+
+  if (action.items) {
+    // TODO flash some item we didn't pick up yet
+  } else {
+    const zone = action.zone;
+    // TODO if trigger != null flash the trigger item in the inventory too
+
+    const canvas = document.createElement('canvas');
+    canvas.width = maskElement.value.width;
+    canvas.height = maskElement.value.height;
+    const context = canvas.getContext('2d');
+    context.drawImage(maskElement.value, 0, 0, maskElement.value.width, maskElement.value.height);
+    const imageData = context.getImageData(0, 0, maskElement.value.width, maskElement.value.height);
+    const data = imageData.data;
+    for (let i = 0; i < data.length; i += 4) {
+      if (rgbaToHex([data[i], data[i + 1], data[i + 2], data[i + 3]]) == zone) {
+        data[i] = 255;
+        data[i + 1] = 255;
+        data[i + 2] = 255;
+        data[i + 3] = 128;
+      } else {
+        data[i + 3] = 0;
+      }
+    }
+    context.putImageData(imageData, 0, 0);
+    hintElement.value.src = canvas.toDataURL();
+    hintElement.value.style.opacity = 1;
+    setTimeout(() => {
+      hintElement.value.style.opacity = 0;
+    }, 1000);
+  }
 }
 
 const rgbaToHex = (rgba) => {

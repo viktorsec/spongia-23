@@ -5,7 +5,6 @@ pub struct HintGenerator {
     rooms: BTreeMap<String, compact::Room>,
     flag_masks: BTreeMap<String, u64>,
     item_masks: BTreeMap<String, u64>,
-    // TODO flag/id mappings
 }
 
 #[derive(Clone, Debug, PartialEq, Eq, Hash)]
@@ -121,7 +120,7 @@ fn parse_action(
 
 impl HintGenerator {
     pub fn new(serialized_rooms: &str) -> HintGenerator {
-        // Parse the raw format.
+        //         // Parse the raw format.
         let raw_rooms: Vec<raw::Room> = serde_json::from_str(serialized_rooms).unwrap();
 
         // Convert to a more compact representation.
@@ -169,9 +168,9 @@ impl HintGenerator {
     pub fn find_path<'a>(
         &'a self,
         start_room: &'a str,
-        start_flags: &[&str],
-        start_items: &[&str],
-        start_items_taken: &[&str],
+        start_flags: &Vec<String>,
+        start_items: &Vec<String>,
+        start_items_taken: &Vec<String>,
         end_room: &str,
     ) -> Option<Vec<Transition>> {
         let start_state = State {
@@ -184,11 +183,13 @@ impl HintGenerator {
 
         let mut queue = VecDeque::new();
 
-        use fasthash::city::Hash64;
-        use fasthash::RandomState;
-        let random_state = RandomState::<Hash64>::new();
-        let mut previous: HashMap<_, Option<(Transition, State)>, _> =
-            HashMap::with_hasher(random_state);
+        // TODO not working with wasm :/
+        // use fasthash::city::Hash64;
+        // use fasthash::RandomState;
+        // let random_state = RandomState::<Hash64>::new();
+        // let mut previous: HashMap<_, Option<(Transition, State)>, _> =
+        //     HashMap::with_hasher(random_state);
+        let mut previous = HashMap::new();
 
         queue.push_back(start_state.clone());
         previous.insert(start_state.clone(), None);
@@ -215,7 +216,7 @@ impl HintGenerator {
                 }
             };
 
-            // TODO take items
+            // Take items.
             let untaken_items = current_room.items & !state.items_taken;
             if untaken_items != 0 {
                 let mut new_state = state.clone();
@@ -224,6 +225,7 @@ impl HintGenerator {
                 maybe_add_state(new_state, Transition::TakeItems);
             }
 
+            // Try all zone actions.
             for (color, actions) in current_room.zones.iter() {
                 for action in actions {
                     // Horrible hack needed to improve performance.

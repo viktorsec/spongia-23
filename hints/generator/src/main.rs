@@ -40,7 +40,7 @@ fn main() {
 
     let path = generator.find_path(
         &start_room,
-        &vec!["dud_level_3"],
+        &vec!["dud_level_3".to_string()],
         &vec![],
         &vec![],
         &end_room,

@@ -1,58 +1,26 @@
 <template>
   <div>
     <div class="viewport-wrapper">
-      <div
-        class="viewport"
-        @mousemove="moveHandler"
-        @mouseleave="leaveHandler"
-        @click="clickHandler"
-        :class="[ activeCursor ]"
-      >
-        <img
-          :src="loadImage(room.background)"
-          class="background"
-        />
-        <img
-          :src="maskSource"
-          class="mask"
-          draggable="false"
-          ref="maskElement"
-          :style="{
-            opacity: clientState.maskVisible ? 0.8 : 0,
-          }"
-        />
+      <div class="viewport" @mousemove="moveHandler" @mouseleave="leaveHandler" @click="clickHandler"
+        :class="[activeCursor]">
+        <img :src="loadImage(room.background)" class="background" />
+        <img :src="maskSource" class="mask" draggable="false" ref="maskElement" :style="{
+          opacity: clientState.maskVisible ? 0.8 : 0,
+        }" />
         <div v-if="overlaysDisplayed">
-          <img
-            v-for="overlay in overlaysDisplayed"
-            :key="overlay.image"
-            :src="loadImage(overlay.image)"
-            class="object"
-            draggable="false"
-          />
+          <img v-for="overlay in overlaysDisplayed" :key="overlay.image" :src="loadImage(overlay.image)" class="object"
+            draggable="false" />
         </div>
         <div v-if="itemsDisplayed">
-          <img
-            v-for="item in itemsDisplayed"
-            :key="item.id"
-            :src="loadImage(item.image)"
-            class="overlay"
-            :data-label="item.id"
-            draggable="false"
-          />
+          <img v-for="item in itemsDisplayed" :key="item.id" :src="loadImage(item.image)" class="overlay"
+            :data-label="item.id" draggable="false" />
         </div>
-        <div
-          ref="tooltipElement"
-          class="tooltip"
-          :class="{
-            hidden: !activeTooltip
-          }"
-        >
+        <div ref="tooltipElement" class="tooltip" :class="{
+          hidden: !activeTooltip
+        }">
           {{ activeTooltip }}
         </div>
-        <div
-          class="loading-overlay"
-          :class="{ hidden: imagesLoaded }"
-        />
+        <div class="loading-overlay" :class="{ hidden: imagesLoaded }" />
       </div>
       <div class="debug" v-if="clientState.debugVisible">
         <p>Images loaded: {{ imagesLoaded }}</p>
@@ -63,6 +31,7 @@
         <p>Action count: {{ actionCount }}</p>
         <p>Max action count: {{ props.room.maxActions }}</p>
         <p>Active cursor: {{ activeCursor }}</p>
+        <button @click="getHint">Hint!</button>
       </div>
     </div>
   </div>
@@ -72,6 +41,9 @@
 import { ref, toRaw, watch, computed, nextTick } from 'vue';
 import gameState from '@/store/gameState';
 import clientState from '@/store/clientState';
+
+import rooms from '@/rooms';
+import * as wasm from '@/hints/hints_wasm';
 
 const props = defineProps({
   room: Object,
@@ -87,6 +59,11 @@ const maskSource = ref(null);
 
 const actionCount = ref(0);
 const lastCoordinates = ref({ x: null, y: null });
+
+const getHint = () => {
+  wasm.foo();
+  wasm.get_hint(JSON.stringify(rooms), JSON.stringify(toRaw(gameState)));
+}
 
 const rgbaToHex = (rgba) => {
   function hexByte(x) {
@@ -189,13 +166,13 @@ const selectAction = (actions, trigger = null) => {
     }
     if (action.conditions?.hasFlags) {
       const flagArray = action.conditions.hasFlags.split(',');
-      if(flagArray.some((flag) => !gameState.flags.includes(flag))) {
+      if (flagArray.some((flag) => !gameState.flags.includes(flag))) {
         return false;
       }
     }
     if (action.conditions?.hasFlagsNot) {
       const flagArray = action.conditions.hasFlagsNot.split(',');
-      if(!flagArray.some((flag) => !gameState.flags.includes(flag))) {
+      if (!flagArray.some((flag) => !gameState.flags.includes(flag))) {
         return false;
       }
     }
@@ -328,7 +305,7 @@ const processRoomLoad = () => {
       });
     });
 
-    Promise.all(imageLoader).then(() => { 
+    Promise.all(imageLoader).then(() => {
       imagesLoaded.value = true;
       // TODO: Improve this
       moveHandler();
@@ -360,13 +337,13 @@ const overlaysDisplayed = computed(() => {
     }
     if (overlay.conditions.hasFlags) {
       const flagArray = overlay.conditions.hasFlags.split(',');
-      if(flagArray.some((flag) => !gameState.flags.includes(flag))) {
+      if (flagArray.some((flag) => !gameState.flags.includes(flag))) {
         return false;
       }
     }
     if (overlay.conditions.hasFlagsNot) {
       const flagArray = overlay.conditions.hasFlagsNot.split(',');
-      if(!flagArray.some((flag) => !gameState.flags.includes(flag))) {
+      if (!flagArray.some((flag) => !gameState.flags.includes(flag))) {
         return false;
       }
     }
@@ -420,6 +397,7 @@ processRoomLoad();
   justify-content: center;
   overflow: hidden;
 }
+
 .viewport {
   flex: 1;
   /* TODO optimize */
@@ -428,6 +406,7 @@ processRoomLoad();
   aspect-ratio: 3 / 2.05;
   outline: 1px solid rgba(255, 255, 255, 0.15);
   position: relative;
+
   @media screen and (min-width: 768px) {
     max-width: min(100%, calc(calc(100vh - 11rem) * 1.46));
   }
@@ -454,6 +433,7 @@ processRoomLoad();
   bottom: -1px;
   background-color: #000;
   transition: opacity .2s;
+
   &.hidden {
     opacity: 0;
   }
@@ -479,25 +459,66 @@ processRoomLoad();
   transition: opacity .3s;
   transform: translateX(-50%);
   white-space: nowrap;
+
   &.hidden {
     opacity: 0;
     transition: none;
   }
 }
 
-.cursor-nw-resize { cursor: url("@/assets/cursors/nw-resize.png") 16 16, nw-resize; }
-.cursor-n-resize { cursor: url("@/assets/cursors/n-resize.png") 16 16, n-resize; }
-.cursor-ne-resize { cursor: url("@/assets/cursors/ne-resize.png") 16 16, ne-resize; }
-.cursor-w-resize { cursor: url("@/assets/cursors/w-resize.png") 16 16, w-resize; }
-.cursor-e-resize { cursor: url("@/assets/cursors/e-resize.png") 16 16, e-resize; }
-.cursor-sw-resize { cursor: url("@/assets/cursors/sw-resize.png") 16 16, sw-resize; }
-.cursor-s-resize { cursor: url("@/assets/cursors/s-resize.png") 16 16, s-resize; }
-.cursor-se-resize { cursor: url("@/assets/cursors/se-resize.png") 16 16, se-resize; }
-.cursor-zoom { cursor: url("@/assets/cursors/zoom.png") 16 16, zoom-in; }
-.cursor-move { cursor: url("@/assets/cursors/move.png") 16 16, move; }
-.cursor-door-right { cursor: url("@/assets/cursors/door-right.png") 16 16, move; }
-.cursor-door-left { cursor: url("@/assets/cursors/door-left.png") 16 16, move; }
-.cursor-help { cursor: url("@/assets/cursors/help.png") 16 16, help; }
-.cursor-grab { cursor: url("@/assets/cursors/grab.png") 16 16, grab; }
+.cursor-nw-resize {
+  cursor: url("@/assets/cursors/nw-resize.png") 16 16, nw-resize;
+}
 
+.cursor-n-resize {
+  cursor: url("@/assets/cursors/n-resize.png") 16 16, n-resize;
+}
+
+.cursor-ne-resize {
+  cursor: url("@/assets/cursors/ne-resize.png") 16 16, ne-resize;
+}
+
+.cursor-w-resize {
+  cursor: url("@/assets/cursors/w-resize.png") 16 16, w-resize;
+}
+
+.cursor-e-resize {
+  cursor: url("@/assets/cursors/e-resize.png") 16 16, e-resize;
+}
+
+.cursor-sw-resize {
+  cursor: url("@/assets/cursors/sw-resize.png") 16 16, sw-resize;
+}
+
+.cursor-s-resize {
+  cursor: url("@/assets/cursors/s-resize.png") 16 16, s-resize;
+}
+
+.cursor-se-resize {
+  cursor: url("@/assets/cursors/se-resize.png") 16 16, se-resize;
+}
+
+.cursor-zoom {
+  cursor: url("@/assets/cursors/zoom.png") 16 16, zoom-in;
+}
+
+.cursor-move {
+  cursor: url("@/assets/cursors/move.png") 16 16, move;
+}
+
+.cursor-door-right {
+  cursor: url("@/assets/cursors/door-right.png") 16 16, move;
+}
+
+.cursor-door-left {
+  cursor: url("@/assets/cursors/door-left.png") 16 16, move;
+}
+
+.cursor-help {
+  cursor: url("@/assets/cursors/help.png") 16 16, help;
+}
+
+.cursor-grab {
+  cursor: url("@/assets/cursors/grab.png") 16 16, grab;
+}
 </style>

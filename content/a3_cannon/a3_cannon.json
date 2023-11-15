@@ -32,8 +32,8 @@
                 {
                     "conditions": { "hasFlags": "placed_bullet" },
                     "say": {
-                        "sk": "Nabité delo, už len treba vystreliť.",
-                        "en": "The cannon is loaded, now I just need to fire it."
+                        "sk": "Nabité delo, už len treba vystreliť. Ale ako?",
+                        "en": "The cannon is loaded, now I just need to fire it. But how?"
                     }
                 },
                 {
@@ -214,6 +214,13 @@
                     }
                 },
                 {
+                    "conditions": { "hasFlags": "placed_bullet" },
+                    "say": {
+                        "sk": "Nabité delo, už len treba vystreliť. Ale ako?",
+                        "en": "The cannon is loaded, now I just need to fire it. But how?"
+                    }
+                },
+                {
                     "trigger": "match_lit",
                     "conditions": { "hasFlags": "placed_bullet" },
                     "say": {
@@ -222,6 +229,14 @@
                     },
                     "takeItem": "match_lit",
                     "goto": "a4_finale"
+                },
+                {
+                    "trigger": "match",
+                    "conditions": { "hasFlags": "placed_bullet" },
+                    "say": {
+                        "sk": "Zápalka nehorí, to mi je nanič.",
+                        "en": "The match is not lit, that's useless."
+                    }
                 },
                 {
                     "trigger": "important_key",

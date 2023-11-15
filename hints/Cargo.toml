@@ -1,15 +1,10 @@
-[package]
-name = "hints"
-version = "0.1.0"
-edition = "2021"
+[workspace]
+resolver = "2"
+members = [
+    "generator",
+    "binding",
+]
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
-serde = { version = "1.0", features = ["derive"] }
-serde_json = "1.0"
-fasthash = "0.4"
-
-[[bin]]
-name = "hints"
-path = "src/main.rs"
+[profile.release]
+# Tell `rustc` to optimize for small code size.
+opt-level = "s"

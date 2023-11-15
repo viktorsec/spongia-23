@@ -25,7 +25,24 @@
             },
             "actions": [
                 {
-                    "goto": "a3_cave_robot"
+                    "conditions": {
+                        "hasItemNot": "shirt_glowing"
+                    },
+                    "goto": "a3_cave_robot",
+                    "say": {
+                        "sk": "Robot: Tento trakt je určený len pre údržbu.",
+                        "en": "Robot: This corridor is for maintenance only."
+                    }
+                },
+                {
+                    "conditions": {
+                        "hasItem": "shirt_glowing"
+                    },
+                    "goto": "a3_cave_robot",
+                    "say": {
+                        "sk": "Robot: Údržba! Už sme vás očakávali, prosím vstúpte ďalej.",
+                        "en": "Robot: Maintenance! We were expecting you, please come in."
+                    }
                 }
             ]
         },

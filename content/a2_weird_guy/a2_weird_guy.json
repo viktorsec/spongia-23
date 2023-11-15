@@ -52,8 +52,8 @@
             "actions": [
                 {
                     "say": {
-                        "sk": "Tik tok",
-                        "en": "Tick-tock"
+                        "sk": "Zberateľ (stíšeným hlasom): Tik tok",
+                        "en": "Collector (quietly): Tick-tock"
                     }
                 },
                 {

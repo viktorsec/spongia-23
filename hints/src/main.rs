@@ -46,7 +46,7 @@ fn main() {
         &end_room,
     );
     if let Some(path) = path {
-        println!("Path: {:#?}", path);
+        println!("Path: {:?}", path);
     } else {
         println!("No path found");
     }

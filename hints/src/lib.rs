@@ -1,4 +1,7 @@
-use std::collections::{BTreeMap, HashMap, VecDeque};
+use std::{
+    collections::{BTreeMap, HashMap, VecDeque},
+    thread::current,
+};
 
 #[derive(Debug)]
 pub struct HintGenerator {
@@ -14,7 +17,7 @@ struct State<'a> {
     flags: u64,
     items: u64,
     items_taken: u64,
-    // todo action count
+    action_count: Option<usize>,
 }
 
 #[derive(Debug, Clone)]
@@ -23,7 +26,7 @@ pub enum Transition {
         color: String,
         trigger_item: Option<u64>,
     },
-    // TODO taking items
+    TakeItems,
 }
 
 fn create_mask<T>(map: &mut BTreeMap<String, u64>, key: T) -> u64
@@ -79,6 +82,46 @@ fn apply_action<'a>(state: &mut State<'a>, action: &'a compact::Action) {
     state.items &= !action.take_items;
 }
 
+fn parse_action(
+    raw_action: raw::Action,
+    flag_masks: &mut BTreeMap<String, u64>,
+    item_masks: &mut BTreeMap<String, u64>,
+) -> compact::Action {
+    compact::Action {
+        conditions: compact::Conditions {
+            has_flags: create_mask_set(flag_masks, raw_action.conditions.has_flags),
+            has_flags_not: create_mask_set(flag_masks, raw_action.conditions.has_flags_not),
+            has_items: raw_action
+                .conditions
+                .has_item
+                .map(|item| create_mask(item_masks, item))
+                .unwrap_or(0),
+            has_items_not: raw_action
+                .conditions
+                .has_item_not
+                .map(|item| create_mask(item_masks, item))
+                .unwrap_or(0),
+        },
+        trigger: raw_action
+            .trigger
+            .map(|item| create_mask(item_masks, item))
+            .unwrap_or(0),
+
+        goto: raw_action.goto,
+        give_items: raw_action
+            .give_item
+            .map(|item| create_mask(item_masks, &item))
+            .unwrap_or(0),
+        take_items: raw_action
+            .take_item
+            .map(|item| create_mask(item_masks, &item))
+            .unwrap_or(0),
+        set_flags: create_mask_set(flag_masks, raw_action.set_flags),
+        unset_flags: create_mask_set(flag_masks, raw_action.unset_flags),
+        flip_flags: create_mask_set(flag_masks, raw_action.flip_flags),
+    }
+}
+
 impl HintGenerator {
     pub fn new(serialized_rooms: &str) -> HintGenerator {
         // Parse the raw format.
@@ -95,51 +138,19 @@ impl HintGenerator {
                     &mut item_masks,
                     raw_room.items.iter().map(|item| item.id.as_str()),
                 ),
-                // TODO enter/leave/count
                 zones: BTreeMap::new(),
+                enter_action: raw_room
+                    .enter_action
+                    .map(|action| parse_action(action, &mut flag_masks, &mut item_masks)),
+                leave_action: raw_room
+                    .leave_action
+                    .map(|action| parse_action(action, &mut flag_masks, &mut item_masks)),
+                max_actions: raw_room.max_actions,
             };
             for raw_zone in raw_room.zones {
                 let mut actions = Vec::new();
                 for raw_action in raw_zone.actions {
-                    actions.push(compact::Action {
-                        conditions: compact::Conditions {
-                            has_flags: create_mask_set(
-                                &mut flag_masks,
-                                raw_action.conditions.has_flags,
-                            ),
-                            has_flags_not: create_mask_set(
-                                &mut flag_masks,
-                                raw_action.conditions.has_flags_not,
-                            ),
-                            has_items: raw_action
-                                .conditions
-                                .has_item
-                                .map(|item| create_mask(&mut item_masks, item))
-                                .unwrap_or(0),
-                            has_items_not: raw_action
-                                .conditions
-                                .has_item_not
-                                .map(|item| create_mask(&mut item_masks, item))
-                                .unwrap_or(0),
-                        },
-                        trigger: raw_action
-                            .trigger
-                            .map(|item| create_mask(&mut item_masks, item))
-                            .unwrap_or(0),
-
-                        goto: raw_action.goto,
-                        give_items: raw_action
-                            .give_item
-                            .map(|item| create_mask(&mut item_masks, &item))
-                            .unwrap_or(0),
-                        take_items: raw_action
-                            .take_item
-                            .map(|item| create_mask(&mut item_masks, &item))
-                            .unwrap_or(0),
-                        set_flags: create_mask_set(&mut flag_masks, raw_action.set_flags),
-                        unset_flags: create_mask_set(&mut flag_masks, raw_action.unset_flags),
-                        flip_flags: create_mask_set(&mut flag_masks, raw_action.flip_flags),
-                    });
+                    actions.push(parse_action(raw_action, &mut flag_masks, &mut item_masks));
                 }
                 room.zones.insert(raw_zone.color, actions);
             }
@@ -171,6 +182,7 @@ impl HintGenerator {
             flags: get_mask_set(&self.flag_masks, start_flags),
             items: get_mask_set(&self.item_masks, start_items),
             items_taken: get_mask_set(&self.item_masks, start_items_taken),
+            action_count: None,
         };
 
         let mut queue = VecDeque::new();
@@ -184,24 +196,18 @@ impl HintGenerator {
         queue.push_back(start_state.clone());
         previous.insert(start_state.clone(), None);
 
-        while !queue.is_empty() {
-            let state = queue.pop_front().unwrap();
+        let mut final_state = None;
 
-            if state.room == end_room {
-                println!("FOUND after {} states", previous.len());
-                let mut path = Vec::new();
-                let mut state = state;
-                while let Some((ref transition, ref previous_state)) = previous[&state] {
-                    path.push(transition.clone());
-                    state = previous_state.clone();
-                }
-                return Some(path);
-            }
+        while final_state.is_none() && !queue.is_empty() {
+            let state = queue.pop_front().unwrap();
 
             let current_room = &self.rooms[state.room];
             let mut maybe_add_state = |new_state: State<'a>, transition: Transition| {
                 if new_state == state {
                     return;
+                }
+                if new_state.room == end_room {
+                    final_state = Some(new_state.clone());
                 }
                 match previous.entry(new_state) {
                     std::collections::hash_map::Entry::Occupied(_) => {}
@@ -213,10 +219,23 @@ impl HintGenerator {
             };
 
             // TODO take items
+            let untaken_items = current_room.items & !state.items_taken;
+            if untaken_items != 0 {
+                let mut new_state = state.clone();
+                new_state.items |= untaken_items;
+                new_state.items_taken |= untaken_items;
+                maybe_add_state(new_state, Transition::TakeItems);
+            }
 
             for (color, actions) in current_room.zones.iter() {
                 for action in actions {
-                    // TODO hack backtracking
+                    // Horrible hack needed to improve performance.
+                    // Prevents backtracking back to first act.
+                    if state.room == "a2_forest_path"
+                        && action.goto == Some("a0_observatory_exterior".to_string())
+                    {
+                        continue;
+                    }
 
                     // Item trigger.
                     let mut trigger_item = None;
@@ -241,12 +260,30 @@ impl HintGenerator {
                     }
 
                     // Eligible action at this point, apply it.
-                    let mut news_state = state.clone();
-                    apply_action(&mut news_state, action);
-                    // TODO leave/enter, action counter
+                    let mut new_state = state.clone();
+                    new_state.action_count.as_mut().map(|count| *count += 1);
+
+                    apply_action(&mut new_state, action);
+                    if new_state.room != state.room {
+                        let new_room = &self.rooms[new_state.room];
+                        if let Some(enter_action) = &new_room.enter_action {
+                            apply_action(&mut new_state, enter_action);
+                        }
+                        if new_room.max_actions.is_some() {
+                            new_state.action_count = Some(0);
+                        }
+                    }
+                    if let Some(max_actions) = current_room.max_actions {
+                        if new_state.action_count.unwrap() >= max_actions {
+                            apply_action(
+                                &mut new_state,
+                                current_room.leave_action.as_ref().unwrap(),
+                            )
+                        }
+                    }
 
                     maybe_add_state(
-                        news_state,
+                        new_state,
                         Transition::Zone {
                             color: color.clone(),
                             trigger_item,
@@ -256,6 +293,17 @@ impl HintGenerator {
             }
         }
 
+        if let Some(mut state) = final_state {
+            println!("FOUND after {} states", previous.len());
+            let mut path = Vec::new();
+            while let Some((ref transition, ref previous_state)) = previous[&state] {
+                path.push(transition.clone());
+                state = previous_state.clone();
+            }
+            return Some(path);
+        }
+
+        println!("NOT FOUND after {} states", previous.len());
         None
     }
 }
@@ -267,7 +315,9 @@ mod compact {
     pub struct Room {
         pub items: u64,
         pub zones: BTreeMap<String, Vec<Action>>,
-        // TODO enter/leave actions and max count
+        pub enter_action: Option<Action>,
+        pub leave_action: Option<Action>,
+        pub max_actions: Option<usize>,
     }
 
     #[derive(Debug)]
@@ -306,11 +356,11 @@ mod raw {
         pub zones: Vec<Zone>,
 
         #[serde(default, rename = "enterAction")]
-        enter_action: Option<Action>,
+        pub enter_action: Option<Action>,
         #[serde(default, rename = "leaveAction")]
-        leave_action: Option<Action>,
+        pub leave_action: Option<Action>,
         #[serde(default, rename = "maxActions")]
-        max_actions: Option<usize>,
+        pub max_actions: Option<usize>,
     }
 
     #[derive(Deserialize, Debug)]

@@ -60,9 +60,16 @@ const maskSource = ref(null);
 const actionCount = ref(0);
 const lastCoordinates = ref({ x: null, y: null });
 
+let hintGenerator = null;
+
 const getHint = () => {
-  wasm.foo();
-  wasm.get_hint(JSON.stringify(rooms), JSON.stringify(toRaw(gameState)));
+  if (!hintGenerator) {
+    console.log('initializing hint generator');
+    hintGenerator = wasm.GeneratorState.new(JSON.stringify(rooms));
+  }
+  console.log(hintGenerator);
+  const action = hintGenerator.next_action(JSON.stringify(toRaw(gameState)), "a2_forest_path");
+  console.log(action);
 }
 
 const rgbaToHex = (rgba) => {

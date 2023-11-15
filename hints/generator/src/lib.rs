@@ -17,10 +17,20 @@ struct State<'a> {
 }
 
 #[derive(Debug, Clone)]
-pub enum Transition {
+enum Transition {
     Zone {
         color: String,
         trigger_item: Option<u64>,
+    },
+    TakeItems,
+}
+
+// Like Transition, but with strings instead of u64s.
+#[derive(Debug, Clone)]
+pub enum Step {
+    Zone {
+        color: String,
+        trigger_item: Option<String>,
     },
     TakeItems,
 }
@@ -172,7 +182,7 @@ impl HintGenerator {
         start_items: &Vec<String>,
         start_items_taken: &Vec<String>,
         end_room: &str,
-    ) -> Option<Vec<Transition>> {
+    ) -> Option<Vec<Step>> {
         let start_state = State {
             room: start_room,
             flags: get_mask_set(&self.flag_masks, start_flags),
@@ -296,9 +306,26 @@ impl HintGenerator {
             println!("FOUND after {} states", previous.len());
             let mut path = Vec::new();
             while let Some((ref transition, ref previous_state)) = previous[&state] {
-                path.push(transition.clone());
+                path.push(match transition {
+                    Transition::Zone {
+                        color,
+                        trigger_item,
+                    } => Step::Zone {
+                        color: color.clone(),
+                        trigger_item: trigger_item.map(|item| {
+                            self.item_masks
+                                .iter()
+                                .find(|(_k, v)| *v == &item)
+                                .unwrap()
+                                .0
+                                .clone()
+                        }),
+                    },
+                    Transition::TakeItems => Step::TakeItems,
+                });
                 state = previous_state.clone();
             }
+            path.reverse();
             return Some(path);
         }
 

@@ -74,6 +74,8 @@ const credits = () => {
     'Faisceau de Lumière ~ Špongia 2023',
     ['Alexander Mravčák', 'Laco Pápay', 'Viktor Seč'].sort(() => Math.random() - 0.5).join(', '),
     'projects.mravcak.com/hviezda/',
+    ' ',
+    'Music: Ephemeral III (Lilith) by Le Chaos Entre 2 Chaises'
   ].reverse();
   lines.forEach((line, index) => {
     setTimeout(() => {

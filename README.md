@@ -34,3 +34,15 @@ There is an alternative player in `player-vanilla`, but it doesn't support the c
 There is also a content editor in `editor`.
 
 The `adventure` directory contains an [early proof-of-concept prototype](https://adventure-lovat.vercel.app) of the game.
+
+### Acknowledgements
+
+We utilized [Stable Diffusion XL 1.0](https://github.com/Stability-AI/generative-models) along with [Clay Animation](https://civitai.com/models/59569) LoRA while making assets for the game.
+
+The dubbing is done with [ElevenLabs](https://elevenlabs.io/).
+
+#### Music
+
+[Ephemeral III (Lilith)](https://freemusicarchive.org/music/le-chaos-entre-2-chaises/ephemerals/ephemeral-iii-lilith/)
+Author: [Le Chaos Entre 2 Chaises](https://freemusicarchive.org/music/le-chaos-entre-2-chaises/)
+Licence: [CC BY 4.0 Deed](https://creativecommons.org/licenses/by/4.0/)

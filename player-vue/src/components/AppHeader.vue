@@ -69,13 +69,17 @@ const toggleLanguage = () => {
 
 const credits = () => {
   const title = clientState.language === 'sk' ? 'Pozor, padá hviezda!' : 'Watch Out: A Star is Falling';
+  const musicAttribution = clientState.language === 'sk'
+  ? 'Hudba: Ephemeral III (Lilith) od Le Chaos Entre 2 Chaises'
+  : 'Music: Ephemeral III (Lilith) by Le Chaos Entre 2 Chaises';
+
   const lines = [
     title,
     'Faisceau de Lumière ~ Špongia 2023',
     ['Alexander Mravčák', 'Laco Pápay', 'Viktor Seč'].sort(() => Math.random() - 0.5).join(', '),
     'projects.mravcak.com/hviezda/',
     ' ',
-    'Music: Ephemeral III (Lilith) by Le Chaos Entre 2 Chaises'
+    musicAttribution,
   ].reverse();
   lines.forEach((line, index) => {
     setTimeout(() => {

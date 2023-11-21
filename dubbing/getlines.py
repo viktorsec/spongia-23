@@ -12,6 +12,8 @@ import tqdm
 
 def get_all_says(content_dir):
     for file in glob.glob(content_dir + '/*/*.json'):
+        if os.path.basename(os.path.dirname(file)) == 'dubbing':
+            continue
         if file.endswith('.original.json'):
             continue
         room = json.load(open(file))
@@ -23,19 +25,36 @@ def get_all_says(content_dir):
 
 says = list(get_all_says(sys.argv[1]))
 
-VOICE_MAP = {
-    'Izák': 'ovVFY3Dg05IU2oN1OtVR',
-    'Isaac': 'ovVFY3Dg05IU2oN1OtVR',
-    'Mikuláš': 'ZHTBLfwcxqZxJan5ZdfN',
-    'Nicolaus': 'ZHTBLfwcxqZxJan5ZdfN',
+# TODO: Other voice options (speed etc)?
+def voice(id):
+    return {
+        'model': 'eleven_multilingual_v2',
+        'voice': id
+    }
+
+# TODO: Voice modifiers ("crying" etc)?
+VOICE_MAP = {    
+    # Guy
+    'Izák': voice('ovVFY3Dg05IU2oN1OtVR'),
+    'Isaac': voice('ovVFY3Dg05IU2oN1OtVR'),
+    # Neil
+    'Mikuláš': voice('ZHTBLfwcxqZxJan5ZdfN'),
+    'Nicolaus': voice('ZHTBLfwcxqZxJan5ZdfN'),
+    # Ryan
+    'Gustáv': voice('d8mfvnU6fBNQh1oGxKLG'),
+    'Augustus': voice('d8mfvnU6fBNQh1oGxKLG'),
+    # Cooper
+    'Turista': voice('nCGlWx7HG9NmtqHKY65R'),
+    'Tourist': voice('nCGlWx7HG9NmtqHKY65R'),
+    # Wesley
+    'Leonardo': voice('vt9DFlxogrMUvGp5sWRY'),
 }
 
 @dataclass
 class Line:
-    voice: str
     full_line: str
     dubbed_line: str
-    language: str
+    voice_settings: dict[str, str]
 
 to_dub = []
 
@@ -44,22 +63,29 @@ for say in says:
     if isinstance(say, str):
         continue
     for lang, line in say.items():
-        for start, voice in VOICE_MAP.items():
+        for start, voice_settings in VOICE_MAP.items():
             prefix = f'{start}: '
             if line.startswith(prefix):
-                to_dub.append(Line(voice, line, line[len(prefix):], lang))
-
-#to_dub = to_dub[:1]
+                to_dub.append(Line(line, line[len(prefix):], voice_settings))
 
 elevenlabs.set_api_key(os.environ['ELEVENLABS_API_KEY'])
 
 for line in tqdm.tqdm(to_dub):
+    # Lines are keyed by the hash of the full line, so the frontend
+    # can easily refer to them.
     m = hashlib.sha256()
     m.update(line.full_line.encode('utf-8'))
-    path = sys.argv[2] + '/' + m.hexdigest() + '.mp3'
-    if os.path.isfile(path):
-        continue
-    print(path, line)
-    audio = elevenlabs.generate(line.dubbed_line, model='eleven_multilingual_v2', voice=line.voice)
-    with open(path, 'wb') as f:
+    output_basename = sys.argv[2] + '/' + m.hexdigest()
+    
+    if os.path.isfile(output_basename + '.json'):
+        previous_settings = json.load(open(output_basename + '.json'))
+        if previous_settings == line.voice_settings:
+            continue
+    
+    print('Dubbing', line.full_line, 'into', output_basename)
+    audio = elevenlabs.generate(line.dubbed_line, **voice_settings)
+    
+    with open(output_basename + '.mp3', 'wb') as f:
         f.write(audio)
+    with open(output_basename + '.json', 'w') as f:
+        json.dump(line.voice_settings, f)
